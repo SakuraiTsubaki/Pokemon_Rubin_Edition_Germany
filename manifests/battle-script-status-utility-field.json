@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_status_utility_field_core",
+  "retail": {
+    "start": "0x0802446C",
+    "end_exclusive": "0x08025A70",
+    "size": 5636,
+    "sha256": "387c50cd9ce66f37d2317559fbeb3b67a874d229b51fcdeb292431c9d01723e0",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08027A10",
+    "end_exclusive": "0x08029014",
+    "size": 5636,
+    "sha256": "86932d3b4f5a519048f6c4eaead2593027189a246bf598f2aa709bd12203eb8a",
+    "retail_address_delta": "+0x35A4"
+  },
+  "commands": [
+    {
+      "opcode": "0x60",
+      "name": "atk60_incrementgamestat",
+      "retail": "0x0802446C",
+      "debug": "0x08027A10",
+      "span_to_next_opcode": 48,
+      "role": "increment game stat for player-side attacker"
+    },
+    {
+      "opcode": "0x61",
+      "name": "atk61_drawpartystatussummary",
+      "retail": "0x0802449C",
+      "debug": "0x08027A40",
+      "span_to_next_opcode": 200,
+      "role": "build six HpAndStatus entries and draw party summary"
+    },
+    {
+      "opcode": "0x62",
+      "name": "atk62_hidepartystatussummary",
+      "retail": "0x08024564",
+      "debug": "0x08027B08",
+      "span_to_next_opcode": 48,
+      "role": "hide party status summary"
+    },
+    {
+      "opcode": "0x63",
+      "name": "atk63_jumptorandomattack",
+      "retail": "0x08024594",
+      "debug": "0x08027B38",
+      "span_to_next_opcode": 100,
+      "role": "jump to script for gRandomMove move effect"
+    },
+    {
+      "opcode": "0x64",
+      "name": "atk64_statusanimation",
+      "retail": "0x080245F8",
+      "debug": "0x08027B9C",
+      "span_to_next_opcode": 144,
+      "role": "play primary-status animation when visible"
+    },
+    {
+      "opcode": "0x65",
+      "name": "atk65_status2animation",
+      "retail": "0x08024688",
+      "debug": "0x08027C2C",
+      "span_to_next_opcode": 168,
+      "role": "play masked status2 animation"
+    },
+    {
+      "opcode": "0x66",
+      "name": "atk66_chosenstatusanimation",
+      "retail": "0x08024730",
+      "debug": "0x08027CD4",
+      "span_to_next_opcode": 148,
+      "role": "play explicitly encoded status animation"
+    },
+    {
+      "opcode": "0x67",
+      "name": "atk67_yesnobox",
+      "retail": "0x080247C4",
+      "debug": "0x08027D68",
+      "span_to_next_opcode": 176,
+      "role": "generic battle yes/no UI"
+    },
+    {
+      "opcode": "0x68",
+      "name": "atk68_cancelallactions",
+      "retail": "0x08024874",
+      "debug": "0x08027E18",
+      "span_to_next_opcode": 56,
+      "role": "mark every active battler action finished"
+    },
+    {
+      "opcode": "0x69",
+      "name": "atk69_adjustsetdamage",
+      "retail": "0x080248AC",
+      "debug": "0x08027E50",
+      "span_to_next_opcode": 380,
+      "role": "fixed-damage survival adjustment for Endure/Focus Band/False Swipe"
+    },
+    {
+      "opcode": "0x6A",
+      "name": "atk6A_removeitem",
+      "retail": "0x08024A28",
+      "debug": "0x08027FCC",
+      "span_to_next_opcode": 108,
+      "role": "move held item to usedHeldItems and clear battler item"
+    },
+    {
+      "opcode": "0x6B",
+      "name": "atk6B_atknameinbuff1",
+      "retail": "0x08024A94",
+      "debug": "0x08028038",
+      "span_to_next_opcode": 60,
+      "role": "buffer attacker nickname reference"
+    },
+    {
+      "opcode": "0x6C",
+      "name": "atk6C_drawlvlupbox",
+      "retail": "0x08024AD0",
+      "debug": "0x08028074",
+      "span_to_next_opcode": 848,
+      "role": "four-state level-up stat box UI"
+    },
+    {
+      "opcode": "0x6D",
+      "name": "atk6D_resetsentmonsvalue",
+      "retail": "0x08024E20",
+      "debug": "0x080283C4",
+      "span_to_next_opcode": 24,
+      "role": "rebuild sent-party tracking"
+    },
+    {
+      "opcode": "0x6E",
+      "name": "atk6E_setatktoplayer0",
+      "retail": "0x08024E38",
+      "debug": "0x080283DC",
+      "span_to_next_opcode": 32,
+      "role": "set attacker to player-left battler"
+    },
+    {
+      "opcode": "0x6F",
+      "name": "atk6F_makevisible",
+      "retail": "0x08024E58",
+      "debug": "0x080283FC",
+      "span_to_next_opcode": 52,
+      "role": "clear sprite invisibility"
+    },
+    {
+      "opcode": "0x70",
+      "name": "atk70_recordlastability",
+      "retail": "0x08024E8C",
+      "debug": "0x08028430",
+      "span_to_next_opcode": 92,
+      "role": "record last-used ability; original cursor increment is +1 despite one-byte argument"
+    },
+    {
+      "opcode": "0x71",
+      "name": "atk71_buffermovetolearn",
+      "retail": "0x08024EE8",
+      "debug": "0x0802848C",
+      "span_to_next_opcode": 24,
+      "role": "buffer 16-bit move-to-learn ID"
+    },
+    {
+      "opcode": "0x72",
+      "name": "atk72_jumpifplayerran",
+      "retail": "0x08024F00",
+      "debug": "0x080284A4",
+      "span_to_next_opcode": 68,
+      "role": "attempt run and jump on success"
+    },
+    {
+      "opcode": "0x73",
+      "name": "atk73_hpthresholds",
+      "retail": "0x08024F44",
+      "debug": "0x080284E8",
+      "span_to_next_opcode": 188,
+      "role": "categorize opposing HP percentage into four scale bands"
+    },
+    {
+      "opcode": "0x74",
+      "name": "atk74_hpthresholds2",
+      "retail": "0x08025000",
+      "debug": "0x080285A4",
+      "span_to_next_opcode": 188,
+      "role": "categorize HP loss since switch-in into four bands"
+    },
+    {
+      "opcode": "0x75",
+      "name": "atk75_useitemonopponent",
+      "retail": "0x080250BC",
+      "debug": "0x08028660",
+      "span_to_next_opcode": 88,
+      "role": "apply opponent trainer item to enemy party mon"
+    },
+    {
+      "opcode": "0x76",
+      "name": "atk76_various",
+      "retail": "0x08025114",
+      "debug": "0x080286B8",
+      "span_to_next_opcode": 496,
+      "role": "seven-subcommand battle helper multiplexer"
+    },
+    {
+      "opcode": "0x77",
+      "name": "atk77_setprotectlike",
+      "retail": "0x08025304",
+      "debug": "0x080288A8",
+      "span_to_next_opcode": 316,
+      "role": "Protect/Detect/Endure success and consecutive-use counter"
+    },
+    {
+      "opcode": "0x78",
+      "name": "atk78_faintifabilitynotdamp",
+      "retail": "0x08025440",
+      "debug": "0x080289E4",
+      "span_to_next_opcode": 284,
+      "role": "Explosion/Selfdestruct faint path unless Damp exists"
+    },
+    {
+      "opcode": "0x79",
+      "name": "atk79_setatkhptozero",
+      "retail": "0x0802555C",
+      "debug": "0x08028B00",
+      "span_to_next_opcode": 96,
+      "role": "set attacker HP to zero and synchronize"
+    },
+    {
+      "opcode": "0x7A",
+      "name": "atk7A_jumpifnexttargetvalid",
+      "retail": "0x080255BC",
+      "debug": "0x08028B60",
+      "span_to_next_opcode": 164,
+      "role": "iterate valid double-battle target for Intimidate-style loops"
+    },
+    {
+      "opcode": "0x7B",
+      "name": "atk7B_tryhealhalfhealth",
+      "retail": "0x08025660",
+      "debug": "0x08028C04",
+      "span_to_next_opcode": 124,
+      "role": "prepare negative half-max-HP healing value"
+    },
+    {
+      "opcode": "0x7C",
+      "name": "atk7C_trymirrormove",
+      "retail": "0x080256DC",
+      "debug": "0x08028C80",
+      "span_to_next_opcode": 456,
+      "role": "select last taken move and redirect into its effect script"
+    },
+    {
+      "opcode": "0x7D",
+      "name": "atk7D_setrain",
+      "retail": "0x080258A4",
+      "debug": "0x08028E48",
+      "span_to_next_opcode": 84,
+      "role": "start five-turn rain or fail if already raining"
+    },
+    {
+      "opcode": "0x7E",
+      "name": "atk7E_setreflect",
+      "retail": "0x080258F8",
+      "debug": "0x08028E9C",
+      "span_to_next_opcode": 184,
+      "role": "start five-turn Reflect and choose single/double message"
+    },
+    {
+      "opcode": "0x7F",
+      "name": "atk7F_setseeded",
+      "retail": "0x080259B0",
+      "debug": "0x08028F54",
+      "span_to_next_opcode": 192,
+      "role": "apply Leech Seed unless immune/already seeded/no-effect"
+    }
+  ],
+  "protect_success_thresholds": [
+    "0xFFFF",
+    "0x7FFF",
+    "0x3FFF",
+    "0x1FFF"
+  ],
+  "atk76_subcommand_count": 7,
+  "compatibility_quirks": [
+    {
+      "opcode": "0x70",
+      "detail": "advances script cursor by 1 despite battler argument"
+    }
+  ],
+  "fixed_capacity_evidence": {
+    "party_status_records": 6,
+    "choice_move_search_slots": 4
+  },
+  "next": {
+    "opcode": "0x80",
+    "function": "atk80_manipulatedamage",
+    "retail": "0x08025A70",
+    "debug": "0x08029014",
+    "delta": "+0x35A4"
+  }
+}
