@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "module": "battle_main_core_turn_order",
+  "retail": {
+    "start": "0x080109F8",
+    "end_exclusive": "0x08013AC4",
+    "size": 12492,
+    "sha256": "f201eba9a43a5e002c5d166521c0dd6261d82fe9066ba1115f450cac9ef0f81c",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080139E4",
+    "end_exclusive": "0x08016B4C",
+    "size": 12648,
+    "sha256": "9d59402f778877241049f44590a8dc7606a24c968b59e0857804e6472094cf07"
+  },
+  "debug_growth": [
+    {
+      "function": "BattleMainCB1",
+      "extra_bytes": 132,
+      "delta_before": "+0x2FEC",
+      "delta_after": "+0x3070"
+    },
+    {
+      "function": "BattleStartClearSetData",
+      "extra_bytes": 24,
+      "delta_before": "+0x3070",
+      "delta_after": "+0x3088"
+    }
+  ],
+  "functions": [
+    {
+      "name": "BattleMainCB1",
+      "retail": "0x080109F8",
+      "debug": "0x080139E4",
+      "retail_size": 80,
+      "debug_size": 212,
+      "debug_extra": 132,
+      "delta": "+0x2FEC"
+    },
+    {
+      "name": "BattleStartClearSetData",
+      "retail": "0x08010A48",
+      "debug": "0x08013AB8",
+      "retail_size": 788,
+      "debug_size": 812,
+      "debug_extra": 24,
+      "delta": "+0x3070"
+    },
+    {
+      "name": "SwitchInClearSetData",
+      "retail": "0x08010D5C",
+      "debug": "0x08013DE4",
+      "retail_size": 960,
+      "debug_size": 960,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "UndoEffectsAfterFainting",
+      "retail": "0x0801111C",
+      "debug": "0x080141A4",
+      "retail_size": 888,
+      "debug_size": 888,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "bc_8012FAC",
+      "retail": "0x08011494",
+      "debug": "0x0801451C",
+      "retail_size": 116,
+      "debug_size": 116,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "BattlePrepIntroSlide",
+      "retail": "0x08011508",
+      "debug": "0x08014590",
+      "retail_size": 80,
+      "debug_size": 80,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_8011384",
+      "retail": "0x08011558",
+      "debug": "0x080145E0",
+      "retail_size": 636,
+      "debug_size": 636,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "bc_801333C",
+      "retail": "0x080117D4",
+      "debug": "0x0801485C",
+      "retail_size": 416,
+      "debug_size": 416,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "bc_battle_begin_message",
+      "retail": "0x08011974",
+      "debug": "0x080149FC",
+      "retail_size": 56,
+      "debug_size": 56,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "bc_8013568",
+      "retail": "0x080119AC",
+      "debug": "0x08014A34",
+      "retail_size": 40,
+      "debug_size": 40,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_8011800",
+      "retail": "0x080119D4",
+      "debug": "0x08014A5C",
+      "retail_size": 52,
+      "debug_size": 52,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_8011834",
+      "retail": "0x08011A08",
+      "debug": "0x08014A90",
+      "retail_size": 144,
+      "debug_size": 144,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "bc_801362C",
+      "retail": "0x08011A98",
+      "debug": "0x08014B20",
+      "retail_size": 140,
+      "debug_size": 140,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "unref_sub_8011950",
+      "retail": "0x08011B24",
+      "debug": "0x08014BAC",
+      "retail_size": 32,
+      "debug_size": 32,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_8011970",
+      "retail": "0x08011B44",
+      "debug": "0x08014BCC",
+      "retail_size": 68,
+      "debug_size": 68,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_80119B4",
+      "retail": "0x08011B88",
+      "debug": "0x08014C10",
+      "retail_size": 180,
+      "debug_size": 180,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "unref_sub_8011A68",
+      "retail": "0x08011C3C",
+      "debug": "0x08014CC4",
+      "retail_size": 152,
+      "debug_size": 152,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "BattleBeginFirstTurn",
+      "retail": "0x08011CD4",
+      "debug": "0x08014D5C",
+      "retail_size": 712,
+      "debug_size": 712,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "bc_8013B1C",
+      "retail": "0x08011F9C",
+      "debug": "0x08015024",
+      "retail_size": 196,
+      "debug_size": 196,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "BattleTurnPassed",
+      "retail": "0x08012060",
+      "debug": "0x080150E8",
+      "retail_size": 412,
+      "debug_size": 412,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "CanRunFromBattle",
+      "retail": "0x080121FC",
+      "debug": "0x08015284",
+      "retail_size": 560,
+      "debug_size": 560,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_8012258",
+      "retail": "0x0801242C",
+      "debug": "0x080154B4",
+      "retail_size": 204,
+      "debug_size": 204,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "sub_8012324",
+      "retail": "0x080124F8",
+      "debug": "0x08015580",
+      "retail_size": 3224,
+      "debug_size": 3224,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "SwapTurnOrder",
+      "retail": "0x08013190",
+      "debug": "0x08016218",
+      "retail_size": 52,
+      "debug_size": 52,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "GetWhoStrikesFirst",
+      "retail": "0x080131C4",
+      "debug": "0x0801624C",
+      "retail_size": 984,
+      "debug_size": 984,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "SetActionsAndBanksTurnOrder",
+      "retail": "0x0801359C",
+      "debug": "0x08016624",
+      "retail_size": 660,
+      "debug_size": 660,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "TurnValuesCleanUp",
+      "retail": "0x08013830",
+      "debug": "0x080168B8",
+      "retail_size": 288,
+      "debug_size": 288,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "SpecialStatusesClear",
+      "retail": "0x08013950",
+      "debug": "0x080169D8",
+      "retail_size": 80,
+      "debug_size": 80,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    },
+    {
+      "name": "CheckFocusPunch_ClearVarsBeforeTurnStarts",
+      "retail": "0x080139A0",
+      "debug": "0x08016A28",
+      "retail_size": 292,
+      "debug_size": 292,
+      "debug_extra": 0,
+      "delta": "+0x3088"
+    }
+  ],
+  "fixed_capacity_evidence": {
+    "active_battlers": 4,
+    "battle_sides": 2,
+    "party_slots": 6,
+    "stat_stages": 8,
+    "moves_per_battler": 4
+  },
+  "next": {
+    "function": "RunTurnActionsFunctions",
+    "retail": "0x08013AC4",
+    "debug": "0x08016B4C",
+    "delta": "+0x3088"
+  }
+}

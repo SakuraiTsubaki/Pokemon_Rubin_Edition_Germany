@@ -1,72 +1,70 @@
 # German Debug battle-tool subsystem
 
-The German Debug ROM contains a large development-only subsystem inside battle_main that is completely absent from both retail revisions.
+This record corrects the earlier over-broad classification that treated the entire 0x08010800..0x080139E3 span as Debug-only.
 
-## Exact range
+## Debug-only tool block A
 
 - Start: **0x08010800**
+- End exclusive: **0x080132F0**
+- Size: **10,992 bytes (0x2AF0)**
+- SHA-256: **c82b583df905cded349e3d5edc41f899d64175f2c848ae76cc7086d05dcb87f2**
+
+This contains the large animation/audio/battle-state development UI and associated test helpers.
+
+## Shared sprite/helper block
+
+After the large Debug tool block, both Retail and Debug contain the same semantic helper sequence.
+
+Retail:
+- 0x0801041C..0x080109F7
+- 1,500 bytes
+- SHA-256: b159eaa8d62c47cfcbef24546a7b75595dbc7996ca7aff14d64a3a3693b6749f
+
+Debug:
+- 0x080132F0..0x080138CB
+- 1,500 bytes
+- SHA-256: 6ad77a398be92d0eae95f4cebde9069cc52d66af998b417cf8657e0f6c00aa55
+
+| Function | Retail | Debug |
+| --- | --- | --- |
+| oac_poke_opponent | 0x0801041C | 0x080132F0 |
+| sub_8010278 | 0x0801044C | 0x08013320 |
+| sub_80102AC | 0x08010480 | 0x08013354 |
+| nullsub_37 | 0x080104DC | 0x080133B0 |
+| unref_sub_801030C | 0x080104E0 | 0x080133B4 |
+| sub_8010320 | 0x080104F4 | 0x080133C8 |
+| sub_8010384 | 0x08010558 | 0x0801342C |
+| sub_8010494 | 0x08010668 | 0x0801353C |
+| sub_8010520 | 0x080106F4 | 0x080135C8 |
+| sub_801053C | 0x08010710 | 0x080135E4 |
+| sub_8010574 | 0x08010748 | 0x0801361C |
+| sub_80105A0 | 0x08010774 | 0x08013648 |
+| oac_poke_ally_ | 0x08010780 | 0x08013654 |
+| sub_80105DC | 0x080107B0 | 0x08013684 |
+| nullsub_86 | 0x080107BC | 0x08013690 |
+| sub_80105EC | 0x080107C0 | 0x08013694 |
+| dp11b_obj_instanciate | 0x080107E8 | 0x080136BC |
+| dp11b_obj_free | 0x080108E8 | 0x080137BC |
+| objc_dp11b_pingpong | 0x08010984 | 0x08013858 |
+| nullsub_41 | 0x080109D0 | 0x080138A4 |
+| sub_8010800 | 0x080109D4 | 0x080138A8 |
+
+## Debug-only tool block B
+
+Immediately before BattleMainCB1, Debug contains one additional auto-input helper:
+
+- debug_sub_80138CC
+- Start: **0x080138CC**
 - End exclusive: **0x080139E4**
-- Size: **12,772 bytes (0x31E4)**
-- SHA-256: **d5fdce32b2fc20101163c1b9c30f47c7aae94fafc126096e996eaf0f96dd14df**
+- Size: **280 bytes (0x118)**
+- SHA-256: **d2d1d17bf6cc53d9dac48843ba154fef9033a8182598500188bfa1601962ca76**
 
-The first function is debug_sub_8010800 at the address encoded by its historical symbol name. The final known Debug-only function begins at 0x080138CC as debug_sub_80138CC.
+It can synthesize A-button input for player-side battlers in the Debug automated battle path.
 
-After this block, normal battle execution rejoins at:
+## BattleMainCB1 rejoin
 
-- Retail BattleMainCB1: **0x0801041C**
-- Debug BattleMainCB1: **0x080139E4**
+- Retail: **0x080109F8**
+- Debug: **0x080139E4**
+- Address displacement at rejoin: **+0x2FEC**
 
-The total displacement at rejoin is therefore **+0x35C8**.
-
-## Exact anchored Debug entries
-
-| Function | German Debug address |
-| --- | --- |
-| debug_sub_8010800 | 0x08010800 |
-| debug_sub_8010818 | 0x08010818 |
-| debug_sub_80108B8 | 0x080108B8 |
-| debug_sub_8010A7C | 0x08010A7C |
-| debug_sub_8010AAC | 0x08010AAC |
-| debug_sub_8010B80 | 0x08010B80 |
-| debug_sub_8010CAC | 0x08010CAC |
-| debug_sub_8011498 | 0x08011498 |
-| debug_sub_801174C | 0x0801174C |
-| debug_sub_8011D40 | 0x08011D40 |
-| debug_sub_8011E5C | 0x08011E5C |
-| debug_sub_8011E74 | 0x08011E74 |
-| debug_sub_8011EA0 | 0x08011EA0 |
-| debug_sub_8012294 | 0x08012294 |
-| debug_sub_80123D8 | 0x080123D8 |
-| debug_sub_8012540 | 0x08012540 |
-| debug_sub_80125A0 | 0x080125A0 |
-| debug_sub_80125E4 | 0x080125E4 |
-| debug_sub_8012628 | 0x08012628 |
-| debug_sub_8012658 | 0x08012658 |
-| debug_sub_8012688 | 0x08012688 |
-| debug_sub_8012878 | 0x08012878 |
-| debug_sub_8012D10 | 0x08012D10 |
-| debug_sub_8013294 | 0x08013294 |
-| debug_sub_80132C8 | 0x080132C8 |
-| debug_sub_80138CC | 0x080138CC |
-
-These symbol addresses were checked directly against the German Debug ROM. Several functions begin with non-PUSH Thumb instructions, so function discovery must not rely only on prologue scanning.
-
-## Capabilities visible in the Debug source/binary block
-
-The subsystem contains development paths for:
-
-- battle animation selection/testing;
-- audio/BGM/SE controls;
-- battle text-buffer manipulation;
-- species/gender/party parameter editing;
-- direct sprite and affine-animation testing;
-- controller/battle-buffer experiments;
-- AI-cycle and automated battle input support;
-- a dedicated Debug battle charmap/UI;
-- direct battle state and link-test manipulation.
-
-This block is preserved as a first-class Debug profile. It must not be merged into retail execution paths.
-
-## Expansion significance
-
-The Debug subsystem is useful as an instrumentation donor for the independent German project. It exposes internal battle state and test paths that can later be adapted into development diagnostics while keeping the Retail profiles clean.
+The Retail pointer 0x080109F9 and Debug pointer 0x080139E5 are directly embedded in each profile's CB2_HandleStartBattle routine.
