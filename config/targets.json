@@ -20,7 +20,9 @@
       "software_version": 0,
       "sha1": "ca5e3d415c4b47353a73a616878ba833f3648b7a",
       "role": "independent debug/development reconstruction profile",
-      "note": "Do not assume retail addresses match."
+      "note": "Do not assume retail addresses match.",
+      "c_define": "GERMAN_RUBY_DEBUG",
+      "rtc_date_loop": "rev0-style i > 0"
     }
   }
 }

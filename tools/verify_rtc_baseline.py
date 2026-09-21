@@ -6,6 +6,7 @@ from pathlib import Path
 
 REV0_SHA1 = "1c2a53332382e14dab8815e3a6dd81ad89534050"
 REV1_SHA1 = "424740be1fc67a5ddb954794443646e6aeee2c1b"
+DEBUG_SHA1 = "ca5e3d415c4b47353a73a616878ba833f3648b7a"
 
 MONTHS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
@@ -22,13 +23,16 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--rev0", required=True, type=Path)
     p.add_argument("--rev1", required=True, type=Path)
+    p.add_argument("--debug", required=True, type=Path)
     args = p.parse_args()
 
     r0 = args.rev0.read_bytes()
     r1 = args.rev1.read_bytes()
+    dbg = args.debug.read_bytes()
 
     assert sha1(r0) == REV0_SHA1, "Rev 0 SHA-1 mismatch"
     assert sha1(r1) == REV1_SHA1, "Rev 1 SHA-1 mismatch"
+    assert sha1(dbg) == DEBUG_SHA1, "Debug SHA-1 mismatch"
 
     diffs = [i for i in range(0x92B0, 0x9610) if r0[i] != r1[i]]
     assert diffs == [0x9367, 0x938B], diffs
@@ -54,6 +58,15 @@ def main():
     assert u32(r1, 0x97E8) == 0x03000460
     assert u32(r1, 0x97EC) == 0x02023C4F
     assert u32(r1, 0x988C) == 0x03000460
+
+    assert u16(dbg, 0x94E0) == 0xDD11
+    assert u16(dbg, 0x9504) == 0xDCED
+    assert u32(dbg, 0x9550) == 0x0820D2EC
+    assert u32(dbg, 0x9890) == 0x03000460
+    assert u32(dbg, 0x9974) == 0x030040C8
+    assert u32(dbg, 0x9978) == 0x020251E0
+    debug_months = [u32(dbg, 0x20D2EC + i * 4) for i in range(12)]
+    assert debug_months == MONTHS, debug_months
 
     print("RTC baseline verification passed")
     print("Rev 0:", REV0_SHA1)

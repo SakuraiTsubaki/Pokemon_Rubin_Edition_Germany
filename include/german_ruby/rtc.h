@@ -69,5 +69,11 @@ void RtcInitLocalTimeOffset(int32_t hour, int32_t minute);
 void RtcCalcLocalTimeOffset(int32_t days, int32_t hours, int32_t minutes, int32_t seconds);
 void CalcTimeDifference(struct Time *result, struct Time *t1, struct Time *t2);
 uint32_t RtcGetMinuteCount(void);
+#if defined(GERMAN_RUBY_DEBUG)
+void DebugFormatHexRtcDate(uint8_t *dest);
+void DebugFormatRtcDayCount(uint8_t *dest);
+void DebugFormatRtcStatus(uint8_t *dest);
+void DebugRefreshRtcCache(void);
+#endif
 
 #endif

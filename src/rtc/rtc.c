@@ -63,7 +63,7 @@ uint16_t ConvertDateToDayCount(uint8_t year, uint8_t month, uint8_t day)
     int32_t i;
     uint16_t dayCount = 0;
 
-#if defined(GERMAN_RUBY_REV0)
+#if defined(GERMAN_RUBY_REV0) || defined(GERMAN_RUBY_DEBUG)
     for (i = (int32_t)year - 1; i > 0; i--)
 #elif defined(GERMAN_RUBY_REV1)
     for (i = (int32_t)year - 1; i >= 0; i--)
@@ -229,8 +229,8 @@ void RtcReset(void)
 extern uint8_t *ConvertIntToDecimalStringN(uint8_t *dest, int32_t value, uint8_t mode, uint8_t width); /* 0x08006D24 */
 extern uint8_t *ConvertIntToHexStringN(uint8_t *dest, int32_t value, uint8_t mode, uint8_t width);     /* 0x08006E88 */
 
-struct Time gLocalTime;                  /* 0x03004048 */
-extern struct Time gSaveLocalTimeOffset; /* direct retail address 0x02023C4F */
+struct Time gLocalTime;                  /* retail 0x03004048; debug 0x030040C8 */
+extern struct Time gSaveLocalTimeOffset; /* retail 0x02023C4F; debug 0x020251E0 */
 
 /* German retail ROM 0x08009608. */
 void FormatDecimalTime(uint8_t *dest, int32_t hour, int32_t minute, int32_t second)
@@ -281,6 +281,31 @@ void FormatHexDate(uint8_t *dest, int32_t year, int32_t month, int32_t day)
     dest = ConvertIntToHexStringN(dest, day, STR_CONV_MODE_LEADING_ZEROS, 2);
     *dest = EOS;
 }
+
+
+
+#if defined(GERMAN_RUBY_DEBUG)
+#define STR_CONV_MODE_RIGHT_ALIGN 1
+
+/* German Debug ROM 0x0800987C. */
+void DebugFormatHexRtcDate(uint8_t *dest)
+{
+    FormatHexDate(dest, sRtc.year, sRtc.month, sRtc.day);
+}
+
+/* German Debug ROM 0x08009894. */
+void DebugFormatRtcDayCount(uint8_t *dest)
+{
+    uint16_t dayCount = RtcGetDayCount(&sRtc);
+    ConvertIntToDecimalStringN(dest, dayCount, STR_CONV_MODE_RIGHT_ALIGN, 4);
+}
+
+/* German Debug ROM 0x080098B8. */
+void DebugFormatRtcStatus(uint8_t *dest)
+{
+    ConvertIntToHexStringN(dest, sRtc.status, STR_CONV_MODE_LEADING_ZEROS, 2);
+}
+#endif
 
 /* German retail ROM 0x08009700. */
 void RtcCalcTimeDifference(struct SiiRtcInfo *rtc, struct Time *result, struct Time *t)
@@ -369,3 +394,12 @@ uint32_t RtcGetMinuteCount(void)
     RtcGetInfo(&sRtc);
     return (24u * 60u) * RtcGetDayCount(&sRtc) + 60u * sRtc.hour + sRtc.minute;
 }
+
+
+#if defined(GERMAN_RUBY_DEBUG)
+/* German Debug ROM 0x08009A60. */
+void DebugRefreshRtcCache(void)
+{
+    RtcGetRawInfo(&sRtc);
+}
+#endif
