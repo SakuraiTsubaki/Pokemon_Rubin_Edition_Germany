@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_switch_learning_reward_core",
+  "retail": {
+    "start": "0x080224B0",
+    "end_exclusive": "0x0802446C",
+    "size": 8124,
+    "sha256": "fd0fbc4f5136c719654a6aa60db0c86df7d57f0ba9dac8492e0e99b5fd288b49",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08025A54",
+    "end_exclusive": "0x08027A10",
+    "size": 8124,
+    "sha256": "ccbd097180e90153754f95259031b3551a4d33d0e22cdd7cca6e879342782303",
+    "retail_address_delta": "+0x35A4"
+  },
+  "commands": [
+    {
+      "opcode": "0x4A",
+      "name": "atk4A_typecalc2",
+      "retail": "0x080224B0",
+      "debug": "0x08025A54",
+      "span_to_next_opcode": 592,
+      "role": "type-effectiveness/Levitate/Wonder Guard check without damage modulation"
+    },
+    {
+      "opcode": "0x4B",
+      "name": "atk4B_returnatktoball",
+      "retail": "0x08022700",
+      "debug": "0x08025CA4",
+      "span_to_next_opcode": 80,
+      "role": "return attacker sprite to Poké Ball unless already fainted"
+    },
+    {
+      "opcode": "0x4C",
+      "name": "atk4C_getswitchedmondata",
+      "retail": "0x08022750",
+      "debug": "0x08025CF4",
+      "span_to_next_opcode": 116,
+      "role": "request selected party Pokémon data for switching battler"
+    },
+    {
+      "opcode": "0x4D",
+      "name": "atk4D_switchindataupdate",
+      "retail": "0x080227C4",
+      "debug": "0x08025D68",
+      "span_to_next_opcode": 404,
+      "role": "replace BattlePokemon data, restore species types/ability, apply Knock Off/Baton Pass state"
+    },
+    {
+      "opcode": "0x4E",
+      "name": "atk4E_switchinanim",
+      "retail": "0x08022958",
+      "debug": "0x08025EFC",
+      "span_to_next_opcode": 172,
+      "role": "mark Pokédex seen and emit switch-in animation"
+    },
+    {
+      "opcode": "0x4F",
+      "name": "atk4F_jumpifcantswitch",
+      "retail": "0x08022A04",
+      "debug": "0x08025FA8",
+      "span_to_next_opcode": 616,
+      "role": "test trapping/rooting and party availability before switching"
+    },
+    {
+      "opcode": "0x50",
+      "name": "atk50_openpartyscreen",
+      "retail": "0x08022C6C",
+      "debug": "0x08026210",
+      "span_to_next_opcode": 2180,
+      "role": "open/coordinate party selection across single/double/multi/link battle states"
+    },
+    {
+      "opcode": "0x51",
+      "name": "atk51_switchhandleorder",
+      "retail": "0x080234F0",
+      "debug": "0x08026A94",
+      "span_to_next_opcode": 520,
+      "role": "consume switch selection results and synchronize multi-battle switch metadata"
+    },
+    {
+      "opcode": "0x52",
+      "name": "atk52_switchineffects",
+      "retail": "0x080236F8",
+      "debug": "0x08026C9C",
+      "span_to_next_opcode": 680,
+      "role": "Spikes, Truant initialization, switch-in ability/item effects and action cleanup"
+    },
+    {
+      "opcode": "0x53",
+      "name": "atk53_trainerslidein",
+      "retail": "0x080239A0",
+      "debug": "0x08026F44",
+      "span_to_next_opcode": 64,
+      "role": "emit trainer slide animation"
+    },
+    {
+      "opcode": "0x54",
+      "name": "atk54_playse",
+      "retail": "0x080239E0",
+      "debug": "0x08026F84",
+      "span_to_next_opcode": 60,
+      "role": "play 16-bit sound effect ID"
+    },
+    {
+      "opcode": "0x55",
+      "name": "atk55_fanfare",
+      "retail": "0x08023A1C",
+      "debug": "0x08026FC0",
+      "span_to_next_opcode": 60,
+      "role": "play 16-bit fanfare/BGM ID"
+    },
+    {
+      "opcode": "0x56",
+      "name": "atk56_playfaintcry",
+      "retail": "0x08023A58",
+      "debug": "0x08026FFC",
+      "span_to_next_opcode": 48,
+      "role": "emit fainting cry for selected battler"
+    },
+    {
+      "opcode": "0x57",
+      "name": "atk57",
+      "retail": "0x08023A88",
+      "debug": "0x0802702C",
+      "span_to_next_opcode": 56,
+      "role": "send battle outcome through controller command 55"
+    },
+    {
+      "opcode": "0x58",
+      "name": "atk58_returntoball",
+      "retail": "0x08023AC0",
+      "debug": "0x08027064",
+      "span_to_next_opcode": 52,
+      "role": "return selected battler to ball"
+    },
+    {
+      "opcode": "0x59",
+      "name": "atk59_handlelearnnewmove",
+      "retail": "0x08023AF4",
+      "debug": "0x08027098",
+      "span_to_next_opcode": 472,
+      "role": "drive learn-new-move decision and update active battle copies"
+    },
+    {
+      "opcode": "0x5A",
+      "name": "atk5A_yesnoboxlearnmove",
+      "retail": "0x08023CCC",
+      "debug": "0x08027270",
+      "span_to_next_opcode": 892,
+      "role": "move-forgetting yes/no UI and summary-screen state machine"
+    },
+    {
+      "opcode": "0x5B",
+      "name": "atk5B_yesnoboxstoplearningmove",
+      "retail": "0x08024048",
+      "debug": "0x080275EC",
+      "span_to_next_opcode": 272,
+      "role": "stop-learning confirmation UI"
+    },
+    {
+      "opcode": "0x5C",
+      "name": "atk5C_hitanimation",
+      "retail": "0x08024158",
+      "debug": "0x080276FC",
+      "span_to_next_opcode": 144,
+      "role": "emit hit animation unless no-effect/substitute suppresses it"
+    },
+    {
+      "opcode": "0x5D",
+      "name": "atk5D_getmoneyreward",
+      "retail": "0x080241E8",
+      "debug": "0x0802778C",
+      "span_to_next_opcode": 384,
+      "role": "calculate trainer reward and add money to SaveBlock1"
+    },
+    {
+      "opcode": "0x5E",
+      "name": "atk5E",
+      "retail": "0x08024368",
+      "debug": "0x0802790C",
+      "span_to_next_opcode": 180,
+      "role": "refresh battler move/PP slots from controller mon-data buffer"
+    },
+    {
+      "opcode": "0x5F",
+      "name": "atk5F_swapattackerwithtarget",
+      "retail": "0x0802441C",
+      "debug": "0x080279C0",
+      "span_to_next_opcode": 80,
+      "role": "swap attacker/target and toggle swap hit-marker"
+    }
+  ],
+  "fixed_capacity_evidence": {
+    "party_slots": 6,
+    "active_battlers": 4,
+    "move_slots": 4,
+    "multi_battle_party_half_slots": 3
+  },
+  "next": {
+    "opcode": "0x60",
+    "function": "atk60_incrementgamestat",
+    "retail": "0x0802446C",
+    "debug": "0x08027A10",
+    "delta": "+0x35A4"
+  }
+}
