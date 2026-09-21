@@ -1,0 +1,7 @@
+*.gba
+*.agb
+roms/
+inputs/rom/
+__pycache__/
+*.pyc
+.DS_Store
