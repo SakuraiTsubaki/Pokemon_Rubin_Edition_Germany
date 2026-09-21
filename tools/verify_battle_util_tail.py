@@ -6,12 +6,12 @@ REV0_SHA1="1c2a53332382e14dab8815e3a6dd81ad89534050"
 REV1_SHA1="424740be1fc67a5ddb954794443646e6aeee2c1b"
 DEBUG_SHA1="ca5e3d415c4b47353a73a616878ba833f3648b7a"
 
-TAIL_R=(0x1A200,0x1C1DC); TAIL_D=(0x1D754,0x1F754)
-MODULE_R=(0x15324,0x1C1DC); MODULE_D=(0x183AC,0x1F754)
-TAIL_R_SHA="89bba501313e49c894400ca736698e3c5b15ea142f28b0eddeeeea327b32429c"
-TAIL_D_SHA="6a3350e10866d249f54ad7baa9939aa14766198460b93eb02171a4b3b0d8cce1"
-MODULE_R_SHA="d6faa3fa2b22fcfe2cfdb8ddabb9161558683a5d1bf64bc4781efefa427fe9c4"
-MODULE_D_SHA="11f5c8a6cbece220bc932537185f4c892d61fbc71009dabafb322325c60b3807"
+TAIL_R=(0x1A200,0x1BE24); TAIL_D=(0x1D754,0x1F39C)
+MODULE_R=(0x15324,0x1BE24); MODULE_D=(0x183AC,0x1F39C)
+TAIL_R_SHA="44621a33d30d6284f4542e3fda5affeee98ebe74b833dcb3c5c7b7640cb52fd3"
+TAIL_D_SHA="34cc518702cc203987d6959d06982c3cc5acbba314bd7457f62417fcddbf66fe"
+MODULE_R_SHA="109bd414e182e4e3c73a3d9e4745cb2e834463752a8366aa00fd020c12f9cf17"
+MODULE_D_SHA="2f46b142f1a06e1b5dfe8a0e94a42a35d85b8390496966fed1a0f2b8dd22bd1"
 FUNCS=[(0x1A200,0x1D754),(0x1B5E0,0x1EB34),(0x1B768,0x1ECBC),(0x1B794,0x1ECE8),(0x1BAFC,0x1F050)]
 
 def sha1(x): return hashlib.sha1(x).hexdigest()
@@ -30,10 +30,10 @@ def main():
  assert (MODULE_D[1]-MODULE_D[0])-(MODULE_R[1]-MODULE_R[0])==0x4F0
  for ro,do in FUNCS: assert r1[ro:ro+2]==d[do:do+2], (hex(ro),hex(do))
  assert u32(r1,0x207610+40)==0x0801B769 and u32(d,0x2207A8+40)==0x0801ECBD
- assert (0x1F754-0x1F050)-(0x1C1DC-0x1BAFC)==0x24
- assert 0x1F754-0x1C1DC==0x3578
- assert r1[0x1C1DC:0x1C1EC]==d[0x1F754:0x1F764]
+ assert (0x1F39C-0x1F050)-(0x1BE24-0x1BAFC)==0x24
+ assert 0x1F39C-0x1BE24==0x3578
+ assert r1[0x1BE24:0x1BE2C]==d[0x1F39C:0x1F3A4]
  print("German battle_util tail/module verification passed")
- print("Action 10 resolved; next module battle_script_commands; delta +0x3578")
+ print("Action 10 resolved; next module battle_script_commands at atk00; delta +0x3578")
 
 if __name__=="__main__": main()

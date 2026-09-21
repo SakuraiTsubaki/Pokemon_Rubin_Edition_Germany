@@ -1,18 +1,18 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "module": "battle_util_item_target_disobedience_tail",
   "retail": {
     "start": "0x0801A200",
-    "end_exclusive": "0x0801C1DC",
-    "size": 8156,
-    "sha256": "89bba501313e49c894400ca736698e3c5b15ea142f28b0eddeeeea327b32429c",
+    "end_exclusive": "0x0801BE24",
+    "size": 7204,
+    "sha256": "44621a33d30d6284f4542e3fda5affeee98ebe74b833dcb3c5c7b7640cb52fd3",
     "rev0_rev1_byte_identical": true
   },
   "debug": {
     "start": "0x0801D754",
-    "end_exclusive": "0x0801F754",
-    "size": 8192,
-    "sha256": "6a3350e10866d249f54ad7baa9939aa14766198460b93eb02171a4b3b0d8cce1"
+    "end_exclusive": "0x0801F39C",
+    "size": 7240,
+    "sha256": "34cc518702cc203987d6959d06982c3cc5acbba314bd7457f62417fcddbf66fe"
   },
   "functions": [
     {
@@ -51,8 +51,8 @@
       "name": "IsMonDisobedient",
       "retail": "0x0801BAFC",
       "debug": "0x0801F050",
-      "retail_size": 1760,
-      "debug_size": 1796,
+      "retail_size": 808,
+      "debug_size": 844,
       "role": "badge/level-based obedience and disobedience outcomes"
     }
   ],
@@ -112,16 +112,16 @@
   "complete_battle_util": {
     "retail": {
       "start": "0x08015324",
-      "end_exclusive": "0x0801C1DC",
-      "size": 28344,
-      "sha256": "d6faa3fa2b22fcfe2cfdb8ddabb9161558683a5d1bf64bc4781efefa427fe9c4",
+      "end_exclusive": "0x0801BE24",
+      "size": 27392,
+      "sha256": "109bd414e182e4e3c73a3d9e4745cb2e834463752a8366aa00fd020c12f9cf17",
       "rev0_rev1_byte_identical": true
     },
     "debug": {
       "start": "0x080183AC",
-      "end_exclusive": "0x0801F754",
-      "size": 29608,
-      "sha256": "11f5c8a6cbece220bc932537185f4c892d61fbc71009dabafb322325c60b3807"
+      "end_exclusive": "0x0801F39C",
+      "size": 28656,
+      "sha256": "2f46b142f1a06e1b5dfe8a0e94a42a35d85b8390496966fed1a0f2b8dd22bd1"
     },
     "debug_extra_bytes": 1264,
     "debug_extra_breakdown": [
@@ -137,8 +137,9 @@
   },
   "next_module": {
     "name": "battle_script_commands",
-    "retail_start": "0x0801C1DC",
-    "debug_start": "0x0801F754",
+    "retail_start": "0x0801BE24",
+    "debug_start": "0x0801F39C",
     "delta": "+0x3578"
-  }
+  },
+  "correction": "The prior 0x0801C1DC/0x0801F754 boundary was an internal helper. The opcode table proves battle_script_commands starts at atk00."
 }

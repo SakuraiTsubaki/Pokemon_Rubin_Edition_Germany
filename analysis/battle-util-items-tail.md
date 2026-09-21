@@ -6,8 +6,8 @@ This slice completes the German battle_util module.
 
 | Profile | Start | End exclusive | Size | SHA-256 |
 | --- | --- | --- | ---: | --- |
-| Retail Rev 0 / Rev 1 | 0x0801A200 | 0x0801C1DC | 8,156 bytes | 89bba501313e49c894400ca736698e3c5b15ea142f28b0eddeeeea327b32429c |
-| Debug | 0x0801D754 | 0x0801F754 | 8,192 bytes | 6a3350e10866d249f54ad7baa9939aa14766198460b93eb02171a4b3b0d8cce1 |
+| Retail Rev 0 / Rev 1 | 0x0801A200 | 0x0801BE24 | 7,204 bytes | 44621a33d30d6284f4542e3fda5affeee98ebe74b833dcb3c5c7b7640cb52fd3 |
+| Debug | 0x0801D754 | 0x0801F39C | 7,240 bytes | 34cc518702cc203987d6959d06982c3cc5acbba314bd7457f62417fcddbf66fe |
 
 Retail Rev 0 and Rev 1 are byte-identical throughout the entire tail.
 
@@ -79,8 +79,8 @@ Retail obedience thresholds are 10 / 30 / 50 / 70 by badge progression, with the
 
 The Debug build adds a control-bit 0x40 path that forces obedienceLevel to 10 before badge processing.
 
-- Retail size: 1,760 bytes
-- Debug size: 1,796 bytes
+- Retail size: 808 bytes
+- Debug size: 844 bytes
 - Debug growth: 36 bytes (0x24)
 - accumulated delta changes from +0x3554 to +0x3578
 
@@ -88,11 +88,15 @@ The Debug build adds a control-bit 0x40 path that forces obedienceLevel to 10 be
 
 | Profile | Start | End exclusive | Size | SHA-256 |
 | --- | --- | --- | ---: | --- |
-| Retail Rev 0 / Rev 1 | 0x08015324 | 0x0801C1DC | 28,344 bytes | d6faa3fa2b22fcfe2cfdb8ddabb9161558683a5d1bf64bc4781efefa427fe9c4 |
-| Debug | 0x080183AC | 0x0801F754 | 29,608 bytes | 11f5c8a6cbece220bc932537185f4c892d61fbc71009dabafb322325c60b3807 |
+| Retail Rev 0 / Rev 1 | 0x08015324 | 0x0801BE24 | 27,392 bytes | 109bd414e182e4e3c73a3d9e4745cb2e834463752a8366aa00fd020c12f9cf17 |
+| Debug | 0x080183AC | 0x0801F39C | 28,656 bytes | 2f46b142f1a06e1b5dfe8a0e94a42a35d85b8390496966fed1a0f2b8dd22bd1 |
 
 Debug is exactly 1,264 bytes (0x4F0) larger. The difference is fully accounted for by AbilityBattleEffects (+0x4CC) and IsMonDisobedient (+0x24).
 
 ## Next module
 
-battle_script_commands begins at Retail **0x0801C1DC** / Debug **0x0801F754**, with accumulated Debug delta **+0x3578**.
+battle_script_commands begins at Retail **0x0801BE24** / Debug **0x0801F39C**, with accumulated Debug delta **+0x3578**.
+
+## Boundary correction
+
+The earlier 0x0801C1DC / 0x0801F754 boundary was a false positive caused by an internal battle_script_commands helper sharing a cross-profile signature. The German opcode table points opcode 0x00 to Thumb pointers 0x0801BE25 / 0x0801F39D, proving the actual module entries are 0x0801BE24 / 0x0801F39C.
