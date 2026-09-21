@@ -230,7 +230,7 @@ extern uint8_t *ConvertIntToDecimalStringN(uint8_t *dest, int32_t value, uint8_t
 extern uint8_t *ConvertIntToHexStringN(uint8_t *dest, int32_t value, uint8_t mode, uint8_t width);     /* 0x08006E88 */
 
 struct Time gLocalTime;                  /* retail 0x03004048; debug 0x030040C8 */
-extern struct Time gSaveLocalTimeOffset; /* retail 0x02023C4F; debug 0x020251E0 */
+extern struct Time gSaveLocalTimeOffset; /* retail 0x02024F3C; debug 0x020251E0 */
 
 /* German retail ROM 0x08009608. */
 void FormatDecimalTime(uint8_t *dest, int32_t hour, int32_t minute, int32_t second)
