@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "module": "battle_util_item_target_disobedience_tail",
+  "retail": {
+    "start": "0x0801A200",
+    "end_exclusive": "0x0801C1DC",
+    "size": 8156,
+    "sha256": "89bba501313e49c894400ca736698e3c5b15ea142f28b0eddeeeea327b32429c",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0801D754",
+    "end_exclusive": "0x0801F754",
+    "size": 8192,
+    "sha256": "6a3350e10866d249f54ad7baa9939aa14766198460b93eb02171a4b3b0d8cce1"
+  },
+  "functions": [
+    {
+      "name": "ItemBattleEffects",
+      "retail": "0x0801A200",
+      "debug": "0x0801D754",
+      "retail_size": 5088,
+      "debug_size": 5088,
+      "role": "held-item effect dispatcher"
+    },
+    {
+      "name": "unref_sub_801B40C",
+      "retail": "0x0801B5E0",
+      "debug": "0x0801EB34",
+      "retail_size": 392,
+      "debug_size": 392,
+      "role": "unused double-battle combined-move matcher"
+    },
+    {
+      "name": "sub_801B594",
+      "retail": "0x0801B768",
+      "debug": "0x0801ECBC",
+      "retail_size": 44,
+      "debug_size": 44,
+      "role": "Battle Action 10; execute current battle-script opcode when controllers are idle"
+    },
+    {
+      "name": "GetMoveTarget",
+      "retail": "0x0801B794",
+      "debug": "0x0801ECE8",
+      "retail_size": 872,
+      "debug_size": 872,
+      "role": "resolve move target and redirections"
+    },
+    {
+      "name": "IsMonDisobedient",
+      "retail": "0x0801BAFC",
+      "debug": "0x0801F050",
+      "retail_size": 1760,
+      "debug_size": 1796,
+      "role": "badge/level-based obedience and disobedience outcomes"
+    }
+  ],
+  "item_effects": {
+    "recognized_hold_effect_count": 27,
+    "recognized_hold_effects": [
+      "HOLD_EFFECT_DOUBLE_PRIZE",
+      "HOLD_EFFECT_RESTORE_STATS",
+      "HOLD_EFFECT_RESTORE_HP",
+      "HOLD_EFFECT_RESTORE_PP",
+      "HOLD_EFFECT_LEFTOVERS",
+      "HOLD_EFFECT_CONFUSE_SPICY",
+      "HOLD_EFFECT_CONFUSE_DRY",
+      "HOLD_EFFECT_CONFUSE_SWEET",
+      "HOLD_EFFECT_CONFUSE_BITTER",
+      "HOLD_EFFECT_CONFUSE_SOUR",
+      "HOLD_EFFECT_ATTACK_UP",
+      "HOLD_EFFECT_DEFENSE_UP",
+      "HOLD_EFFECT_SPEED_UP",
+      "HOLD_EFFECT_SP_ATTACK_UP",
+      "HOLD_EFFECT_SP_DEFENSE_UP",
+      "HOLD_EFFECT_CRITICAL_UP",
+      "HOLD_EFFECT_RANDOM_STAT_UP",
+      "HOLD_EFFECT_CURE_PAR",
+      "HOLD_EFFECT_CURE_PSN",
+      "HOLD_EFFECT_CURE_BRN",
+      "HOLD_EFFECT_CURE_FRZ",
+      "HOLD_EFFECT_CURE_SLP",
+      "HOLD_EFFECT_CURE_CONFUSION",
+      "HOLD_EFFECT_CURE_STATUS",
+      "HOLD_EFFECT_CURE_ATTRACT",
+      "HOLD_EFFECT_FLINCH",
+      "HOLD_EFFECT_SHELL_BELL"
+    ],
+    "item_id_width_bits": 16,
+    "hold_effect_id_width_bits": 8,
+    "hold_effect_param_width_bits": 8,
+    "move_slots_scanned_for_pp_restore": 4,
+    "stat_stages_scanned": 8
+  },
+  "battle_action_10": {
+    "function": "sub_801B594",
+    "retail_entry": "0x0801B768",
+    "retail_thumb_pointer": "0x0801B769",
+    "debug_entry": "0x0801ECBC",
+    "debug_thumb_pointer": "0x0801ECBD",
+    "size": 44,
+    "status": "resolved"
+  },
+  "debug_growth": {
+    "function": "IsMonDisobedient",
+    "extra_bytes": 36,
+    "debug_control_bit": "0x40",
+    "delta_before": "+0x3554",
+    "delta_after": "+0x3578"
+  },
+  "complete_battle_util": {
+    "retail": {
+      "start": "0x08015324",
+      "end_exclusive": "0x0801C1DC",
+      "size": 28344,
+      "sha256": "d6faa3fa2b22fcfe2cfdb8ddabb9161558683a5d1bf64bc4781efefa427fe9c4",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x080183AC",
+      "end_exclusive": "0x0801F754",
+      "size": 29608,
+      "sha256": "11f5c8a6cbece220bc932537185f4c892d61fbc71009dabafb322325c60b3807"
+    },
+    "debug_extra_bytes": 1264,
+    "debug_extra_breakdown": [
+      {
+        "function": "AbilityBattleEffects",
+        "bytes": 1228
+      },
+      {
+        "function": "IsMonDisobedient",
+        "bytes": 36
+      }
+    ]
+  },
+  "next_module": {
+    "name": "battle_script_commands",
+    "retail_start": "0x0801C1DC",
+    "debug_start": "0x0801F754",
+    "delta": "+0x3578"
+  }
+}
