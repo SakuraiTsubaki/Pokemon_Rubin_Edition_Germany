@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "module": "battle_main_action_handlers",
+  "action_slice": {
+    "retail": {
+      "start": "0x080141BC",
+      "end_exclusive": "0x08015324",
+      "size": 4456,
+      "sha256": "20e994944adc5b1f3405a34ac8d07ae2ee405f492b5071c19dd328f77ce4a1d9",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x08017244",
+      "end_exclusive": "0x080183AC",
+      "size": 4456,
+      "sha256": "e204ce288cf66d02e6ffee4d63b51bb5cf81c82c79b88d44bac49ed7cb93af6",
+      "retail_address_delta": "+0x3088"
+    }
+  },
+  "functions": [
+    {
+      "name": "HandleAction_UseMove",
+      "retail": "0x080141BC",
+      "debug": "0x08017244",
+      "size": 1804,
+      "role": "select move/target, apply Follow Me/Lightning Rod redirection, enter move-effect battle script"
+    },
+    {
+      "name": "HandleAction_Switch",
+      "retail": "0x080148C8",
+      "debug": "0x08017950",
+      "size": 172,
+      "role": "prepare switch nickname/script and increment battle-result switch count"
+    },
+    {
+      "name": "HandleAction_UseItem",
+      "retail": "0x08014974",
+      "debug": "0x080179FC",
+      "size": 792,
+      "role": "decode 16-bit item ID and choose ball/run/item/AI item script"
+    },
+    {
+      "name": "TryRunFromBattle",
+      "retail": "0x08014C8C",
+      "debug": "0x08017D14",
+      "size": 316,
+      "role": "Smoke Ball/Run Away/speed-based escape calculation"
+    },
+    {
+      "name": "HandleAction_Run",
+      "retail": "0x08014DC8",
+      "debug": "0x08017E50",
+      "size": 348,
+      "role": "resolve link/local escape and wild-opponent flee behavior"
+    },
+    {
+      "name": "HandleAction_WatchesCarefully",
+      "retail": "0x08014F24",
+      "debug": "0x08017FAC",
+      "size": 72,
+      "role": "Safari watch-carefully action"
+    },
+    {
+      "name": "HandleAction_SafariZoneBallThrow",
+      "retail": "0x08014F6C",
+      "debug": "0x08017FF4",
+      "size": 96,
+      "role": "consume Safari Ball and enter ball script"
+    },
+    {
+      "name": "HandleAction_ThrowPokeblock",
+      "retail": "0x08014FCC",
+      "debug": "0x08018054",
+      "size": 196,
+      "role": "apply Pokeblock Safari flee-rate changes"
+    },
+    {
+      "name": "HandleAction_GoNear",
+      "retail": "0x08015090",
+      "debug": "0x08018118",
+      "size": 196,
+      "role": "apply Safari catch/flee factor changes"
+    },
+    {
+      "name": "HandleAction_SafriZoneRun",
+      "retail": "0x08015154",
+      "debug": "0x080181DC",
+      "size": 60,
+      "role": "force Safari escape outcome"
+    },
+    {
+      "name": "HandleAction_Action9",
+      "retail": "0x08015190",
+      "debug": "0x08018218",
+      "size": 120,
+      "role": "prepare Safari action text/script and force second turn-order slot finished"
+    },
+    {
+      "name": "HandleAction_Action11",
+      "retail": "0x08015208",
+      "debug": "0x08018290",
+      "size": 44,
+      "role": "process fainted-mon actions or finish action"
+    },
+    {
+      "name": "HandleAction_NothingIsFainted",
+      "retail": "0x08015234",
+      "debug": "0x080182BC",
+      "size": 52,
+      "role": "advance turn action and clear transient hit-marker state"
+    },
+    {
+      "name": "HandleAction_ActionFinished",
+      "retail": "0x08015268",
+      "debug": "0x080182F0",
+      "size": 188,
+      "role": "advance turn, clear special/transient move state and script stack"
+    }
+  ],
+  "action_table": {
+    "retail_address": "0x08207610",
+    "debug_address": "0x082207A8",
+    "entries": 14,
+    "retail_sha256": "325dc01ec5a02fb745118e57fa04eec5b43626f086af1db21eee8944c29e700c",
+    "debug_sha256": "9f3eeb6e3a1f504da2c87f8c39c617441f6bfd011c8c7fbc26f13a6fa349de98",
+    "mapping": [
+      {
+        "id": 0,
+        "name": "HandleAction_UseMove",
+        "retail_thumb_pointer": "0x080141BD",
+        "debug_thumb_pointer": "0x08017245"
+      },
+      {
+        "id": 1,
+        "name": "HandleAction_UseItem",
+        "retail_thumb_pointer": "0x08014975",
+        "debug_thumb_pointer": "0x080179FD"
+      },
+      {
+        "id": 2,
+        "name": "HandleAction_Switch",
+        "retail_thumb_pointer": "0x080148C9",
+        "debug_thumb_pointer": "0x08017951"
+      },
+      {
+        "id": 3,
+        "name": "HandleAction_Run",
+        "retail_thumb_pointer": "0x08014DC9",
+        "debug_thumb_pointer": "0x08017E51"
+      },
+      {
+        "id": 4,
+        "name": "HandleAction_WatchesCarefully",
+        "retail_thumb_pointer": "0x08014F25",
+        "debug_thumb_pointer": "0x08017FAD"
+      },
+      {
+        "id": 5,
+        "name": "HandleAction_SafariZoneBallThrow",
+        "retail_thumb_pointer": "0x08014F6D",
+        "debug_thumb_pointer": "0x08017FF5"
+      },
+      {
+        "id": 6,
+        "name": "HandleAction_ThrowPokeblock",
+        "retail_thumb_pointer": "0x08014FCD",
+        "debug_thumb_pointer": "0x08018055"
+      },
+      {
+        "id": 7,
+        "name": "HandleAction_GoNear",
+        "retail_thumb_pointer": "0x08015091",
+        "debug_thumb_pointer": "0x08018119"
+      },
+      {
+        "id": 8,
+        "name": "HandleAction_SafriZoneRun",
+        "retail_thumb_pointer": "0x08015155",
+        "debug_thumb_pointer": "0x080181DD"
+      },
+      {
+        "id": 9,
+        "name": "HandleAction_Action9",
+        "retail_thumb_pointer": "0x08015191",
+        "debug_thumb_pointer": "0x08018219"
+      },
+      {
+        "id": 10,
+        "name": "battle_util external action",
+        "retail_thumb_pointer": "0x0801B769",
+        "debug_thumb_pointer": "0x0801ECBD"
+      },
+      {
+        "id": 11,
+        "name": "HandleAction_Action11",
+        "retail_thumb_pointer": "0x08015209",
+        "debug_thumb_pointer": "0x08018291"
+      },
+      {
+        "id": 12,
+        "name": "HandleAction_ActionFinished",
+        "retail_thumb_pointer": "0x08015269",
+        "debug_thumb_pointer": "0x080182F1"
+      },
+      {
+        "id": 13,
+        "name": "HandleAction_NothingIsFainted",
+        "retail_thumb_pointer": "0x08015235",
+        "debug_thumb_pointer": "0x080182BD"
+      }
+    ]
+  },
+  "outcome_table": {
+    "retail_address": "0x08207648",
+    "debug_address": "0x082207E0",
+    "entries": 9,
+    "mapping": [
+      {
+        "id": 0,
+        "name": "BattleTurnPassed",
+        "retail_thumb_pointer": "0x08011F9D",
+        "debug_thumb_pointer": "0x08015025"
+      },
+      {
+        "id": 1,
+        "name": "HandleEndTurn_BattleWon",
+        "retail_thumb_pointer": "0x08013B6D",
+        "debug_thumb_pointer": "0x08016BF5"
+      },
+      {
+        "id": 2,
+        "name": "HandleEndTurn_BattleLost",
+        "retail_thumb_pointer": "0x08013D39",
+        "debug_thumb_pointer": "0x08016DC1"
+      },
+      {
+        "id": 3,
+        "name": "HandleEndTurn_BattleLost",
+        "retail_thumb_pointer": "0x08013D39",
+        "debug_thumb_pointer": "0x08016DC1"
+      },
+      {
+        "id": 4,
+        "name": "HandleEndTurn_RanFromBattle",
+        "retail_thumb_pointer": "0x08013DB1",
+        "debug_thumb_pointer": "0x08016E39"
+      },
+      {
+        "id": 5,
+        "name": "HandleEndTurn_FinishBattle",
+        "retail_thumb_pointer": "0x08013E71",
+        "debug_thumb_pointer": "0x08016EF9"
+      },
+      {
+        "id": 6,
+        "name": "HandleEndTurn_MonFled",
+        "retail_thumb_pointer": "0x08013E1D",
+        "debug_thumb_pointer": "0x08016EA5"
+      },
+      {
+        "id": 7,
+        "name": "HandleEndTurn_FinishBattle",
+        "retail_thumb_pointer": "0x08013E71",
+        "debug_thumb_pointer": "0x08016EF9"
+      },
+      {
+        "id": 8,
+        "name": "HandleEndTurn_FinishBattle",
+        "retail_thumb_pointer": "0x08013E71",
+        "debug_thumb_pointer": "0x08016EF9"
+      }
+    ]
+  },
+  "complete_battle_main": {
+    "retail": {
+      "start": "0x0800E998",
+      "end_exclusive": "0x08015324",
+      "size": 27020,
+      "sha256": "8e23208aa7693b31725b31dffa051c7808b82351ab40c591be8c41c746fd387b",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x0800EC0C",
+      "end_exclusive": "0x080183AC",
+      "size": 38816,
+      "sha256": "db5388b194b192cfe68ef6ddf3b01638c19a938ed1b687acdbf707400532ebf5"
+    },
+    "debug_extra_bytes": 11796
+  },
+  "next_module": {
+    "name": "battle_util",
+    "retail_start": "0x08015324",
+    "debug_start": "0x080183AC"
+  }
+}
