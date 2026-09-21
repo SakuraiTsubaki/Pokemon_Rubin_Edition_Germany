@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_animation_hp_effect_core",
+  "retail": {
+    "start": "0x0801DAC0",
+    "end_exclusive": "0x0801F8EC",
+    "size": 7724,
+    "sha256": "c9edbc870e2acc0fb4c6301449f7693bc9058bcfd031262b061b944d8c320219",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08021038",
+    "end_exclusive": "0x08022E90",
+    "size": 7768,
+    "sha256": "d8e52c1c94d505e86f098244b379902377f947162e8406df6da98b3b5a714654"
+  },
+  "functions": [
+    {
+      "name": "atk09_attackanimation",
+      "retail": "0x0801DAC0",
+      "debug": "0x08021038",
+      "retail_size": 372,
+      "debug_size": 372,
+      "role": "emit move animation / pause fallback"
+    },
+    {
+      "name": "atk0A_waitanimation",
+      "retail": "0x0801DC34",
+      "debug": "0x080211AC",
+      "retail_size": 32,
+      "debug_size": 32,
+      "role": "wait until controller animation work completes"
+    },
+    {
+      "name": "atk0B_healthbarupdate",
+      "retail": "0x0801DC54",
+      "debug": "0x080211CC",
+      "retail_size": 204,
+      "debug_size": 204,
+      "role": "emit visual HP-bar delta"
+    },
+    {
+      "name": "atk0C_datahpupdate",
+      "retail": "0x0801DD20",
+      "debug": "0x08021298",
+      "retail_size": 1020,
+      "debug_size": 1020,
+      "role": "apply real HP/substitute damage and synchronize HP"
+    },
+    {
+      "name": "atk0D_critmessage",
+      "retail": "0x0801E11C",
+      "debug": "0x08021694",
+      "retail_size": 84,
+      "debug_size": 84,
+      "role": "emit critical-hit message"
+    },
+    {
+      "name": "atk0E_effectivenesssound",
+      "retail": "0x0801E170",
+      "debug": "0x080216E8",
+      "retail_size": 208,
+      "debug_size": 208,
+      "role": "emit super/not-very/normal effectiveness sound"
+    },
+    {
+      "name": "atk0F_resultmessage",
+      "retail": "0x0801E240",
+      "debug": "0x080217B8",
+      "retail_size": 432,
+      "debug_size": 432,
+      "role": "select miss/effectiveness/OHKO/endure/failure message path"
+    },
+    {
+      "name": "atk10_printstring",
+      "retail": "0x0801E3F0",
+      "debug": "0x08021968",
+      "retail_size": 64,
+      "debug_size": 64,
+      "role": "print explicit string ID"
+    },
+    {
+      "name": "atk11_printselectionstring",
+      "retail": "0x0801E430",
+      "debug": "0x080219A8",
+      "retail_size": 68,
+      "debug_size": 68,
+      "role": "print selection string through controller"
+    },
+    {
+      "name": "atk12_waitmessage",
+      "retail": "0x0801E474",
+      "debug": "0x080219EC",
+      "retail_size": 92,
+      "debug_size": 92,
+      "role": "wait configured frame count for active message"
+    },
+    {
+      "name": "atk13_printfromtable",
+      "retail": "0x0801E4D0",
+      "debug": "0x08021A48",
+      "retail_size": 84,
+      "debug_size": 84,
+      "role": "print string selected from pointer table / multichooser"
+    },
+    {
+      "name": "atk14_printselectionstringfromtable",
+      "retail": "0x0801E524",
+      "debug": "0x08021A9C",
+      "retail_size": 100,
+      "debug_size": 100,
+      "role": "selection-string table variant"
+    },
+    {
+      "name": "GetBattlerTurnOrderNum",
+      "retail": "0x0801E588",
+      "debug": "0x08021B00",
+      "retail_size": 56,
+      "debug_size": 56,
+      "role": "map battler ID to current turn-order index"
+    },
+    {
+      "name": "SetMoveEffect",
+      "retail": "0x0801E5C0",
+      "debug": "0x08021B38",
+      "retail_size": 4648,
+      "debug_size": 4648,
+      "role": "central move-effect/status/stat/item/recoil dispatcher"
+    },
+    {
+      "name": "atk15_seteffectwithchance",
+      "retail": "0x0801F7E8",
+      "debug": "0x08022D60",
+      "retail_size": 244,
+      "debug_size": 288,
+      "role": "secondary-effect chance dispatcher; Debug can force eligible secondary effects"
+    },
+    {
+      "name": "atk16_seteffectprimary",
+      "retail": "0x0801F8DC",
+      "debug": "0x08022E80",
+      "retail_size": 16,
+      "debug_size": 16,
+      "role": "apply move effect as primary/certain path"
+    }
+  ],
+  "debug_growth": {
+    "opcode": "0x15",
+    "function": "atk15_seteffectwithchance",
+    "extra_bytes": 44,
+    "delta_before": "+0x3578",
+    "delta_after": "+0x35A4",
+    "control_bit": "0x04"
+  },
+  "compatibility_pressure_points": {
+    "physical_special_split": "type-based",
+    "move_id_bits": 16,
+    "hp_bits": 16,
+    "string_id_bits": 16,
+    "move_effect_dispatcher_bytes": 4648
+  },
+  "next": {
+    "opcode": "0x17",
+    "function": "atk17_seteffectsecondary",
+    "retail": "0x0801F8EC",
+    "debug": "0x08022E90",
+    "delta": "+0x35A4"
+  }
+}
