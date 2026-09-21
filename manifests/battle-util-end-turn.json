@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "module": "battle_util_end_turn_cancel",
+  "retail": {
+    "start": "0x08015FD0",
+    "end_exclusive": "0x080184F8",
+    "size": 9512,
+    "sha256": "f60d0efa94a631b184c9fe1b08ecd9a71752f648499ccb892a0efa7b7abc82fa",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08019058",
+    "end_exclusive": "0x0801B580",
+    "size": 9512,
+    "sha256": "5f92f831ecff7a256b50e990ba2f6e78dbcbd89a7d7b9700de8ed45c0b80da45",
+    "retail_address_delta": "+0x3088"
+  },
+  "functions": [
+    {
+      "name": "DoFieldEndTurnEffects",
+      "retail": "0x08015FD0",
+      "debug": "0x08019058",
+      "size": 1884,
+      "role": "field/side end-turn state machine for screens, Mist, Safeguard, Wish and weather"
+    },
+    {
+      "name": "TurnBasedEffects",
+      "retail": "0x0801672C",
+      "debug": "0x080197B4",
+      "size": 2948,
+      "role": "per-battler end-turn state machine for abilities, items, Leech Seed, poison, burn, Curse, Wrap and related effects"
+    },
+    {
+      "name": "HandleWishPerishSongOnTurnEnd",
+      "retail": "0x080172B0",
+      "debug": "0x0801A338",
+      "size": 712,
+      "role": "Future Sight/Doom Desire and Perish Song end-turn processing"
+    },
+    {
+      "name": "HandleFaintedMonActions",
+      "retail": "0x08017578",
+      "debug": "0x0801A600",
+      "size": 804,
+      "role": "experience, faint scripts, absence flags, abilities/items after fainting"
+    },
+    {
+      "name": "TryClearRageStatuses",
+      "retail": "0x0801789C",
+      "debug": "0x0801A924",
+      "size": 80,
+      "role": "clear Rage when a battler no longer selected Rage"
+    },
+    {
+      "name": "AtkCanceller_UnableToUseMove",
+      "retail": "0x080178EC",
+      "debug": "0x0801A974",
+      "size": 2304,
+      "role": "14-stage pre-move inability/cancellation state machine"
+    },
+    {
+      "name": "sub_8018018",
+      "retail": "0x080181EC",
+      "debug": "0x0801B274",
+      "size": 416,
+      "role": "party/battler availability helper used by fainted-mon processing"
+    },
+    {
+      "name": "CastformDataTypeChange",
+      "retail": "0x0801838C",
+      "debug": "0x0801B414",
+      "size": 364,
+      "role": "Forecast weather-driven Castform type/form selection"
+    }
+  ],
+  "original_state_counts": {
+    "field_end_turn_cases": 10,
+    "fainted_action_states": 8,
+    "attack_canceller_stages": 14,
+    "battle_sides": 2
+  },
+  "castform_weather_forms": [
+    "NORMAL",
+    "FIRE",
+    "WATER",
+    "ICE"
+  ],
+  "next": {
+    "function": "AbilityBattleEffects",
+    "retail": "0x080184F8",
+    "debug": "0x0801B580"
+  }
+}
