@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_final_and_complete",
+  "final_slice": {
+    "retail": {
+      "start": "0x0802AE54",
+      "end_exclusive": "0x0802C144",
+      "size": 4848,
+      "sha256": "5f0c2a052fc9513f290c5cd3988c9468509211815bd88cd29d0ddaf3e884ead5",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x0802E4B8",
+      "end_exclusive": "0x0802F7A8",
+      "size": 4848,
+      "sha256": "80a072aa0e859189edb0bf58407561412377dd7b941581a8621ddd1037581d0a",
+      "retail_address_delta": "+0x3664"
+    }
+  },
+  "commands": [
+    {
+      "opcode": "0xE0",
+      "name": "atkE0_trysetsnatch",
+      "retail": "0x0802AE54",
+      "debug": "0x0802E4B8",
+      "span_to_next_entry": 124,
+      "role": "set Snatch interception state when turn ordering permits"
+    },
+    {
+      "opcode": "0xE1",
+      "name": "atkE1_trygetintimidatetarget",
+      "retail": "0x0802AED0",
+      "debug": "0x0802E534",
+      "span_to_next_entry": 220,
+      "role": "find next valid opposing Intimidate target"
+    },
+    {
+      "opcode": "0xE2",
+      "name": "atkE2_switchoutabilities",
+      "retail": "0x0802AFAC",
+      "debug": "0x0802E610",
+      "span_to_next_entry": 132,
+      "role": "run switch-out ability behavior such as Natural Cure"
+    },
+    {
+      "opcode": "0xE3",
+      "name": "atkE3_jumpifhasnohp",
+      "retail": "0x0802B030",
+      "debug": "0x0802E694",
+      "span_to_next_entry": 84,
+      "role": "branch if selected battler has zero HP"
+    },
+    {
+      "opcode": "0xE4",
+      "name": "atkE4_getsecretpowereffect",
+      "retail": "0x0802B084",
+      "debug": "0x0802E6E8",
+      "span_to_next_entry": 184,
+      "role": "map battle environment to Secret Power effect"
+    },
+    {
+      "opcode": "0xE5",
+      "name": "atkE5_pickup",
+      "retail": "0x0802B13C",
+      "debug": "0x0802E7A0",
+      "span_to_next_entry": 236,
+      "role": "scan six-player party for Pickup item generation"
+    },
+    {
+      "opcode": "0xE6",
+      "name": "atkE6_docastformchangeanimation",
+      "retail": "0x0802B228",
+      "debug": "0x0802E88C",
+      "span_to_next_entry": 108,
+      "role": "emit Castform form-change animation"
+    },
+    {
+      "opcode": "0xE7",
+      "name": "atkE7_trycastformdatachange",
+      "retail": "0x0802B294",
+      "debug": "0x0802E8F8",
+      "span_to_next_entry": 72,
+      "role": "run Forecast/Castform data change and callback script"
+    },
+    {
+      "opcode": "0xE8",
+      "name": "atkE8_settypebasedhalvers",
+      "retail": "0x0802B2DC",
+      "debug": "0x0802E940",
+      "span_to_next_entry": 184,
+      "role": "set Mud Sport or Water Sport status"
+    },
+    {
+      "opcode": "0xE9",
+      "name": "atkE9_setweatherballtype",
+      "retail": "0x0802B394",
+      "debug": "0x0802E9F8",
+      "span_to_next_entry": 204,
+      "role": "Weather Ball type selection and 2x weather multiplier"
+    },
+    {
+      "opcode": "0xEA",
+      "name": "atkEA_tryrecycleitem",
+      "retail": "0x0802B460",
+      "debug": "0x0802EAC4",
+      "span_to_next_entry": 164,
+      "role": "restore previously consumed held item"
+    },
+    {
+      "opcode": "0xEB",
+      "name": "atkEB_settypetoenvironment",
+      "retail": "0x0802B504",
+      "debug": "0x0802EB68",
+      "span_to_next_entry": 176,
+      "role": "Camouflage type assignment from battle environment"
+    },
+    {
+      "opcode": "0xEC",
+      "name": "atkEC_pursuitrelated",
+      "retail": "0x0802B5B4",
+      "debug": "0x0802EC18",
+      "span_to_next_entry": 212,
+      "role": "double-battle Pursuit interception setup"
+    },
+    {
+      "opcode": "0xED",
+      "name": "atkEF_snatchsetbattlers",
+      "retail": "0x0802B688",
+      "debug": "0x0802ECEC",
+      "span_to_next_entry": 104,
+      "role": "rotate attacker/target/scripting battler for Snatch"
+    },
+    {
+      "opcode": "0xEE",
+      "name": "atkEE_removelightscreenreflect",
+      "retail": "0x0802B6F0",
+      "debug": "0x0802ED54",
+      "span_to_next_entry": 156,
+      "role": "Brick Break removal of Reflect and Light Screen"
+    },
+    {
+      "opcode": "0xEF",
+      "name": "atkEF_handleballthrow",
+      "retail": "0x0802B78C",
+      "debug": "0x0802EDF0",
+      "span_to_next_entry": 936,
+      "role": "Poké Ball catch-rate, ball-bonus and shake calculation"
+    },
+    {
+      "opcode": "0xF0",
+      "name": "atkF0_givecaughtmon",
+      "retail": "0x0802BB34",
+      "debug": "0x0802F198",
+      "span_to_next_entry": 128,
+      "role": "give caught Pokémon to player and record battle result"
+    },
+    {
+      "opcode": "0xF1",
+      "name": "atkF1_trysetcaughtmondexflags",
+      "retail": "0x0802BBB4",
+      "debug": "0x0802F218",
+      "span_to_next_entry": 176,
+      "role": "set Pokédex caught flags and Unown/Spinda personalities"
+    },
+    {
+      "opcode": "0xF2",
+      "name": "atkF2_displaydexinfo",
+      "retail": "0x0802BC64",
+      "debug": "0x0802F2C8",
+      "span_to_next_entry": 512,
+      "role": "caught-Pokémon Pokédex display; span includes three UI helpers"
+    },
+    {
+      "opcode": "0xF3",
+      "name": "atkF3_trygivecaughtmonnick",
+      "retail": "0x0802BE64",
+      "debug": "0x0802F4C8",
+      "span_to_next_entry": 608,
+      "role": "caught-Pokémon nickname yes/no/naming-screen state machine"
+    },
+    {
+      "opcode": "0xF4",
+      "name": "atkF4_subattackerhpbydmg",
+      "retail": "0x0802C0C4",
+      "debug": "0x0802F728",
+      "span_to_next_entry": 48,
+      "role": "subtract current battle damage from attacker HP"
+    },
+    {
+      "opcode": "0xF5",
+      "name": "atkF5_removeattackerstatus1",
+      "retail": "0x0802C0F4",
+      "debug": "0x0802F758",
+      "span_to_next_entry": 40,
+      "role": "clear attacker primary status"
+    },
+    {
+      "opcode": "0xF6",
+      "name": "atkF6_finishaction",
+      "retail": "0x0802C11C",
+      "debug": "0x0802F780",
+      "span_to_next_entry": 12,
+      "role": "set action function to ActionFinished"
+    },
+    {
+      "opcode": "0xF7",
+      "name": "atkF7_finishturn",
+      "retail": "0x0802C128",
+      "debug": "0x0802F78C",
+      "span_to_next_entry": 28,
+      "role": "finish current action and force turn-action index to battler count"
+    }
+  ],
+  "helpers": [
+    {
+      "name": "sub_802BBD4",
+      "retail": "0x0802BDA8",
+      "debug": "0x0802F40C",
+      "size": 152,
+      "role": "draw/clear rectangular battle UI frame tiles"
+    },
+    {
+      "name": "sub_802BC6C",
+      "retail": "0x0802BE40",
+      "debug": "0x0802F4A4",
+      "size": 32,
+      "role": "position yes/no menu cursor"
+    },
+    {
+      "name": "nullsub_6",
+      "retail": "0x0802BE60",
+      "debug": "0x0802F4C4",
+      "size": 4,
+      "role": "empty UI callback"
+    }
+  ],
+  "complete_module": {
+    "opcode_count": 248,
+    "opcode_min": "0x00",
+    "opcode_max": "0xF7",
+    "retail": {
+      "start": "0x0801BE24",
+      "end_exclusive": "0x0802C144",
+      "size": 66336,
+      "sha256": "7cda4dc84fef6029645fb5fe6a6eceb05b02e582cf888663c2def8a4d42a6864",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x0801F39C",
+      "end_exclusive": "0x0802F7A8",
+      "size": 66572,
+      "sha256": "5938e9fa8bcfd0bf0ec3836249dc89afb2d2943188595188e98122da2ce763fe"
+    },
+    "debug_extra_bytes": 236,
+    "debug_extra_breakdown": [
+      {
+        "opcode": "0x15",
+        "bytes": 44
+      },
+      {
+        "opcode": "0x9E",
+        "bytes": 192
+      }
+    ]
+  },
+  "next_module": {
+    "name": "battle_controller_player",
+    "first_function": "BattleControllerDummy",
+    "retail_start": "0x0802C144",
+    "debug_start": "0x0802F7A8",
+    "delta": "+0x3664"
+  }
+}

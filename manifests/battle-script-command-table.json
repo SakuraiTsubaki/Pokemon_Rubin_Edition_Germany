@@ -1360,5 +1360,28 @@
       "sha256": "a9bf3e2e2cee14e7d9f016fb6cce568c52fa265f21136ff3eeed153157c86df7"
     },
     "coverage": "atk00 through atk16, exclusive of atk17"
+  },
+  "complete_module": {
+    "retail": {
+      "start": "0x0801BE24",
+      "end_exclusive": "0x0802C144",
+      "size": 66336,
+      "sha256": "7cda4dc84fef6029645fb5fe6a6eceb05b02e582cf888663c2def8a4d42a6864",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x0801F39C",
+      "end_exclusive": "0x0802F7A8",
+      "size": 66572,
+      "sha256": "5938e9fa8bcfd0bf0ec3836249dc89afb2d2943188595188e98122da2ce763fe"
+    },
+    "debug_extra_bytes": 236,
+    "status": "all 248 opcodes mapped"
+  },
+  "next_module": {
+    "name": "battle_controller_player",
+    "retail_start": "0x0802C144",
+    "debug_start": "0x0802F7A8",
+    "delta": "+0x3664"
   }
 }
