@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_vm_control_moveend",
+  "retail": {
+    "start": "0x08021164",
+    "end_exclusive": "0x080224B0",
+    "size": 4940,
+    "sha256": "eafda36717d95918b2233c1b582886630954e30ed4a235c4102ceb0eee044ecf",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08024708",
+    "end_exclusive": "0x08025A54",
+    "size": 4940,
+    "sha256": "0a4a16537389dd12cf1f96241506ef8906b6ab8663297fa126972bd03157a7b6",
+    "retail_address_delta": "+0x35A4"
+  },
+  "commands": [
+    {
+      "opcode": "0x30",
+      "name": "atk30_subbyte",
+      "retail": "0x08021164",
+      "debug": "0x08024708",
+      "size": 44,
+      "role": "subtract immediate byte through script pointer"
+    },
+    {
+      "opcode": "0x31",
+      "name": "atk31_copyarray",
+      "retail": "0x08021190",
+      "debug": "0x08024734",
+      "size": 84,
+      "role": "copy byte array from source pointer"
+    },
+    {
+      "opcode": "0x32",
+      "name": "atk32_copyarraywithindex",
+      "retail": "0x080211E4",
+      "debug": "0x08024788",
+      "size": 108,
+      "role": "copy byte array with pointer-provided source index"
+    },
+    {
+      "opcode": "0x33",
+      "name": "atk33_orbyte",
+      "retail": "0x08021250",
+      "debug": "0x080247F4",
+      "size": 44,
+      "role": "OR immediate byte into pointed memory"
+    },
+    {
+      "opcode": "0x34",
+      "name": "atk34_orhalfword",
+      "retail": "0x0802127C",
+      "debug": "0x08024820",
+      "size": 56,
+      "role": "OR immediate 16-bit value"
+    },
+    {
+      "opcode": "0x35",
+      "name": "atk35_orword",
+      "retail": "0x080212B4",
+      "debug": "0x08024858",
+      "size": 68,
+      "role": "OR immediate 32-bit value"
+    },
+    {
+      "opcode": "0x36",
+      "name": "atk36_bicbyte",
+      "retail": "0x080212F8",
+      "debug": "0x0802489C",
+      "size": 44,
+      "role": "clear immediate byte bits"
+    },
+    {
+      "opcode": "0x37",
+      "name": "atk37_bichalfword",
+      "retail": "0x08021324",
+      "debug": "0x080248C8",
+      "size": 56,
+      "role": "clear 16-bit bits"
+    },
+    {
+      "opcode": "0x38",
+      "name": "atk38_bicword",
+      "retail": "0x0802135C",
+      "debug": "0x08024900",
+      "size": 68,
+      "role": "clear 32-bit bits"
+    },
+    {
+      "opcode": "0x39",
+      "name": "atk39_pause",
+      "retail": "0x080213A0",
+      "debug": "0x08024944",
+      "size": 64,
+      "role": "wait a script-provided frame count"
+    },
+    {
+      "opcode": "0x3A",
+      "name": "atk3A_waitstate",
+      "retail": "0x080213E0",
+      "debug": "0x08024984",
+      "size": 32,
+      "role": "wait until controller flags are idle"
+    },
+    {
+      "opcode": "0x3B",
+      "name": "atk3B_healthbar_update",
+      "retail": "0x08021400",
+      "debug": "0x080249A4",
+      "size": 88,
+      "role": "emit HP-bar update for attacker or target"
+    },
+    {
+      "opcode": "0x3C",
+      "name": "atk3C_return",
+      "retail": "0x08021458",
+      "debug": "0x080249FC",
+      "size": 12,
+      "role": "pop battle-script cursor"
+    },
+    {
+      "opcode": "0x3D",
+      "name": "atk3D_end",
+      "retail": "0x08021464",
+      "debug": "0x08024A08",
+      "size": 32,
+      "role": "end script action and clear move result"
+    },
+    {
+      "opcode": "0x3E",
+      "name": "atk3E_end2",
+      "retail": "0x08021484",
+      "debug": "0x08024A28",
+      "size": 24,
+      "role": "end script action without clearing move result"
+    },
+    {
+      "opcode": "0x3F",
+      "name": "atk3F_end3",
+      "retail": "0x0802149C",
+      "debug": "0x08024A40",
+      "size": 48,
+      "role": "pop battle script and battle-main function stack"
+    },
+    {
+      "opcode": "0x41",
+      "name": "atk41_call",
+      "retail": "0x080214CC",
+      "debug": "0x08024A70",
+      "size": 48,
+      "role": "call battle-script pointer while pushing return cursor"
+    },
+    {
+      "opcode": "0x42",
+      "name": "atk42_jumpiftype2",
+      "retail": "0x080214FC",
+      "debug": "0x08024AA0",
+      "size": 92,
+      "role": "conditional type jump variant"
+    },
+    {
+      "opcode": "0x43",
+      "name": "atk43_jumpifabilitypresent",
+      "retail": "0x08021558",
+      "debug": "0x08024AFC",
+      "size": 76,
+      "role": "branch if ability exists anywhere on field"
+    },
+    {
+      "opcode": "0x44",
+      "name": "atk44_endselectionscript",
+      "retail": "0x080215A4",
+      "debug": "0x08024B48",
+      "size": 32,
+      "role": "mark attacker selection script finished"
+    },
+    {
+      "opcode": "0x45",
+      "name": "atk45_playanimation",
+      "retail": "0x080215C4",
+      "debug": "0x08024B68",
+      "size": 196,
+      "role": "emit explicit battle animation"
+    },
+    {
+      "opcode": "0x46",
+      "name": "atk46_playanimation2",
+      "retail": "0x08021688",
+      "debug": "0x08024C2C",
+      "size": 204,
+      "role": "animation ID and argument loaded indirectly"
+    },
+    {
+      "opcode": "0x47",
+      "name": "atk47_setgraphicalstatchangevalues",
+      "retail": "0x08021754",
+      "debug": "0x08024CF8",
+      "size": 124,
+      "role": "translate stat-change descriptor to animation args"
+    },
+    {
+      "opcode": "0x48",
+      "name": "atk48_playstatchangeanimation",
+      "retail": "0x080217D0",
+      "debug": "0x08024D74",
+      "size": 508,
+      "role": "validate stat changes and emit appropriate stat animation"
+    },
+    {
+      "opcode": "0x49",
+      "name": "atk49_moveend",
+      "retail": "0x080219CC",
+      "debug": "0x08024F70",
+      "size": 2788,
+      "role": "17-stage end-of-move cleanup/effect state machine"
+    }
+  ],
+  "out_of_order_opcode_0x40": {
+    "function": "atk40_jumpifaffectedbyprotect",
+    "retail": "0x0801C26C",
+    "debug": "0x0801F7E4",
+    "delta": "+0x3578"
+  },
+  "moveend": {
+    "opcode": "0x49",
+    "states": [
+      {
+        "id": 0,
+        "name": "RAGE"
+      },
+      {
+        "id": 1,
+        "name": "DEFROST"
+      },
+      {
+        "id": 2,
+        "name": "SYNCHRONIZE_TARGET"
+      },
+      {
+        "id": 3,
+        "name": "MOVE_END_ABILITIES"
+      },
+      {
+        "id": 4,
+        "name": "STATUS_IMMUNITY_ABILITIES"
+      },
+      {
+        "id": 5,
+        "name": "SYNCHRONIZE_ATTACKER"
+      },
+      {
+        "id": 6,
+        "name": "CHOICE_MOVE"
+      },
+      {
+        "id": 7,
+        "name": "CHANGED_ITEMS"
+      },
+      {
+        "id": 8,
+        "name": "ATTACKER_INVISIBLE"
+      },
+      {
+        "id": 9,
+        "name": "ATTACKER_VISIBLE"
+      },
+      {
+        "id": 10,
+        "name": "TARGET_VISIBLE"
+      },
+      {
+        "id": 11,
+        "name": "ITEM_EFFECTS_ALL"
+      },
+      {
+        "id": 12,
+        "name": "KINGSROCK_SHELLBELL"
+      },
+      {
+        "id": 13,
+        "name": "SUBSTITUTE"
+      },
+      {
+        "id": 14,
+        "name": "UPDATE_LAST_MOVES"
+      },
+      {
+        "id": 15,
+        "name": "MIRROR_MOVE"
+      },
+      {
+        "id": 16,
+        "name": "NEXT_TARGET"
+      }
+    ],
+    "state_count": 17,
+    "code_size": 2788
+  },
+  "next": {
+    "opcode": "0x4A",
+    "function": "atk4A_typecalc2",
+    "retail": "0x080224B0",
+    "debug": "0x08025A54",
+    "delta": "+0x35A4"
+  }
+}
