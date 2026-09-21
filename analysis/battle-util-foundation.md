@@ -75,7 +75,7 @@ IsImprisoned walks opposing active battlers and compares the requested 16-bit mo
 
 ## Action-table cross-module edge
 
-The previously mapped battle action table's action ID 10 points into battle_util at Retail 0x0801B768 / Debug 0x0801ECBC (Thumb pointers 0x0801B769 / 0x0801ECBD). That handler lies later in this module and remains an explicit target for the next battle_util passes.
+The previously mapped battle action table's action ID 10 points into battle_util at Retail 0x0801B768 / Debug 0x0801ECBC (Thumb pointers 0x0801B769 / 0x0801ECBD). That handler is now resolved as sub_801B594, a 44-byte battle-script execution action.
 
 ## Next function
 

@@ -55,12 +55,12 @@ The original battle action table is present directly in the German ROMs.
 | 7 | HandleAction_GoNear | 0x08015091 | 0x08018119 |
 | 8 | HandleAction_SafriZoneRun | 0x08015155 | 0x080181DD |
 | 9 | HandleAction_Action9 | 0x08015191 | 0x08018219 |
-| 10 | battle_util external action | 0x0801B769 | 0x0801ECBD |
+| 10 | sub_801B594 (battle script action) | 0x0801B769 | 0x0801ECBD |
 | 11 | HandleAction_Action11 | 0x08015209 | 0x08018291 |
 | 12 | HandleAction_ActionFinished | 0x08015269 | 0x080182F1 |
 | 13 | HandleAction_NothingIsFainted | 0x08015235 | 0x080182BD |
 
-Action ID 10 points outside battle_main into the following battle_util module. That cross-module action is preserved as an explicit external edge.
+Action ID 10 points into battle_util and is now resolved as sub_801B594: a 44-byte handler that executes the current battle-script opcode when controller execution flags are idle.
 
 ## Outcome dispatch table
 

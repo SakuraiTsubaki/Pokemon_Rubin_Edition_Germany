@@ -186,9 +186,10 @@
       },
       {
         "id": 10,
-        "name": "battle_util external action",
+        "name": "sub_801B594",
         "retail_thumb_pointer": "0x0801B769",
-        "debug_thumb_pointer": "0x0801ECBD"
+        "debug_thumb_pointer": "0x0801ECBD",
+        "role": "battle script action; execute current opcode when controllers are idle"
       },
       {
         "id": 11,
@@ -208,7 +209,14 @@
         "retail_thumb_pointer": "0x08015235",
         "debug_thumb_pointer": "0x080182BD"
       }
-    ]
+    ],
+    "action_10_resolution": {
+      "status": "resolved",
+      "retail_entry": "0x0801B768",
+      "debug_entry": "0x0801ECBC",
+      "code_size": 44,
+      "module": "battle_util"
+    }
   },
   "outcome_table": {
     "retail_address": "0x08207648",

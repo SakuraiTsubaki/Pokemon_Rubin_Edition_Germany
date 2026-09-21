@@ -15,7 +15,7 @@ enum GermanBattleActionId
     GERMAN_B_ACTION_7 = 7, /* HandleAction_GoNear */
     GERMAN_B_ACTION_8 = 8, /* HandleAction_SafriZoneRun */
     GERMAN_B_ACTION_9 = 9, /* HandleAction_Action9 */
-    GERMAN_B_ACTION_10 = 10, /* battle_util external action */
+    GERMAN_B_ACTION_10 = 10, /* sub_801B594: battle script action */
     GERMAN_B_ACTION_11 = 11, /* HandleAction_Action11 */
     GERMAN_B_ACTION_12 = 12, /* HandleAction_ActionFinished */
     GERMAN_B_ACTION_13 = 13, /* HandleAction_NothingIsFainted */

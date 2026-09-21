@@ -169,7 +169,10 @@
     "retail_thumb_pointer": "0x0801B769",
     "debug_entry": "0x0801ECBC",
     "debug_thumb_pointer": "0x0801ECBD",
-    "status": "later battle_util target"
+    "status": "resolved",
+    "function": "sub_801B594",
+    "size": 44,
+    "behavior": "execute current battle-script opcode when controller execution flags are idle"
   },
   "next": {
     "function": "DoFieldEndTurnEffects",
