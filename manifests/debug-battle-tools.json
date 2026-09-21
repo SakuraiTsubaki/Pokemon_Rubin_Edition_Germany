@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "profile": "germany-debug",
+  "module": "battle_main_debug_tools",
+  "start": "0x08010800",
+  "end_exclusive": "0x080139E4",
+  "size": 12772,
+  "sha256": "d5fdce32b2fc20101163c1b9c30f47c7aae94fafc126096e996eaf0f96dd14df",
+  "anchored_functions": [
+    {
+      "name": "debug_sub_8010800",
+      "address": "0x08010800"
+    },
+    {
+      "name": "debug_sub_8010818",
+      "address": "0x08010818"
+    },
+    {
+      "name": "debug_sub_80108B8",
+      "address": "0x080108B8"
+    },
+    {
+      "name": "debug_sub_8010A7C",
+      "address": "0x08010A7C"
+    },
+    {
+      "name": "debug_sub_8010AAC",
+      "address": "0x08010AAC"
+    },
+    {
+      "name": "debug_sub_8010B80",
+      "address": "0x08010B80"
+    },
+    {
+      "name": "debug_sub_8010CAC",
+      "address": "0x08010CAC"
+    },
+    {
+      "name": "debug_sub_8011498",
+      "address": "0x08011498"
+    },
+    {
+      "name": "debug_sub_801174C",
+      "address": "0x0801174C"
+    },
+    {
+      "name": "debug_sub_8011D40",
+      "address": "0x08011D40"
+    },
+    {
+      "name": "debug_sub_8011E5C",
+      "address": "0x08011E5C"
+    },
+    {
+      "name": "debug_sub_8011E74",
+      "address": "0x08011E74"
+    },
+    {
+      "name": "debug_sub_8011EA0",
+      "address": "0x08011EA0"
+    },
+    {
+      "name": "debug_sub_8012294",
+      "address": "0x08012294"
+    },
+    {
+      "name": "debug_sub_80123D8",
+      "address": "0x080123D8"
+    },
+    {
+      "name": "debug_sub_8012540",
+      "address": "0x08012540"
+    },
+    {
+      "name": "debug_sub_80125A0",
+      "address": "0x080125A0"
+    },
+    {
+      "name": "debug_sub_80125E4",
+      "address": "0x080125E4"
+    },
+    {
+      "name": "debug_sub_8012628",
+      "address": "0x08012628"
+    },
+    {
+      "name": "debug_sub_8012658",
+      "address": "0x08012658"
+    },
+    {
+      "name": "debug_sub_8012688",
+      "address": "0x08012688"
+    },
+    {
+      "name": "debug_sub_8012878",
+      "address": "0x08012878"
+    },
+    {
+      "name": "debug_sub_8012D10",
+      "address": "0x08012D10"
+    },
+    {
+      "name": "debug_sub_8013294",
+      "address": "0x08013294"
+    },
+    {
+      "name": "debug_sub_80132C8",
+      "address": "0x080132C8"
+    },
+    {
+      "name": "debug_sub_80138CC",
+      "address": "0x080138CC"
+    }
+  ],
+  "source_comparison_function_count": 60,
+  "rejoin": {
+    "retail_battle_main_cb1": "0x0801041C",
+    "debug_battle_main_cb1": "0x080139E4",
+    "accumulated_delta": "+0x35C8"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "module": "battle_main_link_multi_pre_debug",
+  "retail": {
+    "start": "0x0800F200",
+    "end_exclusive": "0x0801041C",
+    "size": 4636,
+    "sha256": "6c564beca2daeb1b71704d16c159a71520419be68c11695e6b08de8320b785d7",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0800F4C0",
+    "end_exclusive": "0x08010800",
+    "size": 4928,
+    "sha256": "5f60c59e24fd5de5f02b3e431b6f47be3b114693de098cfca3072f8f38f3c44e"
+  },
+  "functions": [
+    {
+      "name": "PrepareOwnMultiPartnerBuffer",
+      "retail": "0x0800F200",
+      "debug": "0x0800F4C0",
+      "retail_size": 216,
+      "debug_size": 216,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x2C0",
+      "role": "pack the local 3-Pokemon multi-battle partner summary"
+    },
+    {
+      "name": "sub_800F104",
+      "retail": "0x0800F2D8",
+      "debug": "0x0800F598",
+      "retail_size": 404,
+      "debug_size": 452,
+      "extra_debug_bytes": 48,
+      "debug_delta": "+0x2C0",
+      "role": "multi-battle party selection/link preparation callback"
+    },
+    {
+      "name": "CB2_HandleStartMultiBattle",
+      "retail": "0x0800F46C",
+      "debug": "0x0800F75C",
+      "retail_size": 1392,
+      "debug_size": 1436,
+      "extra_debug_bytes": 44,
+      "debug_delta": "+0x2F0",
+      "role": "four-player multi-battle startup and party exchange state machine"
+    },
+    {
+      "name": "BattleMainCB2",
+      "retail": "0x0800F9DC",
+      "debug": "0x0800FCF8",
+      "retail_size": 48,
+      "debug_size": 248,
+      "extra_debug_bytes": 200,
+      "debug_delta": "+0x31C",
+      "role": "per-frame battle graphics/tasks callback"
+    },
+    {
+      "name": "sub_800F828",
+      "retail": "0x0800FA0C",
+      "debug": "0x0800FDF0",
+      "retail_size": 16,
+      "debug_size": 16,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "initialize VS sprite movement callback"
+    },
+    {
+      "name": "sub_800F838",
+      "retail": "0x0800FA1C",
+      "debug": "0x0800FE00",
+      "retail_size": 160,
+      "debug_size": 160,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "VS sprite movement/transition state machine"
+    },
+    {
+      "name": "CreateNPCTrainerParty",
+      "retail": "0x0800FABC",
+      "debug": "0x0800FEA0",
+      "retail_size": 1004,
+      "debug_size": 1004,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "construct trainer party and apply items/custom moves"
+    },
+    {
+      "name": "sub_800FCD4",
+      "retail": "0x0800FEA8",
+      "debug": "0x0801028C",
+      "retail_size": 40,
+      "debug_size": 40,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "HBlank/VCount display helper"
+    },
+    {
+      "name": "sub_800FCFC",
+      "retail": "0x0800FED0",
+      "debug": "0x080102B4",
+      "retail_size": 176,
+      "debug_size": 176,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "battle VBlank callback"
+    },
+    {
+      "name": "nullsub_36",
+      "retail": "0x0800FF80",
+      "debug": "0x08010364",
+      "retail_size": 4,
+      "debug_size": 4,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "empty sprite callback"
+    },
+    {
+      "name": "sub_800FDB0",
+      "retail": "0x0800FF84",
+      "debug": "0x08010368",
+      "retail_size": 112,
+      "debug_size": 112,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "VS sprite affine/movement cleanup"
+    },
+    {
+      "name": "sub_800FE20",
+      "retail": "0x0800FFF4",
+      "debug": "0x080103D8",
+      "retail_size": 32,
+      "debug_size": 32,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "start VS sprite affine animation and sound"
+    },
+    {
+      "name": "sub_800FE40",
+      "retail": "0x08010014",
+      "debug": "0x080103F8",
+      "retail_size": 468,
+      "debug_size": 468,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "build two-bit party condition flags for link result screen"
+    },
+    {
+      "name": "c2_8011A1C",
+      "retail": "0x080101E8",
+      "debug": "0x080105CC",
+      "retail_size": 420,
+      "debug_size": 420,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "reinitialize battle-result/VS presentation scene"
+    },
+    {
+      "name": "sub_80101B8",
+      "retail": "0x0801038C",
+      "debug": "0x08010770",
+      "retail_size": 28,
+      "debug_size": 28,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "battle result scene frame callback"
+    },
+    {
+      "name": "c2_081284E0",
+      "retail": "0x080103A8",
+      "debug": "0x0801078C",
+      "retail_size": 116,
+      "debug_size": 116,
+      "extra_debug_bytes": 0,
+      "debug_delta": "+0x3E4",
+      "role": "battle-result fade-out state machine"
+    }
+  ],
+  "debug_growth": [
+    {
+      "function": "sub_800F104",
+      "extra_bytes": 48,
+      "delta_before": "+0x2C0",
+      "delta_after": "+0x2F0"
+    },
+    {
+      "function": "CB2_HandleStartMultiBattle",
+      "extra_bytes": 44,
+      "delta_before": "+0x2F0",
+      "delta_after": "+0x31C"
+    },
+    {
+      "function": "BattleMainCB2",
+      "extra_bytes": 200,
+      "delta_before": "+0x31C",
+      "delta_after": "+0x3E4"
+    }
+  ],
+  "next": {
+    "retail": {
+      "address": "0x0801041C",
+      "function": "BattleMainCB1"
+    },
+    "debug": {
+      "address": "0x08010800",
+      "function": "debug_sub_8010800"
+    }
+  }
+}
