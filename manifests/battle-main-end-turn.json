@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "module": "battle_main_end_turn_post_battle",
+  "retail": {
+    "start": "0x08013AC4",
+    "end_exclusive": "0x080141BC",
+    "size": 1784,
+    "sha256": "2067deeccc15b2bd4a056bd4c9d76a3d1b32edc3da4ef1e4ce3d81aa32bedaaa",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08016B4C",
+    "end_exclusive": "0x08017244",
+    "size": 1784,
+    "sha256": "270e1c3605cec26515a6c387b0c12ac89884a0f4654eaadc5ab86cce2e22f666",
+    "retail_address_delta": "+0x3088"
+  },
+  "functions": [
+    {
+      "name": "RunTurnActionsFunctions",
+      "retail": "0x08013AC4",
+      "debug": "0x08016B4C",
+      "size": 168,
+      "role": "dispatch current action function and select end-turn handler when all battlers have acted"
+    },
+    {
+      "name": "HandleEndTurn_BattleWon",
+      "retail": "0x08013B6C",
+      "debug": "0x08016BF4",
+      "size": 460,
+      "role": "select link/tower/trainer/wild victory script and victory music"
+    },
+    {
+      "name": "HandleEndTurn_BattleLost",
+      "retail": "0x08013D38",
+      "debug": "0x08016DC0",
+      "size": 120,
+      "role": "select link or local defeat script"
+    },
+    {
+      "name": "HandleEndTurn_RanFromBattle",
+      "retail": "0x08013DB0",
+      "debug": "0x08016E38",
+      "size": 108,
+      "role": "select normal/Smoke Ball/ability escape message script"
+    },
+    {
+      "name": "HandleEndTurn_MonFled",
+      "retail": "0x08013E1C",
+      "debug": "0x08016EA4",
+      "size": 84,
+      "role": "prepare fleeing wild Pokemon nickname and flee script"
+    },
+    {
+      "name": "HandleEndTurn_FinishBattle",
+      "retail": "0x08013E70",
+      "debug": "0x08016EF8",
+      "size": 268,
+      "role": "run final battle script or begin fade/music shutdown and post-battle transition"
+    },
+    {
+      "name": "FreeResetData_ReturnToOvOrDoEvolutions",
+      "retail": "0x08013F7C",
+      "debug": "0x08017004",
+      "size": 80,
+      "role": "reset sprite data after fade and select evolution processing or overworld return"
+    },
+    {
+      "name": "TryEvolvePokemon",
+      "retail": "0x08013FCC",
+      "debug": "0x08017054",
+      "size": 144,
+      "role": "scan six party bits and launch level-up evolution scenes"
+    },
+    {
+      "name": "WaitForEvoSceneToFinish",
+      "retail": "0x0801405C",
+      "debug": "0x080170E4",
+      "size": 40,
+      "role": "wait for evolution callback to return to BattleMainCB2"
+    },
+    {
+      "name": "ReturnFromBattleToOverworld",
+      "retail": "0x08014084",
+      "debug": "0x0801710C",
+      "size": 164,
+      "role": "Pokerus/roamer/result cleanup and restore saved overworld callback"
+    },
+    {
+      "name": "RunBattleScriptCommands_PopCallbacksStack",
+      "retail": "0x08014128",
+      "debug": "0x080171B0",
+      "size": 104,
+      "role": "resume stacked battle-main callback or run next script command"
+    },
+    {
+      "name": "RunBattleScriptCommands",
+      "retail": "0x08014190",
+      "debug": "0x08017218",
+      "size": 44,
+      "role": "run current battle script command when controllers are idle"
+    }
+  ],
+  "capacity_evidence": {
+    "evolution_party_bit_count": 6,
+    "outcome_table_index_mask": "0x7F"
+  },
+  "next": {
+    "function": "HandleAction_UseMove",
+    "retail": "0x080141BC",
+    "debug": "0x08017244",
+    "delta": "+0x3088"
+  }
+}
