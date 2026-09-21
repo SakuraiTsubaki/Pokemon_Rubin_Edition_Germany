@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "germany-retail-rev0": {
+      "game_code": "AXVD",
+      "software_version": 0,
+      "sha1": "1c2a53332382e14dab8815e3a6dd81ad89534050",
+      "c_define": "GERMAN_RUBY_REV0",
+      "role": "retail regression and exact reconstruction profile"
+    },
+    "germany-retail-rev1": {
+      "game_code": "AXVD",
+      "software_version": 1,
+      "sha1": "424740be1fc67a5ddb954794443646e6aeee2c1b",
+      "c_define": "GERMAN_RUBY_REV1",
+      "role": "primary retail decompilation profile"
+    },
+    "germany-debug": {
+      "game_code": "AXVD",
+      "software_version": 0,
+      "sha1": "ca5e3d415c4b47353a73a616878ba833f3648b7a",
+      "role": "independent debug/development reconstruction profile",
+      "note": "Do not assume retail addresses match."
+    }
+  }
+}
