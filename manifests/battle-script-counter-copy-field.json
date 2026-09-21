@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_counter_copy_field_rules",
+  "retail": {
+    "start": "0x08027B64",
+    "end_exclusive": "0x08029850",
+    "size": 7404,
+    "sha256": "6644ec154e3cd15bf0be45a27a6a3375dbb6b35228fb9c1d05ce3f15d1705065",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0802B1C8",
+    "end_exclusive": "0x0802CEB4",
+    "size": 7404,
+    "sha256": "0befa4b0c047905478c820e4da840fef77e821d441db7e2755cfabfaeadc67cc",
+    "retail_address_delta": "+0x3664"
+  },
+  "commands": [
+    {
+      "opcode": "0xA0",
+      "name": "atkA0_psywavedamageeffect",
+      "retail": "0x08027B64",
+      "debug": "0x0802B1C8",
+      "span_to_next_opcode": 84,
+      "role": "Psywave damage at 50-150% of attacker level"
+    },
+    {
+      "opcode": "0xA1",
+      "name": "atkA1_counterdamagecalculator",
+      "retail": "0x08027BB8",
+      "debug": "0x0802B21C",
+      "span_to_next_opcode": 248,
+      "role": "Counter: double recorded physical damage and choose source/follow-me target"
+    },
+    {
+      "opcode": "0xA2",
+      "name": "atkA2_mirrorcoatdamagecalculator",
+      "retail": "0x08027CB0",
+      "debug": "0x0802B314",
+      "span_to_next_opcode": 248,
+      "role": "Mirror Coat: double recorded special damage"
+    },
+    {
+      "opcode": "0xA3",
+      "name": "atkA3_disablelastusedattack",
+      "retail": "0x08027DA8",
+      "debug": "0x0802B40C",
+      "span_to_next_opcode": 324,
+      "role": "Disable last used move for random 2-5 turns"
+    },
+    {
+      "opcode": "0xA4",
+      "name": "atkA4_trysetencore",
+      "retail": "0x08027EEC",
+      "debug": "0x0802B550",
+      "span_to_next_opcode": 308,
+      "role": "Encore last move for random 3-6 turns"
+    },
+    {
+      "opcode": "0xA5",
+      "name": "atkA5_painsplitdmgcalc",
+      "retail": "0x08028020",
+      "debug": "0x0802B684",
+      "span_to_next_opcode": 248,
+      "role": "Pain Split average-HP delta calculation"
+    },
+    {
+      "opcode": "0xA6",
+      "name": "atkA6_settypetorandomresistance",
+      "retail": "0x08028118",
+      "debug": "0x0802B77C",
+      "span_to_next_opcode": 504,
+      "role": "Conversion 2: choose a resistance type from type chart"
+    },
+    {
+      "opcode": "0xA7",
+      "name": "atkA7_setalwayshitflag",
+      "retail": "0x08028310",
+      "debug": "0x0802B974",
+      "span_to_next_opcode": 88,
+      "role": "set sure-hit battler/status3 state"
+    },
+    {
+      "opcode": "0xA8",
+      "name": "atkA8_copymovepermanently",
+      "retail": "0x08028368",
+      "debug": "0x0802B9CC",
+      "span_to_next_opcode": 652,
+      "role": "Sketch permanent move copy; span includes two-turn/choice helpers"
+    },
+    {
+      "opcode": "0xA9",
+      "name": "atkA9_trychoosesleeptalkmove",
+      "retail": "0x080285F4",
+      "debug": "0x0802BC58",
+      "span_to_next_opcode": 312,
+      "role": "Sleep Talk choose one legal move from four slots"
+    },
+    {
+      "opcode": "0xAA",
+      "name": "atkAA_setdestinybond",
+      "retail": "0x0802872C",
+      "debug": "0x0802BD90",
+      "span_to_next_opcode": 144,
+      "role": "set Destiny Bond; span includes destiny-bond trigger helper"
+    },
+    {
+      "opcode": "0xAB",
+      "name": "atkAB_trysetdestinybondtohappen",
+      "retail": "0x080287BC",
+      "debug": "0x0802BE20",
+      "span_to_next_opcode": 24,
+      "role": "arm Destiny Bond hit marker when target qualifies"
+    },
+    {
+      "opcode": "0xAC",
+      "name": "atkAC_remaininghptopower",
+      "retail": "0x080287D4",
+      "debug": "0x0802BE38",
+      "span_to_next_opcode": 104,
+      "role": "Flail/Reversal dynamic power from scaled HP"
+    },
+    {
+      "opcode": "0xAD",
+      "name": "atkAD_tryspiteppreduce",
+      "retail": "0x0802883C",
+      "debug": "0x0802BEA0",
+      "span_to_next_opcode": 496,
+      "role": "Spite remove random 2-5 PP from target's last move"
+    },
+    {
+      "opcode": "0xAE",
+      "name": "atkAE_healpartystatus",
+      "retail": "0x08028A2C",
+      "debug": "0x0802C090",
+      "span_to_next_opcode": 636,
+      "role": "Heal Bell/Aromatherapy party status healing with Soundproof behavior"
+    },
+    {
+      "opcode": "0xAF",
+      "name": "atkAF_cursetarget",
+      "retail": "0x08028CA8",
+      "debug": "0x0802C30C",
+      "span_to_next_opcode": 156,
+      "role": "Ghost Curse target status plus half-max-HP cost"
+    },
+    {
+      "opcode": "0xB0",
+      "name": "atkB0_trysetspikes",
+      "retail": "0x08028D44",
+      "debug": "0x0802C3A8",
+      "span_to_next_opcode": 140,
+      "role": "add Spikes layer up to three"
+    },
+    {
+      "opcode": "0xB1",
+      "name": "atkB1_setforesight",
+      "retail": "0x08028DD0",
+      "debug": "0x0802C434",
+      "span_to_next_opcode": 48,
+      "role": "set Foresight status"
+    },
+    {
+      "opcode": "0xB2",
+      "name": "atkB2_trysetperishsong",
+      "retail": "0x08028E00",
+      "debug": "0x0802C464",
+      "span_to_next_opcode": 184,
+      "role": "apply three-turn Perish Song except Soundproof/already affected"
+    },
+    {
+      "opcode": "0xB3",
+      "name": "atkB3_rolloutdamagecalculation",
+      "retail": "0x08028EB8",
+      "debug": "0x0802C51C",
+      "span_to_next_opcode": 380,
+      "role": "five-hit Rollout scaling and Defense Curl doubling"
+    },
+    {
+      "opcode": "0xB4",
+      "name": "atkB4_jumpifconfusedandstatmaxed",
+      "retail": "0x08029034",
+      "debug": "0x0802C698",
+      "span_to_next_opcode": 104,
+      "role": "branch if confused and requested stat is already max"
+    },
+    {
+      "opcode": "0xB5",
+      "name": "atkB5_furycuttercalc",
+      "retail": "0x0802909C",
+      "debug": "0x0802C700",
+      "span_to_next_opcode": 180,
+      "role": "Fury Cutter stacking power up to five-count state"
+    },
+    {
+      "opcode": "0xB6",
+      "name": "atkB6_happinesstodamagecalculation",
+      "retail": "0x08029150",
+      "debug": "0x0802C7B4",
+      "span_to_next_opcode": 132,
+      "role": "Return/Frustration power from friendship"
+    },
+    {
+      "opcode": "0xB7",
+      "name": "atkB7_presentdamagecalculation",
+      "retail": "0x080291D4",
+      "debug": "0x0802C838",
+      "span_to_next_opcode": 188,
+      "role": "Present choose 40/80/120 power or quarter-HP healing"
+    },
+    {
+      "opcode": "0xB8",
+      "name": "atkB8_setsafeguard",
+      "retail": "0x08029290",
+      "debug": "0x0802C8F4",
+      "span_to_next_opcode": 144,
+      "role": "start five-turn Safeguard"
+    },
+    {
+      "opcode": "0xB9",
+      "name": "atkB9_magnitudedamagecalculation",
+      "retail": "0x08029320",
+      "debug": "0x0802C984",
+      "span_to_next_opcode": 292,
+      "role": "Magnitude 4-10 weighted power selection"
+    },
+    {
+      "opcode": "0xBA",
+      "name": "atkBA_jumpifnopursuitswitchdmg",
+      "retail": "0x08029444",
+      "debug": "0x0802CAA8",
+      "span_to_next_opcode": 376,
+      "role": "Pursuit interception of switching target"
+    },
+    {
+      "opcode": "0xBB",
+      "name": "atkBB_setsunny",
+      "retail": "0x080295BC",
+      "debug": "0x0802CC20",
+      "span_to_next_opcode": 88,
+      "role": "start five-turn temporary sun"
+    },
+    {
+      "opcode": "0xBC",
+      "name": "atkBC_maxattackhalvehp",
+      "retail": "0x08029614",
+      "debug": "0x0802CC78",
+      "span_to_next_opcode": 128,
+      "role": "Belly Drum set Attack stage max at half-HP cost"
+    },
+    {
+      "opcode": "0xBD",
+      "name": "atkBD_copyfoestats",
+      "retail": "0x08029694",
+      "debug": "0x0802CCF8",
+      "span_to_next_opcode": 72,
+      "role": "Psych Up copy all eight stat stages"
+    },
+    {
+      "opcode": "0xBE",
+      "name": "atkBE_rapidspinfree",
+      "retail": "0x080296DC",
+      "debug": "0x0802CD40",
+      "span_to_next_opcode": 324,
+      "role": "Rapid Spin clear Wrap, Leech Seed, then Spikes"
+    },
+    {
+      "opcode": "0xBF",
+      "name": "atkBF_setdefensecurlbit",
+      "retail": "0x08029820",
+      "debug": "0x0802CE84",
+      "span_to_next_opcode": 48,
+      "role": "set Defense Curl status bit"
+    }
+  ],
+  "helpers": [
+    {
+      "name": "IsTwoTurnsMove",
+      "retail": "0x08028524",
+      "debug": "0x0802BB88",
+      "size": 60,
+      "role": "identify charging/two-turn move effects"
+    },
+    {
+      "name": "IsMoveUnchoosable",
+      "retail": "0x08028560",
+      "debug": "0x0802BBC4",
+      "size": 40,
+      "role": "reject Sleep Talk selection of empty/Sleep Talk/Assist/Mirror Move/Metronome"
+    },
+    {
+      "name": "AttacksThisTurn",
+      "retail": "0x08028588",
+      "debug": "0x0802BBEC",
+      "size": 108,
+      "role": "return charging turn versus attacking turn, including sunny SolarBeam"
+    },
+    {
+      "name": "TrySetDestinyBondToHappen",
+      "retail": "0x0802875C",
+      "debug": "0x0802BDC0",
+      "size": 96,
+      "role": "set Destiny Bond hit marker across opposing sides"
+    }
+  ],
+  "fixed_rules": {
+    "move_slots": 4,
+    "disable_turns": "2..5",
+    "encore_turns": "3..6",
+    "spite_pp_loss": "2..5",
+    "spikes_max_layers": 3,
+    "perish_song_timer": 3,
+    "rollout_turns": 5,
+    "fury_cutter_counter_cap": 5,
+    "safeguard_turns": 5,
+    "sun_turns": 5
+  },
+  "next": {
+    "opcode": "0xC0",
+    "function": "atkC0_recoverbasedonsunlight",
+    "retail": "0x08029850",
+    "debug": "0x0802CEB4",
+    "delta": "+0x3664"
+  }
+}
