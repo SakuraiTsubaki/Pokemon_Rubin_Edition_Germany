@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "module": "battle_controller_emitters",
+  "command_count": 56,
+  "command_id_range": [
+    0,
+    55
+  ],
+  "retail": {
+    "start": "0x0800C7EC",
+    "end_exclusive": "0x0800D40C",
+    "size": 3104,
+    "sha256": "5debedeab09cd8a8b401345cfd75d15eb97915582661a85624a204ac9eb38935",
+    "rev0_rev1_byte_identical": true,
+    "transfer_buffer": "0x03004050"
+  },
+  "debug": {
+    "start": "0x0800CA08",
+    "end_exclusive": "0x0800D628",
+    "size": 3104,
+    "sha256": "7d19ce0e6c41d743eaf46cef52af0a66ed0fd98d273c9aeaeafcd4d98b74ff9f",
+    "retail_address_delta": "+0x21C",
+    "transfer_buffer": "0x030040D0"
+  },
+  "entries": [
+    {
+      "command_id": 0,
+      "name": "BtlController_EmitGetMonData",
+      "retail": "0x0800C7EC",
+      "debug": "0x0800CA08",
+      "size": 36,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 1,
+      "name": "BtlController_EmitGetRawMonData",
+      "retail": "0x0800C810",
+      "debug": "0x0800CA2C",
+      "size": 40,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 2,
+      "name": "BtlController_EmitSetMonData",
+      "retail": "0x0800C838",
+      "debug": "0x0800CA54",
+      "size": 64,
+      "packet_size": "3+bytes"
+    },
+    {
+      "command_id": 3,
+      "name": "BtlController_EmitSetRawMonData",
+      "retail": "0x0800C878",
+      "debug": "0x0800CA94",
+      "size": 64,
+      "packet_size": "3+bytes"
+    },
+    {
+      "command_id": 4,
+      "name": "BtlController_EmitLoadMonSprite",
+      "retail": "0x0800C8B8",
+      "debug": "0x0800CAD4",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 5,
+      "name": "BtlController_EmitSwitchInAnim",
+      "retail": "0x0800C8D8",
+      "debug": "0x0800CAF4",
+      "size": 36,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 6,
+      "name": "BtlController_EmitReturnMonToBall",
+      "retail": "0x0800C8FC",
+      "debug": "0x0800CB18",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 7,
+      "name": "BtlController_EmitDrawTrainerPic",
+      "retail": "0x0800C91C",
+      "debug": "0x0800CB38",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 8,
+      "name": "BtlController_EmitTrainerSlide",
+      "retail": "0x0800C93C",
+      "debug": "0x0800CB58",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 9,
+      "name": "BtlController_EmitTrainerSlideBack",
+      "retail": "0x0800C95C",
+      "debug": "0x0800CB78",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 10,
+      "name": "BtlController_EmitFaintAnimation",
+      "retail": "0x0800C97C",
+      "debug": "0x0800CB98",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 11,
+      "name": "BtlController_EmitPaletteFade",
+      "retail": "0x0800C99C",
+      "debug": "0x0800CBB8",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 12,
+      "name": "BtlController_EmitSuccessBallThrowAnim",
+      "retail": "0x0800C9BC",
+      "debug": "0x0800CBD8",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 13,
+      "name": "BtlController_EmitBallThrowAnim",
+      "retail": "0x0800C9DC",
+      "debug": "0x0800CBF8",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 14,
+      "name": "BtlController_EmitPause",
+      "retail": "0x0800C9FC",
+      "debug": "0x0800CC18",
+      "size": 72,
+      "packet_size": "2+3*count"
+    },
+    {
+      "command_id": 15,
+      "name": "BtlController_EmitMoveAnimation",
+      "retail": "0x0800CA44",
+      "debug": "0x0800CC60",
+      "size": 216,
+      "packet_size": "44"
+    },
+    {
+      "command_id": 16,
+      "name": "BtlController_EmitPrintString",
+      "retail": "0x0800CB1C",
+      "debug": "0x0800CD38",
+      "size": 288,
+      "packet_size": "68"
+    },
+    {
+      "command_id": 17,
+      "name": "BtlController_EmitPrintSelectionString",
+      "retail": "0x0800CC3C",
+      "debug": "0x0800CE58",
+      "size": 240,
+      "packet_size": "68"
+    },
+    {
+      "command_id": 18,
+      "name": "BtlController_EmitChooseAction",
+      "retail": "0x0800CD2C",
+      "debug": "0x0800CF48",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 19,
+      "name": "BtlController_EmitUnknownYesNoBox",
+      "retail": "0x0800CD58",
+      "debug": "0x0800CF74",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 20,
+      "name": "BtlController_EmitChooseMove",
+      "retail": "0x0800CD78",
+      "debug": "0x0800CF94",
+      "size": 60,
+      "packet_size": "24"
+    },
+    {
+      "command_id": 21,
+      "name": "BtlController_EmitChooseItem",
+      "retail": "0x0800CDB4",
+      "debug": "0x0800CFD0",
+      "size": 52,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 22,
+      "name": "BtlController_EmitChoosePokemon",
+      "retail": "0x0800CDE8",
+      "debug": "0x0800D004",
+      "size": 60,
+      "packet_size": "8 (7 initialized)"
+    },
+    {
+      "command_id": 23,
+      "name": "BtlController_EmitCmd23",
+      "retail": "0x0800CE24",
+      "debug": "0x0800D040",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 24,
+      "name": "BtlController_EmitHealthBarUpdate",
+      "retail": "0x0800CE44",
+      "debug": "0x0800D060",
+      "size": 56,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 25,
+      "name": "BtlController_EmitExpUpdate",
+      "retail": "0x0800CE7C",
+      "debug": "0x0800D098",
+      "size": 52,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 26,
+      "name": "BtlController_EmitStatusIconUpdate",
+      "retail": "0x0800CEB0",
+      "debug": "0x0800D0CC",
+      "size": 84,
+      "packet_size": "9"
+    },
+    {
+      "command_id": 27,
+      "name": "BtlController_EmitStatusAnimation",
+      "retail": "0x0800CF04",
+      "debug": "0x0800D120",
+      "size": 60,
+      "packet_size": "6"
+    },
+    {
+      "command_id": 28,
+      "name": "BtlController_EmitStatusXor",
+      "retail": "0x0800CF40",
+      "debug": "0x0800D15C",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 29,
+      "name": "BtlController_EmitDataTransfer",
+      "retail": "0x0800CF60",
+      "debug": "0x0800D17C",
+      "size": 72,
+      "packet_size": "4+len"
+    },
+    {
+      "command_id": 30,
+      "name": "BtlController_EmitDMA3Transfer",
+      "retail": "0x0800CFA8",
+      "debug": "0x0800D1C4",
+      "size": 104,
+      "packet_size": "7+len"
+    },
+    {
+      "command_id": 31,
+      "name": "BtlController_EmitPlayBGM",
+      "retail": "0x0800D010",
+      "debug": "0x0800D22C",
+      "size": 72,
+      "packet_size": "3+len"
+    },
+    {
+      "command_id": 32,
+      "name": "BtlController_EmitCmd32",
+      "retail": "0x0800D058",
+      "debug": "0x0800D274",
+      "size": 72,
+      "packet_size": "3+len"
+    },
+    {
+      "command_id": 33,
+      "name": "BtlController_EmitTwoReturnValues",
+      "retail": "0x0800D0A0",
+      "debug": "0x0800D2BC",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 34,
+      "name": "BtlController_EmitChosenMonReturnValue",
+      "retail": "0x0800D0CC",
+      "debug": "0x0800D2E8",
+      "size": 56,
+      "packet_size": "5"
+    },
+    {
+      "command_id": 35,
+      "name": "BtlController_EmitOneReturnValue",
+      "retail": "0x0800D104",
+      "debug": "0x0800D320",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 36,
+      "name": "BtlController_EmitOneReturnValue_Duplicate",
+      "retail": "0x0800D130",
+      "debug": "0x0800D34C",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 37,
+      "name": "BtlController_EmitCmd37",
+      "retail": "0x0800D15C",
+      "debug": "0x0800D378",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 38,
+      "name": "BtlController_EmitCmd38",
+      "retail": "0x0800D17C",
+      "debug": "0x0800D398",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 39,
+      "name": "BtlController_EmitCmd39",
+      "retail": "0x0800D19C",
+      "debug": "0x0800D3B8",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 40,
+      "name": "BtlController_EmitCmd40",
+      "retail": "0x0800D1BC",
+      "debug": "0x0800D3D8",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 41,
+      "name": "BtlController_EmitHitAnimation",
+      "retail": "0x0800D1DC",
+      "debug": "0x0800D3F8",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 42,
+      "name": "BtlController_EmitCmd42",
+      "retail": "0x0800D1FC",
+      "debug": "0x0800D418",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 43,
+      "name": "BtlController_EmitPlaySE",
+      "retail": "0x0800D21C",
+      "debug": "0x0800D438",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 44,
+      "name": "BtlController_EmitPlayFanfareOrBGM",
+      "retail": "0x0800D248",
+      "debug": "0x0800D464",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 45,
+      "name": "BtlController_EmitFaintingCry",
+      "retail": "0x0800D274",
+      "debug": "0x0800D490",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 46,
+      "name": "BtlController_EmitIntroSlide",
+      "retail": "0x0800D294",
+      "debug": "0x0800D4B0",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 47,
+      "name": "BtlController_EmitIntroTrainerBallThrow",
+      "retail": "0x0800D2B4",
+      "debug": "0x0800D4D0",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 48,
+      "name": "BtlController_EmitDrawPartyStatusSummary",
+      "retail": "0x0800D2D4",
+      "debug": "0x0800D4F0",
+      "size": 72,
+      "packet_size": "52"
+    },
+    {
+      "command_id": 49,
+      "name": "BtlController_EmitHidePartyStatusSummary",
+      "retail": "0x0800D31C",
+      "debug": "0x0800D538",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 50,
+      "name": "BtlController_EmitEndBounceEffect",
+      "retail": "0x0800D33C",
+      "debug": "0x0800D558",
+      "size": 32,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 51,
+      "name": "BtlController_EmitSpriteInvisibility",
+      "retail": "0x0800D35C",
+      "debug": "0x0800D578",
+      "size": 36,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 52,
+      "name": "BtlController_EmitBattleAnimation",
+      "retail": "0x0800D380",
+      "debug": "0x0800D59C",
+      "size": 44,
+      "packet_size": "4"
+    },
+    {
+      "command_id": 53,
+      "name": "BtlController_EmitLinkStandbyMsg",
+      "retail": "0x0800D3AC",
+      "debug": "0x0800D5C8",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 54,
+      "name": "BtlController_EmitResetActionMoveSelection",
+      "retail": "0x0800D3CC",
+      "debug": "0x0800D5E8",
+      "size": 32,
+      "packet_size": "2"
+    },
+    {
+      "command_id": 55,
+      "name": "BtlController_EmitCmd55",
+      "retail": "0x0800D3EC",
+      "debug": "0x0800D608",
+      "size": 32,
+      "packet_size": "2"
+    }
+  ],
+  "next_module": {
+    "name": "decompress",
+    "retail_start": "0x0800D40C",
+    "debug_start": "0x0800D628"
+  }
+}
