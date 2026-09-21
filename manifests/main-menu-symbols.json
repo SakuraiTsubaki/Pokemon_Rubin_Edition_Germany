@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "module": "main_menu_core",
+  "retail_slice": {
+    "start": "0x08009890",
+    "end_exclusive": "0x0800A3C8",
+    "size": 2872,
+    "sha256": "62bd4806097ce06e18050399c4221536613ffa164142b86ccad8433f0d355043",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug_slice": {
+    "start": "0x08009A70",
+    "end_exclusive": "0x0800A5A8",
+    "size": 2872,
+    "sha256": "4d8026c08d81e7f60d7d15bff838b0703b25d018ccafb6306e431ada5ff49a39"
+  },
+  "save_block2_base": {
+    "retail": "0x02024EA4",
+    "debug": "0x02025148"
+  },
+  "functions": [
+    {
+      "name": "CB2_MainMenu",
+      "retail": "0x08009890",
+      "debug": "0x08009A70",
+      "status": "promoted"
+    },
+    {
+      "name": "VBlankCB_MainMenu",
+      "retail": "0x080098A8",
+      "debug": "0x08009A88",
+      "status": "promoted"
+    },
+    {
+      "name": "CB2_InitMainMenu",
+      "retail": "0x080098BC",
+      "debug": "0x08009A9C",
+      "status": "promoted"
+    },
+    {
+      "name": "CB2_InitMainMenuFromOptions",
+      "retail": "0x080098C8",
+      "debug": "0x08009AA8",
+      "status": "promoted"
+    },
+    {
+      "name": "InitMainMenu",
+      "retail": "0x080098D4",
+      "debug": "0x08009AB4",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuCheckSave",
+      "retail": "0x08009A44",
+      "debug": "0x08009C24",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuWaitForSaveErrorAck",
+      "retail": "0x08009BE8",
+      "debug": "0x08009DC8",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuCheckRtc",
+      "retail": "0x08009C30",
+      "debug": "0x08009E10",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuWaitForRtcErrorAck",
+      "retail": "0x08009CF8",
+      "debug": "0x08009ED8",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuDraw",
+      "retail": "0x08009D40",
+      "debug": "0x08009F20",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuHighlight",
+      "retail": "0x08009F0C",
+      "debug": "0x0800A0EC",
+      "status": "mapped"
+    },
+    {
+      "name": "MainMenuProcessKeyInput",
+      "retail": "0x08009F38",
+      "debug": "0x0800A118",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuProcessKeyInput",
+      "retail": "0x0800A04C",
+      "debug": "0x0800A22C",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuPressedA",
+      "retail": "0x0800A07C",
+      "debug": "0x0800A25C",
+      "status": "mapped"
+    },
+    {
+      "name": "Task_MainMenuPressedB",
+      "retail": "0x0800A17C",
+      "debug": "0x0800A35C",
+      "status": "mapped"
+    },
+    {
+      "name": "HighlightCurrentMenuItem",
+      "retail": "0x0800A1A8",
+      "debug": "0x0800A388",
+      "status": "mapped"
+    },
+    {
+      "name": "PrintMainMenuItem",
+      "retail": "0x0800A288",
+      "debug": "0x0800A468",
+      "status": "mapped"
+    },
+    {
+      "name": "PrintSaveFileInfo",
+      "retail": "0x0800A2D4",
+      "debug": "0x0800A4B4",
+      "status": "promoted"
+    },
+    {
+      "name": "PrintPlayerName",
+      "retail": "0x0800A2EC",
+      "debug": "0x0800A4CC",
+      "status": "promoted"
+    },
+    {
+      "name": "PrintPlayTime",
+      "retail": "0x0800A310",
+      "debug": "0x0800A4F0",
+      "status": "promoted"
+    },
+    {
+      "name": "PrintPokedexCount",
+      "retail": "0x0800A358",
+      "debug": "0x0800A538",
+      "status": "promoted"
+    },
+    {
+      "name": "PrintBadgeCount",
+      "retail": "0x0800A390",
+      "debug": "0x0800A570",
+      "status": "promoted"
+    },
+    {
+      "name": "Task_NewGameSpeech1",
+      "retail": "0x0800A3C8",
+      "debug": "0x0800A5A8",
+      "status": "next-slice"
+    }
+  ]
+}
