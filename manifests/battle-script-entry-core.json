@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_entry_core",
+  "debug_delta": "+0x3578",
+  "functions": [
+    {
+      "name": "atk00_attackcanceler",
+      "retail": "0x0801BE24",
+      "debug": "0x0801F39C",
+      "size": 952,
+      "kind": "opcode 0x00",
+      "role": "pre-move cancellation gate; faint/PP/obedience/ability/protect/snatch/lightning-rod checks"
+    },
+    {
+      "name": "JumpIfMoveFailed",
+      "retail": "0x0801C1DC",
+      "debug": "0x0801F754",
+      "size": 144,
+      "kind": "helper",
+      "role": "advance or redirect battle script based on move-result/ability failure state"
+    },
+    {
+      "name": "atk40_jumpifaffectedbyprotect",
+      "retail": "0x0801C26C",
+      "debug": "0x0801F7E4",
+      "size": 112,
+      "kind": "opcode 0x40",
+      "role": "battle-script command for Protect interaction"
+    },
+    {
+      "name": "JumpIfMoveAffectedByProtect",
+      "retail": "0x0801C2DC",
+      "debug": "0x0801F854",
+      "size": 108,
+      "kind": "helper",
+      "role": "test current move/protect state and prepare protect failure behavior"
+    },
+    {
+      "name": "AccuracyCalcHelper",
+      "retail": "0x0801C348",
+      "debug": "0x0801F8C0",
+      "size": 328,
+      "kind": "helper",
+      "role": "shared accuracy/evasion and move-specific accuracy preparation"
+    },
+    {
+      "name": "atk01_accuracycheck",
+      "retail": "0x0801C490",
+      "debug": "0x0801FA08",
+      "size": null,
+      "kind": "opcode 0x01",
+      "role": "accuracy-check command entry; next interpreter stage"
+    }
+  ],
+  "retail_physical_range": {
+    "start": "0x0801BE24",
+    "end_exclusive": "0x0801C490",
+    "size": 1644,
+    "sha256": "61c5916134fd94dd5c986bc366b380b3c41096fbf46ced2ce0344d7f65a5d7a0"
+  },
+  "debug_physical_range": {
+    "start": "0x0801F39C",
+    "end_exclusive": "0x0801FA08",
+    "size": 1644,
+    "sha256": "c141d790f54249b05d20c5b9bff60160616edf76c9e4285c08aaaaf1db69051e"
+  },
+  "next": {
+    "opcode": "0x01",
+    "function": "atk01_accuracycheck",
+    "retail": "0x0801C490",
+    "debug": "0x0801FA08"
+  }
+}
