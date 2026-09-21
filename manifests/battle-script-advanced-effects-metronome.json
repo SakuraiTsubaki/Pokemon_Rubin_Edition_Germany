@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_advanced_effects_metronome",
+  "retail": {
+    "start": "0x08025A70",
+    "end_exclusive": "0x08027B64",
+    "size": 8436,
+    "sha256": "4ff38ee3cd2d99b00c61ac34cd1ce77e206fdfc8c240cf20bf1216b8fa4ab805",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08029014",
+    "end_exclusive": "0x0802B1C8",
+    "size": 8628,
+    "sha256": "64e2ac7d35bed453b2c3ee3b6d6531e04ad38ace1a7dd9d4829f8643cc5726ff"
+  },
+  "commands": [
+    {
+      "opcode": "0x80",
+      "name": "atk80_manipulatedamage",
+      "retail": "0x08025A70",
+      "debug": "0x08029014",
+      "span_to_next_opcode": 128,
+      "role": "negate, halve/cap, or double current battle damage",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x81",
+      "name": "atk81_trysetrest",
+      "retail": "0x08025AF0",
+      "debug": "0x08029094",
+      "span_to_next_opcode": 208,
+      "role": "Rest full heal setup and fixed sleep status",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x82",
+      "name": "atk82_jumpifnotfirstturn",
+      "retail": "0x08025BC0",
+      "debug": "0x08029164",
+      "span_to_next_opcode": 72,
+      "role": "branch unless attacker is on first turn",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x83",
+      "name": "atk83_nop",
+      "retail": "0x08025C08",
+      "debug": "0x080291AC",
+      "span_to_next_opcode": 172,
+      "role": "one-byte no-op; physical span includes UproarWakeUpCheck",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x84",
+      "name": "atk84_jumpifcantmakeasleep",
+      "retail": "0x08025CB4",
+      "debug": "0x08029258",
+      "span_to_next_opcode": 124,
+      "role": "reject sleep under Uproar, Insomnia or Vital Spirit",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x85",
+      "name": "atk85_stockpile",
+      "retail": "0x08025D30",
+      "debug": "0x080292D4",
+      "span_to_next_opcode": 124,
+      "role": "increment Stockpile counter up to three",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x86",
+      "name": "atk86_stockpiletobasedamage",
+      "retail": "0x08025DAC",
+      "debug": "0x08029350",
+      "span_to_next_opcode": 296,
+      "role": "Spit Up-style damage using Stockpile count",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x87",
+      "name": "atk87_stockpiletohpheal",
+      "retail": "0x08025ED4",
+      "debug": "0x08029478",
+      "span_to_next_opcode": 236,
+      "role": "Swallow-style healing from Stockpile count",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x88",
+      "name": "atk88_negativedamage",
+      "retail": "0x08025FC0",
+      "debug": "0x08029564",
+      "span_to_next_opcode": 1240,
+      "role": "set healing/recoil-style negative half of dealt HP; span includes ChangeStatBuffs",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x89",
+      "name": "atk89_statbuffchange",
+      "retail": "0x08026498",
+      "debug": "0x08029A3C",
+      "span_to_next_opcode": 84,
+      "role": "apply encoded stat change through ChangeStatBuffs",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x8A",
+      "name": "atk8A_normalisebuffs",
+      "retail": "0x080264EC",
+      "debug": "0x08029A90",
+      "span_to_next_opcode": 84,
+      "role": "Haze: reset eight stat stages of all battlers to neutral 6",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x8B",
+      "name": "atk8B_setbide",
+      "retail": "0x08026540",
+      "debug": "0x08029AE4",
+      "span_to_next_opcode": 112,
+      "role": "initialize Bide multi-turn state and damage accumulator",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x8C",
+      "name": "atk8C_confuseifrepeatingattackends",
+      "retail": "0x080265B0",
+      "debug": "0x08029B54",
+      "span_to_next_opcode": 64,
+      "role": "queue confusion after locked repeating attack ends",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x8D",
+      "name": "atk8D_setmultihitcounter",
+      "retail": "0x080265F0",
+      "debug": "0x08029B94",
+      "span_to_next_opcode": 76,
+      "role": "initialize explicit or random multi-hit count",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x8E",
+      "name": "atk8E_initmultihitstring",
+      "retail": "0x0802663C",
+      "debug": "0x08029BE0",
+      "span_to_next_opcode": 296,
+      "role": "initialize multi-hit text count; span includes forced-switch level helper",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x8F",
+      "name": "atk8F_forcerandomswitch",
+      "retail": "0x08026764",
+      "debug": "0x08029D08",
+      "span_to_next_opcode": 764,
+      "role": "Roar/Whirlwind-style forced switch with trainer/wild level rules",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x90",
+      "name": "atk90_tryconversiontypechange",
+      "retail": "0x08026A60",
+      "debug": "0x0802A004",
+      "span_to_next_opcode": 420,
+      "role": "Conversion: randomly adopt a type from one of four known moves",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x91",
+      "name": "atk91_givepaydaymoney",
+      "retail": "0x08026C04",
+      "debug": "0x0802A1A8",
+      "span_to_next_opcode": 144,
+      "role": "award accumulated Pay Day money outside link battles",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x92",
+      "name": "atk92_setlightscreen",
+      "retail": "0x08026C94",
+      "debug": "0x0802A238",
+      "span_to_next_opcode": 184,
+      "role": "start five-turn Light Screen",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x93",
+      "name": "atk93_tryKO",
+      "retail": "0x08026D4C",
+      "debug": "0x0802A2F0",
+      "span_to_next_opcode": 736,
+      "role": "OHKO calculation with Sturdy, Focus Band, level and accuracy logic",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x94",
+      "name": "atk94_damagetohalftargethp",
+      "retail": "0x0802702C",
+      "debug": "0x0802A5D0",
+      "span_to_next_opcode": 60,
+      "role": "set damage to half target current HP, minimum one",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x95",
+      "name": "atk95_setsandstorm",
+      "retail": "0x08027068",
+      "debug": "0x0802A60C",
+      "span_to_next_opcode": 88,
+      "role": "start five-turn temporary Sandstorm",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x96",
+      "name": "atk96_weatherdamage",
+      "retail": "0x080270C0",
+      "debug": "0x0802A664",
+      "span_to_next_opcode": 376,
+      "role": "apply Sandstorm/Hail residual damage and immunities",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x97",
+      "name": "atk97_tryinfatuating",
+      "retail": "0x08027238",
+      "debug": "0x0802A7DC",
+      "span_to_next_opcode": 468,
+      "role": "Attract gender/personality check with Oblivious handling",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x98",
+      "name": "atk98_updatestatusicon",
+      "retail": "0x0802740C",
+      "debug": "0x0802A9B0",
+      "span_to_next_opcode": 272,
+      "role": "emit one or both allied status icon updates",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x99",
+      "name": "atk99_setmist",
+      "retail": "0x0802751C",
+      "debug": "0x0802AAC0",
+      "span_to_next_opcode": 148,
+      "role": "start five-turn Mist",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x9A",
+      "name": "atk9A_setfocusenergy",
+      "retail": "0x080275B0",
+      "debug": "0x0802AB54",
+      "span_to_next_opcode": 92,
+      "role": "set Focus Energy once",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x9B",
+      "name": "atk9B_transformdataexecution",
+      "retail": "0x0802760C",
+      "debug": "0x0802ABB0",
+      "span_to_next_opcode": 416,
+      "role": "Transform battle data, four moves and PP capped to five",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x9C",
+      "name": "atk9C_setsubstitute",
+      "retail": "0x080277AC",
+      "debug": "0x0802AD50",
+      "span_to_next_opcode": 260,
+      "role": "create quarter-max-HP Substitute",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x9D",
+      "name": "atk9D_mimicattackcopy",
+      "retail": "0x080278B0",
+      "debug": "0x0802AE54",
+      "span_to_next_opcode": 476,
+      "role": "Mimic last move into current move slot with five-PP cap",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x9E",
+      "name": "atk9E_metronome",
+      "retail": "0x08027A8C",
+      "debug": "0x0802B030",
+      "span_to_next_opcode": 168,
+      "role": "choose legal random move; Debug adds sequential move-test path",
+      "delta": "+0x35A4"
+    },
+    {
+      "opcode": "0x9F",
+      "name": "atk9F_dmgtolevel",
+      "retail": "0x08027B34",
+      "debug": "0x0802B198",
+      "span_to_next_opcode": 48,
+      "role": "set damage equal to attacker level",
+      "delta": "+0x3664"
+    }
+  ],
+  "helpers": [
+    {
+      "name": "UproarWakeUpCheck",
+      "retail": "0x08025C18",
+      "debug": "0x080291BC",
+      "size": 156,
+      "role": "scan active battlers for Uproar unless sleeper has Soundproof"
+    },
+    {
+      "name": "ChangeStatBuffs",
+      "retail": "0x08025FF4",
+      "debug": "0x08029598",
+      "size": 1188,
+      "role": "central stat-stage change helper with Mist/Protect/ability/Shield Dust handling"
+    },
+    {
+      "name": "ForceSwitchLevelCheck",
+      "source_name": "sub_80264C0",
+      "retail": "0x08026694",
+      "debug": "0x08029C38",
+      "size": 208,
+      "role": "trainer/wild forced-switch level and random success helper"
+    },
+    {
+      "name": "IsMoveUncopyable",
+      "retail": "0x08027868",
+      "debug": "0x0802AE0C",
+      "size": 72,
+      "role": "check Mimic/Metronome forbidden move list"
+    }
+  ],
+  "fixed_rules": {
+    "stat_stage_count": 8,
+    "stat_stage_min": 0,
+    "stat_stage_neutral": 6,
+    "stat_stage_max": 12,
+    "stockpile_max": 3,
+    "move_slots": 4,
+    "party_slots": 6,
+    "multi_party_half_slots": 3,
+    "substitute_hp_divisor": 4,
+    "weather_damage_divisor": 16,
+    "light_screen_turns": 5,
+    "mist_turns": 5,
+    "sandstorm_turns": 5
+  },
+  "debug_growth": {
+    "opcode": "0x9E",
+    "function": "atk9E_metronome",
+    "extra_bytes": 192,
+    "delta_before": "+0x35A4",
+    "delta_after": "+0x3664"
+  },
+  "next": {
+    "opcode": "0xA0",
+    "function": "atkA0_psywavedamageeffect",
+    "retail": "0x08027B64",
+    "debug": "0x0802B1C8",
+    "delta": "+0x3664"
+  }
+}
