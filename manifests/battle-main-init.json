@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "module": "battle_main_init",
+  "retail": {
+    "start": "0x0800E998",
+    "end_exclusive": "0x0800F200",
+    "size": 2152,
+    "sha256": "d8753f7da7f3354ddd5839e7de318ec8c9f0f289789f5285fe44c05a4e69ca4e",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0800EC0C",
+    "end_exclusive": "0x0800F4C0",
+    "size": 2228,
+    "sha256": "493145436c8a0f706ed56e4950e98e0b54aae0556d93754c06285174eaf0e89d"
+  },
+  "debug_growth": [
+    {
+      "function": "CB2_InitBattleInternal",
+      "extra_bytes": 32,
+      "delta_before": "+0x274",
+      "delta_after": "+0x294"
+    },
+    {
+      "function": "CB2_HandleStartBattle",
+      "extra_bytes": 44,
+      "delta_before": "+0x294",
+      "delta_after": "+0x2C0"
+    }
+  ],
+  "functions": [
+    {
+      "name": "CB2_InitBattle",
+      "retail": "0x0800E998",
+      "debug": "0x0800EC0C",
+      "delta": "+0x274",
+      "retail_size": 52,
+      "debug_size": 52,
+      "role": "battle init dispatcher; multi battle enters link setup path"
+    },
+    {
+      "name": "CB2_InitBattleInternal",
+      "retail": "0x0800E9CC",
+      "debug": "0x0800EC40",
+      "delta": "+0x274",
+      "retail_size": 500,
+      "debug_size": 532,
+      "role": "VRAM/window/scanline/background/sprite/task initialization and battle setup"
+    },
+    {
+      "name": "BufferPartyVsScreenHealth_AtStart",
+      "retail": "0x0800EBC0",
+      "debug": "0x0800EE54",
+      "delta": "+0x294",
+      "retail_size": 192,
+      "debug_size": 192,
+      "role": "encode six-party health/status state for link VS screen"
+    },
+    {
+      "name": "SetPlayerBerryDataInBattleStruct",
+      "retail": "0x0800EC80",
+      "debug": "0x0800EF14",
+      "delta": "+0x294",
+      "retail_size": 92,
+      "debug_size": 92,
+      "role": "copy local Enigma Berry data into link battle header"
+    },
+    {
+      "name": "SetAllPlayersBerryData",
+      "retail": "0x0800ECDC",
+      "debug": "0x0800EF70",
+      "delta": "+0x294",
+      "retail_size": 316,
+      "debug_size": 316,
+      "role": "populate per-player Enigma Berry battle records"
+    },
+    {
+      "name": "TryCorrectShedinjaLanguage",
+      "retail": "0x0800EE18",
+      "debug": "0x0800F0AC",
+      "delta": "+0x294",
+      "retail_size": 88,
+      "debug_size": 88,
+      "role": "repair Shedinja language flag when nickname matches localized default"
+    },
+    {
+      "name": "CB2_HandleStartBattle",
+      "retail": "0x0800EE70",
+      "debug": "0x0800F104",
+      "delta": "+0x294",
+      "retail_size": 912,
+      "debug_size": 956,
+      "role": "link/non-link battle startup state machine and party exchange"
+    }
+  ],
+  "fixed_format_constraints": {
+    "party_slots": 6,
+    "link_party_transfer_groups": 3,
+    "pokemon_per_transfer_group": 2,
+    "enigma_berry_name_bytes": 7,
+    "enigma_berry_item_effect_bytes": 18,
+    "debug_link_type": "0x2211"
+  },
+  "next": {
+    "retail": "0x0800F200",
+    "debug": "0x0800F4C0",
+    "delta": "+0x2C0"
+  }
+}
