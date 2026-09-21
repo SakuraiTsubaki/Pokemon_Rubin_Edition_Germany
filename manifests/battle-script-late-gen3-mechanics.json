@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_late_gen3_mechanics",
+  "retail": {
+    "start": "0x08029850",
+    "end_exclusive": "0x0802AE54",
+    "size": 5636,
+    "sha256": "174eb2f5c256fe591be923bbd873e24d3121ff76af5306bafadcf47b9b9b7540",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0802CEB4",
+    "end_exclusive": "0x0802E4B8",
+    "size": 5636,
+    "sha256": "54a42142ac9ed17d164c5186698419eebb41dc38219c608dbecc19631a92a736",
+    "retail_address_delta": "+0x3664"
+  },
+  "commands": [
+    {
+      "opcode": "0xC0",
+      "name": "atkC0_recoverbasedonsunlight",
+      "retail": "0x08029850",
+      "debug": "0x0802CEB4",
+      "span_to_next_opcode": 264,
+      "role": "Morning Sun/Synthesis/Moonlight healing based on weather"
+    },
+    {
+      "opcode": "0xC1",
+      "name": "atkC1_hiddenpowercalc",
+      "retail": "0x08029958",
+      "debug": "0x0802CFBC",
+      "span_to_next_opcode": 296,
+      "role": "Hidden Power type and power from six IV low bits"
+    },
+    {
+      "opcode": "0xC2",
+      "name": "atkC2_selectfirstvalidtarget",
+      "retail": "0x08029A80",
+      "debug": "0x0802D0E4",
+      "span_to_next_opcode": 116,
+      "role": "select first non-absent battler other than attacker"
+    },
+    {
+      "opcode": "0xC3",
+      "name": "atkC3_trysetfutureattack",
+      "retail": "0x08029AF4",
+      "debug": "0x0802D158",
+      "span_to_next_opcode": 296,
+      "role": "schedule Future Sight/Doom Desire with three-count delay and stored damage"
+    },
+    {
+      "opcode": "0xC4",
+      "name": "atkC4_trydobeatup",
+      "retail": "0x08029C1C",
+      "debug": "0x0802D280",
+      "span_to_next_opcode": 528,
+      "role": "Beat Up six-party contributor scan and per-member damage"
+    },
+    {
+      "opcode": "0xC5",
+      "name": "atkC5_setsemiinvulnerablebit",
+      "retail": "0x08029E2C",
+      "debug": "0x0802D490",
+      "span_to_next_opcode": 132,
+      "role": "set Fly/Bounce/Dig/Dive semi-invulnerable status"
+    },
+    {
+      "opcode": "0xC6",
+      "name": "atkC6_clearsemiinvulnerablebit",
+      "retail": "0x08029EB0",
+      "debug": "0x0802D514",
+      "span_to_next_opcode": 144,
+      "role": "clear Fly/Bounce/Dig/Dive status"
+    },
+    {
+      "opcode": "0xC7",
+      "name": "atkC7_setminimize",
+      "retail": "0x08029F40",
+      "debug": "0x0802D5A4",
+      "span_to_next_opcode": 64,
+      "role": "set Minimize status when obedience marker permits"
+    },
+    {
+      "opcode": "0xC8",
+      "name": "atkC8_sethail",
+      "retail": "0x08029F80",
+      "debug": "0x0802D5E4",
+      "span_to_next_opcode": 88,
+      "role": "start five-turn temporary Hail"
+    },
+    {
+      "opcode": "0xC9",
+      "name": "atkC9_jumpifattackandspecialattackcannotfall",
+      "retail": "0x08029FD8",
+      "debug": "0x0802D63C",
+      "span_to_next_opcode": 156,
+      "role": "Memento gate and attacker self-KO setup"
+    },
+    {
+      "opcode": "0xCA",
+      "name": "atkCA_setforcedtarget",
+      "retail": "0x0802A074",
+      "debug": "0x0802D6D8",
+      "span_to_next_opcode": 76,
+      "role": "Follow Me one-turn forced-target state"
+    },
+    {
+      "opcode": "0xCB",
+      "name": "atkCB_setcharge",
+      "retail": "0x0802A0C0",
+      "debug": "0x0802D724",
+      "span_to_next_opcode": 100,
+      "role": "set Charge status and two-turn counters"
+    },
+    {
+      "opcode": "0xCC",
+      "name": "atkCC_callenvironmentattack",
+      "retail": "0x0802A124",
+      "debug": "0x0802D788",
+      "span_to_next_opcode": 116,
+      "role": "Nature Power environment-to-move dispatch"
+    },
+    {
+      "opcode": "0xCD",
+      "name": "atkCD_cureifburnedparalysedorpoisoned",
+      "retail": "0x0802A198",
+      "debug": "0x0802D7FC",
+      "span_to_next_opcode": 132,
+      "role": "Refresh poison/burn/paralysis/toxic cure"
+    },
+    {
+      "opcode": "0xCE",
+      "name": "atkCE_settorment",
+      "retail": "0x0802A21C",
+      "debug": "0x0802D880",
+      "span_to_next_opcode": 88,
+      "role": "set Torment unless already active"
+    },
+    {
+      "opcode": "0xCF",
+      "name": "atkCF_jumpifnodamage",
+      "retail": "0x0802A274",
+      "debug": "0x0802D8D8",
+      "span_to_next_opcode": 92,
+      "role": "branch according to recorded physical/special damage"
+    },
+    {
+      "opcode": "0xD0",
+      "name": "atkD0_settaunt",
+      "retail": "0x0802A2D0",
+      "debug": "0x0802D934",
+      "span_to_next_opcode": 116,
+      "role": "set two-turn Taunt timers"
+    },
+    {
+      "opcode": "0xD1",
+      "name": "atkD1_trysethelpinghand",
+      "retail": "0x0802A344",
+      "debug": "0x0802D9A8",
+      "span_to_next_opcode": 168,
+      "role": "set Helping Hand on live double-battle partner"
+    },
+    {
+      "opcode": "0xD2",
+      "name": "atkD2_tryswapitems",
+      "retail": "0x0802A3EC",
+      "debug": "0x0802DA50",
+      "span_to_next_opcode": 664,
+      "role": "Trick item swap with mail/Enigma/Sticky Hold/Knock Off restrictions"
+    },
+    {
+      "opcode": "0xD3",
+      "name": "atkD3_trycopyability",
+      "retail": "0x0802A684",
+      "debug": "0x0802DCE8",
+      "span_to_next_opcode": 120,
+      "role": "Role Play copy target ability except none/Wonder Guard"
+    },
+    {
+      "opcode": "0xD4",
+      "name": "atkD4_trywish",
+      "retail": "0x0802A6FC",
+      "debug": "0x0802DD60",
+      "span_to_next_opcode": 212,
+      "role": "Wish schedule/heal state with two-count timer and half-HP healing"
+    },
+    {
+      "opcode": "0xD5",
+      "name": "atkD5_trysetroots",
+      "retail": "0x0802A7D0",
+      "debug": "0x0802DE34",
+      "span_to_next_opcode": 88,
+      "role": "set Ingrain/Rooted status"
+    },
+    {
+      "opcode": "0xD6",
+      "name": "atkD6_doubledamagedealtifdamaged",
+      "retail": "0x0802A828",
+      "debug": "0x0802DE8C",
+      "span_to_next_opcode": 104,
+      "role": "set 2x damage multiplier when attacker was damaged by target"
+    },
+    {
+      "opcode": "0xD7",
+      "name": "atkD7_setyawn",
+      "retail": "0x0802A890",
+      "debug": "0x0802DEF4",
+      "span_to_next_opcode": 112,
+      "role": "set Yawn two-turn status if target has no status/yawn"
+    },
+    {
+      "opcode": "0xD8",
+      "name": "atkD8_setdamagetohealthdifference",
+      "retail": "0x0802A900",
+      "debug": "0x0802DF64",
+      "span_to_next_opcode": 108,
+      "role": "Endeavor HP-difference damage"
+    },
+    {
+      "opcode": "0xD9",
+      "name": "atkD9_scaledamagebyhealthratio",
+      "retail": "0x0802A96C",
+      "debug": "0x0802DFD0",
+      "span_to_next_opcode": 100,
+      "role": "Eruption/Water Spout power scaled by current/max HP"
+    },
+    {
+      "opcode": "0xDA",
+      "name": "atkDA_tryswapabilities",
+      "retail": "0x0802A9D0",
+      "debug": "0x0802E034",
+      "span_to_next_opcode": 152,
+      "role": "Skill Swap abilities except Wonder Guard/no-effect invalid cases"
+    },
+    {
+      "opcode": "0xDB",
+      "name": "atkDB_tryimprison",
+      "retail": "0x0802AA68",
+      "debug": "0x0802E0CC",
+      "span_to_next_opcode": 256,
+      "role": "Imprison opposing move overlap with Pressure handling"
+    },
+    {
+      "opcode": "0xDC",
+      "name": "atkDC_trysetgrudge",
+      "retail": "0x0802AB68",
+      "debug": "0x0802E1CC",
+      "span_to_next_opcode": 88,
+      "role": "set Grudge status"
+    },
+    {
+      "opcode": "0xDD",
+      "name": "atkDD_weightdamagecalculation",
+      "retail": "0x0802ABC0",
+      "debug": "0x0802E224",
+      "span_to_next_opcode": 152,
+      "role": "Low Kick power from target Pokédex weight table"
+    },
+    {
+      "opcode": "0xDE",
+      "name": "atkDE_assistattackselect",
+      "retail": "0x0802AC58",
+      "debug": "0x0802E2BC",
+      "span_to_next_opcode": 376,
+      "role": "Assist scan party moves and choose legal random move"
+    },
+    {
+      "opcode": "0xDF",
+      "name": "atkDF_trysetmagiccoat",
+      "retail": "0x0802ADD0",
+      "debug": "0x0802E434",
+      "span_to_next_opcode": 132,
+      "role": "set Magic Coat bounce unless attacker is final turn action"
+    }
+  ],
+  "fixed_rules": {
+    "party_slots": 6,
+    "move_slots": 4,
+    "future_attack_counter": 3,
+    "wish_counter": 2,
+    "charge_timer": 2,
+    "yawn_timer": 2,
+    "hail_turns": 5,
+    "follow_me_timer": 1
+  },
+  "next": {
+    "opcode": "0xE0",
+    "function": "atkE0_trysetmagiccoat",
+    "retail": "0x0802AE54",
+    "debug": "0x0802E4B8",
+    "delta": "+0x3664"
+  }
+}
