@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_faint_exp_vm_core",
+  "retail": {
+    "start": "0x0801F8EC",
+    "end_exclusive": "0x08021164",
+    "size": 6264,
+    "sha256": "f5f2a488df39c10cbba61705aec1c94623d31a6a5d16b9cb65e4fc8cb8bbff73",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08022E90",
+    "end_exclusive": "0x08024708",
+    "size": 6264,
+    "sha256": "bddba2d8ebb93f3266d79c3eaeab0a4d3a75c7852e1cb46d171d52c39f48c1ad",
+    "retail_address_delta": "+0x35A4"
+  },
+  "opcodes": [
+    {
+      "opcode": "0x17",
+      "name": "atk17_seteffectsecondary",
+      "retail": "0x0801F8EC",
+      "debug": "0x08022E90",
+      "size": 16,
+      "role": "apply move effect as secondary/non-primary"
+    },
+    {
+      "opcode": "0x18",
+      "name": "atk18_clearstatusfromeffect",
+      "retail": "0x0801F8FC",
+      "debug": "0x08022EA0",
+      "size": 132,
+      "role": "clear status1/status2 flag selected by move-effect byte"
+    },
+    {
+      "opcode": "0x19",
+      "name": "atk19_tryfaintmon",
+      "retail": "0x0801F980",
+      "debug": "0x08022F24",
+      "size": 904,
+      "role": "faint detection, counters, friendship, Destiny Bond and Grudge handling"
+    },
+    {
+      "opcode": "0x1A",
+      "name": "atk1A_dofaintanimation",
+      "retail": "0x0801FD08",
+      "debug": "0x080232AC",
+      "size": 60,
+      "role": "emit faint animation"
+    },
+    {
+      "opcode": "0x1B",
+      "name": "atk1B_cleareffectsonfaint",
+      "retail": "0x0801FD44",
+      "debug": "0x080232E8",
+      "size": 100,
+      "role": "clear status and undo attraction/trapping/switch-dependent effects"
+    },
+    {
+      "opcode": "0x1C",
+      "name": "atk1C_jumpifstatus",
+      "retail": "0x0801FDA8",
+      "debug": "0x0802334C",
+      "size": 120,
+      "role": "conditional jump on 32-bit primary-status mask"
+    },
+    {
+      "opcode": "0x1D",
+      "name": "atk1D_jumpifstatus2",
+      "retail": "0x0801FE20",
+      "debug": "0x080233C4",
+      "size": 120,
+      "role": "conditional jump on 32-bit volatile-status mask"
+    },
+    {
+      "opcode": "0x1E",
+      "name": "atk1E_jumpifability",
+      "retail": "0x0801FE98",
+      "debug": "0x0802343C",
+      "size": 240,
+      "role": "conditional jump on battler/side ability query"
+    },
+    {
+      "opcode": "0x1F",
+      "name": "atk1F_jumpifsideaffecting",
+      "retail": "0x0801FF88",
+      "debug": "0x0802352C",
+      "size": 120,
+      "role": "conditional jump on 16-bit side-status mask"
+    },
+    {
+      "opcode": "0x20",
+      "name": "atk20_jumpifstat",
+      "retail": "0x08020000",
+      "debug": "0x080235A4",
+      "size": 248,
+      "role": "compare one stat stage and branch"
+    },
+    {
+      "opcode": "0x21",
+      "name": "atk21_jumpifstatus3condition",
+      "retail": "0x080200F8",
+      "debug": "0x0802369C",
+      "size": 132,
+      "role": "conditional/inverted jump on status3 flags"
+    },
+    {
+      "opcode": "0x22",
+      "name": "atk22_jumpiftype",
+      "retail": "0x0802017C",
+      "debug": "0x08023720",
+      "size": 92,
+      "role": "conditional jump if battler has requested type"
+    },
+    {
+      "opcode": "0x23",
+      "name": "atk23_getexp",
+      "retail": "0x080201D8",
+      "debug": "0x0802377C",
+      "size": 2480,
+      "role": "experience/EV distribution and level-up state machine"
+    },
+    {
+      "opcode": "0x24",
+      "name": "atk24",
+      "retail": "0x08020B88",
+      "debug": "0x0802412C",
+      "size": 488,
+      "role": "party defeat/win and link-fainted-state outcome check; span includes MoveValuesCleanUp helper"
+    },
+    {
+      "opcode": "0x25",
+      "name": "atk25_movevaluescleanup",
+      "retail": "0x08020D70",
+      "debug": "0x08024314",
+      "size": 24,
+      "role": "reset move result/damage/critical/effect transient values"
+    },
+    {
+      "opcode": "0x26",
+      "name": "atk26_setmultihit",
+      "retail": "0x08020D88",
+      "debug": "0x0802432C",
+      "size": 24,
+      "role": "initialize multi-hit counter"
+    },
+    {
+      "opcode": "0x27",
+      "name": "atk27_decrementmultihit",
+      "retail": "0x08020DA0",
+      "debug": "0x08024344",
+      "size": 72,
+      "role": "decrement multi-hit counter and branch/continue"
+    },
+    {
+      "opcode": "0x28",
+      "name": "atk28_goto",
+      "retail": "0x08020DE8",
+      "debug": "0x0802438C",
+      "size": 32,
+      "role": "unconditional script pointer jump"
+    },
+    {
+      "opcode": "0x29",
+      "name": "atk29_jumpifbyte",
+      "retail": "0x08020E08",
+      "debug": "0x080243AC",
+      "size": 160,
+      "role": "generic byte comparison and jump"
+    },
+    {
+      "opcode": "0x2A",
+      "name": "atk2A_jumpifhalfword",
+      "retail": "0x08020EA8",
+      "debug": "0x0802444C",
+      "size": 168,
+      "role": "generic 16-bit comparison and jump"
+    },
+    {
+      "opcode": "0x2B",
+      "name": "atk2B_jumpifword",
+      "retail": "0x08020F50",
+      "debug": "0x080244F4",
+      "size": 180,
+      "role": "generic 32-bit comparison and jump"
+    },
+    {
+      "opcode": "0x2C",
+      "name": "atk2C_jumpifarrayequal",
+      "retail": "0x08021004",
+      "debug": "0x080245A8",
+      "size": 136,
+      "role": "byte-array equality test and jump"
+    },
+    {
+      "opcode": "0x2D",
+      "name": "atk2D_jumpifarraynotequal",
+      "retail": "0x0802108C",
+      "debug": "0x08024630",
+      "size": 132,
+      "role": "byte-array inequality test and jump"
+    },
+    {
+      "opcode": "0x2E",
+      "name": "atk2E_setbyte",
+      "retail": "0x08021110",
+      "debug": "0x080246B4",
+      "size": 40,
+      "role": "write immediate byte through script pointer"
+    },
+    {
+      "opcode": "0x2F",
+      "name": "atk2F_addbyte",
+      "retail": "0x08021138",
+      "debug": "0x080246DC",
+      "size": 44,
+      "role": "add immediate byte through script pointer"
+    }
+  ],
+  "helper": {
+    "name": "MoveValuesCleanUp",
+    "retail": "0x08020D24",
+    "debug": "0x080242C8",
+    "size": 76,
+    "role": "clear move-result flags, reset damage multiplier/critical multiplier/effect byte and selected hit-marker flags"
+  },
+  "exp_rules": {
+    "base_formula": "expYield * defeatedLevel / 7",
+    "party_slots": 6,
+    "exp_share_split": "half participants / half Exp Share holders",
+    "lucky_egg_percent": 150,
+    "trainer_battle_percent": 150,
+    "traded_percent": 150,
+    "level_cap": 100,
+    "awards_evs": true
+  },
+  "next": {
+    "opcode": "0x30",
+    "function": "atk30_subbyte",
+    "retail": "0x08021164",
+    "debug": "0x08024708",
+    "delta": "+0x35A4"
+  }
+}
