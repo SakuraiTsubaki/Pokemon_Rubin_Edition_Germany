@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "module": "battle_util_foundation",
+  "retail": {
+    "start": "0x08015324",
+    "end_exclusive": "0x08015FD0",
+    "size": 3244,
+    "sha256": "f1292d07e15d28e091d388c71f989ba613c06f45d5d2ec118cb625d41576d374",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080183AC",
+    "end_exclusive": "0x08019058",
+    "size": 3244,
+    "sha256": "8280b41942af994c9ae1979d2a785dc62b13c75e4bdba295b6d15fa59535a05e",
+    "retail_address_delta": "+0x3088"
+  },
+  "functions": [
+    {
+      "name": "GetBattlerForBattleScript",
+      "retail": "0x08015324",
+      "debug": "0x080183AC",
+      "size": 132,
+      "role": "map battle-script bank selector to target/attacker/effect/scripting battler"
+    },
+    {
+      "name": "PressurePPLose",
+      "retail": "0x080153A8",
+      "debug": "0x08018430",
+      "size": 200,
+      "role": "apply Pressure PP loss to one move and synchronize PP through the controller"
+    },
+    {
+      "name": "PressurePPLoseOnUsingImprision",
+      "retail": "0x08015470",
+      "debug": "0x080184F8",
+      "size": 308,
+      "role": "apply Pressure PP loss for Imprison across opposing battlers"
+    },
+    {
+      "name": "PressurePPLoseOnUsingPerishSong",
+      "retail": "0x080155A4",
+      "debug": "0x0801862C",
+      "size": 276,
+      "role": "apply Pressure PP loss for Perish Song across battlers"
+    },
+    {
+      "name": "MarkAllBattlersForControllerExec",
+      "retail": "0x080156B8",
+      "debug": "0x08018740",
+      "size": 112,
+      "role": "set controller-execution bits for all active battlers"
+    },
+    {
+      "name": "MarkBattlerForControllerExec",
+      "retail": "0x08015728",
+      "debug": "0x080187B0",
+      "size": 80,
+      "role": "set controller-execution bits for one battler"
+    },
+    {
+      "name": "sub_80155A4",
+      "retail": "0x08015778",
+      "debug": "0x08018800",
+      "size": 80,
+      "role": "set per-link-player controller bits for one battler and clear a high pending bit"
+    },
+    {
+      "name": "CancelMultiTurnMoves",
+      "retail": "0x080157C8",
+      "debug": "0x08018850",
+      "size": 108,
+      "role": "clear multi-turn/status3 state and Rollout/Fury Cutter counters"
+    },
+    {
+      "name": "WasUnableToUseMove",
+      "retail": "0x08015834",
+      "debug": "0x080188BC",
+      "size": 88,
+      "role": "test per-turn ProtectStruct failure and immobility flags"
+    },
+    {
+      "name": "PrepareStringBattle",
+      "retail": "0x0801588C",
+      "debug": "0x08018914",
+      "size": 36,
+      "role": "emit a battle-string command and mark battler controller busy"
+    },
+    {
+      "name": "ResetSentPokesToOpponentValue",
+      "retail": "0x080158B0",
+      "debug": "0x08018938",
+      "size": 100,
+      "role": "rebuild sent-party bitfields from active battler party indexes"
+    },
+    {
+      "name": "sub_8015740",
+      "retail": "0x08015914",
+      "debug": "0x0801899C",
+      "size": 132,
+      "role": "refresh sent-party bitfield for an opponent-side battler"
+    },
+    {
+      "name": "sub_80157C4",
+      "retail": "0x08015998",
+      "debug": "0x08018A20",
+      "size": 104,
+      "role": "propagate sent-party bit for player/opponent tracking"
+    },
+    {
+      "name": "BattleScriptPush",
+      "retail": "0x08015A00",
+      "debug": "0x08018A88",
+      "size": 32,
+      "role": "push a battle-script pointer onto the battle-script stack"
+    },
+    {
+      "name": "BattleScriptPushCursor",
+      "retail": "0x08015A20",
+      "debug": "0x08018AA8",
+      "size": 36,
+      "role": "push the current battle-script cursor"
+    },
+    {
+      "name": "BattleScriptPop",
+      "retail": "0x08015A44",
+      "debug": "0x08018ACC",
+      "size": 36,
+      "role": "pop the current battle-script cursor"
+    },
+    {
+      "name": "TrySetCantSelectMoveBattleScript",
+      "retail": "0x08015A68",
+      "debug": "0x08018AF0",
+      "size": 516,
+      "role": "select a rejection script for disabled/Torment/Taunt/Imprison/Choice/zero-PP moves"
+    },
+    {
+      "name": "CheckMoveLimitations",
+      "retail": "0x08015C6C",
+      "debug": "0x08018CF4",
+      "size": 504,
+      "role": "build the four-bit unusable-move mask"
+    },
+    {
+      "name": "AreAllMovesUnusable",
+      "retail": "0x08015E64",
+      "debug": "0x08018EEC",
+      "size": 204,
+      "role": "detect mask 0xF and configure no-moves/Struggle behavior"
+    },
+    {
+      "name": "IsImprisoned",
+      "retail": "0x08015F30",
+      "debug": "0x08018FB8",
+      "size": 160,
+      "role": "scan opposing battlers and their four move slots for Imprison overlap"
+    }
+  ],
+  "original_capacity_evidence": {
+    "move_slots": 4,
+    "all_moves_unusable_mask": "0x0F",
+    "move_id_width_bits": 16,
+    "selected_move_slot_width_bits": 8,
+    "active_battler_model": 4
+  },
+  "battle_action_10": {
+    "retail_entry": "0x0801B768",
+    "retail_thumb_pointer": "0x0801B769",
+    "debug_entry": "0x0801ECBC",
+    "debug_thumb_pointer": "0x0801ECBD",
+    "status": "later battle_util target"
+  },
+  "next": {
+    "function": "DoFieldEndTurnEffects",
+    "retail": "0x08015FD0",
+    "debug": "0x08019058"
+  }
+}
