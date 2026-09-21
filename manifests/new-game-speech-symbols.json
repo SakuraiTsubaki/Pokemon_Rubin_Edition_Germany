@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "module": "new_game_speech",
+  "retail_slice": {
+    "start": "0x0800A3C8",
+    "end_exclusive": "0x0800B234",
+    "size": 3692,
+    "sha256": "8c81b39a88fe3b5d1a12eaee333692fee3d5ca87e1d52f2f62426572ba02e73e",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug_slice": {
+    "start": "0x0800A5A8",
+    "end_exclusive": "0x0800B414",
+    "size": 3692,
+    "sha256": "f7c78291c4f9031b5585252d2e9a7099c7598c4a3dac258568ebf47f4aaf5938",
+    "retail_address_delta": "+0x1E0"
+  },
+  "next_function": {
+    "retail": "0x0800B234",
+    "debug": "0x0800B414",
+    "role": "CB_ContinueNewGameSpeechPart2"
+  },
+  "functions": [
+    {
+      "state": 1,
+      "name": "Task_NewGameSpeech1",
+      "retail": "0x0800A3C8",
+      "debug": "0x0800A5A8",
+      "role": "initialize Birch intro graphics, sprites, window state and fade",
+      "text_refs": [],
+      "next_states": [
+        2
+      ]
+    },
+    {
+      "state": 2,
+      "name": "Task_NewGameSpeech2",
+      "retail": "0x0800A4B4",
+      "debug": "0x0800A694",
+      "role": "fade in Birch/Azurill/background",
+      "text_refs": [],
+      "next_states": [
+        3
+      ]
+    },
+    {
+      "state": 3,
+      "name": "Task_NewGameSpeech3",
+      "retail": "0x0800A52C",
+      "debug": "0x0800A70C",
+      "role": "display welcome text",
+      "text_refs": [
+        "gBirchSpeech_Welcome"
+      ],
+      "next_states": [
+        4
+      ]
+    },
+    {
+      "state": 4,
+      "name": "Task_NewGameSpeech4",
+      "retail": "0x0800A59C",
+      "debug": "0x0800A77C",
+      "role": "advance to the 'this is Pokemon' text",
+      "text_refs": [
+        "gBirchSpeech_ThisIsPokemon"
+      ],
+      "next_states": [
+        5
+      ]
+    },
+    {
+      "state": 5,
+      "name": "Task_NewGameSpeech5",
+      "retail": "0x0800A5E8",
+      "debug": "0x0800A7C8",
+      "role": "wait for text completion",
+      "text_refs": [],
+      "next_states": [
+        6
+      ]
+    },
+    {
+      "state": 6,
+      "name": "Task_NewGameSpeech6",
+      "retail": "0x0800A618",
+      "debug": "0x0800A7F8",
+      "role": "create Pokeball presentation sprite",
+      "text_refs": [],
+      "next_states": [
+        7
+      ]
+    },
+    {
+      "state": 7,
+      "name": "Task_NewGameSpeech7",
+      "retail": "0x0800A68C",
+      "debug": "0x0800A86C",
+      "role": "handle Pokeball/Pokemon reveal and cry",
+      "text_refs": [],
+      "next_states": [
+        8
+      ]
+    },
+    {
+      "state": 8,
+      "name": "Task_NewGameSpeech8",
+      "retail": "0x0800A6FC",
+      "debug": "0x0800A8DC",
+      "role": "display world-inhabited-by-Pokemon text",
+      "text_refs": [
+        "gBirchSpeech_WorldInhabitedByPokemon"
+      ],
+      "next_states": [
+        9
+      ]
+    },
+    {
+      "state": 9,
+      "name": "Task_NewGameSpeech9",
+      "retail": "0x0800A738",
+      "debug": "0x0800A918",
+      "role": "display transition toward player introduction",
+      "text_refs": [
+        "gBirchSpeech_AndYouAre"
+      ],
+      "next_states": [
+        10
+      ]
+    },
+    {
+      "state": 10,
+      "name": "Task_NewGameSpeech10",
+      "retail": "0x0800A780",
+      "debug": "0x0800A960",
+      "role": "fade out professor/background for player selection",
+      "text_refs": [],
+      "next_states": [
+        11
+      ]
+    },
+    {
+      "state": 11,
+      "name": "Task_NewGameSpeech11",
+      "retail": "0x0800A7F8",
+      "debug": "0x0800A9D8",
+      "role": "wait for fade completion",
+      "text_refs": [],
+      "next_states": [
+        12
+      ]
+    },
+    {
+      "state": 12,
+      "name": "Task_NewGameSpeech12",
+      "retail": "0x0800A83C",
+      "debug": "0x0800AA1C",
+      "role": "bring player trainer presentation on screen",
+      "text_refs": [],
+      "next_states": [
+        13
+      ]
+    },
+    {
+      "state": 13,
+      "name": "Task_NewGameSpeech13",
+      "retail": "0x0800A8EC",
+      "debug": "0x0800AACC",
+      "role": "wait for player presentation transition",
+      "text_refs": [],
+      "next_states": [
+        14
+      ]
+    },
+    {
+      "state": 14,
+      "name": "Task_NewGameSpeech14",
+      "retail": "0x0800A930",
+      "debug": "0x0800AB10",
+      "role": "display boy-or-girl prompt",
+      "text_refs": [
+        "gBirchSpeech_AreYouBoyOrGirl"
+      ],
+      "next_states": [
+        15
+      ]
+    },
+    {
+      "state": 15,
+      "name": "Task_NewGameSpeech15",
+      "retail": "0x0800A970",
+      "debug": "0x0800AB50",
+      "role": "create gender selection menu",
+      "text_refs": [],
+      "next_states": [
+        16
+      ]
+    },
+    {
+      "state": 16,
+      "name": "Task_NewGameSpeech16",
+      "retail": "0x0800A9A8",
+      "debug": "0x0800AB88",
+      "role": "process gender selection or sprite switch",
+      "text_refs": [],
+      "next_states": [
+        17,
+        19
+      ]
+    },
+    {
+      "state": 17,
+      "name": "Task_NewGameSpeech17",
+      "retail": "0x0800AA48",
+      "debug": "0x0800AC28",
+      "role": "slide old trainer sprite out",
+      "text_refs": [],
+      "next_states": [
+        18
+      ]
+    },
+    {
+      "state": 18,
+      "name": "Task_NewGameSpeech18",
+      "retail": "0x0800AAF0",
+      "debug": "0x0800ACD0",
+      "role": "slide selected trainer sprite in",
+      "text_refs": [],
+      "next_states": [
+        16
+      ]
+    },
+    {
+      "state": 19,
+      "name": "Task_NewGameSpeech19",
+      "retail": "0x0800AB48",
+      "debug": "0x0800AD28",
+      "role": "display name prompt",
+      "text_refs": [
+        "gBirchSpeech_WhatsYourName"
+      ],
+      "next_states": [
+        20
+      ]
+    },
+    {
+      "state": 20,
+      "name": "Task_NewGameSpeech20",
+      "retail": "0x0800AB88",
+      "debug": "0x0800AD68",
+      "role": "create preset-name menu",
+      "text_refs": [],
+      "next_states": [
+        21
+      ]
+    },
+    {
+      "state": 21,
+      "name": "Task_NewGameSpeech21",
+      "retail": "0x0800ABC0",
+      "debug": "0x0800ADA0",
+      "role": "process preset/custom/back name selection",
+      "text_refs": [],
+      "next_states": [
+        14,
+        22,
+        23
+      ]
+    },
+    {
+      "state": 22,
+      "name": "Task_NewGameSpeech22",
+      "retail": "0x0800AC80",
+      "debug": "0x0800AE60",
+      "role": "enter naming screen for custom name",
+      "text_refs": [],
+      "next_states": []
+    },
+    {
+      "state": 23,
+      "name": "Task_NewGameSpeech23",
+      "retail": "0x0800ACC0",
+      "debug": "0x0800AEA0",
+      "role": "display confirmation text with player name",
+      "text_refs": [
+        "gBirchSpeech_SoItsPlayer"
+      ],
+      "next_states": [
+        24
+      ]
+    },
+    {
+      "state": 24,
+      "name": "Task_NewGameSpeech24",
+      "retail": "0x0800AD0C",
+      "debug": "0x0800AEEC",
+      "role": "display yes/no confirmation menu",
+      "text_refs": [],
+      "next_states": [
+        25
+      ]
+    },
+    {
+      "state": 25,
+      "name": "Task_NewGameSpeech25",
+      "retail": "0x0800AD44",
+      "debug": "0x0800AF24",
+      "role": "process confirmation or return to gender choice",
+      "text_refs": [],
+      "next_states": [
+        14,
+        26
+      ]
+    },
+    {
+      "state": 26,
+      "name": "Task_NewGameSpeech26",
+      "retail": "0x0800ADF4",
+      "debug": "0x0800AFD4",
+      "role": "complete trainer/background fade-out transition",
+      "text_refs": [],
+      "next_states": [
+        27
+      ]
+    },
+    {
+      "state": 27,
+      "name": "Task_NewGameSpeech27",
+      "retail": "0x0800AE2C",
+      "debug": "0x0800B00C",
+      "role": "restore Birch/Azurill and display contextual player text",
+      "text_refs": [
+        "gBirchSpeech_AhOkayYouArePlayer"
+      ],
+      "next_states": [
+        28
+      ]
+    },
+    {
+      "state": 28,
+      "name": "Task_NewGameSpeech28",
+      "retail": "0x0800AF1C",
+      "debug": "0x0800B0FC",
+      "role": "fade Birch/Azurill back out after text",
+      "text_refs": [],
+      "next_states": [
+        29
+      ]
+    },
+    {
+      "state": 29,
+      "name": "Task_NewGameSpeech29",
+      "retail": "0x0800AFC8",
+      "debug": "0x0800B1A8",
+      "role": "restore selected trainer and display ready text",
+      "text_refs": [
+        "gBirchSpeech_AreYouReady"
+      ],
+      "next_states": [
+        30
+      ]
+    },
+    {
+      "state": 30,
+      "name": "Task_NewGameSpeech30",
+      "retail": "0x0800B0A8",
+      "debug": "0x0800B288",
+      "role": "start trainer shrink/fade/BGM transition",
+      "text_refs": [],
+      "next_states": [
+        31
+      ]
+    },
+    {
+      "state": 31,
+      "name": "Task_NewGameSpeech31",
+      "retail": "0x0800B158",
+      "debug": "0x0800B338",
+      "role": "wait for affine shrink animation",
+      "text_refs": [],
+      "next_states": [
+        32
+      ]
+    },
+    {
+      "state": 32,
+      "name": "Task_NewGameSpeech32",
+      "retail": "0x0800B194",
+      "debug": "0x0800B374",
+      "role": "finish palette transition and prepare final state",
+      "text_refs": [],
+      "next_states": [
+        33
+      ]
+    },
+    {
+      "state": 33,
+      "name": "Task_NewGameSpeech33",
+      "retail": "0x0800B208",
+      "debug": "0x0800B3E8",
+      "role": "enter new game callback and destroy intro task",
+      "text_refs": [],
+      "next_states": []
+    }
+  ],
+  "evidence_policy": "Addresses and slice identity are verified against the supplied German binaries. Semantic names/roles are assigned only after control-flow and call-pattern comparison; external source naming is non-authoritative comparison material."
+}
