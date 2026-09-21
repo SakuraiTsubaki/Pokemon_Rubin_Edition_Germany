@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "module": "battle_controllers",
+  "slice": {
+    "retail": {
+      "start": "0x0800BA2C",
+      "end_exclusive": "0x0800C7EC",
+      "size": 3520,
+      "sha256": "ed1195f99f35a971e23d8018c26ccdd043155efacb7ec9b3fca5aba8fab1dd6c",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x0800BC0C",
+      "end_exclusive": "0x0800CA08",
+      "size": 3580,
+      "sha256": "39f0347ff1bd8a793d2f09bffe6d846fd71a399c279ad2a997924682406c304d"
+    }
+  },
+  "debug_growth": {
+    "function": "SetUpBattleVarsAndBirchPoochyena",
+    "extra_bytes": 60,
+    "delta_before": "+0x1E0",
+    "delta_after": "+0x21C",
+    "observed_literals": [
+      "0x02023A0C",
+      "0x02000000",
+      "0x000160FD",
+      "0x000160FF",
+      "0x030041D0"
+    ]
+  },
+  "functions": [
+    {
+      "name": "HandleLinkBattleSetup",
+      "retail": "0x0800BA2C",
+      "debug": "0x0800BC0C",
+      "retail_debug_delta": "+0x1E0",
+      "size": 44,
+      "role": "link-battle setup entry"
+    },
+    {
+      "name": "SetUpBattleVarsAndBirchPoochyena",
+      "retail": "0x0800BA58",
+      "debug": "0x0800BC38",
+      "retail_debug_delta": "+0x1E0",
+      "size": 204,
+      "role": "battle globals/controllers initialization; first-battle Poochyena setup"
+    },
+    {
+      "name": "sub_800B950",
+      "retail": "0x0800BB24",
+      "debug": "0x0800BD40",
+      "retail_debug_delta": "+0x21C",
+      "size": 88,
+      "role": "select single/link controllers, assign party slots, initialize battlers"
+    },
+    {
+      "name": "InitSinglePlayerBtlControllers",
+      "retail": "0x0800BB7C",
+      "debug": "0x0800BD98",
+      "retail_debug_delta": "+0x21C",
+      "size": 208,
+      "role": "single-player controller topology"
+    },
+    {
+      "name": "InitLinkBtlControllers",
+      "retail": "0x0800BC4C",
+      "debug": "0x0800BE68",
+      "retail_debug_delta": "+0x21C",
+      "size": 732,
+      "role": "link/multi battle controller topology"
+    },
+    {
+      "name": "SetBattlePartyIds",
+      "retail": "0x0800BF28",
+      "debug": "0x0800C144",
+      "retail_debug_delta": "+0x21C",
+      "size": 328,
+      "role": "select valid party member indexes for battlers"
+    },
+    {
+      "name": "PrepareBufferDataTransfer",
+      "retail": "0x0800C070",
+      "debug": "0x0800C28C",
+      "retail_debug_delta": "+0x21C",
+      "size": 140,
+      "role": "route controller payload to link or local battle buffers"
+    },
+    {
+      "name": "CreateTasksForSendRecvLinkBuffers",
+      "retail": "0x0800C0FC",
+      "debug": "0x0800C318",
+      "retail_debug_delta": "+0x21C",
+      "size": 200,
+      "role": "initialize link send/receive tasks and buffers"
+    },
+    {
+      "name": "PrepareBufferDataTransferLink",
+      "retail": "0x0800C1C4",
+      "debug": "0x0800C3E0",
+      "retail_debug_delta": "+0x21C",
+      "size": 440,
+      "role": "pack controller payload into link-send ring buffer"
+    },
+    {
+      "name": "Task_HandleSendLinkBuffersData",
+      "retail": "0x0800C37C",
+      "debug": "0x0800C598",
+      "retail_debug_delta": "+0x21C",
+      "size": 436,
+      "role": "link-send task state machine"
+    },
+    {
+      "name": "sub_800C35C",
+      "retail": "0x0800C530",
+      "debug": "0x0800C74C",
+      "retail_debug_delta": "+0x21C",
+      "size": 288,
+      "role": "copy received link blocks into battle receive buffer"
+    },
+    {
+      "name": "Task_HandleCopyReceivedLinkBuffersData",
+      "retail": "0x0800C650",
+      "debug": "0x0800C86C",
+      "retail_debug_delta": "+0x21C",
+      "size": 412,
+      "role": "dispatch received link controller blocks"
+    },
+    {
+      "name": "BtlController_EmitGetMonData",
+      "retail": "0x0800C7EC",
+      "debug": "0x0800CA08",
+      "retail_debug_delta": "+0x21C",
+      "size": null,
+      "role": "first controller command emitter; next slice"
+    }
+  ]
+}
