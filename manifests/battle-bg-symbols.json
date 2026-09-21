@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "module": "battle_bg",
+  "retail": {
+    "start": "0x0800D858",
+    "end_exclusive": "0x0800E998",
+    "size": 4416,
+    "sha256": "1aa5d366a78ec31d9ad1b9e2a1d8a7e5dd972abaee607edb54685eb41d5b16a3",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0800DA74",
+    "end_exclusive": "0x0800EC0C",
+    "size": 4504,
+    "sha256": "69cffde59be984b84836ae1e6e2f898c426ec713badf4af1a73ce8d7d2163331"
+  },
+  "debug_growth": {
+    "function": "LoadBattleTextboxAndBackground",
+    "extra_bytes": 88,
+    "delta_before": "+0x21C",
+    "delta_after": "+0x274"
+  },
+  "functions": [
+    {
+      "name": "debug_sub_800D684",
+      "retail": "0x0800D858",
+      "debug": "0x0800DA74",
+      "retail_debug_delta": "0x21C",
+      "retail_size": 64,
+      "debug_size": 64,
+      "role": "debug/utility sprite setup callback entry"
+    },
+    {
+      "name": "sub_800D6C4",
+      "retail": "0x0800D898",
+      "debug": "0x0800DAB4",
+      "retail_debug_delta": "0x21C",
+      "retail_size": 16,
+      "debug_size": 16,
+      "role": "animate sprites and build OAM buffer"
+    },
+    {
+      "name": "sub_800D6D4",
+      "retail": "0x0800D8A8",
+      "debug": "0x0800DAC4",
+      "retail_debug_delta": "0x21C",
+      "retail_size": 120,
+      "debug_size": 120,
+      "role": "initialize battle display registers/background controls"
+    },
+    {
+      "name": "ApplyPlayerChosenFrameToBattleMenu",
+      "retail": "0x0800D920",
+      "debug": "0x0800DB3C",
+      "retail_debug_delta": "0x21C",
+      "retail_size": 108,
+      "debug_size": 108,
+      "role": "load chosen window frame and battle-menu palette entries"
+    },
+    {
+      "name": "DrawMainBattleBackground",
+      "retail": "0x0800D98C",
+      "debug": "0x0800DBA8",
+      "retail_debug_delta": "0x21C",
+      "retail_size": 768,
+      "debug_size": 768,
+      "role": "select main battle tiles/tilemap/palette by battle flags, trainer class, map scene and environment"
+    },
+    {
+      "name": "LoadBattleTextboxAndBackground",
+      "retail": "0x0800DC8C",
+      "debug": "0x0800DEA8",
+      "retail_debug_delta": "0x21C",
+      "retail_size": 64,
+      "debug_size": 152,
+      "role": "load textbox graphics, frame and main battle background"
+    },
+    {
+      "name": "sub_800DAF8",
+      "retail": "0x0800DCCC",
+      "debug": "0x0800DF40",
+      "retail_debug_delta": "0x274",
+      "retail_size": 300,
+      "debug_size": 300,
+      "role": "build link-result window tile data"
+    },
+    {
+      "name": "PrintLinkBattleWinLossTie",
+      "retail": "0x0800DDF8",
+      "debug": "0x0800E06C",
+      "retail_debug_delta": "0x274",
+      "retail_size": 524,
+      "debug_size": 524,
+      "role": "render localized link battle win/loss/tie messages"
+    },
+    {
+      "name": "InitLinkBattleVsScreen",
+      "retail": "0x0800E004",
+      "debug": "0x0800E278",
+      "retail_debug_delta": "0x274",
+      "retail_size": 1036,
+      "debug_size": 1036,
+      "role": "link VS-screen task/state machine"
+    },
+    {
+      "name": "DrawBattleEntryBackground",
+      "retail": "0x0800E410",
+      "debug": "0x0800E684",
+      "retail_debug_delta": "0x274",
+      "retail_size": 472,
+      "debug_size": 472,
+      "role": "load battle-entry animation background by battle context"
+    },
+    {
+      "name": "LoadChosenBattleElement",
+      "retail": "0x0800E5E8",
+      "debug": "0x0800E85C",
+      "retail_debug_delta": "0x274",
+      "retail_size": 944,
+      "debug_size": 944,
+      "role": "incremental loader for textbox/background tiles, tilemap, palette and frame"
+    }
+  ],
+  "environment_table": {
+    "retail_address": "0x08206528",
+    "debug_address": "0x0821F27C",
+    "entry_count": 10,
+    "entry_size": 20,
+    "sha256": "64e4c4c2d165ac4e13e77623ddca80bbaf58ec1120e24418584dbfdf56393a0f",
+    "entries": [
+      {
+        "id": 0,
+        "name": "GRASS",
+        "tileset": "0x08E5DED4",
+        "tilemap": "0x08E5E4BC",
+        "entry_tileset": "0x08E63A7C",
+        "entry_tilemap": "0x08E64004",
+        "palette": "0x08E5E484"
+      },
+      {
+        "id": 1,
+        "name": "LONG_GRASS",
+        "tileset": "0x08E5E76C",
+        "tilemap": "0x08E5EE24",
+        "entry_tileset": "0x08E641C0",
+        "entry_tilemap": "0x08E648D0",
+        "palette": "0x08E5EDE4"
+      },
+      {
+        "id": 2,
+        "name": "SAND",
+        "tileset": "0x08E5F0D4",
+        "tilemap": "0x08E5F714",
+        "entry_tileset": "0x08E64B08",
+        "entry_tilemap": "0x08E6504C",
+        "palette": "0x08E5F6CC"
+      },
+      {
+        "id": 3,
+        "name": "UNDERWATER",
+        "tileset": "0x08E5F9C4",
+        "tilemap": "0x08E5FFC4",
+        "entry_tileset": "0x08E651F4",
+        "entry_tilemap": "0x08E656C0",
+        "palette": "0x08E5FF7C"
+      },
+      {
+        "id": 4,
+        "name": "WATER",
+        "tileset": "0x08E60274",
+        "tilemap": "0x08E6088C",
+        "entry_tileset": "0x08E65850",
+        "entry_tilemap": "0x08E65E5C",
+        "palette": "0x08E60848"
+      },
+      {
+        "id": 5,
+        "name": "POND",
+        "tileset": "0x08E60B3C",
+        "tilemap": "0x08E61124",
+        "entry_tileset": "0x08E66000",
+        "entry_tilemap": "0x08E6654C",
+        "palette": "0x08E610E4"
+      },
+      {
+        "id": 6,
+        "name": "MOUNTAIN",
+        "tileset": "0x08E613D4",
+        "tilemap": "0x08E619D0",
+        "entry_tileset": "0x08E66698",
+        "entry_tilemap": "0x08E66C78",
+        "palette": "0x08E61994"
+      },
+      {
+        "id": 7,
+        "name": "CAVE",
+        "tileset": "0x08E61C80",
+        "tilemap": "0x08E622C0",
+        "entry_tileset": "0x08E66E0C",
+        "entry_tilemap": "0x08E67628",
+        "palette": "0x08E62278"
+      },
+      {
+        "id": 8,
+        "name": "BUILDING",
+        "tileset": "0x08E625AC",
+        "tilemap": "0x08E62B94",
+        "entry_tileset": "0x08E678D0",
+        "entry_tilemap": "0x08E67CE0",
+        "palette": "0x08E636FC"
+      },
+      {
+        "id": 9,
+        "name": "PLAIN",
+        "tileset": "0x08E625AC",
+        "tilemap": "0x08E62B94",
+        "entry_tileset": "0x08E678D0",
+        "entry_tilemap": "0x08E67CE0",
+        "palette": "0x08E62570"
+      }
+    ]
+  },
+  "german_link_result_layout": {
+    "left_message_x": 5,
+    "right_message_x": 20,
+    "center_message_x": 13,
+    "tile_offset_win": 160,
+    "tile_offset_loss": 172
+  },
+  "next_module": {
+    "name": "battle_main",
+    "retail_start": "0x0800E998",
+    "debug_start": "0x0800EC0C"
+  }
+}
