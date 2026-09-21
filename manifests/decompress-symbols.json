@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "module": "decompress",
+  "retail": {
+    "start": "0x0800D40C",
+    "end_exclusive": "0x0800D858",
+    "size": 1100,
+    "sha256": "8214643be8cafdff49ca26dfa48cdbce01e99cedf26e6143d5e5754625190feb",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0800D628",
+    "end_exclusive": "0x0800DA74",
+    "size": 1100,
+    "sha256": "b49b41f45d0812ec8342a6a77345cc789f9e0ed6ce76dbadd3855ecd1248a8fd",
+    "retail_address_delta": "+0x21C"
+  },
+  "functions": [
+    {
+      "name": "LZDecompressWram",
+      "retail": "0x0800D40C",
+      "debug": "0x0800D628",
+      "size": 12,
+      "role": "thin wrapper around BIOS LZ77 WRAM decompression"
+    },
+    {
+      "name": "LZDecompressVram",
+      "retail": "0x0800D418",
+      "debug": "0x0800D634",
+      "size": 12,
+      "role": "thin wrapper around BIOS LZ77 VRAM decompression"
+    },
+    {
+      "name": "LoadCompressedObjectPic",
+      "retail": "0x0800D424",
+      "debug": "0x0800D640",
+      "size": 44,
+      "role": "decompress sprite sheet to EWRAM and load it"
+    },
+    {
+      "name": "LoadCompressedObjectPicOverrideBuffer",
+      "retail": "0x0800D450",
+      "debug": "0x0800D66C",
+      "size": 40,
+      "role": "decompress sprite sheet to caller buffer and load it"
+    },
+    {
+      "name": "LoadCompressedObjectPalette",
+      "retail": "0x0800D478",
+      "debug": "0x0800D694",
+      "size": 52,
+      "role": "decompress object palette to EWRAM and load it"
+    },
+    {
+      "name": "LoadCompressedObjectPaletteOverrideBuffer",
+      "retail": "0x0800D4AC",
+      "debug": "0x0800D6C8",
+      "size": 48,
+      "role": "decompress object palette to caller buffer and load it"
+    },
+    {
+      "name": "DecompressPicFromTable_2",
+      "retail": "0x0800D4DC",
+      "debug": "0x0800D6F8",
+      "size": 44,
+      "role": "decompress normal species image or fallback question-mark image"
+    },
+    {
+      "name": "HandleLoadSpecialPokePic",
+      "retail": "0x0800D508",
+      "debug": "0x0800D724",
+      "size": 68,
+      "role": "select front/back context and forward to special Pokemon-picture loader"
+    },
+    {
+      "name": "LoadSpecialPokePic",
+      "retail": "0x0800D54C",
+      "debug": "0x0800D768",
+      "size": 168,
+      "role": "handle Unown forms, unknown-species fallback and Spinda spots"
+    },
+    {
+      "name": "Unused_LZDecompressWramIndirect",
+      "retail": "0x0800D5F4",
+      "debug": "0x0800D810",
+      "size": 12,
+      "role": "unused pointer-indirect LZ77 WRAM wrapper"
+    },
+    {
+      "name": "unref_sub_800D42C",
+      "retail": "0x0800D600",
+      "debug": "0x0800D81C",
+      "size": 600,
+      "role": "repack compacted Pokemon tile objects into centered 8x8-tile canvases"
+    }
+  ],
+  "expansion_audit": [
+    "species boundary fallback",
+    "Unown form index mapping",
+    "front/back graphics table indexing",
+    "EWRAM decompression scratch usage",
+    "legacy 8x8 tile repacking"
+  ],
+  "next_module": {
+    "name": "battle_bg",
+    "retail_start": "0x0800D858",
+    "debug_start": "0x0800DA74"
+  }
+}
