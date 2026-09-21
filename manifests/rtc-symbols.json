@@ -60,6 +60,50 @@
     [
       "0x080095F4",
       "RtcReset"
+    ],
+    [
+      "0x08009608",
+      "FormatDecimalTime"
+    ],
+    [
+      "0x08009640",
+      "FormatHexTime"
+    ],
+    [
+      "0x08009678",
+      "FormatHexRtcTime"
+    ],
+    [
+      "0x08009690",
+      "FormatDecimalDate"
+    ],
+    [
+      "0x080096C8",
+      "FormatHexDate"
+    ],
+    [
+      "0x08009700",
+      "RtcCalcTimeDifference"
+    ],
+    [
+      "0x08009784",
+      "RtcCalcLocalTime"
+    ],
+    [
+      "0x080097AC",
+      "RtcInitLocalTimeOffset"
+    ],
+    [
+      "0x080097C0",
+      "RtcCalcLocalTimeOffset"
+    ],
+    [
+      "0x080097F0",
+      "CalcTimeDifference"
+    ],
+    [
+      "0x08009858",
+      "RtcGetMinuteCount"
     ]
   ],
   "globals": [
@@ -78,6 +122,14 @@
     [
       "0x0300046E",
       "sSavedIme"
+    ],
+    [
+      "0x03004048",
+      "gLocalTime"
+    ],
+    [
+      "0x02023C4F",
+      "save local-time offset field"
     ]
   ],
   "data": [
@@ -110,6 +162,14 @@
     [
       "0x081ED184",
       "SiiRtcGetDateTime"
+    ],
+    [
+      "0x08006D24",
+      "ConvertIntToDecimalStringN"
+    ],
+    [
+      "0x08006E88",
+      "ConvertIntToHexStringN"
     ]
   ]
 }

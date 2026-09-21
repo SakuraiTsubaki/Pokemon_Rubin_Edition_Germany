@@ -219,3 +219,153 @@ void RtcReset(void)
     SiiRtcReset();
     RtcRestoreInterrupts();
 }
+
+
+#define STR_CONV_MODE_LEADING_ZEROS 2
+#define CHAR_COLON 0xF0
+#define CHAR_HYPHEN 0xAE
+#define EOS 0xFF
+
+extern uint8_t *ConvertIntToDecimalStringN(uint8_t *dest, int32_t value, uint8_t mode, uint8_t width); /* 0x08006D24 */
+extern uint8_t *ConvertIntToHexStringN(uint8_t *dest, int32_t value, uint8_t mode, uint8_t width);     /* 0x08006E88 */
+
+struct Time gLocalTime;                  /* 0x03004048 */
+extern struct Time gSaveLocalTimeOffset; /* direct retail address 0x02023C4F */
+
+/* German retail ROM 0x08009608. */
+void FormatDecimalTime(uint8_t *dest, int32_t hour, int32_t minute, int32_t second)
+{
+    dest = ConvertIntToDecimalStringN(dest, hour, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_COLON;
+    dest = ConvertIntToDecimalStringN(dest, minute, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_COLON;
+    dest = ConvertIntToDecimalStringN(dest, second, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest = EOS;
+}
+
+/* German retail ROM 0x08009640. */
+void FormatHexTime(uint8_t *dest, int32_t hour, int32_t minute, int32_t second)
+{
+    dest = ConvertIntToHexStringN(dest, hour, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_COLON;
+    dest = ConvertIntToHexStringN(dest, minute, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_COLON;
+    dest = ConvertIntToHexStringN(dest, second, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest = EOS;
+}
+
+/* German retail ROM 0x08009678. */
+void FormatHexRtcTime(uint8_t *dest)
+{
+    FormatHexTime(dest, sRtc.hour, sRtc.minute, sRtc.second);
+}
+
+/* German retail ROM 0x08009690. */
+void FormatDecimalDate(uint8_t *dest, int32_t year, int32_t month, int32_t day)
+{
+    dest = ConvertIntToDecimalStringN(dest, year, STR_CONV_MODE_LEADING_ZEROS, 4);
+    *dest++ = CHAR_HYPHEN;
+    dest = ConvertIntToDecimalStringN(dest, month, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_HYPHEN;
+    dest = ConvertIntToDecimalStringN(dest, day, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest = EOS;
+}
+
+/* German retail ROM 0x080096C8. */
+void FormatHexDate(uint8_t *dest, int32_t year, int32_t month, int32_t day)
+{
+    dest = ConvertIntToHexStringN(dest, year, STR_CONV_MODE_LEADING_ZEROS, 4);
+    *dest++ = CHAR_HYPHEN;
+    dest = ConvertIntToHexStringN(dest, month, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest++ = CHAR_HYPHEN;
+    dest = ConvertIntToHexStringN(dest, day, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *dest = EOS;
+}
+
+/* German retail ROM 0x08009700. */
+void RtcCalcTimeDifference(struct SiiRtcInfo *rtc, struct Time *result, struct Time *t)
+{
+    uint16_t days = RtcGetDayCount(rtc);
+
+    result->seconds = (int8_t)ConvertBcdToBinary(rtc->second) - t->seconds;
+    result->minutes = (int8_t)ConvertBcdToBinary(rtc->minute) - t->minutes;
+    result->hours = (int8_t)ConvertBcdToBinary(rtc->hour) - t->hours;
+    result->days = (int16_t)(days - t->days);
+
+    if (result->seconds < 0)
+    {
+        result->seconds += 60;
+        --result->minutes;
+    }
+
+    if (result->minutes < 0)
+    {
+        result->minutes += 60;
+        --result->hours;
+    }
+
+    if (result->hours < 0)
+    {
+        result->hours += 24;
+        --result->days;
+    }
+}
+
+/* German retail ROM 0x08009784. */
+void RtcCalcLocalTime(void)
+{
+    RtcGetInfo(&sRtc);
+    RtcCalcTimeDifference(&sRtc, &gLocalTime, &gSaveLocalTimeOffset);
+}
+
+/* German retail ROM 0x080097AC. */
+void RtcInitLocalTimeOffset(int32_t hour, int32_t minute)
+{
+    RtcCalcLocalTimeOffset(0, hour, minute, 0);
+}
+
+/* German retail ROM 0x080097C0. */
+void RtcCalcLocalTimeOffset(int32_t days, int32_t hours, int32_t minutes, int32_t seconds)
+{
+    gLocalTime.days = (int16_t)days;
+    gLocalTime.hours = (int8_t)hours;
+    gLocalTime.minutes = (int8_t)minutes;
+    gLocalTime.seconds = (int8_t)seconds;
+
+    RtcGetInfo(&sRtc);
+    RtcCalcTimeDifference(&sRtc, &gSaveLocalTimeOffset, &gLocalTime);
+}
+
+/* German retail ROM 0x080097F0. */
+void CalcTimeDifference(struct Time *result, struct Time *t1, struct Time *t2)
+{
+    result->seconds = t2->seconds - t1->seconds;
+    result->minutes = t2->minutes - t1->minutes;
+    result->hours = t2->hours - t1->hours;
+    result->days = t2->days - t1->days;
+
+    if (result->seconds < 0)
+    {
+        result->seconds += 60;
+        --result->minutes;
+    }
+
+    if (result->minutes < 0)
+    {
+        result->minutes += 60;
+        --result->hours;
+    }
+
+    if (result->hours < 0)
+    {
+        result->hours += 24;
+        --result->days;
+    }
+}
+
+/* German retail ROM 0x08009858. */
+uint32_t RtcGetMinuteCount(void)
+{
+    RtcGetInfo(&sRtc);
+    return (24u * 60u) * RtcGetDayCount(&sRtc) + 60u * sRtc.hour + sRtc.minute;
+}

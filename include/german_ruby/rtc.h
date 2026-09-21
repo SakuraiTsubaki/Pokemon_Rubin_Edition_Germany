@@ -22,6 +22,14 @@
 #define RTC_ERR_INVALID_SECOND  0x0800
 #define RTC_ERR_FLAG_MASK       0x0FF0
 
+struct Time
+{
+    int16_t days;
+    int8_t hours;
+    int8_t minutes;
+    int8_t seconds;
+};
+
 struct SiiRtcInfo
 {
     uint8_t year;
@@ -50,5 +58,16 @@ void RtcGetStatus(struct SiiRtcInfo *rtc);
 void RtcGetRawInfo(struct SiiRtcInfo *rtc);
 uint16_t RtcCheckInfo(struct SiiRtcInfo *rtc);
 void RtcReset(void);
+void FormatDecimalTime(uint8_t *dest, int32_t hour, int32_t minute, int32_t second);
+void FormatHexTime(uint8_t *dest, int32_t hour, int32_t minute, int32_t second);
+void FormatHexRtcTime(uint8_t *dest);
+void FormatDecimalDate(uint8_t *dest, int32_t year, int32_t month, int32_t day);
+void FormatHexDate(uint8_t *dest, int32_t year, int32_t month, int32_t day);
+void RtcCalcTimeDifference(struct SiiRtcInfo *rtc, struct Time *result, struct Time *t);
+void RtcCalcLocalTime(void);
+void RtcInitLocalTimeOffset(int32_t hour, int32_t minute);
+void RtcCalcLocalTimeOffset(int32_t days, int32_t hours, int32_t minutes, int32_t seconds);
+void CalcTimeDifference(struct Time *result, struct Time *t1, struct Time *t2);
+uint32_t RtcGetMinuteCount(void);
 
 #endif
