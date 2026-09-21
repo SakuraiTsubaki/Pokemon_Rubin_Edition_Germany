@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "source": "supplied German ROMs",
+  "retail_block": {
+    "start": "0x081D3C9F",
+    "end_exclusive": "0x081D40CC",
+    "size": 1069,
+    "sha256": "0870c7b96b0b35756558df922f8135f8b9ce0498601f8da9eb2fb9fe1205bc0d"
+  },
+  "debug_block": {
+    "start": "0x081EC9F3",
+    "end_exclusive": "0x081ECE20",
+    "size": 1069,
+    "sha256": "0870c7b96b0b35756558df922f8135f8b9ce0498601f8da9eb2fb9fe1205bc0d",
+    "retail_address_delta": "+0x18D54"
+  },
+  "strings": [
+    {
+      "id": "welcome",
+      "state": 3,
+      "retail": "0x081D3C9F",
+      "debug": "0x081EC9F3",
+      "encoded_length": 134,
+      "sha256": "805d3360b9fc99182402fba64c98e653c2bea093026b89379ca05765713e3732",
+      "preview": "Sorry, dass du warten musstest.",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "this_is_pokemon",
+      "state": 4,
+      "retail": "0x081D3D25",
+      "debug": "0x081ECA79",
+      "encoded_length": 30,
+      "sha256": "d046998cb15c3187068869ef8be123541d4614dc4c5250a3026be13566051673",
+      "preview": "Das nennen wir ein “POKéMON”.",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "world_inhabited_by_pokemon",
+      "state": 8,
+      "retail": "0x081D3D43",
+      "debug": "0x081ECA97",
+      "encoded_length": 472,
+      "sha256": "8507a17c7a10d993439c3edb635eb948ebb2324bbfffb469d6594fc38a667454",
+      "preview": "Auf dieser Welt leben Wesen, …",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "and_you_are",
+      "state": 9,
+      "retail": "0x081D3F1B",
+      "debug": "0x081ECC6F",
+      "encoded_length": 17,
+      "sha256": "de572bc601eab5bf2d6df9d059fcb9cf4fdad7031d461726cd343cc66d10b4bb",
+      "preview": "Und wer bist du?",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "boy_or_girl",
+      "state": 14,
+      "retail": "0x081D3F2C",
+      "debug": "0x081ECC80",
+      "encoded_length": 45,
+      "sha256": "808c1b2684bcee3ec6638c126a218d97d930699281a336f2a030d5cce54a74b6",
+      "preview": "Bist du ein Junge? …",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "whats_your_name",
+      "state": 19,
+      "retail": "0x081D3F59",
+      "debug": "0x081ECCAD",
+      "encoded_length": 24,
+      "sha256": "b2892f13f043a5977a555dc71d203c170053f6c8d9fe5e16f0a1b5493eeec471",
+      "preview": "Fein! …",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "so_its_player",
+      "state": 23,
+      "retail": "0x081D3F71",
+      "debug": "0x081ECCC5",
+      "encoded_length": 23,
+      "sha256": "6f0b0f8e6d52e4e8c85225ba2ce54d01a870516632cd7f358ceec93716299ffc",
+      "preview": "Ah, du bist also {PLAYER}?",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "ah_okay_player",
+      "state": 27,
+      "retail": "0x081D3F88",
+      "debug": "0x081ECCDC",
+      "encoded_length": 103,
+      "sha256": "a6ca7d95c122b2ffb7b168b01b9a244c6ced4b6d5dbf4eb4e61cbf9ede06d352",
+      "preview": "Ah, okay! …",
+      "retail_debug_bytes_identical": true
+    },
+    {
+      "id": "are_you_ready",
+      "state": 29,
+      "retail": "0x081D3FEF",
+      "debug": "0x081ECD43",
+      "encoded_length": 221,
+      "sha256": "4d1eb62afbf05383e52fdeb2d09c0c30fc52cb81e60d83ec94b296e7a4fd4a18",
+      "preview": "Gut, bist du bereit? …",
+      "retail_debug_bytes_identical": true
+    }
+  ]
+}
