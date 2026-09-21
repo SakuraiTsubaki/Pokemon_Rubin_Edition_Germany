@@ -53,10 +53,10 @@ def main():
     assert u32(r1, 0x968C) == 0x03000460
     assert u32(r1, 0x97A0) == 0x03000460
     assert u32(r1, 0x97A4) == 0x03004048
-    assert u32(r1, 0x97A8) == 0x02023C4F
+    assert u32(r1, 0x97A8) == 0x02024F3C
     assert u32(r1, 0x97E4) == 0x03004048
     assert u32(r1, 0x97E8) == 0x03000460
-    assert u32(r1, 0x97EC) == 0x02023C4F
+    assert u32(r1, 0x97EC) == 0x02024F3C
     assert u32(r1, 0x988C) == 0x03000460
 
     assert u16(dbg, 0x94E0) == 0xDD11
