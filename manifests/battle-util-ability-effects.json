@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "module": "battle_util_ability_dispatch",
+  "retail": {
+    "start": "0x080184F8",
+    "end_exclusive": "0x0801A200",
+    "size": 7432,
+    "sha256": "3c73b59edc8cb2e5b7171b3281a73392103ec16f2695810fd9bc5cbf3c3e3cd6",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0801B580",
+    "end_exclusive": "0x0801D754",
+    "size": 8660,
+    "sha256": "9b641ffb25303d74075c179bbdd64aa072f0d2771738425fc5b59c27c5a8b2eb"
+  },
+  "functions": [
+    {
+      "name": "AbilityBattleEffects",
+      "retail": "0x080184F8",
+      "retail_size": 7308,
+      "retail_sha256": "bebef06996411234536f5acf13912386da5efa32b2c5e934d41b10106f0b577a",
+      "debug": "0x0801B580",
+      "debug_size": 8536,
+      "debug_sha256": "6e414606a8371821ce31d9b66b4721ce57a25f1075587264c29864aff7703ab5",
+      "debug_extra_bytes": 1228,
+      "delta_before": "+0x3088",
+      "delta_after": "+0x3554",
+      "debug_extra_semantics": "unclassified pending statement-level Debug decompilation"
+    },
+    {
+      "name": "BattleScriptExecute",
+      "retail": "0x0801A184",
+      "retail_size": 60,
+      "retail_sha256": "f500b309853a1079a925eacf4b0c9deb010f9e1c1e7c2e56a0e677c7ab93e2b7",
+      "debug": "0x0801D6D8",
+      "debug_size": 60,
+      "debug_sha256": "28c810e87b3f173a331852abb2683097378b41f22be285634358e490a119901e",
+      "delta": "+0x3554"
+    },
+    {
+      "name": "BattleScriptPushCursorAndCallback",
+      "retail": "0x0801A1C0",
+      "retail_size": 64,
+      "retail_sha256": "364a7cfb9725ac5d85aa291526c87fa10750ee6a49b1424283f7f7645c5f706a",
+      "debug": "0x0801D714",
+      "debug_size": 64,
+      "debug_sha256": "d1e062240a6e19165f3b102ba7e2487fe3dad2f15a4c155dc07941f2ffee44b6",
+      "delta": "+0x3554"
+    }
+  ],
+  "interface_widths": {
+    "battler_id_bits": 8,
+    "ability_id_bits": 8,
+    "move_argument_bits": 16
+  },
+  "next": {
+    "function": "ItemBattleEffects",
+    "retail": "0x0801A200",
+    "debug": "0x0801D754",
+    "delta": "+0x3554"
+  }
+}
