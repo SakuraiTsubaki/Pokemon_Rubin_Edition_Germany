@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "module": "main_menu_helpers",
+  "helper_slice": {
+    "retail": {
+      "start": "0x0800B234",
+      "end_exclusive": "0x0800BA2C",
+      "size": 2040,
+      "sha256": "844fad2a520d6b7b769786399de8d3c5a5e351cb0f97a7465f67df53e430d031"
+    },
+    "debug": {
+      "start": "0x0800B414",
+      "end_exclusive": "0x0800BC0C",
+      "size": 2040,
+      "sha256": "74260300a0830783b57573d9defeafaa4084e65025418d2631ba9508bd5a3757",
+      "retail_address_delta": "+0x1E0"
+    }
+  },
+  "complete_module": {
+    "retail": {
+      "start": "0x08009890",
+      "end_exclusive": "0x0800BA2C",
+      "size": 8604,
+      "sha256": "6aab6354e6342ade67758f5a293db2e45a9c27a0adbe983487eb28f752f0ea06",
+      "rev0_rev1_byte_identical": true
+    },
+    "debug": {
+      "start": "0x08009A70",
+      "end_exclusive": "0x0800BC0C",
+      "size": 8604,
+      "sha256": "86c703c4790622849580374f46b5bb0a2974757e0d6b0afbf66925c98e2307c7"
+    },
+    "retail_debug_differing_byte_count": 899
+  },
+  "functions": [
+    {
+      "name": "CB_ContinueNewGameSpeechPart2",
+      "retail": "0x0800B234",
+      "debug": "0x0800B414",
+      "size": 476,
+      "role": "reinitialize graphics after naming screen and resume at confirmation"
+    },
+    {
+      "name": "nullsub_34",
+      "retail": "0x0800B410",
+      "debug": "0x0800B5F0",
+      "size": 4,
+      "role": "empty sprite callback"
+    },
+    {
+      "name": "ShrinkPlayerSprite",
+      "retail": "0x0800B414",
+      "debug": "0x0800B5F4",
+      "size": 28,
+      "role": "move/shrink player sprite during final intro transition"
+    },
+    {
+      "name": "CreateAzurillSprite",
+      "retail": "0x0800B430",
+      "debug": "0x0800B610",
+      "size": 112,
+      "role": "decompress/load Azurill graphics and create intro sprite"
+    },
+    {
+      "name": "AddBirchSpeechObjects",
+      "retail": "0x0800B4A0",
+      "debug": "0x0800B680",
+      "size": 288,
+      "role": "create Birch, Azurill, Brendan and May intro sprites"
+    },
+    {
+      "name": "Task_SpriteFadeOut",
+      "retail": "0x0800B5C0",
+      "debug": "0x0800B7A0",
+      "size": 108,
+      "role": "sprite alpha fade-out task"
+    },
+    {
+      "name": "StartSpriteFadeOut",
+      "retail": "0x0800B62C",
+      "debug": "0x0800B80C",
+      "size": 112,
+      "role": "launch sprite fade-out helper task"
+    },
+    {
+      "name": "Task_SpriteFadeIn",
+      "retail": "0x0800B69C",
+      "debug": "0x0800B87C",
+      "size": 108,
+      "role": "sprite alpha fade-in task"
+    },
+    {
+      "name": "StartSpriteFadeIn",
+      "retail": "0x0800B708",
+      "debug": "0x0800B8E8",
+      "size": 116,
+      "role": "launch sprite fade-in helper task"
+    },
+    {
+      "name": "HandleFloorShadowFadeOut",
+      "retail": "0x0800B77C",
+      "debug": "0x0800B95C",
+      "size": 108,
+      "role": "background/floor-shadow fade-out task"
+    },
+    {
+      "name": "StartBackgroundFadeOut",
+      "retail": "0x0800B7E8",
+      "debug": "0x0800B9C8",
+      "size": 64,
+      "role": "launch background fade-out helper task"
+    },
+    {
+      "name": "HandleFloorShadowFadeIn",
+      "retail": "0x0800B828",
+      "debug": "0x0800BA08",
+      "size": 108,
+      "role": "background/floor-shadow fade-in task"
+    },
+    {
+      "name": "StartBackgroundFadeIn",
+      "retail": "0x0800B894",
+      "debug": "0x0800BA74",
+      "size": 64,
+      "role": "launch background fade-in helper task"
+    },
+    {
+      "name": "CreateGenderMenu",
+      "retail": "0x0800B8D4",
+      "debug": "0x0800BAB4",
+      "size": 96,
+      "role": "draw and initialize the boy/girl selection menu"
+    },
+    {
+      "name": "GenderMenuProcessInput",
+      "retail": "0x0800B934",
+      "debug": "0x0800BB14",
+      "size": 16,
+      "role": "read non-wrapping gender menu input"
+    },
+    {
+      "name": "CreateNameMenu",
+      "retail": "0x0800B944",
+      "debug": "0x0800BB24",
+      "size": 136,
+      "role": "draw and initialize preset-name selection menu"
+    },
+    {
+      "name": "NameMenuProcessInput",
+      "retail": "0x0800B9CC",
+      "debug": "0x0800BBAC",
+      "size": 16,
+      "role": "read preset-name menu input"
+    },
+    {
+      "name": "SetPresetPlayerName",
+      "retail": "0x0800B9DC",
+      "debug": "0x0800BBBC",
+      "size": 80,
+      "role": "copy selected preset name into German SaveBlock2 player name"
+    }
+  ],
+  "next_module": {
+    "retail_start": "0x0800BA2C",
+    "debug_start": "0x0800BC0C",
+    "identification": "battle_controllers"
+  }
+}
