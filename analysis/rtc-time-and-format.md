@@ -39,7 +39,7 @@ Negative seconds borrow 60 from minutes; negative minutes borrow 60 from hours; 
 ## Recovered locations
 
 - 0x03004048: local-time structure.
-- 0x02023C4F: save-resident local-time offset field.
+- 0x02024F3C: save-resident local-time offset field.
 - 0x03000460: cached RTC record, reused by formatting and minute-count routines.
 
 ## Revision comparison
