@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "module": "battle_script_accuracy_damage_type_core",
+  "retail": {
+    "start": "0x0801C490",
+    "end_exclusive": "0x0801DAC0",
+    "size": 5680,
+    "sha256": "7bbe796fc3a53a0a91baac9b06a9534c0c70c213dd3e009516d8ee1c847a3061",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0801FA08",
+    "end_exclusive": "0x08021038",
+    "size": 5680,
+    "sha256": "2e50618d4821ab4a88f1ab54ec0d8c72ffc4e118d7b6e9dcaea5005042ceed6b",
+    "retail_address_delta": "+0x3578"
+  },
+  "functions": [
+    {
+      "name": "atk01_accuracycheck",
+      "retail": "0x0801C490",
+      "debug": "0x0801FA08",
+      "size": 908,
+      "role": "accuracy/evasion, weather, ability and held-item hit calculation"
+    },
+    {
+      "name": "atk02_attackstring",
+      "retail": "0x0801C81C",
+      "debug": "0x0801FD94",
+      "size": 84,
+      "role": "emit move-use battle string"
+    },
+    {
+      "name": "atk03_ppreduce",
+      "retail": "0x0801C870",
+      "debug": "0x0801FDE8",
+      "size": 476,
+      "role": "deduct PP with Pressure and sync PP through battle controller"
+    },
+    {
+      "name": "atk04_critcalc",
+      "retail": "0x0801CA4C",
+      "debug": "0x0801FFC4",
+      "size": 372,
+      "role": "calculate critical-hit stage and multiplier"
+    },
+    {
+      "name": "atk05_damagecalc",
+      "retail": "0x0801CBC0",
+      "debug": "0x08020138",
+      "size": 268,
+      "role": "base damage calculation plus crit/damage multiplier/Charge/Helping Hand"
+    },
+    {
+      "name": "AI_CalcDmg",
+      "retail": "0x0801CCCC",
+      "debug": "0x08020244",
+      "size": 244,
+      "role": "AI-facing base damage calculation helper"
+    },
+    {
+      "name": "ModulateDmgByType",
+      "retail": "0x0801CDC0",
+      "debug": "0x08020338",
+      "size": 216,
+      "role": "apply 0x/0.5x/2x type multiplier and result flags"
+    },
+    {
+      "name": "atk06_typecalc",
+      "retail": "0x0801CE98",
+      "debug": "0x08020410",
+      "size": 632,
+      "role": "STAB/type chart/Levitate/Wonder Guard damage-type command"
+    },
+    {
+      "name": "CheckWonderGuardAndLevitate",
+      "retail": "0x0801D110",
+      "debug": "0x08020688",
+      "size": 652,
+      "role": "pre-damage immunity/effectiveness helper for accuracy path"
+    },
+    {
+      "name": "ModulateDmgByType2",
+      "retail": "0x0801D39C",
+      "debug": "0x08020914",
+      "size": 184,
+      "role": "type multiplier helper with explicit move/result arguments"
+    },
+    {
+      "name": "TypeCalc",
+      "retail": "0x0801D454",
+      "debug": "0x080209CC",
+      "size": 476,
+      "role": "general battle type calculation helper"
+    },
+    {
+      "name": "AI_TypeCalc",
+      "retail": "0x0801D630",
+      "debug": "0x08020BA8",
+      "size": 280,
+      "role": "species/ability-based AI type effectiveness helper"
+    },
+    {
+      "name": "Unused_ApplyRandomDmgMultiplier",
+      "retail": "0x0801D748",
+      "debug": "0x08020CC0",
+      "size": 60,
+      "role": "unused wrapper around 85-100% random damage multiplier"
+    },
+    {
+      "name": "atk07_adjustnormaldamage",
+      "retail": "0x0801D784",
+      "debug": "0x08020CFC",
+      "size": 432,
+      "role": "apply random damage, Focus Band, False Swipe and Endure survival"
+    },
+    {
+      "name": "atk08_adjustnormaldamage2",
+      "retail": "0x0801D934",
+      "debug": "0x08020EAC",
+      "size": 396,
+      "role": "variant of atk07 without False Swipe handling"
+    }
+  ],
+  "rules": {
+    "random_damage_percent_min": 85,
+    "random_damage_percent_max": 100,
+    "critical_stage_chances": [
+      "1/16",
+      "1/8",
+      "1/4",
+      "1/3",
+      "1/2"
+    ],
+    "critical_multiplier": 2,
+    "compound_eyes_percent": 130,
+    "sand_veil_accuracy_percent": 80,
+    "hustle_accuracy_percent": 80,
+    "helping_hand_damage_percent": 150,
+    "stab_percent": 150,
+    "thunder_sun_accuracy": 50,
+    "type_multipliers": [
+      "0x",
+      "0.5x",
+      "2x"
+    ]
+  },
+  "next": {
+    "opcode": "0x09",
+    "function": "atk09_attackanimation",
+    "retail": "0x0801DAC0",
+    "debug": "0x08021038",
+    "delta": "+0x3578"
+  }
+}
