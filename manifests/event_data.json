@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "module": "event_data",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08069370",
+      "end_exclusive": "0x080696A8",
+      "size": 824,
+      "sha256": "c067fcbf7336ebb8130910c86cddbca42abb2afef909b13e32aedc453cebf315"
+    },
+    "rev1": {
+      "start": "0x08069370",
+      "end_exclusive": "0x080696A8",
+      "size": 824,
+      "sha256": "c067fcbf7336ebb8130910c86cddbca42abb2afef909b13e32aedc453cebf315"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806DA4C",
+    "end_exclusive": "0x0806DD84",
+    "size": 824,
+    "sha256": "b9ca3102a2d1327456e53b525bf06ce062131f2a8331391cca7e478898effc8a",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x46DC",
+    "exit": "+0x46DC"
+  },
+  "entry": {
+    "first_function": "InitEventData",
+    "size_with_literal_pool": "0x3C",
+    "common_first_12_hex": "10 B5 0C 4C 90 22 52 00 20 1C 00 21",
+    "retail_temp_buffer": "0x0202E8E2",
+    "debug_temp_buffer": "0x0202EB86"
+  },
+  "runtime_constants": {
+    "temp_flags_size": 4,
+    "daily_flags_size": 8,
+    "temp_vars_size": 32,
+    "temp_special_event_buffer_size": 16,
+    "special_0x8000_0x800B_count": 12
+  },
+  "special_variables": {
+    "result": {
+      "retail": "0x0202E8DC",
+      "debug": "0x0202EB80"
+    },
+    "last_talked": {
+      "retail": "0x0202E8DE",
+      "debug": "0x0202EB82"
+    },
+    "facing": {
+      "retail": "0x0202E8E0",
+      "debug": "0x0202EB84"
+    },
+    "temp_event_buffer": {
+      "retail": "0x0202E8E2",
+      "debug": "0x0202EB86"
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 20,
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "coord_event_weather",
+    "retail_start": "0x080696A8",
+    "debug_start": "0x0806DD84",
+    "delta": "+0x46DC",
+    "weather_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      7,
+      8,
+      11,
+      12,
+      20,
+      21
+    ],
+    "wrapper_prefix_hex": "00 B5",
+    "wrapper_suffix_hex": "01 BC 00 47"
+  }
+}
