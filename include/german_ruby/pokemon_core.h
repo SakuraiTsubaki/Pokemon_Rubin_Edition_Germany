@@ -1,0 +1,15 @@
+#ifndef GERMAN_RUBY_POKEMON_CORE_H
+#define GERMAN_RUBY_POKEMON_CORE_H
+
+#define GERMAN_BOX_POKEMON_SIZE              0x50u
+#define GERMAN_PARTY_POKEMON_SIZE            0x64u
+#define GERMAN_POKEMON_SECURE_BYTES          48u
+#define GERMAN_POKEMON_SUBSTRUCT_COUNT       4u
+#define GERMAN_POKEMON_SUBSTRUCT_BYTES       12u
+#define GERMAN_POKEMON_MOVE_SLOTS            4u
+#define GERMAN_POKEMON_IV_COUNT              6u
+#define GERMAN_POKEMON_EV_COUNT              6u
+#define GERMAN_POKEMON_LEVEL_CAP             100u
+#define GERMAN_LEVELUP_MOVE_ID_MASK          0x01FFu
+
+#endif

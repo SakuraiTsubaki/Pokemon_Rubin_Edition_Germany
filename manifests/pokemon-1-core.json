@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_1",
+  "retail": {
+    "start": "0x0803A894",
+    "end_exclusive": "0x0803BC00",
+    "size": 4972,
+    "sha256": "b1dcf9b7bf3072ad0ab17e2d85a1cbcea07df28f5a509be3ac41e502cb7ada2e",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0803E768",
+    "end_exclusive": "0x0803FD7C",
+    "size": 5652,
+    "sha256": "8da5f12cbf393f7623b27b2c855447dde85c1fec05219e5e047aaf1c4f875027"
+  },
+  "functions": [
+    {
+      "name": "ZeroBoxMonData",
+      "retail": "0x0803A894",
+      "debug": "0x0803E768",
+      "retail_size": 24,
+      "debug_size": 24,
+      "delta": "+0x3ED4",
+      "role": "clear all 0x50 bytes of BoxPokemon"
+    },
+    {
+      "name": "ZeroMonData",
+      "retail": "0x0803A8AC",
+      "debug": "0x0803E780",
+      "retail_size": 128,
+      "debug_size": 128,
+      "delta": "+0x3ED4",
+      "role": "clear BoxPokemon plus party-battle fields"
+    },
+    {
+      "name": "ZeroPlayerPartyMons",
+      "retail": "0x0803A92C",
+      "debug": "0x0803E800",
+      "retail_size": 32,
+      "debug_size": 32,
+      "delta": "+0x3ED4",
+      "role": "clear six player-party Pokemon records"
+    },
+    {
+      "name": "ZeroEnemyPartyMons",
+      "retail": "0x0803A94C",
+      "debug": "0x0803E820",
+      "retail_size": 32,
+      "debug_size": 32,
+      "delta": "+0x3ED4",
+      "role": "clear six enemy-party Pokemon records"
+    },
+    {
+      "name": "CreateMon",
+      "retail": "0x0803A96C",
+      "debug": "0x0803E840",
+      "retail_size": 112,
+      "debug_size": 112,
+      "delta": "+0x3ED4",
+      "role": "create BoxMon, set level/mail, calculate party stats"
+    },
+    {
+      "name": "CreateBoxMon",
+      "retail": "0x0803A9DC",
+      "debug": "0x0803E8B0",
+      "retail_size": 724,
+      "debug_size": 724,
+      "delta": "+0x3ED4",
+      "role": "initialize personality/OT/nickname/language/species/EXP/friendship/met data/IVs/ability/moves"
+    },
+    {
+      "name": "CreateMonWithNature",
+      "retail": "0x0803ACB0",
+      "debug": "0x0803EB84",
+      "retail_size": 104,
+      "debug_size": 104,
+      "delta": "+0x3ED4",
+      "role": "reroll personality until requested nature"
+    },
+    {
+      "name": "CreateMonWithGenderNatureLetter",
+      "retail": "0x0803AD18",
+      "debug": "0x0803EBEC",
+      "retail_size": 256,
+      "debug_size": 256,
+      "delta": "+0x3ED4",
+      "role": "reroll personality until requested nature/gender/Unown letter"
+    },
+    {
+      "name": "CreateMaleMon",
+      "retail": "0x0803AE18",
+      "debug": "0x0803ECEC",
+      "retail_size": 104,
+      "debug_size": 104,
+      "delta": "+0x3ED4",
+      "role": "create male Pokemon with random personality/OT"
+    },
+    {
+      "name": "CreateMonWithIVsPersonality",
+      "retail": "0x0803AE80",
+      "debug": "0x0803ED54",
+      "retail_size": 64,
+      "debug_size": 64,
+      "delta": "+0x3ED4",
+      "role": "create fixed-personality Pokemon then set packed IVs"
+    },
+    {
+      "name": "CreateMonWithIVsOTID",
+      "retail": "0x0803AEC0",
+      "debug": "0x0803ED94",
+      "retail_size": 116,
+      "debug_size": 116,
+      "delta": "+0x3ED4",
+      "role": "create Pokemon then set six explicit IV bytes and fixed OT"
+    },
+    {
+      "name": "CreateMonWithEVSpread",
+      "retail": "0x0803AF34",
+      "debug": "0x0803EE08",
+      "retail_size": 136,
+      "debug_size": 136,
+      "delta": "+0x3ED4",
+      "role": "distribute 510 EV points across selected six-stat mask"
+    },
+    {
+      "name": "sub_803ADE8",
+      "retail": "0x0803AFBC",
+      "debug": "0x0803EE90",
+      "retail_size": 400,
+      "debug_size": 400,
+      "delta": "+0x3ED4",
+      "role": "import UnknownPokemonStruct into Pokemon including four moves/EVs/IVs/language"
+    },
+    {
+      "name": "sub_803AF78",
+      "retail": "0x0803B14C",
+      "debug": "0x0803F020",
+      "retail_size": 428,
+      "debug_size": 428,
+      "delta": "+0x3ED4",
+      "role": "export Pokemon into UnknownPokemonStruct including four moves/EVs/IVs/personality"
+    },
+    {
+      "name": "CalculateBoxMonChecksum",
+      "retail": "0x0803B2F8",
+      "debug": "0x0803F1CC",
+      "retail_size": 148,
+      "debug_size": 148,
+      "delta": "+0x3ED4",
+      "role": "sum 24 decrypted 16-bit words across four personality-ordered substructs"
+    },
+    {
+      "name": "CalculateMonStats",
+      "retail": "0x0803B38C",
+      "debug": "0x0803F260",
+      "retail_size": 764,
+      "debug_size": 764,
+      "delta": "+0x3ED4",
+      "role": "derive level/HP/five stats from species, IVs, EVs and nature"
+    },
+    {
+      "name": "ExpandBoxMon",
+      "retail": "0x0803B688",
+      "debug": "0x0803F804",
+      "retail_size": 80,
+      "debug_size": 80,
+      "delta": "+0x417C",
+      "role": "expand boxed record into party Pokemon and calculate stats"
+    },
+    {
+      "name": "GetLevelFromMonExp",
+      "retail": "0x0803B6D8",
+      "debug": "0x0803F854",
+      "retail_size": 108,
+      "debug_size": 108,
+      "delta": "+0x417C",
+      "role": "derive level 1..100 from growth-rate EXP table"
+    },
+    {
+      "name": "GetLevelFromBoxMonExp",
+      "retail": "0x0803B744",
+      "debug": "0x0803F8C0",
+      "retail_size": 108,
+      "debug_size": 108,
+      "delta": "+0x417C",
+      "role": "boxed-record level derivation"
+    },
+    {
+      "name": "GiveMoveToMon",
+      "retail": "0x0803B7B0",
+      "debug": "0x0803F92C",
+      "retail_size": 20,
+      "debug_size": 20,
+      "delta": "+0x417C",
+      "role": "party-mon wrapper for GiveMoveToBoxMon"
+    },
+    {
+      "name": "GiveMoveToBoxMon",
+      "retail": "0x0803B7C4",
+      "debug": "0x0803F940",
+      "retail_size": 112,
+      "debug_size": 112,
+      "delta": "+0x417C",
+      "role": "insert 16-bit move into first free of four slots or report duplicate/full"
+    },
+    {
+      "name": "GiveMoveToBattleMon",
+      "retail": "0x0803B834",
+      "debug": "0x0803F9B0",
+      "retail_size": 68,
+      "debug_size": 68,
+      "delta": "+0x417C",
+      "role": "insert move into first free BattlePokemon move slot"
+    },
+    {
+      "name": "SetMonMoveSlot",
+      "retail": "0x0803B878",
+      "debug": "0x0803F9F4",
+      "retail_size": 64,
+      "debug_size": 64,
+      "delta": "+0x417C",
+      "role": "set move and base PP for selected party-mon slot"
+    },
+    {
+      "name": "SetBattleMonMoveSlot",
+      "retail": "0x0803B8B8",
+      "debug": "0x0803FA34",
+      "retail_size": 48,
+      "debug_size": 48,
+      "delta": "+0x417C",
+      "role": "set move and base PP for selected BattlePokemon slot"
+    },
+    {
+      "name": "GiveMonInitialMoveset",
+      "retail": "0x0803B8E8",
+      "debug": "0x0803FA64",
+      "retail_size": 12,
+      "debug_size": 12,
+      "delta": "+0x417C",
+      "role": "party-mon wrapper for boxed initial moveset"
+    },
+    {
+      "name": "GiveBoxMonInitialMoveset",
+      "retail": "0x0803B8F4",
+      "debug": "0x0803FA70",
+      "retail_size": 168,
+      "debug_size": 168,
+      "delta": "+0x417C",
+      "role": "scan packed level-up learnset and retain latest four moves"
+    },
+    {
+      "name": "MonTryLearningNewMove",
+      "retail": "0x0803B99C",
+      "debug": "0x0803FB18",
+      "retail_size": 268,
+      "debug_size": 268,
+      "delta": "+0x417C",
+      "role": "advance per-level learnset cursor and offer next move"
+    },
+    {
+      "name": "DeleteFirstMoveAndGiveMoveToMon",
+      "retail": "0x0803BAA8",
+      "debug": "0x0803FC24",
+      "retail_size": 172,
+      "debug_size": 172,
+      "delta": "+0x417C",
+      "role": "shift four move/PP slots left and append new move"
+    },
+    {
+      "name": "DeleteFirstMoveAndGiveMoveToBoxMon",
+      "retail": "0x0803BB54",
+      "debug": "0x0803FCD0",
+      "retail_size": 172,
+      "debug_size": 172,
+      "delta": "+0x417C",
+      "role": "boxed-record move/PP shift and append"
+    }
+  ],
+  "debug_growth": {
+    "bytes": 680,
+    "hex": "0x2A8",
+    "function": "Nakamura_NakaGenderTest_RecalcStats",
+    "debug_start": "0x0803F55C",
+    "debug_size": 680,
+    "delta_before": "+0x3ED4",
+    "delta_after": "+0x417C"
+  },
+  "data_model": {
+    "box_pokemon_size": 80,
+    "party_pokemon_size": 100,
+    "secure_payload_bytes": 48,
+    "secure_substruct_count": 4,
+    "secure_substruct_bytes": 12,
+    "checksum_words_per_substruct": 6,
+    "checksum_total_u16_words": 24,
+    "move_slots": 4,
+    "move_id_bits": 16,
+    "move_pp_bits": 8,
+    "iv_count": 6,
+    "iv_bits_each": 5,
+    "ev_count": 6,
+    "ev_bits_each": 8,
+    "ev_total_construction_budget": 510,
+    "level_cap": 100,
+    "packed_levelup_move_bits": 9
+  },
+  "next_module": {
+    "name": "calculate_base_damage",
+    "first_function": "CalculateBaseDamage",
+    "retail_start": "0x0803BC00",
+    "debug_start": "0x0803FD7C",
+    "delta": "+0x417C"
+  }
+}
