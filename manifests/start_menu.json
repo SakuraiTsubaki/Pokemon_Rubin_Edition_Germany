@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "module": "start_menu",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080712D0",
+      "end_exclusive": "0x08071F3C",
+      "size": 3180,
+      "sha256": "0bd17feffa3874c6540ebb08928be1b9110dcf2c6960f6e4eccc6caf0a710a58"
+    },
+    "rev1": {
+      "start": "0x080712D0",
+      "end_exclusive": "0x08071F3C",
+      "size": 3180,
+      "sha256": "0bd17feffa3874c6540ebb08928be1b9110dcf2c6960f6e4eccc6caf0a710a58"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08075C30",
+    "end_exclusive": "0x08076AC8",
+    "size": 3740,
+    "sha256": "7e26e68bee12d4aa582c831bf90b6b87b4e2df21119b308409607e7dc31e4d0f",
+    "growth_bytes": 560,
+    "growth_hex": "0x22C"
+  },
+  "delta": {
+    "entry": "+0x4960",
+    "exit": "+0x4B8C"
+  },
+  "debug_prefix": {
+    "start": "0x08075C30",
+    "end_exclusive": "0x08075E5C",
+    "size": 560,
+    "sha256": "69afdd1b92fc99c5287650915d4d422f107e77365c356bd1e9c934fb9e499bf6",
+    "functions": [
+      {
+        "name": "debug_sub_8075C30",
+        "start": "0x08075C30",
+        "end_exclusive": "0x08075C40",
+        "size": 16,
+        "sha256": "fdc3517658f7a66b128155de08291e05ed35ca02c03c11abcee98c3e26e3a42f"
+      },
+      {
+        "name": "debug_sub_8075C40",
+        "start": "0x08075C40",
+        "end_exclusive": "0x08075D9C",
+        "size": 348,
+        "sha256": "dfe24c9787a1d35cd9812b41d88f4c42e456f8600cce8421c3c1315fea1733e9"
+      },
+      {
+        "name": "debug_sub_8075D9C",
+        "start": "0x08075D9C",
+        "end_exclusive": "0x08075DB4",
+        "size": 24,
+        "sha256": "dcba1dd32bcd7ebd2f18b781ab6f1c52be503d4345e6ae3626f4932e47b183d2"
+      },
+      {
+        "name": "debug_sub_8075DB4",
+        "start": "0x08075DB4",
+        "end_exclusive": "0x08075E38",
+        "size": 132,
+        "sha256": "8ca7fd6db939a01b67f8f967df3ac6482d074f5e1aebf2dad7fc3ac73f9b9a31"
+      },
+      {
+        "name": "unref_sub_8070F90",
+        "start": "0x08075E38",
+        "end_exclusive": "0x08075E5C",
+        "size": 36,
+        "sha256": "4007784d0fb970efb51a70324a3cd40b7035ebaf9a632dd7ddee31ae409320fc"
+      }
+    ]
+  },
+  "common_body": {
+    "retail_start": "0x080712D0",
+    "debug_start": "0x08075E5C",
+    "size": 3180
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 58,
+    "common_function_count": 53,
+    "debug_only_function_count": 5
+  },
+  "next_profile_modules": {
+    "retail": {
+      "name": "menu",
+      "start": "0x08071F3C",
+      "first_function": "CloseMenu",
+      "entry_prefix_hex": "00 B5 05 20 03 F0 88 FC"
+    },
+    "debug": {
+      "name": "debug/start_menu_debug",
+      "start": "0x08076AC8",
+      "first_function": "debug_sub_8076AC8",
+      "entry_prefix_hex": "10 B5 82 B0 00 06 00 0E 1B 4A 81 00 09 18 49 00"
+    }
+  }
+}
