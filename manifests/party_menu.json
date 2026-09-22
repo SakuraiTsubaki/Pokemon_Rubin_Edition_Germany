@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "module": "party_menu",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0806B21C",
+      "end_exclusive": "0x080712D0",
+      "size": 24756,
+      "sha256": "4e46edf06f57597e5be44b4ea4553baa12d7a5b0539a4ce4e9474d9132f0dd74"
+    },
+    "rev1": {
+      "start": "0x0806B21C",
+      "end_exclusive": "0x080712D0",
+      "size": 24756,
+      "sha256": "4e46edf06f57597e5be44b4ea4553baa12d7a5b0539a4ce4e9474d9132f0dd74"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806FB44",
+    "end_exclusive": "0x08075C30",
+    "size": 24812,
+    "sha256": "e9df2862b802125709c828573e1ab75fcaa5d3bb8d248bcd810cab15ecab0015",
+    "net_growth_bytes": 56,
+    "net_growth_hex": "0x38"
+  },
+  "delta": {
+    "entry": "+0x4928",
+    "exit": "+0x4960"
+  },
+  "conditional_decomposition": {
+    "debug_internal_growth_bytes": 92,
+    "debug_internal_growth_hex": "0x5C",
+    "retail_only_tail_bytes": 36,
+    "retail_only_tail_hex": "0x24",
+    "net_debug_growth_hex": "0x38",
+    "note": "No per-Debug-conditional byte split is inferred."
+  },
+  "retail_only_tail": {
+    "function": "unref_sub_8070F90",
+    "start": "0x080712AC",
+    "end_exclusive": "0x080712D0",
+    "size": 36,
+    "sha256": "9409d74a2cc3d04dd0fcd5304d4ec24d7695ffb470360ab3a1509646f727e04d"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 180,
+    "debug_compiled_explicit_count": 179,
+    "retail_only_function_count": 1
+  },
+  "next_module": {
+    "name": "start_menu",
+    "retail_start": "0x080712D0",
+    "retail_first_function": "BuildStartMenuActions",
+    "retail_entry_prefix_hex": "00 B5 05 48 00 21 01 70 E3 F7 9E F9",
+    "debug_start": "0x08075C30",
+    "debug_first_function": "debug_sub_8075C30",
+    "debug_entry_prefix_hex": "00 B5 03 F0 B9 FA 00 F0 B1 F8 01 20 02 BC 08 47",
+    "debug_common_build_start_menu_actions": "0x08075E5C",
+    "delta": "+0x4960"
+  }
+}
