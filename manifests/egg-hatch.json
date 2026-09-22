@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "module": "egg_hatch",
+  "retail": {
+    "start": "0x08042BC8",
+    "end_exclusive": "0x08043A60",
+    "size": 3736,
+    "sha256": "f588c592f49c79df973673fae1a61b27e72ade82e4e4f83c2c8b7c5f46112749",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08046D44",
+    "end_exclusive": "0x08047BDC",
+    "size": 3736,
+    "sha256": "2c9dea76d3666146f7d70064330d2ca25a3996912f475fea3cf9663602f0986b",
+    "retail_address_delta": "+0x417C"
+  },
+  "debug_growth_bytes": 0,
+  "function_inventory": [
+    "CreatedHatchedMon",
+    "AddHatchedMonToParty",
+    "ScriptHatchMon",
+    "DaycareMonReceivedMail_",
+    "DaycareMonReceivedMail",
+    "EggHatchCreateMonSprite",
+    "VBlankCB_EggHatch",
+    "EggHatch",
+    "Task_EggHatch",
+    "CB2_EggHatch_0",
+    "EggHatchSetMonNickname",
+    "Task_EggHatchPlayBGM",
+    "CB2_EggHatch_1",
+    "SpriteCB_Egg_0",
+    "SpriteCB_Egg_1",
+    "SpriteCB_Egg_2",
+    "SpriteCB_Egg_3",
+    "SpriteCB_Egg_4",
+    "SpriteCB_Egg_5",
+    "SpriteCB_EggShard",
+    "CreateRandomEggShardSprite",
+    "CreateEggShardSprite",
+    "EggHatchPrintMessage1",
+    "EggHatchPrintMessage2",
+    "EggHatchUpdateWindowText"
+  ],
+  "hatch_rules": {
+    "hatch_level": 5,
+    "copied_move_slots": 4,
+    "copied_iv_count": 6,
+    "friendship_after_hatch": 120,
+    "egg_setup_states": 9,
+    "hatch_interaction_states": 12,
+    "shard_velocity_entries": 19,
+    "naming_screen_type": 3,
+    "ruby_copies_event_legal": false
+  },
+  "next_module": {
+    "name": "battle_interface",
+    "first_function": "do_nothing",
+    "retail_start": "0x08043A60",
+    "debug_start": "0x08047BDC",
+    "delta": "+0x417C",
+    "entry_bytes": "09 20 70 47"
+  }
+}
