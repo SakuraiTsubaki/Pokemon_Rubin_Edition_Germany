@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "module": "reset_rtc_screen",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0806A7C0",
+      "end_exclusive": "0x0806B21C",
+      "size": 2652,
+      "sha256": "77007b88f74c8d930d9ca9a753bb307fee59a46903a68276d4a183e80057d9f9"
+    },
+    "rev1": {
+      "start": "0x0806A7C0",
+      "end_exclusive": "0x0806B21C",
+      "size": 2652,
+      "sha256": "77007b88f74c8d930d9ca9a753bb307fee59a46903a68276d4a183e80057d9f9"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806EE9C",
+    "end_exclusive": "0x0806FB44",
+    "size": 3240,
+    "sha256": "ba808e9fe207c8925504f661ae8ff1e6c19079a15eff92e50319d112e0f43914",
+    "growth_bytes": 588,
+    "growth_hex": "0x24C"
+  },
+  "delta": {
+    "entry": "+0x46DC",
+    "exit": "+0x4928"
+  },
+  "entry": {
+    "first_function": "SpriteCB_ResetRtcCusor0",
+    "common_first_32_hex": "00 B5 03 1C 0A 4A 2E 20 19 5E 88 00 40 18 C0 00 80 18 0C 22 81 5E 30 22 98 5E 81 42 7B D0 19 86"
+  },
+  "debug_tail": {
+    "start": "0x0806F8F8",
+    "end_exclusive": "0x0806FB44",
+    "size": 588,
+    "sha256": "15903c364ae087117620114b83df44d784f8e2ded4f3177516fbd4c0db3aeccb",
+    "functions": [
+      {
+        "name": "debug_sub_806F8F8",
+        "start": "0x0806F8F8",
+        "end_exclusive": "0x0806F908",
+        "size": 16,
+        "sha256": "b9d46c8666dc6f80f76512bbb1f37a39d6138b241016bf33b02dd9058a03c673"
+      },
+      {
+        "name": "debug_sub_806F908",
+        "start": "0x0806F908",
+        "end_exclusive": "0x0806F99C",
+        "size": 148,
+        "sha256": "3b79039f0fae18532c2e87e45a8e09cd5f8e5c50c615b1d315b4e27f75d5b52b"
+      },
+      {
+        "name": "debug_sub_806F99C",
+        "start": "0x0806F99C",
+        "end_exclusive": "0x0806F9B8",
+        "size": 28,
+        "sha256": "95685efd13811c1e99ec0d2275589c0f9c557ba76f15b42a506096e2de3f3fa5"
+      },
+      {
+        "name": "debug_sub_806F9B8",
+        "start": "0x0806F9B8",
+        "end_exclusive": "0x0806F9E4",
+        "size": 44,
+        "sha256": "33a72a98a81c617bdbff0da2962378a04404e79c7e9561848448f4086fad1c16"
+      },
+      {
+        "name": "debug_sub_806F9E4",
+        "start": "0x0806F9E4",
+        "end_exclusive": "0x0806FB44",
+        "size": 352,
+        "sha256": "69ffc50642ac5d2b7ba661e3045389c007b3426f49e56243afd2242a39b0b5c0"
+      }
+    ]
+  },
+  "source_correlation": {
+    "common_function_count": 18,
+    "debug_only_function_count": 5,
+    "total_explicit_function_count": 23
+  },
+  "next_module": {
+    "name": "party_menu",
+    "first_function": "CB2_PartyMenuMain",
+    "retail_start": "0x0806B21C",
+    "debug_start": "0x0806FB44",
+    "delta": "+0x4928",
+    "retail_entry_prefix_hex": "70 B5 81 B0 95 F7 52 FB 95 F7 76 FB",
+    "debug_entry_prefix_hex": "70 B5 81 B0 90 F7 BE FE 90 F7 E2 FE"
+  }
+}
