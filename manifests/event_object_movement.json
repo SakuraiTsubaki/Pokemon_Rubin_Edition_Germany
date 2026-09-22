@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "module": "event_object_movement",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0805AD90",
+      "end_exclusive": "0x08064DB4",
+      "size": 40996,
+      "sha256": "5828818871f2779b9f5a9500c2c1c4b5ffc02a06e928e9c8e1de3aa1c0b2e6f5"
+    },
+    "rev1": {
+      "start": "0x0805AD90",
+      "end_exclusive": "0x08064DB4",
+      "size": 40996,
+      "sha256": "5828818871f2779b9f5a9500c2c1c4b5ffc02a06e928e9c8e1de3aa1c0b2e6f5"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0805F348",
+    "end_exclusive": "0x080693B4",
+    "size": 41068,
+    "sha256": "c7e94d987507ecc1dfee7ecfd442963054b5931d732be1fd2ef41f09e29a7609",
+    "growth_bytes": 72,
+    "growth_hex": "0x48"
+  },
+  "delta": {
+    "entry": "+0x45B8",
+    "exit": "+0x4600"
+  },
+  "entry": {
+    "first_function": "ClearObjectEvent",
+    "object_event_size": "0x24",
+    "stable_prefix_hex": "10 B5 04 1C 00 21 24 22",
+    "stable_suffix_hex": "FF 20 20 72 01 20 40 42 60 72 A0 72 20 77 10 BC 01 BC 00 47"
+  },
+  "debug_source_correlation": {
+    "bss_counter": "gUnknown_Debug_03004BC0",
+    "text_conditional_site_count": 6,
+    "text_conditional_areas": [
+      "ClearAllObjectEvents reset",
+      "InitObjectEventStateFromTemplate increment",
+      "RemoveObjectEvent decrement",
+      "TrySetupObjectEventSprite CreateSprite-failure decrement",
+      "sub_805B710 reset",
+      "sub_805B710 per-active-object increment"
+    ],
+    "note": "0x48 total text growth is binary-proven; no per-site byte split is inferred."
+  },
+  "runtime_constants": {
+    "live_object_event_count": 16,
+    "object_event_size": "0x24",
+    "camera_object_callback_count": 3,
+    "ground_effect_handler_count": 20,
+    "ministep_profile_lengths": [
+      16,
+      8,
+      6,
+      4,
+      2
+    ]
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 660,
+    "note": "Macro-generated and included movement callbacks/actions are additional; 660 is not treated as total machine-function count.",
+    "address_policy": "Historical numeric names are semantic labels only; German addresses are re-established from German binaries."
+  },
+  "tail": {
+    "semantic_name": "DoRippleFieldEffect",
+    "invariant_anchor_hex": "97 20 90 60 03 20 D0 60 05 20"
+  },
+  "next_module": {
+    "name": "field_message_box",
+    "first_function": "InitFieldMessageBox",
+    "retail_start": "0x08064DB4",
+    "debug_start": "0x080693B4",
+    "delta": "+0x4600",
+    "common_first_16_hex": "00 B5 06 49 00 20 08 70 05 48 00 88 00 F0 A2 FB"
+  }
+}
