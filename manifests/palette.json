@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "module": "palette",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08073DD4",
+      "end_exclusive": "0x08074F6C",
+      "size": 4504,
+      "sha256": "00253a220123b34da98a8f730bbd40566732cd88f3062ed8535393bf98915e22"
+    },
+    "rev1": {
+      "start": "0x08073DD4",
+      "end_exclusive": "0x08074F6C",
+      "size": 4504,
+      "sha256": "00253a220123b34da98a8f730bbd40566732cd88f3062ed8535393bf98915e22"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0807B040",
+    "end_exclusive": "0x0807C1D8",
+    "size": 4504,
+    "sha256": "68f011f71b92e1c424fe5767d750d9ff8a32ad2db28a8c1cd7510d4cc4f2a3ba",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x726C"
+  },
+  "runtime_buffers": {
+    "unfaded": {
+      "retail": "0x0202EAC8",
+      "debug": "0x0202ED6C"
+    },
+    "faded": {
+      "retail": "0x0202EEC8",
+      "debug": "0x0202F16C"
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 32,
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "sound",
+    "first_function": "InitMapMusic",
+    "retail_start": "0x08074F6C",
+    "debug_start": "0x0807C1D8",
+    "delta": "+0x726C",
+    "common_body_hex": "00 B5 03 49 00 20 08 70 00 F0 80 F8 01 BC 00 47",
+    "disable_music": {
+      "retail": "0x03004AFC",
+      "debug": "0x03004BD4"
+    }
+  }
+}
