@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "module": "field_player_avatar",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08058AF4",
+      "end_exclusive": "0x0805AD90",
+      "size": 8860,
+      "sha256": "222f2eee68b4ca41ba6c9329b2691f18980b045715ba5926f149466f44c4dcfd"
+    },
+    "rev1": {
+      "start": "0x08058AF4",
+      "end_exclusive": "0x0805AD90",
+      "size": 8860,
+      "sha256": "222f2eee68b4ca41ba6c9329b2691f18980b045715ba5926f149466f44c4dcfd"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0805CFDC",
+    "end_exclusive": "0x0805F348",
+    "size": 9068,
+    "sha256": "bb5acc900b4dc33878bceef76755552d5bde8752ac9b8d35e8b65476551858ad",
+    "growth_bytes": 208,
+    "growth_hex": "0xD0"
+  },
+  "delta": {
+    "entry": "+0x44E8",
+    "exit": "+0x45B8"
+  },
+  "debug_growth": {
+    "common_body_end": "0x0805F2B0",
+    "internal_conditional_growth_bytes": 56,
+    "internal_conditional_growth_hex": "0x38",
+    "source_correlated_internal_areas": [
+      "TryDoMetatileBehaviorForcedMovement",
+      "MovePlayerNotOnBike"
+    ],
+    "tail": {
+      "start": "0x0805F2B0",
+      "end_exclusive": "0x0805F348",
+      "size": 152,
+      "hex": "0x98",
+      "sha256": "6cafd04d4c299ff17733bd4fa9083da2c28aaafecc7056a400f840d5e15193fd"
+    },
+    "tail_functions": [
+      {
+        "semantic_name": "debug_sub_805F2B0",
+        "start": "0x0805F2B0",
+        "end_exclusive": "0x0805F2DC",
+        "size": 44,
+        "sha256": "f617e6afde734d0fe7db07543484fc9d95d658a6bb3da8505410ec3bfd4888bf"
+      },
+      {
+        "semantic_name": "debug_sub_805F2DC",
+        "start": "0x0805F2DC",
+        "end_exclusive": "0x0805F348",
+        "size": 108,
+        "sha256": "4e34a8b6306b1e55f192bf62a9c0be141b1c11b6c4a3afe352bb6b927e8d04e2"
+      }
+    ]
+  },
+  "entry": {
+    "semantic_name": "MovementType_Player",
+    "common_prefix_hex": "00 B5 01 1C 2E 20 0A 5E D0 00 80 18 80 00 03 4A 80 18 03 4A",
+    "generated_callback_offset": "0x24",
+    "generated_callback_hex": "00 20 70 47"
+  },
+  "runtime_constants": {
+    "player_avatar_size": "0x24",
+    "forced_movement_test_count": 18,
+    "forced_movement_handler_count": 19,
+    "fishing_state_count": 16
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 147,
+    "common_explicit_count": 145,
+    "debug_only_explicit_functions": [
+      "debug_sub_805F2B0",
+      "debug_sub_805F2DC"
+    ],
+    "macro_generated_common_functions": [
+      "MovementType_Player",
+      "MovementType_Player_callback"
+    ],
+    "retail_correlated_function_total": 147,
+    "debug_correlated_function_total": 149,
+    "address_policy": "Historical numeric names are semantic labels only; German addresses are re-established from German binaries."
+  },
+  "next_module": {
+    "name": "event_object_movement",
+    "first_function": "ClearObjectEvent",
+    "retail_start": "0x0805AD90",
+    "debug_start": "0x0805F348",
+    "delta": "+0x45B8",
+    "object_event_size": "0x24",
+    "stable_prefix_hex": "10 B5 04 1C 00 21 24 22",
+    "stable_suffix_hex": "FF 20 20 72 01 20 40 42 60 72 A0 72 20 77 10 BC 01 BC 00 47"
+  }
+}
