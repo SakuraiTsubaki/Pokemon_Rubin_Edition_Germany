@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "module": "event_object_lock",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08065000",
+      "end_exclusive": "0x08065234",
+      "size": 564,
+      "sha256": "b82387f905398a3c212afd964dab927367abaaacf016cafc8d5b0a8d5fe00a2d"
+    },
+    "rev1": {
+      "start": "0x08065000",
+      "end_exclusive": "0x08065234",
+      "size": 564,
+      "sha256": "b82387f905398a3c212afd964dab927367abaaacf016cafc8d5b0a8d5fe00a2d"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08069600",
+    "end_exclusive": "0x08069834",
+    "size": 564,
+    "sha256": "f43b11ba73cfa31e0990719d4f824bd5220881e86bb9dbec3c4c1cb55f96dfc0",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x4600",
+    "exit": "+0x4600"
+  },
+  "entry": {
+    "first_function": "walkrun_is_standing_still",
+    "common_prefix_hex": "00 B5 03 48 C0 78 01 28 04 D0 01 20 03 E0",
+    "retail_player_avatar_address": "0x0202E858",
+    "debug_player_avatar_address": "0x0202EAFC",
+    "common_suffix_hex": "00 20 02 BC 08 47"
+  },
+  "runtime_globals": {
+    "gObjectEvents": {
+      "retail": "0x030048B0",
+      "debug": "0x03004980",
+      "literal_refs": 6
+    },
+    "gSelectedObjectEvent": {
+      "retail": "0x03004AF0",
+      "debug": "0x03004BC4",
+      "literal_refs": 5
+    },
+    "gSpecialVar_Facing": {
+      "retail": "0x0202E8E0",
+      "debug": "0x0202EB84",
+      "literal_refs": 1
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 11,
+    "debug_conditional_text": false,
+    "address_policy": "Historical numeric names are semantic labels only; German addresses are re-established from German binaries."
+  },
+  "next_module": {
+    "name": "text_window",
+    "first_function": "TextWindow_SetBaseTileNum",
+    "retail_start": "0x08065234",
+    "debug_start": "0x08069834",
+    "delta": "+0x4600",
+    "common_first_16_hex": "00 04 00 0C 02 49 08 80 09 30 00 04 00 0C 70 47",
+    "base_tile_num_iwram": "0x030005AC"
+  }
+}
