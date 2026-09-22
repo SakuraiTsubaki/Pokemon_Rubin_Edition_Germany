@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "module": "random",
+  "retail": {
+    "start": "0x080411A8",
+    "end_exclusive": "0x080411D8",
+    "size": 48,
+    "sha256": "0124eac0db619a26f2570eac3dc66b5963878fb31e450a0b0aa8f6f223cd55a4",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08045324",
+    "end_exclusive": "0x08045354",
+    "size": 48,
+    "sha256": "519530735ef7cefd06e9c01b6abd00cc661c01fea7d2aa829be89b51cb4e65cf",
+    "retail_address_delta": "+0x417C"
+  },
+  "functions": [
+    {
+      "name": "Random",
+      "retail": "0x080411A8",
+      "debug": "0x08045324",
+      "span": 32
+    },
+    {
+      "name": "SeedRng",
+      "retail": "0x080411C8",
+      "debug": "0x08045344",
+      "span": 16
+    }
+  ],
+  "lcg": {
+    "multiplier_decimal": 1103515245,
+    "multiplier_hex": "0x41C64E6D",
+    "increment_decimal": 24691,
+    "increment_hex": "0x6073",
+    "return_bits": "state[31:16]"
+  },
+  "rng_global": {
+    "retail": "0x03004828",
+    "debug": "0x030048F8"
+  },
+  "next_module": {
+    "name": "util",
+    "retail_start": "0x080411D8",
+    "debug_start": "0x08045354",
+    "delta": "+0x417C"
+  }
+}

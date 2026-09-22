@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "module": "de_rom_8040FE0",
+  "german_specific": true,
+  "retail": {
+    "start": "0x08040FE0",
+    "end_exclusive": "0x08041110",
+    "size": 304,
+    "sha256": "0d60aa9e91ffd588e2d962a26e20f137a0e4b34fc6fc4eddde613c11890bca22",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0804515C",
+    "end_exclusive": "0x0804528C",
+    "size": 304,
+    "sha256": "d1c9e7698dc63c6b0e4a22b887172ed5aff2e9d91c5be92e4e2a64bd15d3d2bb",
+    "retail_address_delta": "+0x417C"
+  },
+  "functions": [
+    {
+      "name": "de_sub_8040FE0",
+      "retail": "0x08040FE0",
+      "debug": "0x0804515C",
+      "span": 20,
+      "fixed_trainer_class_index": 26,
+      "correlated_name": "TRAINER_CLASS_SCHOOL_KID"
+    },
+    {
+      "name": "de_sub_8040FF4",
+      "retail": "0x08040FF4",
+      "debug": "0x08045170",
+      "span": 24,
+      "fixed_trainer_class_index": 46,
+      "correlated_name": "TRAINER_CLASS_POKEMON_TRAINER_3"
+    },
+    {
+      "name": "de_sub_804100C",
+      "retail": "0x0804100C",
+      "debug": "0x08045188",
+      "span": 24,
+      "fixed_trainer_class_index": 25,
+      "correlated_name": "TRAINER_CLASS_LEADER"
+    },
+    {
+      "name": "de_sub_8041024",
+      "retail": "0x08041024",
+      "debug": "0x080451A0",
+      "span": 232,
+      "selector_values": [
+        "0x100",
+        "0x400",
+        "0x800"
+      ],
+      "role": "German context-sensitive trainer-class name dispatcher"
+    },
+    {
+      "name": "de_sub_804110C",
+      "retail": "0x0804110C",
+      "debug": "0x08045288",
+      "span": 4,
+      "role": "return second argument unchanged"
+    }
+  ],
+  "trainer_class_name_entry_bytes": 13,
+  "next_module": {
+    "name": "trig",
+    "first_function": "Sin",
+    "retail_start": "0x08041110",
+    "debug_start": "0x0804528C",
+    "delta": "+0x417C"
+  }
+}

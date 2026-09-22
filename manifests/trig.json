@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "module": "trig",
+  "retail": {
+    "start": "0x08041110",
+    "end_exclusive": "0x080411A8",
+    "size": 152,
+    "sha256": "4ca4702ed06a970f5502bb52b7354e995528a32dae91ade3d9ddbf48f1e276aa",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0804528C",
+    "end_exclusive": "0x08045324",
+    "size": 152,
+    "sha256": "0542d9f677d3195b88fbe91590a9167b8fb741f5635c6aa39420e576d050bc6e",
+    "retail_address_delta": "+0x417C"
+  },
+  "functions": [
+    {
+      "name": "Sin",
+      "retail": "0x08041110",
+      "debug": "0x0804528C",
+      "span": 28,
+      "format": "Q8.8"
+    },
+    {
+      "name": "Cos",
+      "retail": "0x0804112C",
+      "debug": "0x080452A8",
+      "span": 32,
+      "format": "Q8.8",
+      "phase_shift_entries": 64
+    },
+    {
+      "name": "Sin2",
+      "retail": "0x0804114C",
+      "debug": "0x080452C8",
+      "span": 68,
+      "format": "Q4.12",
+      "angle_unit": "degrees"
+    },
+    {
+      "name": "Cos2",
+      "retail": "0x08041190",
+      "debug": "0x0804530C",
+      "span": 24,
+      "angle_unit": "degrees"
+    }
+  ],
+  "tables": [
+    {
+      "name": "gSineTable",
+      "entries": 320,
+      "entry_bits": 16,
+      "retail": "0x08215314",
+      "debug": "0x0822E4AC",
+      "size": 640,
+      "sha256": "dbdf49974fb8a6f319acc84a54ad90b3167aa588b2a3eafc62a6289c4d926205"
+    },
+    {
+      "name": "gSineDegreeTable",
+      "entries": 180,
+      "entry_bits": 16,
+      "retail": "0x08215594",
+      "debug": "0x0822E72C",
+      "size": 360,
+      "sha256": "353f23c8d42a29b25f44f9ef952af11f4745681ab8c479887b23f984631c72a0"
+    }
+  ],
+  "next_module": {
+    "name": "random",
+    "first_function": "Random",
+    "retail_start": "0x080411A8",
+    "debug_start": "0x08045324",
+    "delta": "+0x417C"
+  }
+}
