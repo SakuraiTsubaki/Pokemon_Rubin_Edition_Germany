@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "module": "battle_controller_player",
+  "retail": {
+    "start": "0x0802C144",
+    "end_exclusive": "0x080314C4",
+    "size": 21376,
+    "sha256": "7b2e93299fcb177e344049e3b6443099374d57a624ba2c86f80ef3bd2c1093fb",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0802F7A8",
+    "end_exclusive": "0x0803527C",
+    "size": 23252,
+    "sha256": "bc563162bc54b9e206540d86fcb8509c040cc12bf77f9eedb317c7e86ad18f68"
+  },
+  "debug_growth": {
+    "bytes": 1876,
+    "hex": "0x754",
+    "delta_at_module_start": "+0x3664",
+    "delta_at_handlers_and_end": "+0x3DB8",
+    "source_role": "move-selection/animation Debug inspection tooling"
+  },
+  "command_table": {
+    "command_min": "0x00",
+    "command_max": "0x38",
+    "command_count": 57,
+    "entry_size": 4,
+    "retail_address": "0x08207D68",
+    "debug_address": "0x08220F00",
+    "retail_sha256": "96b74032006663bbeb41941c1331912b07f7cb5e31dc4cea4bb18c92c48e8d4f",
+    "debug_sha256": "4380e6eff2e2beabccb6ced1f9817bd951f8e406d02786585edb3fdabb2ba99e",
+    "entries": [
+      {
+        "command": 0,
+        "command_hex": "0x00",
+        "name": "PlayerHandleGetAttributes",
+        "retail": "0x0802E6A4",
+        "debug": "0x0803245C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 1,
+        "command_hex": "0x01",
+        "name": "PlayerHandleGetRawMonData",
+        "retail": "0x0802EEC4",
+        "debug": "0x08032C7C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 2,
+        "command_hex": "0x02",
+        "name": "PlayerHandleSetAttributes",
+        "retail": "0x0802EF4C",
+        "debug": "0x08032D04",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 3,
+        "command_hex": "0x03",
+        "name": "PlayerHandlecmd3",
+        "retail": "0x0802F9A0",
+        "debug": "0x08033758",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 4,
+        "command_hex": "0x04",
+        "name": "PlayerHandleLoadPokeSprite",
+        "retail": "0x0802FA14",
+        "debug": "0x080337CC",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 5,
+        "command_hex": "0x05",
+        "name": "PlayerHandleSendOutPoke",
+        "retail": "0x0802FA7C",
+        "debug": "0x08033834",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 6,
+        "command_hex": "0x06",
+        "name": "PlayerHandleReturnPokeToBall",
+        "retail": "0x0802FC74",
+        "debug": "0x08033A2C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 7,
+        "command_hex": "0x07",
+        "name": "PlayerHandleTrainerThrow",
+        "retail": "0x0802FD88",
+        "debug": "0x08033B40",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 8,
+        "command_hex": "0x08",
+        "name": "PlayerHandleTrainerSlide",
+        "retail": "0x0802FEB4",
+        "debug": "0x08033C6C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 9,
+        "command_hex": "0x09",
+        "name": "PlayerHandleTrainerSlideBack",
+        "retail": "0x0802FF90",
+        "debug": "0x08033D48",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 10,
+        "command_hex": "0x0A",
+        "name": "PlayerHandlecmd10",
+        "retail": "0x08030050",
+        "debug": "0x08033E08",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 11,
+        "command_hex": "0x0B",
+        "name": "PlayerHandlecmd11",
+        "retail": "0x08030134",
+        "debug": "0x08033EEC",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 12,
+        "command_hex": "0x0C",
+        "name": "PlayerHandlecmd12",
+        "retail": "0x08030154",
+        "debug": "0x08033F0C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 13,
+        "command_hex": "0x0D",
+        "name": "PlayerHandleBallThrow",
+        "retail": "0x080301A4",
+        "debug": "0x08033F5C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 14,
+        "command_hex": "0x0E",
+        "name": "PlayerHandlePuase",
+        "retail": "0x08030200",
+        "debug": "0x08033FB8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 15,
+        "command_hex": "0x0F",
+        "name": "PlayerHandleMoveAnimation",
+        "retail": "0x08030230",
+        "debug": "0x08033FE8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 16,
+        "command_hex": "0x10",
+        "name": "PlayerHandlePrintString",
+        "retail": "0x080304C8",
+        "debug": "0x08034280",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 17,
+        "command_hex": "0x11",
+        "name": "PlayerHandlePrintStringPlayerOnly",
+        "retail": "0x0803052C",
+        "debug": "0x080342E4",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 18,
+        "command_hex": "0x12",
+        "name": "PlayerHandlecmd18",
+        "retail": "0x08030550",
+        "debug": "0x08034308",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 19,
+        "command_hex": "0x13",
+        "name": "PlayerHandlecmd19",
+        "retail": "0x08030638",
+        "debug": "0x080343F0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 20,
+        "command_hex": "0x14",
+        "name": "PlayerHandlecmd20",
+        "retail": "0x0803063C",
+        "debug": "0x080343F4",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 21,
+        "command_hex": "0x15",
+        "name": "PlayerHandleOpenBag",
+        "retail": "0x08030704",
+        "debug": "0x080344BC",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 22,
+        "command_hex": "0x16",
+        "name": "PlayerHandlecmd22",
+        "retail": "0x08030768",
+        "debug": "0x08034520",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 23,
+        "command_hex": "0x17",
+        "name": "PlayerHandlecmd23",
+        "retail": "0x08030848",
+        "debug": "0x08034600",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 24,
+        "command_hex": "0x18",
+        "name": "PlayerHandleHealthBarUpdate",
+        "retail": "0x0803086C",
+        "debug": "0x08034624",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 25,
+        "command_hex": "0x19",
+        "name": "PlayerHandleExpBarUpdate",
+        "retail": "0x0803096C",
+        "debug": "0x08034724",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 26,
+        "command_hex": "0x1A",
+        "name": "PlayerHandleStatusIconUpdate",
+        "retail": "0x08030A08",
+        "debug": "0x080347C0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 27,
+        "command_hex": "0x1B",
+        "name": "PlayerHandleStatusAnimation",
+        "retail": "0x08030A7C",
+        "debug": "0x08034834",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 28,
+        "command_hex": "0x1C",
+        "name": "PlayerHandleStatusXor",
+        "retail": "0x08030AE4",
+        "debug": "0x0803489C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 29,
+        "command_hex": "0x1D",
+        "name": "PlayerHandlecmd29",
+        "retail": "0x08030B50",
+        "debug": "0x08034908",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 30,
+        "command_hex": "0x1E",
+        "name": "PlayerHandleDMATransfer",
+        "retail": "0x08030B5C",
+        "debug": "0x08034914",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 31,
+        "command_hex": "0x1F",
+        "name": "PlayerHandlecmd31",
+        "retail": "0x08030C10",
+        "debug": "0x080349C8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 32,
+        "command_hex": "0x20",
+        "name": "PlayerHandlecmd32",
+        "retail": "0x08030C40",
+        "debug": "0x080349F8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 33,
+        "command_hex": "0x21",
+        "name": "PlayerHandlecmd33",
+        "retail": "0x08030C4C",
+        "debug": "0x08034A04",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 34,
+        "command_hex": "0x22",
+        "name": "PlayerHandlecmd34",
+        "retail": "0x08030C60",
+        "debug": "0x08034A18",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 35,
+        "command_hex": "0x23",
+        "name": "PlayerHandlecmd35",
+        "retail": "0x08030C74",
+        "debug": "0x08034A2C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 36,
+        "command_hex": "0x24",
+        "name": "PlayerHandlecmd36",
+        "retail": "0x08030C88",
+        "debug": "0x08034A40",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 37,
+        "command_hex": "0x25",
+        "name": "PlayerHandlecmd37",
+        "retail": "0x08030C9C",
+        "debug": "0x08034A54",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 38,
+        "command_hex": "0x26",
+        "name": "PlayerHandlecmd38",
+        "retail": "0x08030CB8",
+        "debug": "0x08034A70",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 39,
+        "command_hex": "0x27",
+        "name": "PlayerHandlecmd39",
+        "retail": "0x08030CF0",
+        "debug": "0x08034AA8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 40,
+        "command_hex": "0x28",
+        "name": "PlayerHandlecmd40",
+        "retail": "0x08030D08",
+        "debug": "0x08034AC0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 41,
+        "command_hex": "0x29",
+        "name": "PlayerHandleHitAnimation",
+        "retail": "0x08030D30",
+        "debug": "0x08034AE8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 42,
+        "command_hex": "0x2A",
+        "name": "PlayerHandlecmd42",
+        "retail": "0x08030DA0",
+        "debug": "0x08034B58",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 43,
+        "command_hex": "0x2B",
+        "name": "PlayerHandleEffectivenessSound",
+        "retail": "0x08030DAC",
+        "debug": "0x08034B64",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 44,
+        "command_hex": "0x2C",
+        "name": "PlayerHandlecmd44",
+        "retail": "0x08030DF0",
+        "debug": "0x08034BA8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 45,
+        "command_hex": "0x2D",
+        "name": "PlayerHandleFaintingCry",
+        "retail": "0x08030E20",
+        "debug": "0x08034BD8",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 46,
+        "command_hex": "0x2E",
+        "name": "PlayerHandleIntroSlide",
+        "retail": "0x08030E60",
+        "debug": "0x08034C18",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 47,
+        "command_hex": "0x2F",
+        "name": "PlayerHandleTrainerBallThrow",
+        "retail": "0x08030E94",
+        "debug": "0x08034C4C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 48,
+        "command_hex": "0x30",
+        "name": "PlayerHandlecmd48",
+        "retail": "0x08031180",
+        "debug": "0x08034F38",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 49,
+        "command_hex": "0x31",
+        "name": "PlayerHandlecmd49",
+        "retail": "0x08031278",
+        "debug": "0x08035030",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 50,
+        "command_hex": "0x32",
+        "name": "PlayerHandlecmd50",
+        "retail": "0x080312C4",
+        "debug": "0x0803507C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 51,
+        "command_hex": "0x33",
+        "name": "PlayerHandleSpriteInvisibility",
+        "retail": "0x080312E8",
+        "debug": "0x080350A0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 52,
+        "command_hex": "0x34",
+        "name": "PlayerHandleBattleAnimation",
+        "retail": "0x08031348",
+        "debug": "0x08035100",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 53,
+        "command_hex": "0x35",
+        "name": "PlayerHandleLinkStandbyMsg",
+        "retail": "0x080313B0",
+        "debug": "0x08035168",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 54,
+        "command_hex": "0x36",
+        "name": "PlayerHandleResetActionMoveSelection",
+        "retail": "0x0803140C",
+        "debug": "0x080351C4",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 55,
+        "command_hex": "0x37",
+        "name": "PlayerHandlecmd55",
+        "retail": "0x08031474",
+        "debug": "0x0803522C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 56,
+        "command_hex": "0x38",
+        "name": "PlayerHandlecmd56",
+        "retail": "0x080314C0",
+        "debug": "0x08035278",
+        "delta": "+0x3DB8"
+      }
+    ]
+  },
+  "core": [
+    {
+      "name": "BattleControllerDummy",
+      "retail": "0x0802C144",
+      "debug": "0x0802F7A8",
+      "delta": "+0x3664"
+    },
+    {
+      "name": "SetBankFuncToPlayerBufferRunCommand",
+      "retail": "0x0802C148",
+      "debug": "0x0802F7AC",
+      "delta": "+0x3664"
+    },
+    {
+      "name": "PlayerBufferExecCompleted",
+      "retail": "0x0802C170",
+      "debug": "0x0802F7D4",
+      "delta": "+0x3664"
+    },
+    {
+      "name": "PlayerBufferRunCommand",
+      "retail": "0x0802C1E8",
+      "debug": "0x0802F84C",
+      "delta": "+0x3664"
+    }
+  ],
+  "regional_ui": {
+    "english_other_menu_tile_offset": 440,
+    "german_other_menu_tile_offset": 444
+  },
+  "capacities": {
+    "battle_buffer_bytes_per_battler": 512,
+    "move_slots": 4,
+    "party_slots": 6,
+    "max_active_battlers": 4,
+    "command_id_bits": 8
+  },
+  "next_module": {
+    "name": "battle_gfx_sfx_util",
+    "first_function": "SpriteCB_WaitForBattlerBallReleaseAnim",
+    "retail_start": "0x080314C4",
+    "debug_start": "0x0803527C",
+    "delta": "+0x3DB8"
+  }
+}
