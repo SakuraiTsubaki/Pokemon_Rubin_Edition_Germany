@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "module": "debug/start_menu_debug",
+  "evidence": "German ROM binary",
+  "retail": {
+    "present": false,
+    "size": 0
+  },
+  "debug": {
+    "present": true,
+    "start": "0x08076AC8",
+    "end_exclusive": "0x080791A8",
+    "size": 9952,
+    "sha256": "8e40baceb26a68d08faf009bdf0b4c64bd2aa7e8424d05304c684eb8293ec627"
+  },
+  "delta": {
+    "before": "+0x4B8C",
+    "after": "+0x726C"
+  },
+  "entry": {
+    "first_function": "debug_sub_8076AC8",
+    "first_32_hex": "10 B5 82 B0 00 06 00 0E 1B 4A 81 00 09 18 49 00 1A 48 09 18 11 60 00 24 08 78 FF 28 04 D0 01 34"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 172,
+    "debug_only": true
+  },
+  "tail": {
+    "final_function": "DebugMenu_OpenKiwa",
+    "start": "0x0807918C",
+    "end_exclusive": "0x080791A8",
+    "size": 28,
+    "sha256": "ec317a686616260b61ce4133187dc72d6bcbcb0d35cf554d98fef4cddc07caf5"
+  },
+  "next_module": {
+    "name": "menu",
+    "first_function": "CloseMenu",
+    "retail_start": "0x08071F3C",
+    "debug_start": "0x080791A8",
+    "delta": "+0x726C",
+    "common_first_8_hex": "00 B5 05 20 03 F0 88 FC"
+  }
+}
