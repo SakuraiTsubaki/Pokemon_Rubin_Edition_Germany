@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_2",
+  "retail": {
+    "start": "0x0803C51C",
+    "end_exclusive": "0x0803E360",
+    "size": 7748,
+    "sha256": "e7169aa097ab66e4027ca0ce3dc479548bcb4368acabb18ef6cad6453da636b8",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08040698",
+    "end_exclusive": "0x080424DC",
+    "size": 7748,
+    "sha256": "b9d4617ba309a7f5fc712553dea16be17def6632998b8bdf3d7e3e00c6a35879",
+    "retail_address_delta": "+0x417C"
+  },
+  "debug_growth_bytes": 0,
+  "functions": [
+    {
+      "name": "CountAliveMons",
+      "retail": "0x0803C51C",
+      "debug": "0x08040698",
+      "size": 236,
+      "delta": "+0x417C",
+      "role": "count living battlers for requested side/allied context"
+    },
+    {
+      "name": "sub_803C434",
+      "retail": "0x0803C608",
+      "debug": "0x08040784",
+      "size": 132,
+      "delta": "+0x417C",
+      "role": "choose opposing battler position with double-battle handling"
+    },
+    {
+      "name": "GetMonGender",
+      "retail": "0x0803C68C",
+      "debug": "0x08040808",
+      "size": 16,
+      "delta": "+0x417C",
+      "role": "party-mon wrapper for boxed gender calculation"
+    },
+    {
+      "name": "GetBoxMonGender",
+      "retail": "0x0803C69C",
+      "debug": "0x08040818",
+      "size": 92,
+      "delta": "+0x417C",
+      "role": "derive gender from species ratio and personality low byte"
+    },
+    {
+      "name": "GetGenderFromSpeciesAndPersonality",
+      "retail": "0x0803C6F8",
+      "debug": "0x08040874",
+      "size": 72,
+      "delta": "+0x417C",
+      "role": "species/personality gender helper"
+    },
+    {
+      "name": "SetMultiuseSpriteTemplateToPokemon",
+      "retail": "0x0803C740",
+      "debug": "0x080408BC",
+      "size": 52,
+      "delta": "+0x417C",
+      "role": "prepare shared sprite template for Pokémon front/back graphics"
+    },
+    {
+      "name": "SetMultiuseSpriteTemplateToTrainerBack",
+      "retail": "0x0803C774",
+      "debug": "0x080408F0",
+      "size": 80,
+      "delta": "+0x417C",
+      "role": "prepare shared trainer sprite template"
+    },
+    {
+      "name": "EncryptBoxMon",
+      "retail": "0x0803C7C4",
+      "debug": "0x08040940",
+      "size": 36,
+      "delta": "+0x417C",
+      "role": "XOR 12 secure words with personality and OT ID"
+    },
+    {
+      "name": "DecryptBoxMon",
+      "retail": "0x0803C7E8",
+      "debug": "0x08040964",
+      "size": 36,
+      "delta": "+0x417C",
+      "role": "reverse secure-payload XOR"
+    },
+    {
+      "name": "GetSubstruct",
+      "retail": "0x0803C80C",
+      "debug": "0x08040988",
+      "size": 1320,
+      "delta": "+0x417C",
+      "role": "map personality modulo 24 to one of four 12-byte secure substructs"
+    },
+    {
+      "name": "GetMonData",
+      "retail": "0x0803CD34",
+      "debug": "0x08040EB0",
+      "size": 156,
+      "delta": "+0x417C",
+      "role": "read party-only fields or delegate boxed fields"
+    },
+    {
+      "name": "GetBoxMonData",
+      "retail": "0x0803CDD0",
+      "debug": "0x08040F4C",
+      "size": 1536,
+      "delta": "+0x417C",
+      "role": "decrypt/checksum/read boxed and secure data fields"
+    },
+    {
+      "name": "SetMonData",
+      "retail": "0x0803D3D0",
+      "debug": "0x0804154C",
+      "size": 240,
+      "delta": "+0x417C",
+      "role": "write party-only fields or delegate boxed fields"
+    },
+    {
+      "name": "SetBoxMonData",
+      "retail": "0x0803D4C0",
+      "debug": "0x0804163C",
+      "size": 1572,
+      "delta": "+0x417C",
+      "role": "decrypt/checksum/write boxed data then recalc checksum/re-encrypt"
+    },
+    {
+      "name": "CopyMon",
+      "retail": "0x0803DAE4",
+      "debug": "0x08041C60",
+      "size": 12,
+      "delta": "+0x417C",
+      "role": "raw record copy wrapper"
+    },
+    {
+      "name": "GiveMonToPlayer",
+      "retail": "0x0803DAF0",
+      "debug": "0x08041C6C",
+      "size": 124,
+      "delta": "+0x417C",
+      "role": "fill first free party slot or send Pokémon to PC"
+    },
+    {
+      "name": "SendMonToPC",
+      "retail": "0x0803DB6C",
+      "debug": "0x08041CE8",
+      "size": 128,
+      "delta": "+0x417C",
+      "role": "scan 14 boxes × 30 slots for first free box slot"
+    },
+    {
+      "name": "CalculatePlayerPartyCount",
+      "retail": "0x0803DBEC",
+      "debug": "0x08041D68",
+      "size": 68,
+      "delta": "+0x417C",
+      "role": "count occupied player party slots"
+    },
+    {
+      "name": "CalculateEnemyPartyCount",
+      "retail": "0x0803DC30",
+      "debug": "0x08041DAC",
+      "size": 68,
+      "delta": "+0x417C",
+      "role": "count occupied enemy party slots"
+    },
+    {
+      "name": "GetMonsStateToDoubles",
+      "retail": "0x0803DC74",
+      "debug": "0x08041DF0",
+      "size": 116,
+      "delta": "+0x417C",
+      "role": "summarize usable party state for double-battle decisions"
+    },
+    {
+      "name": "GetAbilityBySpecies",
+      "retail": "0x0803DCE8",
+      "debug": "0x08041E64",
+      "size": 68,
+      "delta": "+0x417C",
+      "role": "select ability1/ability2 from species and altAbility bit"
+    },
+    {
+      "name": "GetMonAbility",
+      "retail": "0x0803DD2C",
+      "debug": "0x08041EA8",
+      "size": 52,
+      "delta": "+0x417C",
+      "role": "read species/altAbility and resolve ability"
+    },
+    {
+      "name": "CreateSecretBaseEnemyParty",
+      "retail": "0x0803DD60",
+      "debug": "0x08041EDC",
+      "size": 284,
+      "delta": "+0x417C",
+      "role": "build Secret Base enemy party from save decoration/trainer data"
+    },
+    {
+      "name": "GetSecretBaseTrainerPicIndex",
+      "retail": "0x0803DE7C",
+      "debug": "0x08041FF8",
+      "size": 60,
+      "delta": "+0x417C",
+      "role": "derive Secret Base trainer picture"
+    },
+    {
+      "name": "GetSecretBaseTrainerNameIndex",
+      "retail": "0x0803DEB8",
+      "debug": "0x08042034",
+      "size": 60,
+      "delta": "+0x417C",
+      "role": "derive Secret Base trainer name class/index"
+    },
+    {
+      "name": "PlayerPartyAndPokemonStorageFull",
+      "retail": "0x0803DEF4",
+      "debug": "0x08042070",
+      "size": 52,
+      "delta": "+0x417C",
+      "role": "test six party slots then PC capacity"
+    },
+    {
+      "name": "PokemonStorageFull",
+      "retail": "0x0803DF28",
+      "debug": "0x080420A4",
+      "size": 76,
+      "delta": "+0x417C",
+      "role": "scan 14 boxes × 30 slots for any free slot"
+    },
+    {
+      "name": "GetSpeciesName",
+      "retail": "0x0803DF74",
+      "debug": "0x080420F0",
+      "size": 76,
+      "delta": "+0x417C",
+      "role": "copy species name or species-0 fallback"
+    },
+    {
+      "name": "CalculatePPWithBonus",
+      "retail": "0x0803DFC0",
+      "debug": "0x0804213C",
+      "size": 72,
+      "delta": "+0x417C",
+      "role": "apply one of four packed PP Up counts to base PP"
+    },
+    {
+      "name": "RemoveMonPPBonus",
+      "retail": "0x0803E008",
+      "debug": "0x08042184",
+      "size": 60,
+      "delta": "+0x417C",
+      "role": "clear selected two-bit PP Up field on boxed/party Pokémon"
+    },
+    {
+      "name": "RemoveBattleMonPPBonus",
+      "retail": "0x0803E044",
+      "debug": "0x080421C0",
+      "size": 24,
+      "delta": "+0x417C",
+      "role": "clear selected PP Up field on BattlePokemon"
+    },
+    {
+      "name": "CopyPlayerPartyMonToBattleData",
+      "retail": "0x0803E05C",
+      "debug": "0x080421D8",
+      "size": 772,
+      "delta": "+0x417C",
+      "role": "materialize persistent party Pokémon into active BattlePokemon"
+    }
+  ],
+  "data_model": {
+    "secure_words_u32": 12,
+    "secure_bytes": 48,
+    "substruct_permutations": 24,
+    "party_slots": 6,
+    "storage_boxes": 14,
+    "storage_slots_per_box": 30,
+    "move_slots": 4,
+    "pp_up_fields": 4,
+    "pp_up_bits_per_move": 2,
+    "stat_stage_count": 8,
+    "stat_stage_neutral": 6,
+    "ability_selector_bits": 1,
+    "ability_slots": 2
+  },
+  "compatibility_bugs": [
+    {
+      "name": "MON_DATA_IVS aggregate setter",
+      "detail": "original path reads one input byte unless BUGFIX_SETMONIVS is enabled"
+    }
+  ],
+  "next_module": {
+    "name": "pokemon_item_effect",
+    "first_function": "ExecuteTableBasedItemEffect_",
+    "retail_start": "0x0803E360",
+    "debug_start": "0x080424DC",
+    "delta": "+0x417C"
+  }
+}
