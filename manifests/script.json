@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "module": "script",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080656D4",
+      "end_exclusive": "0x08065BAC",
+      "size": 1240,
+      "sha256": "4b56a2c1b4a0c91db332dffcf8e65e87224c4537ee058c459c13aab7467a7b1f"
+    },
+    "rev1": {
+      "start": "0x080656D4",
+      "end_exclusive": "0x08065BAC",
+      "size": 1240,
+      "sha256": "4b56a2c1b4a0c91db332dffcf8e65e87224c4537ee058c459c13aab7467a7b1f"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08069CD4",
+    "end_exclusive": "0x0806A1AC",
+    "size": 1240,
+    "sha256": "95e62a9bfde97ee285c346060870dde56d3c0b285e5df1060db1aa133dde25e6",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x4600",
+    "exit": "+0x4600"
+  },
+  "entry": {
+    "first_function": "InitScriptContext",
+    "common_first_48_hex": "00 B5 03 1C 00 20 58 70 98 60 18 70 58 60 D9 65 1A 66 00 22 03 21 18 1C 70 30 02 60 04 38 01 39 00 29 FA DA 19 1C 0C 31 00 22 18 1C 58 30 02 60"
+  },
+  "runtime": {
+    "source_correlated_function_count": 34,
+    "script_mode_count": 3,
+    "context_status_count": 3,
+    "return_stack_entries": 20,
+    "local_data_words": 4,
+    "ram_script_magic": 51,
+    "ram_script_magic_hex": "0x33"
+  },
+  "profile_globals": {
+    "gRamScriptRetAddr": {
+      "retail": "0x02028DC8",
+      "debug": "0x0202906C"
+    },
+    "gSaveBlock1_ram_script_base_reference": {
+      "retail": "0x0202E8AC",
+      "debug": "0x0202EB50"
+    }
+  },
+  "next_module": {
+    "name": "scrcmd",
+    "first_functions": [
+      "ScrCmd_nop",
+      "ScrCmd_nop1",
+      "ScrCmd_end"
+    ],
+    "retail_start": "0x08065BAC",
+    "debug_start": "0x0806A1AC",
+    "delta": "+0x4600",
+    "common_prefix_hex": "00 20 70 47 00 20 70 47 00 B5 FF F7 B5 FD 00 20 02 BC 08 47"
+  }
+}
