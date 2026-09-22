@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "module": "battle_controller_link_opponent",
+  "retail": {
+    "start": "0x080376E0",
+    "end_exclusive": "0x0803A894",
+    "size": 12724,
+    "sha256": "be0ae41d9a3ac32369d15f31fc5c4f72491b238c6b48bdca06e8dd117d73357d",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0803B5B4",
+    "end_exclusive": "0x0803E768",
+    "size": 12724,
+    "sha256": "7b481172fd4c9d3ae43e56c0151c323a02fa9dc70244d103e8b49d6f1d5bc09b",
+    "retail_address_delta": "+0x3ED4"
+  },
+  "debug_growth_bytes": 0,
+  "command_table": {
+    "command_min": "0x00",
+    "command_max": "0x38",
+    "command_count": 57,
+    "entry_size": 4,
+    "retail_address": "0x08208018",
+    "debug_address": "0x082211B0",
+    "retail_sha256": "ab46af9102042f243e39cda3b3586461130ce252ddcb16fc1ef80c65ee85d959",
+    "debug_sha256": "e86c03defee73f1b93445225d3f8071ae611ffdf52a61f922267afcef2b9b6d3",
+    "entries": [
+      {
+        "command": 0,
+        "command_hex": "0x00",
+        "name": "LinkOpponentHandleGetAttributes",
+        "retail": "0x08038250",
+        "debug": "0x0803C124",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 1,
+        "command_hex": "0x01",
+        "name": "LinkOpponentHandlecmd1",
+        "retail": "0x08038A70",
+        "debug": "0x0803C944",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 2,
+        "command_hex": "0x02",
+        "name": "LinkOpponentHandleSetAttributes",
+        "retail": "0x08038A7C",
+        "debug": "0x0803C950",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 3,
+        "command_hex": "0x03",
+        "name": "LinkOpponentHandlecmd3",
+        "retail": "0x080393F4",
+        "debug": "0x0803D2C8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 4,
+        "command_hex": "0x04",
+        "name": "LinkOpponentHandleLoadPokeSprite",
+        "retail": "0x08039468",
+        "debug": "0x0803D33C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 5,
+        "command_hex": "0x05",
+        "name": "LinkOpponentHandleSendOutPoke",
+        "retail": "0x080395B8",
+        "debug": "0x0803D48C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 6,
+        "command_hex": "0x06",
+        "name": "LinkOpponentHandleReturnPokeToBall",
+        "retail": "0x08039788",
+        "debug": "0x0803D65C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 7,
+        "command_hex": "0x07",
+        "name": "LinkOpponentHandleTrainerThrow",
+        "retail": "0x080398A4",
+        "debug": "0x0803D778",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 8,
+        "command_hex": "0x08",
+        "name": "LinkOpponentHandleTrainerSlide",
+        "retail": "0x08039A78",
+        "debug": "0x0803D94C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 9,
+        "command_hex": "0x09",
+        "name": "LinkOpponentHandleTrainerSlideBack",
+        "retail": "0x08039A84",
+        "debug": "0x0803D958",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 10,
+        "command_hex": "0x0A",
+        "name": "LinkOpponentHandlecmd10",
+        "retail": "0x08039B30",
+        "debug": "0x0803DA04",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 11,
+        "command_hex": "0x0B",
+        "name": "LinkOpponentHandlecmd11",
+        "retail": "0x08039BD4",
+        "debug": "0x0803DAA8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 12,
+        "command_hex": "0x0C",
+        "name": "LinkOpponentHandlecmd12",
+        "retail": "0x08039BE0",
+        "debug": "0x0803DAB4",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 13,
+        "command_hex": "0x0D",
+        "name": "LinkOpponentHandleBallThrow",
+        "retail": "0x08039BEC",
+        "debug": "0x0803DAC0",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 14,
+        "command_hex": "0x0E",
+        "name": "LinkOpponentHandlePuase",
+        "retail": "0x08039BF8",
+        "debug": "0x0803DACC",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 15,
+        "command_hex": "0x0F",
+        "name": "LinkOpponentHandleMoveAnimation",
+        "retail": "0x08039C04",
+        "debug": "0x0803DAD8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 16,
+        "command_hex": "0x10",
+        "name": "LinkOpponentHandlePrintString",
+        "retail": "0x08039E9C",
+        "debug": "0x0803DD70",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 17,
+        "command_hex": "0x11",
+        "name": "LinkOpponentHandlePrintStringPlayerOnly",
+        "retail": "0x08039F00",
+        "debug": "0x0803DDD4",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 18,
+        "command_hex": "0x12",
+        "name": "LinkOpponentHandlecmd18",
+        "retail": "0x08039F0C",
+        "debug": "0x0803DDE0",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 19,
+        "command_hex": "0x13",
+        "name": "LinkOpponentHandlecmd19",
+        "retail": "0x08039F18",
+        "debug": "0x0803DDEC",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 20,
+        "command_hex": "0x14",
+        "name": "LinkOpponentHandlecmd20",
+        "retail": "0x08039F24",
+        "debug": "0x0803DDF8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 21,
+        "command_hex": "0x15",
+        "name": "LinkOpponentHandleOpenBag",
+        "retail": "0x08039F30",
+        "debug": "0x0803DE04",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 22,
+        "command_hex": "0x16",
+        "name": "LinkOpponentHandlecmd22",
+        "retail": "0x08039F3C",
+        "debug": "0x0803DE10",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 23,
+        "command_hex": "0x17",
+        "name": "LinkOpponentHandlecmd23",
+        "retail": "0x08039F48",
+        "debug": "0x0803DE1C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 24,
+        "command_hex": "0x18",
+        "name": "LinkOpponentHandleHealthBarUpdate",
+        "retail": "0x08039F54",
+        "debug": "0x0803DE28",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 25,
+        "command_hex": "0x19",
+        "name": "LinkOpponentHandleExpBarUpdate",
+        "retail": "0x0803A044",
+        "debug": "0x0803DF18",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 26,
+        "command_hex": "0x1A",
+        "name": "LinkOpponentHandleStatusIconUpdate",
+        "retail": "0x0803A050",
+        "debug": "0x0803DF24",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 27,
+        "command_hex": "0x1B",
+        "name": "LinkOpponentHandleStatusAnimation",
+        "retail": "0x0803A0C4",
+        "debug": "0x0803DF98",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 28,
+        "command_hex": "0x1C",
+        "name": "LinkOpponentHandleStatusXor",
+        "retail": "0x0803A12C",
+        "debug": "0x0803E000",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 29,
+        "command_hex": "0x1D",
+        "name": "LinkOpponentHandlecmd29",
+        "retail": "0x0803A138",
+        "debug": "0x0803E00C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 30,
+        "command_hex": "0x1E",
+        "name": "LinkOpponentHandleDMATransfer",
+        "retail": "0x0803A144",
+        "debug": "0x0803E018",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 31,
+        "command_hex": "0x1F",
+        "name": "LinkOpponentHandlecmd31",
+        "retail": "0x0803A150",
+        "debug": "0x0803E024",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 32,
+        "command_hex": "0x20",
+        "name": "LinkOpponentHandlecmd32",
+        "retail": "0x0803A15C",
+        "debug": "0x0803E030",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 33,
+        "command_hex": "0x21",
+        "name": "LinkOpponentHandlecmd33",
+        "retail": "0x0803A168",
+        "debug": "0x0803E03C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 34,
+        "command_hex": "0x22",
+        "name": "LinkOpponentHandlecmd34",
+        "retail": "0x0803A174",
+        "debug": "0x0803E048",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 35,
+        "command_hex": "0x23",
+        "name": "LinkOpponentHandlecmd35",
+        "retail": "0x0803A180",
+        "debug": "0x0803E054",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 36,
+        "command_hex": "0x24",
+        "name": "LinkOpponentHandlecmd36",
+        "retail": "0x0803A18C",
+        "debug": "0x0803E060",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 37,
+        "command_hex": "0x25",
+        "name": "LinkOpponentHandlecmd37",
+        "retail": "0x0803A198",
+        "debug": "0x0803E06C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 38,
+        "command_hex": "0x26",
+        "name": "LinkOpponentHandlecmd38",
+        "retail": "0x0803A1B4",
+        "debug": "0x0803E088",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 39,
+        "command_hex": "0x27",
+        "name": "LinkOpponentHandlecmd39",
+        "retail": "0x0803A1EC",
+        "debug": "0x0803E0C0",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 40,
+        "command_hex": "0x28",
+        "name": "LinkOpponentHandlecmd40",
+        "retail": "0x0803A204",
+        "debug": "0x0803E0D8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 41,
+        "command_hex": "0x29",
+        "name": "LinkOpponentHandleHitAnimation",
+        "retail": "0x0803A22C",
+        "debug": "0x0803E100",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 42,
+        "command_hex": "0x2A",
+        "name": "LinkOpponentHandlecmd42",
+        "retail": "0x0803A29C",
+        "debug": "0x0803E170",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 43,
+        "command_hex": "0x2B",
+        "name": "LinkOpponentHandleEffectivenessSound",
+        "retail": "0x0803A2A8",
+        "debug": "0x0803E17C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 44,
+        "command_hex": "0x2C",
+        "name": "LinkOpponentHandlecmd44",
+        "retail": "0x0803A2EC",
+        "debug": "0x0803E1C0",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 45,
+        "command_hex": "0x2D",
+        "name": "LinkOpponentHandleFaintingCry",
+        "retail": "0x0803A31C",
+        "debug": "0x0803E1F0",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 46,
+        "command_hex": "0x2E",
+        "name": "LinkOpponentHandleIntroSlide",
+        "retail": "0x0803A358",
+        "debug": "0x0803E22C",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 47,
+        "command_hex": "0x2F",
+        "name": "LinkOpponentHandleTrainerBallThrow",
+        "retail": "0x0803A38C",
+        "debug": "0x0803E260",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 48,
+        "command_hex": "0x30",
+        "name": "LinkOpponentHandlecmd48",
+        "retail": "0x0803A5B0",
+        "debug": "0x0803E484",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 49,
+        "command_hex": "0x31",
+        "name": "LinkOpponentHandlecmd49",
+        "retail": "0x0803A6F4",
+        "debug": "0x0803E5C8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 50,
+        "command_hex": "0x32",
+        "name": "LinkOpponentHandlecmd50",
+        "retail": "0x0803A740",
+        "debug": "0x0803E614",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 51,
+        "command_hex": "0x33",
+        "name": "LinkOpponentHandleSpriteInvisibility",
+        "retail": "0x0803A74C",
+        "debug": "0x0803E620",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 52,
+        "command_hex": "0x34",
+        "name": "LinkOpponentHandleBattleAnimation",
+        "retail": "0x0803A7AC",
+        "debug": "0x0803E680",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 53,
+        "command_hex": "0x35",
+        "name": "LinkOpponentHandleLinkStandbyMsg",
+        "retail": "0x0803A814",
+        "debug": "0x0803E6E8",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 54,
+        "command_hex": "0x36",
+        "name": "LinkOpponentHandleResetActionMoveSelection",
+        "retail": "0x0803A820",
+        "debug": "0x0803E6F4",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 55,
+        "command_hex": "0x37",
+        "name": "LinkOpponentHandlecmd55",
+        "retail": "0x0803A82C",
+        "debug": "0x0803E700",
+        "delta": "+0x3ED4"
+      },
+      {
+        "command": 56,
+        "command_hex": "0x38",
+        "name": "LinkOpponentHandlecmd56",
+        "retail": "0x0803A890",
+        "debug": "0x0803E764",
+        "delta": "+0x3ED4"
+      }
+    ]
+  },
+  "next_module": {
+    "name": "pokemon_1",
+    "first_function": "ZeroBoxMonData",
+    "retail_start": "0x0803A894",
+    "debug_start": "0x0803E768",
+    "delta": "+0x3ED4"
+  }
+}
