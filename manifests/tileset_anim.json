@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "module": "tileset_anim",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080731B8",
+      "end_exclusive": "0x08073DD4",
+      "size": 3100,
+      "sha256": "7011b493762e4c0d139d5131f086d25f350b721c508af6e1c703821d68a54ae3"
+    },
+    "rev1": {
+      "start": "0x080731B8",
+      "end_exclusive": "0x08073DD4",
+      "size": 3100,
+      "sha256": "7011b493762e4c0d139d5131f086d25f350b721c508af6e1c703821d68a54ae3"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0807A424",
+    "end_exclusive": "0x0807B040",
+    "size": 3100,
+    "sha256": "f784aeb3924ed7c71106fdc69fc74202927ba96547673242fd4c76981f8393b9",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x726C"
+  },
+  "dma_queue": {
+    "capacity": 20,
+    "count": {
+      "retail": "0x030006C0",
+      "debug": "0x030006E0"
+    },
+    "array": {
+      "retail": "0x0202E9D8",
+      "debug": "0x0202EC7C"
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 63,
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "palette",
+    "first_function": "LoadCompressedPalette",
+    "retail_start": "0x08073DD4",
+    "debug_start": "0x0807B040",
+    "delta": "+0x726C",
+    "common_prefix_hex": "70 B5 0C 1C 15 1C 24 04 24 0C 2D 04 0A 4E 31 1C"
+  }
+}
