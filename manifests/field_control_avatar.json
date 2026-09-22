@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "module": "field_control_avatar",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0806822C",
+      "end_exclusive": "0x08069370",
+      "size": 4420,
+      "sha256": "24d30b6e9f0e240d2f9836789b64db8ff68502ad5130e61b0858e4ae5ec26d5b"
+    },
+    "rev1": {
+      "start": "0x0806822C",
+      "end_exclusive": "0x08069370",
+      "size": 4420,
+      "sha256": "24d30b6e9f0e240d2f9836789b64db8ff68502ad5130e61b0858e4ae5ec26d5b"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806C82C",
+    "end_exclusive": "0x0806DA4C",
+    "size": 4640,
+    "sha256": "e7cfd157fdd22d2de76d97f1c66c5721fdef4eccee7d05548f8f611c74cbe27f",
+    "growth_bytes": 220,
+    "growth_hex": "0xDC"
+  },
+  "delta": {
+    "entry": "+0x4600",
+    "exit": "+0x46DC"
+  },
+  "entry": {
+    "first_function": "ClearPlayerFieldInput",
+    "common_body_hex": "30 B5 02 21 49 42 03 23 5B 42 05 24 64 42 09 25 6D 42 00 22 02 70 42 78 11 40 19 40 21 40 29 40 41 70 00 21 81 70 30 BC 01 BC 00 47"
+  },
+  "debug_source_correlation": {
+    "debug_conditional_region_count": 5,
+    "aggregate_binary_growth": "0xDC",
+    "note": "No per-conditional byte split is inferred."
+  },
+  "runtime_constants": {
+    "map_offset": 7,
+    "wild_encounter_immunity_steps": 4
+  },
+  "tail": {
+    "semantic_function": "SetCableClubWarp",
+    "retail_gMapHeader_literal": "0x0202E828",
+    "debug_gMapHeader_literal": "0x0202EACC"
+  },
+  "next_module": {
+    "name": "event_data",
+    "first_function": "InitEventData",
+    "retail_start": "0x08069370",
+    "debug_start": "0x0806DA4C",
+    "delta": "+0x46DC",
+    "common_first_12_hex": "10 B5 0C 4C 90 22 52 00 20 1C 00 21",
+    "retail_temp_flag_buffer": "0x0202E8E2",
+    "debug_temp_flag_buffer": "0x0202EB86"
+  },
+  "boundary_note": "Debug 0x0806DA48 was rejected before commit because it is the final gMapHeader literal; correct end is 0x0806DA4C."
+}
