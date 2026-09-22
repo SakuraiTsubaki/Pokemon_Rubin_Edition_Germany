@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "module": "battle_ai_switch_items",
+  "retail": {
+    "start": "0x080361C0",
+    "end_exclusive": "0x080376E0",
+    "size": 5408,
+    "sha256": "5f902540b54982bc30c68a089895b0f92fc449c9e0b9cd2463262d98cb6f1e85",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0803A084",
+    "end_exclusive": "0x0803B5B4",
+    "size": 5424,
+    "sha256": "eaec578391d7bbd235f7eef81816b8c6d914fb979270cbae1221acd1e460b2de"
+  },
+  "functions": [
+    {
+      "name": "ShouldSwitchIfPerishSong",
+      "retail": "0x080361C0",
+      "debug": "0x0803A084",
+      "retail_size": 104,
+      "debug_size": 104,
+      "role": "switch immediately when Perish Song timer reaches zero"
+    },
+    {
+      "name": "ShouldSwitchIfWonderGuard",
+      "retail": "0x08036228",
+      "debug": "0x0803A0EC",
+      "retail_size": 404,
+      "debug_size": 404,
+      "role": "look for a reserve mon with super-effective coverage against Wonder Guard"
+    },
+    {
+      "name": "FindMonThatAbsorbsOpponentsMove",
+      "retail": "0x080363BC",
+      "debug": "0x0803A280",
+      "retail_size": 552,
+      "debug_size": 552,
+      "role": "find reserve mon with an ability that absorbs/nullifies opponent move type"
+    },
+    {
+      "name": "ShouldSwitchIfNaturalCure",
+      "retail": "0x080365E4",
+      "debug": "0x0803A4A8",
+      "retail_size": 260,
+      "debug_size": 260,
+      "role": "consider Natural Cure switching under status/HP conditions"
+    },
+    {
+      "name": "HasSuperEffectiveMoveAgainstOpponents",
+      "retail": "0x080366E8",
+      "debug": "0x0803A5AC",
+      "retail_size": 328,
+      "debug_size": 328,
+      "role": "test active AI battler for super-effective coverage"
+    },
+    {
+      "name": "AreStatsRaised",
+      "retail": "0x08036830",
+      "debug": "0x0803A6F4",
+      "retail_size": 72,
+      "debug_size": 72,
+      "role": "test whether active battler has sufficiently raised stat stages"
+    },
+    {
+      "name": "FindMonWithFlagsAndSuperEffective",
+      "retail": "0x08036878",
+      "debug": "0x0803A73C",
+      "retail_size": 608,
+      "debug_size": 608,
+      "role": "find reserve mon matching AI flags plus super-effective coverage"
+    },
+    {
+      "name": "ShouldSwitch",
+      "retail": "0x08036AD8",
+      "debug": "0x0803A99C",
+      "retail_size": 520,
+      "debug_size": 520,
+      "role": "ordered high-level switch heuristic dispatcher"
+    },
+    {
+      "name": "AI_TrySwitchOrUseItem",
+      "retail": "0x08036CE0",
+      "debug": "0x0803ABA4",
+      "retail_size": 320,
+      "debug_size": 336,
+      "role": "choose switch, trainer item, or default move action"
+    },
+    {
+      "name": "ModulateByTypeEffectiveness",
+      "retail": "0x08036E20",
+      "debug": "0x0803ACF4",
+      "retail_size": 136,
+      "debug_size": 136,
+      "role": "apply type-chart multiplier to AI suitability score"
+    },
+    {
+      "name": "GetMostSuitableMonToSwitchInto",
+      "retail": "0x08036EA8",
+      "debug": "0x0803AD7C",
+      "retail_size": 860,
+      "debug_size": 860,
+      "role": "pick reserve mon by defensive typing then estimated damage"
+    },
+    {
+      "name": "GetAI_ItemType",
+      "retail": "0x08037204",
+      "debug": "0x0803B0D8",
+      "retail_size": 92,
+      "debug_size": 92,
+      "role": "classify trainer item into AI item category"
+    },
+    {
+      "name": "ShouldUseItem",
+      "retail": "0x08037260",
+      "debug": "0x0803B134",
+      "retail_size": 1152,
+      "debug_size": 1152,
+      "role": "select and consume one of up to four trainer items"
+    }
+  ],
+  "debug_growth": {
+    "function": "AI_TrySwitchOrUseItem",
+    "bytes": 16,
+    "hex": "0x10",
+    "control_bit": "0x20",
+    "behavior": "skip trainer-item use",
+    "delta_before": "+0x3EC4",
+    "delta_after": "+0x3ED4"
+  },
+  "fixed_capacity_evidence": {
+    "party_slots": 6,
+    "move_slots": 4,
+    "trainer_items": 4,
+    "max_active_battlers": 4,
+    "multi_battle_party_half_slots": 3
+  },
+  "next_module": {
+    "name": "battle_controller_link_opponent",
+    "first_function": "nullsub_47",
+    "retail_start": "0x080376E0",
+    "debug_start": "0x0803B5B4",
+    "delta": "+0x3ED4"
+  }
+}
