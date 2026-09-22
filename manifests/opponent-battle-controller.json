@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "module": "battle_controller_opponent",
+  "retail": {
+    "start": "0x08032CB0",
+    "end_exclusive": "0x080361C0",
+    "size": 13584,
+    "sha256": "5aead473c0aa0e87861721324c5e59275a32c4b94272ce9c177675a0a1ad6bc8",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08036A68",
+    "end_exclusive": "0x0803A084",
+    "size": 13852,
+    "sha256": "2087279f73310a779b9615932200a34c5bd722e3475055ec516bf1d810fb48fc"
+  },
+  "debug_growth": {
+    "total_bytes": 268,
+    "total_hex": "0x10C",
+    "insertions": [
+      {
+        "within_command": "0x07",
+        "function": "OpponentHandleTrainerThrow",
+        "bytes": 36,
+        "hex": "0x24",
+        "delta_before": "+0x3DB8",
+        "delta_after": "+0x3DDC",
+        "role": "Debug trainer-picture override"
+      },
+      {
+        "within_command": "0x14",
+        "function": "OpponentHandlecmd20",
+        "bytes": 232,
+        "hex": "0xE8",
+        "delta_before": "+0x3DDC",
+        "delta_after": "+0x3EC4",
+        "role": "Debug AI move-cycle / target testing"
+      }
+    ]
+  },
+  "command_table": {
+    "command_min": "0x00",
+    "command_max": "0x38",
+    "command_count": 57,
+    "entry_size": 4,
+    "retail_address": "0x08207F2C",
+    "debug_address": "0x082210C4",
+    "retail_sha256": "94f93ad58b25d4be6b9354903bae1be753b4fa5dba2f8d7aa86f85d6e0d8b80f",
+    "debug_sha256": "19e1a40f578aa5973776361b3e4fa749e6552b469e47628d71a645431a6dad40",
+    "entries": [
+      {
+        "command": 0,
+        "command_hex": "0x00",
+        "name": "OpponentHandleGetAttributes",
+        "retail": "0x080336F8",
+        "debug": "0x080374B0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 1,
+        "command_hex": "0x01",
+        "name": "OpponentHandlecmd1",
+        "retail": "0x08033F18",
+        "debug": "0x08037CD0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 2,
+        "command_hex": "0x02",
+        "name": "OpponentHandleSetAttributes",
+        "retail": "0x08033FA0",
+        "debug": "0x08037D58",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 3,
+        "command_hex": "0x03",
+        "name": "OpponentHandlecmd3",
+        "retail": "0x08034918",
+        "debug": "0x080386D0",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 4,
+        "command_hex": "0x04",
+        "name": "OpponentHandleLoadPokeSprite",
+        "retail": "0x0803498C",
+        "debug": "0x08038744",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 5,
+        "command_hex": "0x05",
+        "name": "OpponentHandleSendOutPoke",
+        "retail": "0x08034AE4",
+        "debug": "0x0803889C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 6,
+        "command_hex": "0x06",
+        "name": "OpponentHandleReturnPokeToBall",
+        "retail": "0x08034CB4",
+        "debug": "0x08038A6C",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 7,
+        "command_hex": "0x07",
+        "name": "OpponentHandleTrainerThrow",
+        "retail": "0x08034DD0",
+        "debug": "0x08038B88",
+        "delta": "+0x3DB8"
+      },
+      {
+        "command": 8,
+        "command_hex": "0x08",
+        "name": "OpponentHandleTrainerSlide",
+        "retail": "0x08034F94",
+        "debug": "0x08038D70",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 9,
+        "command_hex": "0x09",
+        "name": "OpponentHandleTrainerSlideBack",
+        "retail": "0x08035158",
+        "debug": "0x08038F34",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 10,
+        "command_hex": "0x0A",
+        "name": "OpponentHandlecmd10",
+        "retail": "0x08035204",
+        "debug": "0x08038FE0",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 11,
+        "command_hex": "0x0B",
+        "name": "OpponentHandlecmd11",
+        "retail": "0x080352A8",
+        "debug": "0x08039084",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 12,
+        "command_hex": "0x0C",
+        "name": "OpponentHandlecmd12",
+        "retail": "0x080352B4",
+        "debug": "0x08039090",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 13,
+        "command_hex": "0x0D",
+        "name": "OpponentHandleBallThrow",
+        "retail": "0x080352C0",
+        "debug": "0x0803909C",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 14,
+        "command_hex": "0x0E",
+        "name": "OpponentHandlePuase",
+        "retail": "0x080352CC",
+        "debug": "0x080390A8",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 15,
+        "command_hex": "0x0F",
+        "name": "OpponentHandleMoveAnimation",
+        "retail": "0x080352D8",
+        "debug": "0x080390B4",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 16,
+        "command_hex": "0x10",
+        "name": "OpponentHandlePrintString",
+        "retail": "0x08035570",
+        "debug": "0x0803934C",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 17,
+        "command_hex": "0x11",
+        "name": "OpponentHandlePrintStringPlayerOnly",
+        "retail": "0x080355D4",
+        "debug": "0x080393B0",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 18,
+        "command_hex": "0x12",
+        "name": "OpponentHandlecmd18",
+        "retail": "0x080355E0",
+        "debug": "0x080393BC",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 19,
+        "command_hex": "0x13",
+        "name": "OpponentHandlecmd19",
+        "retail": "0x080355F0",
+        "debug": "0x080393CC",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 20,
+        "command_hex": "0x14",
+        "name": "OpponentHandlecmd20",
+        "retail": "0x080355FC",
+        "debug": "0x080393D8",
+        "delta": "+0x3DDC"
+      },
+      {
+        "command": 21,
+        "command_hex": "0x15",
+        "name": "OpponentHandleOpenBag",
+        "retail": "0x08035764",
+        "debug": "0x08039628",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 22,
+        "command_hex": "0x16",
+        "name": "OpponentHandlecmd22",
+        "retail": "0x08035794",
+        "debug": "0x08039658",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 23,
+        "command_hex": "0x17",
+        "name": "OpponentHandlecmd23",
+        "retail": "0x08035894",
+        "debug": "0x08039758",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 24,
+        "command_hex": "0x18",
+        "name": "OpponentHandleHealthBarUpdate",
+        "retail": "0x080358A0",
+        "debug": "0x08039764",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 25,
+        "command_hex": "0x19",
+        "name": "OpponentHandleExpBarUpdate",
+        "retail": "0x08035990",
+        "debug": "0x08039854",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 26,
+        "command_hex": "0x1A",
+        "name": "OpponentHandleStatusIconUpdate",
+        "retail": "0x0803599C",
+        "debug": "0x08039860",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 27,
+        "command_hex": "0x1B",
+        "name": "OpponentHandleStatusAnimation",
+        "retail": "0x08035A10",
+        "debug": "0x080398D4",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 28,
+        "command_hex": "0x1C",
+        "name": "OpponentHandleStatusXor",
+        "retail": "0x08035A78",
+        "debug": "0x0803993C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 29,
+        "command_hex": "0x1D",
+        "name": "OpponentHandlecmd29",
+        "retail": "0x08035A84",
+        "debug": "0x08039948",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 30,
+        "command_hex": "0x1E",
+        "name": "OpponentHandleDMATransfer",
+        "retail": "0x08035A90",
+        "debug": "0x08039954",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 31,
+        "command_hex": "0x1F",
+        "name": "OpponentHandlecmd31",
+        "retail": "0x08035A9C",
+        "debug": "0x08039960",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 32,
+        "command_hex": "0x20",
+        "name": "OpponentHandlecmd32",
+        "retail": "0x08035AA8",
+        "debug": "0x0803996C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 33,
+        "command_hex": "0x21",
+        "name": "OpponentHandlecmd33",
+        "retail": "0x08035AB4",
+        "debug": "0x08039978",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 34,
+        "command_hex": "0x22",
+        "name": "OpponentHandlecmd34",
+        "retail": "0x08035AC0",
+        "debug": "0x08039984",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 35,
+        "command_hex": "0x23",
+        "name": "OpponentHandlecmd35",
+        "retail": "0x08035ACC",
+        "debug": "0x08039990",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 36,
+        "command_hex": "0x24",
+        "name": "OpponentHandlecmd36",
+        "retail": "0x08035AD8",
+        "debug": "0x0803999C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 37,
+        "command_hex": "0x25",
+        "name": "OpponentHandlecmd37",
+        "retail": "0x08035AE4",
+        "debug": "0x080399A8",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 38,
+        "command_hex": "0x26",
+        "name": "OpponentHandlecmd38",
+        "retail": "0x08035B00",
+        "debug": "0x080399C4",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 39,
+        "command_hex": "0x27",
+        "name": "OpponentHandlecmd39",
+        "retail": "0x08035B38",
+        "debug": "0x080399FC",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 40,
+        "command_hex": "0x28",
+        "name": "OpponentHandlecmd40",
+        "retail": "0x08035B50",
+        "debug": "0x08039A14",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 41,
+        "command_hex": "0x29",
+        "name": "OpponentHandleHitAnimation",
+        "retail": "0x08035B78",
+        "debug": "0x08039A3C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 42,
+        "command_hex": "0x2A",
+        "name": "OpponentHandlecmd42",
+        "retail": "0x08035BE8",
+        "debug": "0x08039AAC",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 43,
+        "command_hex": "0x2B",
+        "name": "OpponentHandleEffectivenessSound",
+        "retail": "0x08035BF4",
+        "debug": "0x08039AB8",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 44,
+        "command_hex": "0x2C",
+        "name": "OpponentHandlecmd44",
+        "retail": "0x08035C38",
+        "debug": "0x08039AFC",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 45,
+        "command_hex": "0x2D",
+        "name": "OpponentHandleFaintingCry",
+        "retail": "0x08035C68",
+        "debug": "0x08039B2C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 46,
+        "command_hex": "0x2E",
+        "name": "OpponentHandleIntroSlide",
+        "retail": "0x08035CA4",
+        "debug": "0x08039B68",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 47,
+        "command_hex": "0x2F",
+        "name": "OpponentHandleTrainerBallThrow",
+        "retail": "0x08035CD8",
+        "debug": "0x08039B9C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 48,
+        "command_hex": "0x30",
+        "name": "OpponentHandlecmd48",
+        "retail": "0x08035EFC",
+        "debug": "0x08039DC0",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 49,
+        "command_hex": "0x31",
+        "name": "OpponentHandlecmd49",
+        "retail": "0x08036040",
+        "debug": "0x08039F04",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 50,
+        "command_hex": "0x32",
+        "name": "OpponentHandlecmd50",
+        "retail": "0x0803608C",
+        "debug": "0x08039F50",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 51,
+        "command_hex": "0x33",
+        "name": "OpponentHandleSpriteInvisibility",
+        "retail": "0x08036098",
+        "debug": "0x08039F5C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 52,
+        "command_hex": "0x34",
+        "name": "OpponentHandleBattleAnimation",
+        "retail": "0x080360F8",
+        "debug": "0x08039FBC",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 53,
+        "command_hex": "0x35",
+        "name": "OpponentHandleLinkStandbyMsg",
+        "retail": "0x08036160",
+        "debug": "0x0803A024",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 54,
+        "command_hex": "0x36",
+        "name": "OpponentHandleResetActionMoveSelection",
+        "retail": "0x0803616C",
+        "debug": "0x0803A030",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 55,
+        "command_hex": "0x37",
+        "name": "OpponentHandlecmd55",
+        "retail": "0x08036178",
+        "debug": "0x0803A03C",
+        "delta": "+0x3EC4"
+      },
+      {
+        "command": 56,
+        "command_hex": "0x38",
+        "name": "OpponentHandlecmd56",
+        "retail": "0x080361BC",
+        "debug": "0x0803A080",
+        "delta": "+0x3EC4"
+      }
+    ]
+  },
+  "capacities": {
+    "battle_buffer_bytes_per_battler": 512,
+    "move_slots": 4,
+    "max_active_battlers": 4,
+    "command_id_bits": 8
+  },
+  "next_module": {
+    "name": "battle_ai_switch_items",
+    "first_function": "ShouldSwitchIfPerishSong",
+    "retail_start": "0x080361C0",
+    "debug_start": "0x0803A084",
+    "delta": "+0x3EC4"
+  }
+}
