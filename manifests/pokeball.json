@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "module": "pokeball",
+  "retail": {
+    "start": "0x08046724",
+    "end_exclusive": "0x08047CF0",
+    "size": 5580,
+    "sha256": "118403c067324952cec68297957f769cc66c87579a83561c4213ea250dcb6b66",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0804A8F0",
+    "end_exclusive": "0x0804BEBC",
+    "size": 5580,
+    "sha256": "01145d9d2698d8fc33e6b6145a8fa77794ee41c2ddafb9c4fd99c742bf5bd11b",
+    "retail_address_delta": "+0x41CC"
+  },
+  "debug_growth_bytes": 0,
+  "function_inventory": [
+    "DoPokeballSendOutAnimation",
+    "SendOutMonAnimation",
+    "objc_0804ABD4",
+    "sub_80466E8",
+    "sub_80466F4",
+    "sub_8046760",
+    "sub_80467F8",
+    "sub_804684C",
+    "sub_8046944",
+    "sub_8046984",
+    "sub_8046AD0",
+    "sub_8046C78",
+    "sub_8046E7C",
+    "sub_8046E9C",
+    "sub_8046FBC",
+    "SendOutPlayerMonAnimation_Step0",
+    "SendOutPlayerMonAnimation_Step1",
+    "SendOutMonAnimation_Delay",
+    "SendOutOpponentMonAnimation_Step0",
+    "sub_80472B0",
+    "sub_80472D8",
+    "CreatePokeballSprite",
+    "sub_80473D0",
+    "sub_804748C",
+    "sub_8047580",
+    "sub_8047638",
+    "sub_80476E0",
+    "sub_8047754",
+    "obj_delete_and_free_associated_resources_",
+    "StartHealthboxSlideIn",
+    "sub_804780C",
+    "sub_8047830",
+    "DoHitAnimHealthboxEffect",
+    "oamc_804BEB4",
+    "LoadBallGraphics",
+    "FreeBallGraphics",
+    "GetBattlerBall"
+  ],
+  "ball_registry": {
+    "count": 12,
+    "tags": {
+      "first": 55000,
+      "last": 55011
+    },
+    "sheet_bytes_each": 384,
+    "names": [
+      "Poke Ball",
+      "Great Ball",
+      "Safari Ball",
+      "Ultra Ball",
+      "Master Ball",
+      "Net Ball",
+      "Dive Ball",
+      "Nest Ball",
+      "Repeat Ball",
+      "Timer Ball",
+      "Luxury Ball",
+      "Premier Ball"
+    ],
+    "skip_extra_shared_decompress_indexes": [
+      6,
+      10,
+      11
+    ]
+  },
+  "next_module": {
+    "name": "load_save",
+    "first_function": "CheckForFlashMemory",
+    "retail_start": "0x08047CF0",
+    "debug_start": "0x0804BEBC",
+    "delta": "+0x41CC"
+  }
+}

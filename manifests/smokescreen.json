@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "module": "smokescreen",
+  "retail": {
+    "start": "0x08046558",
+    "end_exclusive": "0x08046724",
+    "size": 460,
+    "sha256": "9d3da42856cd6652a3631b80949bc24d715b76379255c937072272f904847534",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0804A724",
+    "end_exclusive": "0x0804A8F0",
+    "size": 460,
+    "sha256": "a68ab77999306175e97fbfccb0b864511952e7a087099004f40a31d02e4879ab",
+    "retail_address_delta": "+0x41CC"
+  },
+  "debug_growth_bytes": 0,
+  "functions": [
+    {
+      "name": "sub_8046234",
+      "retail": "0x08046558",
+      "debug": "0x0804A724",
+      "size": 340,
+      "role": "create 2x2 smoke effect and controller sprite"
+    },
+    {
+      "name": "sub_8046388",
+      "retail": "0x080466AC",
+      "debug": "0x0804A878",
+      "size": 68,
+      "role": "controller cleanup / resource free"
+    },
+    {
+      "name": "sub_80463CC",
+      "retail": "0x080466F0",
+      "debug": "0x0804A8BC",
+      "size": 52,
+      "role": "child animation completion / reference decrement"
+    }
+  ],
+  "child_sprite_count": 4,
+  "next_module": {
+    "name": "pokeball",
+    "first_function": "DoPokeballSendOutAnimation",
+    "retail_start": "0x08046724",
+    "debug_start": "0x0804A8F0",
+    "delta": "+0x41CC"
+  }
+}
