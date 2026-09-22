@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "module": "battle_gfx_sfx_util",
+  "retail": {
+    "start": "0x080314C4",
+    "end_exclusive": "0x08032CB0",
+    "size": 6124,
+    "sha256": "232a9dc36ee0e1f7879e1f12c3d57c526001a486532b3f505b57fa0f5c3f5676",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0803527C",
+    "end_exclusive": "0x08036A68",
+    "size": 6124,
+    "sha256": "b2f91dfeb5ce20260b34fb83911b76a16e92385034e7ec18446c88086b0d4e74",
+    "retail_address_delta": "+0x3DB8"
+  },
+  "debug_growth_bytes": 0,
+  "verified_entries": [
+    {
+      "name": "SpriteCB_WaitForBattlerBallReleaseAnim",
+      "retail": "0x080314C4",
+      "debug": "0x0803527C"
+    },
+    {
+      "name": "unref_sub_8031364",
+      "retail": "0x08031538",
+      "debug": "0x080352F0"
+    },
+    {
+      "name": "SpriteCB_TrainerSlideIn",
+      "retail": "0x08031574",
+      "debug": "0x0803532C"
+    },
+    {
+      "name": "move_anim_start_t2_for_situation",
+      "retail": "0x080315A4",
+      "debug": "0x0803535C"
+    }
+  ],
+  "function_inventory": [
+    "SpriteCB_WaitForBattlerBallReleaseAnim",
+    "unref_sub_8031364",
+    "SpriteCB_TrainerSlideIn",
+    "move_anim_start_t2_for_situation",
+    "TryHandleLaunchBattleTableAnimation",
+    "sub_80315E8",
+    "sub_803163C",
+    "InitAndLaunchSpecialAnimation",
+    "sub_80316CC",
+    "IsMoveWithoutAnimation",
+    "mplay_80342A4",
+    "BattleLoadOpponentMonSprite",
+    "BattleLoadPlayerMonSprite",
+    "unref_sub_8031A64",
+    "nullsub_9",
+    "sub_8031A6C",
+    "DecompressTrainerBackPic",
+    "nullsub_10",
+    "sub_8031B74",
+    "unref_sub_8031BA0",
+    "sub_8031C30",
+    "LoadBattleBarGfx",
+    "battle_load_something",
+    "sub_8031EE8",
+    "sub_8031F0C",
+    "CopyAllBattleSpritesInvisibilities",
+    "sub_8031F88",
+    "sub_8031FC4",
+    "BattleLoadSubstituteSprite",
+    "refresh_graphics_maybe",
+    "TrySetBehindSubstituteSpriteBit",
+    "sub_80324E0",
+    "HandleLowHpMusicChange",
+    "BattleStopLowHpSound",
+    "unref_sub_8032604",
+    "sub_8032638",
+    "SetBattlerSpriteAffineMode",
+    "sub_80327CC",
+    "sub_80328A4",
+    "sub_8032978",
+    "sub_8032984",
+    "sub_8032A08",
+    "sub_8032A38",
+    "sub_8032AA8"
+  ],
+  "next_module": {
+    "name": "battle_controller_opponent",
+    "first_function": "nullsub_45",
+    "retail_start": "0x08032CB0",
+    "debug_start": "0x08036A68",
+    "delta": "+0x3DB8"
+  }
+}
