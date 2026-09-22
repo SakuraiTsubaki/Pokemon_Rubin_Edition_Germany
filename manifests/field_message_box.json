@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "module": "field_message_box",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08064DB4",
+      "end_exclusive": "0x08065000",
+      "size": 588,
+      "sha256": "8378e13d405471aebddbb2b6dfcff3c3d7ef1c76f1bf450bc8704384332f2e8a"
+    },
+    "rev1": {
+      "start": "0x08064DB4",
+      "end_exclusive": "0x08065000",
+      "size": 588,
+      "sha256": "8378e13d405471aebddbb2b6dfcff3c3d7ef1c76f1bf450bc8704384332f2e8a"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080693B4",
+    "end_exclusive": "0x08069600",
+    "size": 588,
+    "sha256": "a342e8f71cccb346e8060b53addd3ff4bfb2ab0d3ab758b7feec746c5dc4648b",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x4600",
+    "exit": "+0x4600"
+  },
+  "entry": {
+    "first_function": "InitFieldMessageBox",
+    "common_first_16_hex": "00 B5 06 49 00 20 08 70 05 48 00 88 00 F0 A2 FB"
+  },
+  "runtime_state": {
+    "message_box_mode_address": "0x030005A8",
+    "message_box_mode_literal_reference_count": 11,
+    "retail_window_address": "0x0202E87C",
+    "debug_window_address": "0x0202EB20",
+    "window_literal_reference_count": 9,
+    "modes": {
+      "hidden": 0,
+      "unused": 1,
+      "normal": 2,
+      "auto_scroll": 3
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 14,
+    "address_policy": "Historical numeric names are semantic labels only; German addresses are re-established from German binaries."
+  },
+  "next_module": {
+    "name": "event_object_lock",
+    "first_function": "walkrun_is_standing_still",
+    "retail_start": "0x08065000",
+    "debug_start": "0x08069600",
+    "delta": "+0x4600",
+    "common_prefix_hex": "00 B5 03 48 C0 78 01 28 04 D0 01 20 03 E0",
+    "retail_player_avatar_address": "0x0202E858",
+    "debug_player_avatar_address": "0x0202EAFC",
+    "common_suffix_hex": "00 20 02 BC 08 47"
+  }
+}
