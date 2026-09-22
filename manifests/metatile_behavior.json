@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "module": "metatile_behavior",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080570DC",
+      "end_exclusive": "0x08057CFC",
+      "size": 3104,
+      "sha256": "59c48f4631b4be59d63f8e5c72ace080955549f44bf7bda668cf08bd5ea8846f"
+    },
+    "rev1": {
+      "start": "0x080570DC",
+      "end_exclusive": "0x08057CFC",
+      "size": 3104,
+      "sha256": "59c48f4631b4be59d63f8e5c72ace080955549f44bf7bda668cf08bd5ea8846f"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0805B5C4",
+    "end_exclusive": "0x0805C1E4",
+    "size": 3104,
+    "sha256": "d51e8243f9f4f8711253eeca9927b2d6be617a54d449865804470aba03f526bd",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x44E8",
+    "exit": "+0x44E8"
+  },
+  "entry": {
+    "function": "MetatileBehavior_IsATile",
+    "entry_hex": "01 20 70 47",
+    "meaning": "return TRUE"
+  },
+  "attribute_table": {
+    "behavior_id_range": "0x00..0xEF",
+    "entry_count": 240,
+    "entry_size": 1,
+    "retail_address": "0x08314614",
+    "debug_address": "0x0832D7BC",
+    "sha256": "cf25f69a32000022fe10be1c2fc9efec780d830e8eb0d6fe205cb4feb0d1badb",
+    "flags": {
+      "wild_encounter": "0x01",
+      "surfable": "0x02",
+      "legacy_traversable_unused": "0x04"
+    }
+  },
+  "source_correlation": {
+    "function_count": 131,
+    "address_policy": "semantic names only; German addresses are always re-established from the German binaries"
+  },
+  "tail": {
+    "consecutive_behavior_ids": "0xE0..0xE6",
+    "functions": [
+      "MetatileBehavior_IsPictureBookShelf",
+      "MetatileBehavior_IsBookShelf",
+      "MetatileBehavior_IsPokeCenterBookShelf",
+      "MetatileBehavior_IsVase",
+      "MetatileBehavior_IsTrashCan",
+      "MetatileBehavior_IsShopShelf",
+      "MetatileBehavior_IsBlueprint"
+    ]
+  },
+  "next_module": {
+    "name": "field_camera",
+    "retail_start": "0x08057CFC",
+    "debug_start": "0x0805C1E4",
+    "delta": "+0x44E8",
+    "entry_hex": "00 21 81 70 C1 70 01 70 41 70 01 21 01 71 70 47"
+  }
+}
