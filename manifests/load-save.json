@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "module": "load_save",
+  "retail": {
+    "start": "0x08047CF0",
+    "end_exclusive": "0x08047FFC",
+    "size": 780,
+    "sha256": "0a35f0a60d16a395c3537589d1f8db8d68a377de8ceab9e1b4b61738cdb5ad05",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0804BEBC",
+    "end_exclusive": "0x0804C1C8",
+    "size": 780,
+    "sha256": "3b756e289bf0492f340beb5657a7a83f668700c70c16d1b084046d95e08edd5a",
+    "retail_address_delta": "+0x41CC"
+  },
+  "debug_growth_bytes": 0,
+  "functions": [
+    {
+      "name": "CheckForFlashMemory",
+      "retail": "0x08047CF0",
+      "debug": "0x0804BEBC",
+      "span": 44,
+      "role": "probe flash; set presence flag; initialize flash timer"
+    },
+    {
+      "name": "GetSecretBase2Field_9",
+      "retail": "0x08047D1C",
+      "debug": "0x0804BEE8",
+      "span": 12,
+      "role": "read SaveBlock2 specialSaveWarp"
+    },
+    {
+      "name": "ClearSecretBase2Field_9",
+      "retail": "0x08047D28",
+      "debug": "0x0804BEF4",
+      "span": 12,
+      "role": "clear specialSaveWarp"
+    },
+    {
+      "name": "SetSecretBase2Field_9",
+      "retail": "0x08047D34",
+      "debug": "0x0804BF00",
+      "span": 12,
+      "role": "set specialSaveWarp"
+    },
+    {
+      "name": "SetSecretBase2Field_9_AndHideBG",
+      "retail": "0x08047D40",
+      "debug": "0x0804BF0C",
+      "span": 24,
+      "role": "hide BG then set specialSaveWarp"
+    },
+    {
+      "name": "ClearSecretBase2Field_9_2",
+      "retail": "0x08047D58",
+      "debug": "0x0804BF24",
+      "span": 12,
+      "role": "duplicate clear helper"
+    },
+    {
+      "name": "SavePlayerParty",
+      "retail": "0x08047D64",
+      "debug": "0x0804BF30",
+      "span": 68,
+      "role": "serialize party count and six Pokemon to SaveBlock1"
+    },
+    {
+      "name": "LoadPlayerParty",
+      "retail": "0x08047DA8",
+      "debug": "0x0804BF74",
+      "span": 72,
+      "role": "restore party count and six Pokemon from SaveBlock1"
+    },
+    {
+      "name": "SaveObjectEvents",
+      "retail": "0x08047DF0",
+      "debug": "0x0804BFBC",
+      "span": 56,
+      "role": "serialize sixteen object events"
+    },
+    {
+      "name": "LoadObjectEvents",
+      "retail": "0x08047E28",
+      "debug": "0x0804BFF4",
+      "span": 56,
+      "role": "restore sixteen object events"
+    },
+    {
+      "name": "SaveSerializedGame",
+      "retail": "0x08047E60",
+      "debug": "0x0804C02C",
+      "span": 16,
+      "role": "SavePlayerParty plus SaveObjectEvents"
+    },
+    {
+      "name": "LoadSerializedGame",
+      "retail": "0x08047E70",
+      "debug": "0x0804C03C",
+      "span": 16,
+      "role": "LoadPlayerParty plus LoadObjectEvents"
+    },
+    {
+      "name": "LoadPlayerBag",
+      "retail": "0x08047E80",
+      "debug": "0x0804C04C",
+      "span": 188,
+      "role": "stage bag/mail arrays from SaveBlock1 into temporary EWRAM"
+    },
+    {
+      "name": "SavePlayerBag",
+      "retail": "0x08047F3C",
+      "debug": "0x0804C108",
+      "span": 192,
+      "role": "write staged bag/mail arrays back into SaveBlock1"
+    }
+  ],
+  "save_blocks": {
+    "retail": {
+      "save_block_2": "0x02024EA4",
+      "save_block_1": "0x02025734",
+      "local_time_offset": "0x02024F3C"
+    },
+    "debug": {
+      "save_block_2": "0x02025148",
+      "save_block_1": "0x020259D8",
+      "local_time_offset": "0x020251E0"
+    },
+    "debug_ewram_shift": "+0x2A4"
+  },
+  "capacities": {
+    "party_slots": 6,
+    "object_events": 16,
+    "bag_items": 20,
+    "bag_key_items": 20,
+    "bag_pokeballs": 16,
+    "bag_tmhm": 64,
+    "bag_berries": 46,
+    "mail": 16
+  },
+  "saveblock1_offsets": {
+    "player_party_count": "0x234",
+    "player_party": "0x238",
+    "bag_items": "0x560",
+    "bag_key_items": "0x5B0",
+    "bag_pokeballs": "0x600",
+    "bag_tmhm": "0x640",
+    "bag_berries": "0x740",
+    "object_events": "0x9E0",
+    "mail": "0x2B4C"
+  },
+  "next_module": {
+    "name": "trade",
+    "first_function": "sub_8047CD8 (source name)",
+    "retail_start": "0x08047FFC",
+    "debug_start": "0x0804C1C8",
+    "delta": "+0x41CC"
+  }
+}
