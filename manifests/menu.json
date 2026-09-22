@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "module": "menu",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08071F3C",
+      "end_exclusive": "0x080731B8",
+      "size": 4732,
+      "sha256": "399e9dd06ad7cab9c2062f0821b17453e8c5efb8833ff8edc5a8548d9dde1b97"
+    },
+    "rev1": {
+      "start": "0x08071F3C",
+      "end_exclusive": "0x080731B8",
+      "size": 4732,
+      "sha256": "399e9dd06ad7cab9c2062f0821b17453e8c5efb8833ff8edc5a8548d9dde1b97"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080791A8",
+    "end_exclusive": "0x0807A424",
+    "size": 4732,
+    "sha256": "e360c150e51a925e7f526ca26635819e77f2a4cb18895bc119596e71b0995160",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x726C"
+  },
+  "german_tail": [
+    {
+      "name": "de_sub_8073110",
+      "retail_start": "0x08073110",
+      "retail_end": "0x08073174",
+      "debug_start": "0x0807A37C",
+      "debug_end": "0x0807A3E0",
+      "size": 100,
+      "retail_sha256": "837325d4eecb84dfbe2b98addcc6c0ec4d5e27960d024da42f59c19c8d2e3f25",
+      "debug_sha256": "f4e0163479d0ee994494c114d6eb5bce8d521f96c8814a49ba7824eab7e358d9"
+    },
+    {
+      "name": "de_sub_8073174",
+      "retail_start": "0x08073174",
+      "retail_end": "0x080731B8",
+      "debug_start": "0x0807A3E0",
+      "debug_end": "0x0807A424",
+      "size": 68,
+      "retail_sha256": "418cf93955f6d1a33737aa82eff09e1ef07009ecf8772cd4fd62124df12cf80f",
+      "debug_sha256": "bfd4b95344f538d822dcb7ec2aeda419eddc6efad47e998f0660d5f0694a4fef"
+    }
+  ],
+  "final_literal": "0x020232CC",
+  "next_module": {
+    "name": "tileset_anim",
+    "first_function": "ClearTilesetAnimDmas",
+    "retail_start": "0x080731B8",
+    "debug_start": "0x0807A424",
+    "delta": "+0x726C",
+    "common_prefix_hex": "00 B5 81 B0 06 49 00 20 08 70 00 20 00 90 05 49 05 4A 68 46",
+    "queue_count": {
+      "retail": "0x030006C0",
+      "debug": "0x030006E0"
+    },
+    "dma_array": {
+      "retail": "0x0202E9D8",
+      "debug": "0x0202EC7C"
+    }
+  }
+}
