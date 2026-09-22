@@ -5,23 +5,23 @@
   "retail": {
     "rev0": {
       "start": "0x08069370",
-      "end_exclusive": "0x080696A8",
+      "end_exclusive": "0x080696AC",
       "size": 824,
-      "sha256": "c067fcbf7336ebb8130910c86cddbca42abb2afef909b13e32aedc453cebf315"
+      "sha256": "706179f721a1edbf5291b5eb81b5fd905ee51efa61fd26aba2bb18cdcb927cbf"
     },
     "rev1": {
       "start": "0x08069370",
-      "end_exclusive": "0x080696A8",
+      "end_exclusive": "0x080696AC",
       "size": 824,
-      "sha256": "c067fcbf7336ebb8130910c86cddbca42abb2afef909b13e32aedc453cebf315"
+      "sha256": "706179f721a1edbf5291b5eb81b5fd905ee51efa61fd26aba2bb18cdcb927cbf"
     },
     "rev0_rev1_byte_identical": true
   },
   "debug": {
     "start": "0x0806DA4C",
-    "end_exclusive": "0x0806DD84",
+    "end_exclusive": "0x0806DD88",
     "size": 824,
-    "sha256": "b9ca3102a2d1327456e53b525bf06ce062131f2a8331391cca7e478898effc8a",
+    "sha256": "22efa675b3a33602a086d92deb5ddebd76c836857819c9873f4b12080558d377",
     "additional_code_bytes": 0
   },
   "delta": {
@@ -66,8 +66,8 @@
   },
   "next_module": {
     "name": "coord_event_weather",
-    "retail_start": "0x080696A8",
-    "debug_start": "0x0806DD84",
+    "retail_start": "0x080696AC",
+    "debug_start": "0x0806DD88",
     "delta": "+0x46DC",
     "weather_ids": [
       1,

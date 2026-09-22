@@ -6,8 +6,8 @@ The complete `event_data` text module has been bounded directly in the supplied 
 
 | Profile | Start | End exclusive | Size | SHA-256 |
 | --- | --- | --- | ---: | --- |
-| Retail Rev 0 / Rev 1 | 0x08069370 | 0x080696A8 | **824 bytes (0x338)** | `c067fcbf7336ebb8130910c86cddbca42abb2afef909b13e32aedc453cebf315` |
-| Debug | 0x0806DA4C | 0x0806DD84 | **824 bytes (0x338)** | `b9ca3102a2d1327456e53b525bf06ce062131f2a8331391cca7e478898effc8a` |
+| Retail Rev 0 / Rev 1 | 0x08069370 | 0x080696AC | **828 bytes (0x33C)** | `706179f721a1edbf5291b5eb81b5fd905ee51efa61fd26aba2bb18cdcb927cbf` |
+| Debug | 0x0806DA4C | 0x0806DD88 | **828 bytes (0x33C)** | `22efa675b3a33602a086d92deb5ddebd76c836857819c9873f4b12080558d377` |
 
 Retail Rev 0 and Rev 1 are byte-identical across the complete module. The connected source contains no Debug-only text, matching the binary result: the accumulated Retail-to-Debug displacement remains **+0x46DC** at entry and exit.
 
@@ -97,8 +97,8 @@ The connected source contains **20 explicit functions** and no `#if DEBUG` text:
 
 `coord_event_weather` begins immediately afterward:
 
-- Retail Rev 0 / Rev 1: **0x080696A8**
-- Debug: **0x0806DD84**
+- Retail Rev 0 / Rev 1: **0x080696AC**
+- Debug: **0x0806DD88**
 - accumulated delta: **+0x46DC**
 
 The next module begins with 13 compact weather-dispatch wrappers. Each wrapper has the form:

@@ -3,10 +3,10 @@ import argparse
 import hashlib
 from pathlib import Path
 
-RETAIL = (0x69370, 0x696A8)
-DEBUG = (0x6DA4C, 0x6DD84)
-RETAIL_SHA256 = "c067fcbf7336ebb8130910c86cddbca42abb2afef909b13e32aedc453cebf315"
-DEBUG_SHA256 = "b9ca3102a2d1327456e53b525bf06ce062131f2a8331391cca7e478898effc8a"
+RETAIL = (0x69370, 0x696AC)
+DEBUG = (0x6DA4C, 0x6DD88)
+RETAIL_SHA256 = "706179f721a1edbf5291b5eb81b5fd905ee51efa61fd26aba2bb18cdcb927cbf"
+DEBUG_SHA256 = "22efa675b3a33602a086d92deb5ddebd76c836857819c9873f4b12080558d377"
 
 ENTRY_PREFIX = bytes.fromhex("10 b5 0c 4c 90 22 52 00 20 1c 00 21")
 TEMP_RETAIL = (0x0202E8E2).to_bytes(4, "little")
@@ -43,7 +43,7 @@ def main() -> None:
     r1 = rev1[RETAIL[0]:RETAIL[1]]
     dbg = debug[DEBUG[0]:DEBUG[1]]
 
-    assert len(r0) == len(r1) == len(dbg) == 0x338
+    assert len(r0) == len(r1) == len(dbg) == 0x33C
     assert r0 == r1
     assert sha256(r0) == RETAIL_SHA256
     assert sha256(r1) == RETAIL_SHA256
@@ -60,8 +60,8 @@ def main() -> None:
     verify_weather_wrappers(debug, DEBUG[1])
 
     print("German event_data verification passed")
-    print("Retail Rev0/Rev1: 0x08069370..0x080696A8, 0x338 bytes")
-    print("Debug:            0x0806DA4C..0x0806DD84, 0x338 bytes")
+    print("Retail Rev0/Rev1: 0x08069370..0x080696AC, 0x33C bytes")
+    print("Debug:            0x0806DA4C..0x0806DD88, 0x33C bytes")
     print("Accumulated Retail->Debug delta remains +0x46DC")
     print("Next: coord_event_weather")
 
