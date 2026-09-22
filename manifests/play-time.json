@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "module": "play_time",
+  "retail": {
+    "start": "0x08052F68",
+    "end_exclusive": "0x08053040",
+    "size": 216,
+    "sha256": "cbe0ba61dc55c205fab73d819b5c367d5f6660e0e60a7506f29a3af9d1e23ee7",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08057158",
+    "end_exclusive": "0x08057230",
+    "size": 216,
+    "sha256": "942d56b27ff8b4f95fdd33623153482f69d052ce76ffcf0808e1706368da4281",
+    "retail_address_delta": "+0x41F0"
+  },
+  "debug_growth_bytes": 0,
+  "functions": [
+    {
+      "name": "PlayTimeCounter_Reset",
+      "retail": "0x08052F68",
+      "debug": "0x08057158"
+    },
+    {
+      "name": "PlayTimeCounter_Start",
+      "retail": "0x08052F88",
+      "debug": "0x08057178"
+    },
+    {
+      "name": "PlayTimeCounter_Stop",
+      "retail": "0x08052FB0",
+      "debug": "0x080571A0"
+    },
+    {
+      "name": "PlayTimeCounter_Update",
+      "retail": "0x08052FBC",
+      "debug": "0x080571AC"
+    },
+    {
+      "name": "PlayTimeCounter_SetToMax",
+      "retail": "0x0805301C",
+      "debug": "0x0805720C"
+    }
+  ],
+  "states": {
+    "stopped": 0,
+    "running": 1,
+    "maxed_out": 2
+  },
+  "max_time": {
+    "hours": 999,
+    "minutes": 59,
+    "seconds": 59,
+    "vblanks": 59
+  },
+  "saveblock2_offsets": {
+    "hours": "0x0E",
+    "minutes": "0x10",
+    "seconds": "0x11",
+    "vblanks": "0x12"
+  },
+  "next_module": {
+    "name": "new_game",
+    "first_function": "write_word_to_mem",
+    "retail_start": "0x08053040",
+    "debug_start": "0x08057230",
+    "delta": "+0x41F0"
+  }
+}
