@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "module": "field_tasks",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0806977C",
+      "end_exclusive": "0x0806A668",
+      "size": 3820,
+      "sha256": "71549fd25ff83140a1e90464aff4a3db7d3ca0092fc533c4feafa7b3a8f370ca"
+    },
+    "rev1": {
+      "start": "0x0806977C",
+      "end_exclusive": "0x0806A668",
+      "size": 3820,
+      "sha256": "71549fd25ff83140a1e90464aff4a3db7d3ca0092fc533c4feafa7b3a8f370ca"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806DE58",
+    "end_exclusive": "0x0806ED44",
+    "size": 3820,
+    "sha256": "be1aee30a11d8ceba061f45a3c54d4da36cf5ad198a97f146f1864774ec75e46",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x46DC",
+    "exit": "+0x46DC"
+  },
+  "entry": {
+    "first_function": "Task_RunPerStepCallback",
+    "common_first_28_hex": "00 B5 00 06 00 0E 07 4A 81 00 09 18 C9 00 89 18 08 22 89 5E 04 4A 89 00 89 18 09 68"
+  },
+  "callback_table": {
+    "entry_count": 8,
+    "retail_address": "0x08381B4C",
+    "debug_address": "0x0839ACF4",
+    "module_owned_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "module_owned_pointer_delta": "+0x46DC"
+  },
+  "runtime_constants": {
+    "map_offset": 7,
+    "muddy_slope_max_simultaneous": 4,
+    "muddy_slope_lifetime_frames": 32
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 27,
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "clock",
+    "first_function": "InitTimeBasedEvents",
+    "retail_start": "0x0806A668",
+    "debug_start": "0x0806ED44",
+    "delta": "+0x46DC",
+    "entry_prefix_hex": "00 B5 09 48",
+    "flag_sys_clock_set": "0x0835",
+    "var_days": "0x4040"
+  }
+}
