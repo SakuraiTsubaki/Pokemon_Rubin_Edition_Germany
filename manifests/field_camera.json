@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "module": "field_camera",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08057CFC",
+      "end_exclusive": "0x080586B8",
+      "size": 2492,
+      "sha256": "bb4fb3177a5165fad0cb6273029a5a6edf81c09cb8d753b4a4f4c70e8cd05461"
+    },
+    "rev1": {
+      "start": "0x08057CFC",
+      "end_exclusive": "0x080586B8",
+      "size": 2492,
+      "sha256": "bb4fb3177a5165fad0cb6273029a5a6edf81c09cb8d753b4a4f4c70e8cd05461"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0805C1E4",
+    "end_exclusive": "0x0805CBA0",
+    "size": 2492,
+    "sha256": "7656d3f28a00bd04749b5ea9c6cc6830c660b623de256a7a23e83d085b63daf2",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x44E8",
+    "exit": "+0x44E8"
+  },
+  "entry": {
+    "semantic_name": "move_tilemap_camera_to_upper_left_corner_",
+    "common_first_16_hex": "00 21 81 70 C1 70 01 70 41 70 01 21 01 71 70 47"
+  },
+  "geometry": {
+    "bg_tilemap_width_tiles": 32,
+    "bg_tilemap_height_tiles": 32,
+    "visible_width_metatiles": 16,
+    "visible_height_metatiles": 16,
+    "metatile_width_tiles": 2,
+    "metatile_height_tiles": 2,
+    "metatile_definition_u16_entries": 8,
+    "bg_tilemap_transfer_bytes": 2048,
+    "bg3_normal_layer_fill": "0x3014"
+  },
+  "vram_tilemap_offsets": {
+    "bg1": "0xE800",
+    "bg2": "0xE000",
+    "bg3": "0xF000"
+  },
+  "source_correlation": {
+    "function_count": 28,
+    "address_policy": "semantic names only; German addresses are established from German binaries",
+    "functions": [
+      "move_tilemap_camera_to_upper_left_corner_",
+      "tilemap_move_something",
+      "coords8_add",
+      "move_tilemap_camera_to_upper_left_corner",
+      "sub_8057A58",
+      "sub_8057B14",
+      "DrawWholeMapView",
+      "DrawWholeMapViewInternal",
+      "RedrawMapSlicesForCameraUpdate",
+      "RedrawMapSliceNorth",
+      "RedrawMapSliceSouth",
+      "RedrawMapSliceEast",
+      "RedrawMapSliceWest",
+      "CurrentMapDrawMetatileAt",
+      "DrawDoorMetatileAt",
+      "DrawMetatileAt",
+      "DrawMetatile",
+      "MapPosToBgTilemapOffset",
+      "CameraUpdateCallback",
+      "ResetCameraUpdateInfo",
+      "InitCameraUpdateCallback",
+      "CameraUpdate",
+      "MoveCameraAndRedrawMap",
+      "SetCameraPanningCallback",
+      "SetCameraPanning",
+      "InstallCameraPanAheadCallback",
+      "UpdateCameraPanning",
+      "CameraPanningCB_PanAhead"
+    ]
+  },
+  "next_module": {
+    "name": "field_door",
+    "first_function_semantic": "CopyDoorTilesToVram",
+    "retail_start": "0x080586B8",
+    "debug_start": "0x0805CBA0",
+    "delta": "+0x44E8",
+    "vram_literal": "0x06007F00"
+  }
+}
