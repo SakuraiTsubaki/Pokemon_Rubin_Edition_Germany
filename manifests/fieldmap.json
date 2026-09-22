@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "module": "fieldmap",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080562D0",
+      "end_exclusive": "0x080570DC",
+      "size": 3596,
+      "sha256": "437e6883063d29a9c67acba6402374456c7e3da2067129e483fbee6ed4b0b7f5"
+    },
+    "rev1": {
+      "start": "0x080562D0",
+      "end_exclusive": "0x080570DC",
+      "size": 3596,
+      "sha256": "437e6883063d29a9c67acba6402374456c7e3da2067129e483fbee6ed4b0b7f5"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0805A7B8",
+    "end_exclusive": "0x0805B5C4",
+    "size": 3596,
+    "sha256": "710a595e8e0b1594e27d27812fbc91fd480ecf538041ff855fbb2d5f9139b000",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x44E8",
+    "exit": "+0x44E8"
+  },
+  "entry": {
+    "function": "GetMapHeaderFromConnection",
+    "common_prefix_hex": "00 B5 02 7A 41 7A 10 1C"
+  },
+  "map_grid_word": {
+    "bits": 16,
+    "metatile_id": {
+      "bits": "0..9",
+      "mask": "0x03FF"
+    },
+    "collision": {
+      "bits": "10..11",
+      "mask": "0x0C00",
+      "shift": 10
+    },
+    "elevation": {
+      "bits": "12..15",
+      "mask": "0xF000",
+      "shift": 12
+    }
+  },
+  "metatile_attributes": {
+    "behavior": {
+      "bits": "0..7",
+      "mask": "0x00FF"
+    },
+    "layer_type": {
+      "bits": "12..15",
+      "mask": "0xF000",
+      "shift": 12
+    }
+  },
+  "backup_map": {
+    "map_offset": 7,
+    "extra_width": 15,
+    "extra_height": 14,
+    "max_map_data_size_u16": 10240,
+    "max_map_data_size_hex": "0x2800"
+  },
+  "map_layout": {
+    "size": 24,
+    "fields": [
+      {"name": "width", "offset": "0x00"},
+      {"name": "height", "offset": "0x04"},
+      {"name": "border", "offset": "0x08"},
+      {"name": "map", "offset": "0x0C"},
+      {"name": "primaryTileset", "offset": "0x10"},
+      {"name": "secondaryTileset", "offset": "0x14"}
+    ]
+  },
+  "tileset": {
+    "primary_metatiles": 512,
+    "secondary_metatiles": 512,
+    "primary_palettes": 6,
+    "total_map_palettes": 12
+  },
+  "connections": ["South", "North", "West", "East"],
+  "compatibility_notes": [
+    "InitBackupMapLayoutConnections original null-dereference UB is preserved in the German compatibility evidence layer"
+  ],
+  "next_module": {
+    "name": "metatile_behavior",
+    "first_function": "MetatileBehavior_IsATile",
+    "retail_start": "0x080570DC",
+    "debug_start": "0x0805B5C4",
+    "delta": "+0x44E8",
+    "entry_hex": "01 20 70 47"
+  }
+}
