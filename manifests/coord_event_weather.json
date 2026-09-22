@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "module": "coord_event_weather",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080696AC",
+      "end_exclusive": "0x0806977C",
+      "size": 208,
+      "sha256": "1feb1b8af8896d001a06e5ee56afc0c1241e27be57db500b24719aacb1a097ac"
+    },
+    "rev1": {
+      "start": "0x080696AC",
+      "end_exclusive": "0x0806977C",
+      "size": 208,
+      "sha256": "1feb1b8af8896d001a06e5ee56afc0c1241e27be57db500b24719aacb1a097ac"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806DD88",
+    "end_exclusive": "0x0806DE58",
+    "size": 208,
+    "sha256": "67d18d6dff683b8e4a2720e65b6a8157ade01b3deaaed66013778f292b26ac3b",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x46DC",
+    "exit": "+0x46DC"
+  },
+  "weather_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    7,
+    8,
+    11,
+    12,
+    20,
+    21
+  ],
+  "wrapper_size": 12,
+  "source_correlation": {
+    "wrapper_count": 13,
+    "dispatcher": "DoCoordEventWeather",
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "field_tasks",
+    "first_function": "Task_RunPerStepCallback",
+    "retail_start": "0x0806977C",
+    "debug_start": "0x0806DE58",
+    "delta": "+0x46DC",
+    "common_first_28_hex": "00 B5 00 06 00 0E 07 4A 81 00 09 18 C9 00 89 18 08 22 89 5E 04 4A 89 00 89 18 09 68"
+  }
+}
