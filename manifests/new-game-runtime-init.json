@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "module": "new_game",
+  "retail": {
+    "start": "0x08053040",
+    "end_exclusive": "0x0805329C",
+    "size": 604,
+    "sha256": "ff8616201d0b9a71942cf375db42b9db673a2678deb42dcb3022ecdcfe76ec4c",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08057230",
+    "end_exclusive": "0x080575AC",
+    "size": 892,
+    "sha256": "7055ef8767b612ce44f42a93fb0a12d04e051f53dc23774664777cdb43b99b66"
+  },
+  "debug_growth": {
+    "bytes": 288,
+    "hex": "0x120",
+    "delta_before": "+0x41F0",
+    "delta_after": "+0x4310",
+    "large_bootstrap_start": "0x08057508"
+  },
+  "retail_functions": [
+    {
+      "name": "write_word_to_mem",
+      "retail": "0x08053040"
+    },
+    {
+      "name": "copy_word_to_mem",
+      "retail": "0x08053050"
+    },
+    {
+      "name": "InitPlayerTrainerId",
+      "retail": "0x0805306C"
+    },
+    {
+      "name": "SetDefaultOptions",
+      "retail": "0x08053094"
+    },
+    {
+      "name": "ClearPokedexFlags",
+      "retail": "0x080530B8"
+    },
+    {
+      "name": "ResetContestAndMuseumWinners",
+      "retail": "0x080530E8"
+    },
+    {
+      "name": "ZeroBattleTowerData",
+      "retail": "0x08053124"
+    },
+    {
+      "name": "WarpToTruck",
+      "retail": "0x08053144"
+    },
+    {
+      "name": "ClearSav2",
+      "retail": "0x08053164"
+    },
+    {
+      "name": "sub_8052E4C",
+      "retail": "0x0805318C"
+    },
+    {
+      "name": "NewGameInitData",
+      "retail": "0x080531AC"
+    }
+  ],
+  "defaults": {
+    "text_speed": "MID",
+    "window_frame": 0,
+    "sound": "MONO",
+    "battle_style": "SHIFT",
+    "battle_scene_off": false,
+    "region_map_zoom": false,
+    "starting_money": 3000
+  },
+  "debug_bootstrap": {
+    "money": 999999,
+    "starter_species": "Treecko",
+    "starter_level": 99,
+    "optional_nickname": "KRÖTE"
+  },
+  "next_module": {
+    "name": "overworld",
+    "first_function": "DoWhiteOut",
+    "retail_start": "0x0805329C",
+    "debug_start": "0x080575AC",
+    "delta": "+0x4310"
+  }
+}
