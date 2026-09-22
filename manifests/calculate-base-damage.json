@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "module": "calculate_base_damage",
+  "retail": {
+    "start": "0x0803BC00",
+    "end_exclusive": "0x0803C51C",
+    "size": 2332,
+    "sha256": "805c2ac86214fd252e5c33331c5b6d2de4b842216a4b150fca390fbf24412288",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0803FD7C",
+    "end_exclusive": "0x08040698",
+    "size": 2332,
+    "sha256": "34c128142c4201f5333f913fbbf677f57402b06052501d3abfc45b36e3a80006",
+    "retail_address_delta": "+0x417C"
+  },
+  "debug_growth_bytes": 0,
+  "rules": {
+    "legacy_physical_special_split": "type-based",
+    "type_override_mask": "0x3F",
+    "type_boost_hold_effect_entries": 17,
+    "reflect_single": "1/2",
+    "reflect_double_two_alive": "2/3",
+    "light_screen_single": "1/2",
+    "light_screen_double_two_alive": "2/3",
+    "spread_move_double": "1/2",
+    "burn_physical_penalty": "1/2 unless Guts",
+    "rain_water": "1.5x",
+    "rain_fire": "0.5x",
+    "sun_fire": "1.5x",
+    "sun_water": "0.5x",
+    "flash_fire": "1.5x",
+    "badge_boost": "1.10x"
+  },
+  "next_module": {
+    "name": "pokemon_2",
+    "first_function": "CountAliveMons",
+    "retail_start": "0x0803C51C",
+    "debug_start": "0x08040698",
+    "delta": "+0x417C"
+  }
+}
