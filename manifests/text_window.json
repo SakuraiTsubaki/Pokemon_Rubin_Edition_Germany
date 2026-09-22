@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "module": "text_window",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08065234",
+      "end_exclusive": "0x080656D4",
+      "size": 1184,
+      "sha256": "2c17ff26f0c817b1513a254d23c2e2a8fc2bdf195c201780fb0138ebd85a1123"
+    },
+    "rev1": {
+      "start": "0x08065234",
+      "end_exclusive": "0x080656D4",
+      "size": 1184,
+      "sha256": "2c17ff26f0c817b1513a254d23c2e2a8fc2bdf195c201780fb0138ebd85a1123"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08069834",
+    "end_exclusive": "0x08069CD4",
+    "size": 1184,
+    "sha256": "0fdc59440c1b1401bd8a99183ff31f6ef60d804d43b352c7125bfc8f8b7baaff",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x4600",
+    "exit": "+0x4600"
+  },
+  "entry": {
+    "first_function": "TextWindow_SetBaseTileNum",
+    "common_first_16_hex": "00 04 00 0C 02 49 08 80 09 30 00 04 00 0C 70 47",
+    "base_tile_num_iwram": "0x030005AC"
+  },
+  "runtime_state": {
+    "text_window_base_tile_num": {
+      "address": "0x030005AC",
+      "literal_refs": 5
+    },
+    "dialogue_frame_base_tile_num": {
+      "address": "0x030005AE",
+      "literal_refs": 4
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 16,
+    "frame_graphics_count": 20,
+    "standard_frame_tile_count": 9,
+    "dialogue_frame_tile_count": 14,
+    "standard_palette_slot": 14,
+    "dialogue_geometry": {
+      "left": 0,
+      "top": 14,
+      "width": 26,
+      "height": 4
+    },
+    "debug_conditional_text": false,
+    "address_policy": "Historical numeric names are semantic labels only; German addresses are re-established from German binaries."
+  },
+  "next_module": {
+    "name": "script",
+    "first_function": "InitScriptContext",
+    "retail_start": "0x080656D4",
+    "debug_start": "0x08069CD4",
+    "delta": "+0x4600",
+    "common_first_48_hex": "00 B5 03 1C 00 20 58 70 98 60 18 70 58 60 D9 65 1A 66 00 22 03 21 18 1C 70 30 02 60 04 38 01 39 00 29 FA DA 19 1C 0C 31 00 22 18 1C 58 30 02 60"
+  }
+}
