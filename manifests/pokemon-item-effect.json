@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_item_effect",
+  "retail": {
+    "start": "0x0803E360",
+    "end_exclusive": "0x0803F340",
+    "size": 4064,
+    "sha256": "7ef952661f4ac95889a0eb8556f80aa32ddbad0289150c594dda1176122c6f05",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080424DC",
+    "end_exclusive": "0x080434BC",
+    "size": 4064,
+    "sha256": "2e716b737731d48369942d58094840b418a1bee6c78e13954e371622556eb009",
+    "retail_address_delta": "+0x417C"
+  },
+  "debug_growth_bytes": 0,
+  "functions": [
+    {
+      "name": "ExecuteTableBasedItemEffect_",
+      "retail": "0x0803E360",
+      "debug": "0x080424DC",
+      "size": 36
+    },
+    {
+      "name": "PokemonUseItemEffects",
+      "retail": "0x0803E384",
+      "debug": "0x08042500",
+      "size": 4028
+    }
+  ],
+  "effect_record": {
+    "command_bytes": 6,
+    "parameter_start": 6,
+    "table_index_expression": "itemId - 13",
+    "enigma_berry_custom_effect": true
+  },
+  "fixed_rules": {
+    "move_slots": 4,
+    "ev_stats": 6,
+    "ev_total_cap": 510,
+    "vitamin_stat_cap": 100,
+    "level_cap": 100,
+    "friendship_max": 255,
+    "guard_spec_mist_turns": 5,
+    "battle_stat_stage_max": 12
+  },
+  "next_module": {
+    "name": "pokemon_3",
+    "first_function": "HealStatusConditions",
+    "retail_start": "0x0803F340",
+    "debug_start": "0x080434BC",
+    "delta": "+0x417C"
+  }
+}
