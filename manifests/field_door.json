@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "module": "field_door",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080586B8",
+      "end_exclusive": "0x08058AF4",
+      "size": 1084,
+      "sha256": "48f3f9760b961707a5eae1e176979ede3bf23afdd0e3cab1ef1dd33381b4af09"
+    },
+    "rev1": {
+      "start": "0x080586B8",
+      "end_exclusive": "0x08058AF4",
+      "size": 1084,
+      "sha256": "48f3f9760b961707a5eae1e176979ede3bf23afdd0e3cab1ef1dd33381b4af09"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0805CBA0",
+    "end_exclusive": "0x0805CFDC",
+    "size": 1084,
+    "sha256": "46a519981bec8252ca0efa2c10927a871e21210815d42e2ac66f68d84fc30029",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x44E8",
+    "exit": "+0x44E8"
+  },
+  "door_tile_vram": "0x06007F00",
+  "frames": {
+    "entry_size": 4,
+    "open_count_with_terminator": 5,
+    "close_count_with_terminator": 5,
+    "combined_size": 40,
+    "retail_open_address": "0x0831B064",
+    "retail_close_address": "0x0831B078",
+    "debug_open_address": "0x0833420C",
+    "debug_close_address": "0x08334220",
+    "sha256_all_profiles": "367d6e93a7e2d4d98d29434fdb45021b48b6fb74ca94906805b43ccebd6d0504",
+    "open": [[4, "0xFFFF"], [4, "0x0000"], [4, "0x0100"], [4, "0x0200"], [0, "0x0000"]],
+    "close": [[4, "0x0200"], [4, "0x0100"], [4, "0x0000"], [4, "0xFFFF"], [0, "0x0000"]]
+  },
+  "graphics_table": {
+    "entry_size": 12,
+    "usable_entries": 34,
+    "entries_with_terminator": 35,
+    "retail_address": "0x0831B19C",
+    "debug_address": "0x08334344",
+    "retail_sha256": "d69a7de97722fc00b2f51c53b6fc44a4b3c7b3c1d0a8ffb2022a5ac0c28ddd41",
+    "debug_sha256": "48ec5ca7ce3fd0f25a08b818c6cc97fd72fe7da993e4aa8a1505b1510ca3613d",
+    "debug_data_pointer_delta": "+0x191A8",
+    "terminator_all_zero": true
+  },
+  "source_correlation": {
+    "function_count": 20,
+    "address_policy": "semantic names only; German addresses are established from German binaries",
+    "functions": [
+      "CopyDoorTilesToVram",
+      "door_build_blockdef",
+      "DrawCurrentDoorAnimFrame",
+      "DrawClosedDoorTiles",
+      "DrawDoor",
+      "sub_8058464",
+      "Task_AnimateDoor",
+      "StartDoorAnimationTask",
+      "DrawClosedDoor",
+      "DrawOpenedDoor",
+      "StartDoorOpenAnimation",
+      "StartDoorCloseAnimation",
+      "cur_mapdata_get_door_x2_at",
+      "unref_sub_805869C",
+      "FieldSetDoorOpened",
+      "FieldSetDoorClosed",
+      "FieldAnimateDoorClose",
+      "FieldAnimateDoorOpen",
+      "FieldIsDoorAnimationRunning",
+      "GetDoorSoundEffect"
+    ]
+  },
+  "next_module": {
+    "name": "field_player_avatar",
+    "retail_start": "0x08058AF4",
+    "debug_start": "0x0805CFDC",
+    "delta": "+0x44E8"
+  }
+}
