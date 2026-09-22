@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "module": "scrcmd",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08065BAC",
+      "end_exclusive": "0x0806822C",
+      "size": 9856,
+      "sha256": "d9abe33055babd8e6e68fbb4838afb265c5475bfeb71b0a8a4fc3126ae34d372"
+    },
+    "rev1": {
+      "start": "0x08065BAC",
+      "end_exclusive": "0x0806822C",
+      "size": 9856,
+      "sha256": "d9abe33055babd8e6e68fbb4838afb265c5475bfeb71b0a8a4fc3126ae34d372"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806A1AC",
+    "end_exclusive": "0x0806C82C",
+    "size": 9856,
+    "sha256": "de537d1d54882ba4d7ee7d9af4f581141a23ad320e6ba938a5312140eb207b5f",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x4600",
+    "exit": "+0x4600"
+  },
+  "entry": {
+    "first_functions": [
+      "ScrCmd_nop",
+      "ScrCmd_nop1",
+      "ScrCmd_end"
+    ],
+    "common_prefix_hex": "00 20 70 47 00 20 70 47 00 B5 FF F7 B5 FD 00 20 02 BC 08 47"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 207,
+    "debug_conditional_text": false,
+    "address_policy": "Historical numeric names are semantic labels only; German addresses are re-established from German binaries."
+  },
+  "tail": {
+    "retail_final_literal": "0x0202E8DC",
+    "debug_final_literal": "0x0202EB80",
+    "semantic": "gSpecialVar_Result"
+  },
+  "next_module": {
+    "name": "field_control_avatar",
+    "first_function": "ClearPlayerFieldInput",
+    "retail_start": "0x0806822C",
+    "debug_start": "0x0806C82C",
+    "delta": "+0x4600",
+    "common_entry_hex": "30 B5 02 21 49 42 03 23 5B 42 05 24 64 42 09 25 6D 42 00 22 02 70 42 78 11 40 19 40 21 40 29 40 41 70 00 21 81 70 30 BC 01 BC 00 47"
+  },
+  "boundary_note": "0x08068220 was rejected before commit because it was still inside the final literal pool; 0x0806822C is binary-verified."
+}
