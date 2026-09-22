@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "module": "clock",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0806A668",
+      "end_exclusive": "0x0806A7C0",
+      "size": 344,
+      "sha256": "f6a44a7060cc399cfa1c4b8ba180697d7f4a5e0ed52081c21dde417d006ee112"
+    },
+    "rev1": {
+      "start": "0x0806A668",
+      "end_exclusive": "0x0806A7C0",
+      "size": 344,
+      "sha256": "f6a44a7060cc399cfa1c4b8ba180697d7f4a5e0ed52081c21dde417d006ee112"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0806ED44",
+    "end_exclusive": "0x0806EE9C",
+    "size": 344,
+    "sha256": "366852d55b6dc05ee1b5e64bdcaa07cf5529929790be452720451d038b1c775b",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x46DC",
+    "exit": "+0x46DC"
+  },
+  "functions": [
+    {
+      "name": "InitTimeBasedEvents",
+      "retail_start": "0x0806A668"
+    },
+    {
+      "name": "DoTimeBasedEvents",
+      "retail_start": "0x0806A6A0"
+    },
+    {
+      "name": "UpdatePerDay",
+      "retail_start": "0x0806A6D0"
+    },
+    {
+      "name": "UpdatePerMinute",
+      "retail_start": "0x0806A734"
+    },
+    {
+      "name": "ReturnFromStartWallClock",
+      "retail_start": "0x0806A78C"
+    },
+    {
+      "name": "StartWallClock",
+      "retail_start": "0x0806A7A0"
+    }
+  ],
+  "constants": {
+    "flag_sys_clock_set": "0x0835",
+    "var_days": "0x4040"
+  },
+  "runtime_globals": {
+    "gMain": {
+      "retail": "0x03001770",
+      "debug": "0x030017F0"
+    }
+  },
+  "next_module": {
+    "name": "reset_rtc_screen",
+    "first_function": "SpriteCB_ResetRtcCusor0",
+    "retail_start": "0x0806A7C0",
+    "debug_start": "0x0806EE9C",
+    "delta": "+0x46DC",
+    "common_first_16_hex": "00 B5 03 1C 0A 4A 2E 20 19 5E 88 00 40 18 C0 00"
+  }
+}
