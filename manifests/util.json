@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "module": "util",
+  "retail": {
+    "start": "0x080411D8",
+    "end_exclusive": "0x08041534",
+    "size": 860,
+    "sha256": "23eb87e96a7473038854c0f9edc982689d01efc389454663a1cd2d5a32419b96",
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08045354",
+    "end_exclusive": "0x080456B0",
+    "size": 860,
+    "sha256": "7d86e6c9bd856b123c5b322d05da50efaeefd70d8b657bb36da5bbbe435ab35e",
+    "retail_address_delta": "+0x417C"
+  },
+  "debug_growth_bytes": 0,
+  "functions": [
+    {
+      "name": "CreateInvisibleSpriteWithCallback",
+      "retail": "0x080411D8",
+      "debug": "0x08045354",
+      "span": 56,
+      "role": "create hidden sprite at (248,168), subpriority 14 and install callback"
+    },
+    {
+      "name": "StoreWordInTwoHalfwords",
+      "retail": "0x08041210",
+      "debug": "0x0804538C",
+      "span": 12,
+      "role": "store low/high halves of 32-bit word"
+    },
+    {
+      "name": "LoadWordFromTwoHalfwords",
+      "retail": "0x0804121C",
+      "debug": "0x08045398",
+      "span": 16,
+      "role": "reassemble 32-bit word from two halfwords"
+    },
+    {
+      "name": "SetBgAffineStruct",
+      "retail": "0x0804122C",
+      "debug": "0x080453A8",
+      "span": 44,
+      "role": "populate GBA affine-background source structure"
+    },
+    {
+      "name": "DoBgAffineSet",
+      "retail": "0x08041258",
+      "debug": "0x080453D4",
+      "span": 76,
+      "role": "stack-create affine source data then call BIOS BgAffineSet"
+    },
+    {
+      "name": "CopySpriteTiles",
+      "retail": "0x080412A4",
+      "debug": "0x08045420",
+      "span": 460,
+      "role": "copy 4bpp sprite tiles with X/Y flip handling"
+    },
+    {
+      "name": "CountTrailingZeroBits",
+      "retail": "0x08041470",
+      "debug": "0x080455EC",
+      "span": 40,
+      "role": "count trailing zero bits; zero input returns 0"
+    },
+    {
+      "name": "CalcCRC16",
+      "retail": "0x08041498",
+      "debug": "0x08045614",
+      "span": 88,
+      "role": "bitwise CRC16"
+    },
+    {
+      "name": "CalcCRC16WithTable",
+      "retail": "0x080414F0",
+      "debug": "0x0804566C",
+      "span": 68,
+      "role": "table-driven equivalent CRC16"
+    }
+  ],
+  "crc16": {
+    "initial": "0x1121",
+    "reflected_polynomial": "0x8408",
+    "final_complement": true,
+    "table_entries": 256,
+    "table_entry_bits": 16,
+    "retail_table": "0x082157AC",
+    "debug_table": "0x0822E944",
+    "table_sha256": "638dbc5f735cced09b3d0d767a72a8800baeb1b3bb399a514af61b3ea7be8a01"
+  },
+  "quirks": [
+    {
+      "function": "CountTrailingZeroBits",
+      "detail": "input 0 returns 0"
+    }
+  ],
+  "next_module": {
+    "name": "blend_palette",
+    "first_function": "BlendPalette",
+    "retail_start": "0x08041534",
+    "debug_start": "0x080456B0",
+    "delta": "+0x417C"
+  }
+}
