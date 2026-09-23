@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "module": "battle_party_menu",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08094A78",
+      "end_exclusive": "0x08095A54",
+      "size": 4060,
+      "sha256": "02680c6402ce257154810b6eaef7d672e22e8f55a1df1edc23052fce4287a776"
+    },
+    "rev1": {
+      "start": "0x08094A78",
+      "end_exclusive": "0x08095A54",
+      "size": 4060,
+      "sha256": "02680c6402ce257154810b6eaef7d672e22e8f55a1df1edc23052fce4287a776"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080A1FC8",
+    "end_exclusive": "0x080A2FA4",
+    "size": 4060,
+    "sha256": "1c48bbe28aa8b11afb25bed72bd5df2648ed6ad6bc1fb4765a0f330002c428a7",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD550",
+    "exit": "+0xD550"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 31,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "function": "Task_BattlePartyMenuCancel",
+    "retail": {
+      "start": "0x08095A14",
+      "end_exclusive": "0x08095A54",
+      "size": 64,
+      "sha256": "d2e230758f9d51fd25a3a448409cd19025d2e854b0cb8337ff60be58f3c3326d"
+    },
+    "debug": {
+      "start": "0x080A2F64",
+      "end_exclusive": "0x080A2FA4",
+      "size": 64,
+      "sha256": "dab4185229433a7fc779b1077bf0a065875f376db753ecc19ebcae13f7c39959"
+    }
+  },
+  "next_module": {
+    "name": "unk_text_8095904",
+    "first_function": "sub_8095904",
+    "retail_start": "0x08095A54",
+    "debug_start": "0x080A2FA4",
+    "delta": "+0xD550",
+    "common_first_32_hex": "F0 B5 57 46 4E 46 45 46 E0 B4 87 B0 00 90 0F 1C 14 1C 0F 98 24 06 24 0E 1B 04 1B 0C 01 93 00 06"
+  }
+}
