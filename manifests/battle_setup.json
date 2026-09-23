@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "module": "battle_setup",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08081D94",
+      "end_exclusive": "0x08083108",
+      "size": 4980,
+      "sha256": "05518cd7d00fbd74e5ef75bafacac1f6a8702bb55c79afe703c2922d216a8a25"
+    },
+    "rev1": {
+      "start": "0x08081D94",
+      "end_exclusive": "0x08083108",
+      "size": 4980,
+      "sha256": "05518cd7d00fbd74e5ef75bafacac1f6a8702bb55c79afe703c2922d216a8a25"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0808915C",
+    "end_exclusive": "0x0808A4D0",
+    "size": 4980,
+    "sha256": "999ea36e9a5e9c88dcab89898cb32d11b39a30a34c997fd41b51eccbb42de798",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x73C8",
+    "exit": "+0x73C8"
+  },
+  "entry": {
+    "first_function": "Task_BattleStart",
+    "common_first_32_hex": "30 B5 00 06 05 0E A8 00 40 19 C0 00 04 49 44 18 00 21 60 5E 00 28 05 D0 01 28 0E D0 1D E0 00 00"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 71,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "last_function": "SetTrainerFlagsAfterTrainerEyeRematch",
+    "retail": {
+      "start": "0x080830EC",
+      "end_exclusive": "0x08083108",
+      "size": 28,
+      "sha256": "ea98d544b95db961865f422b2162d64fddbfd9dddefcc759b77a5186c025d561"
+    },
+    "debug": {
+      "start": "0x0808A4B4",
+      "end_exclusive": "0x0808A4D0",
+      "size": 28,
+      "sha256": "3da8b8fbc82b8e663b9cfc8382be145fb4d1fb25ede08e5c7cd0ad97599313fd"
+    }
+  },
+  "next_module": {
+    "name": "cable_club",
+    "retail_start": "0x08083108",
+    "retail_first_function": "sub_8082CD4",
+    "retail_prefix_hex": "70 B5 00 06 06 0E 09 06 0D 0E 0C 4C 20 1C",
+    "debug_start": "0x0808A4D0",
+    "debug_first_function": "debug_sub_808A4D0",
+    "debug_prefix_hex": "00 B5 01 1C 02 48 81 42 04 D1 01 20",
+    "delta": "+0x73C8"
+  }
+}
