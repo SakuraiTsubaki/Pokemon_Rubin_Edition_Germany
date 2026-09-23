@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "module": "debug_menu_block",
+  "evidence": "German ROM binary",
+  "retail": {
+    "mori_debug_menu": {
+      "start": "0x08084144",
+      "end_exclusive": "0x08084410",
+      "size": 716,
+      "sha256": "f060b11a1bf4848bacf58419c38441f6c25d44850c8cbc10129c5a2c417b5663",
+      "rev0_rev1_byte_identical": true
+    },
+    "trainer_see_start": "0x08084410"
+  },
+  "debug": {
+    "tomomichi_debug_menu": {
+      "start": "0x0808B85C",
+      "end_exclusive": "0x0808F3C4",
+      "size": 15208,
+      "sha256": "8382ed4234377c500d28fa69ad170d7dd9c6eeef46b045b4286a7ddd70b22b91",
+      "function_count": 181
+    },
+    "nohara_debug_menu": {
+      "start": "0x0808F3C4",
+      "end_exclusive": "0x08090454",
+      "size": 4240,
+      "sha256": "1858b8fb291d3f7c9a1e1e114fbaaa159221ef499d3a42aef0195bc176fc2a98",
+      "function_count": 40
+    },
+    "mori_debug_menu": {
+      "start": "0x08090454",
+      "end_exclusive": "0x08090720",
+      "size": 716,
+      "sha256": "ed44baed947a6c5cb01c4a7c7ac5305c33070cf572cf536fc5ebb95df2670b52",
+      "function_count": 13
+    },
+    "taya_debug_window": {
+      "start": "0x08090720",
+      "end_exclusive": "0x0809177C",
+      "size": 4188,
+      "sha256": "87df792ed184eb1dc86755a576a045247dc87e3a9f88097dad80a0f827c5d48d",
+      "function_count": 24
+    },
+    "block": {
+      "start": "0x0808B85C",
+      "end_exclusive": "0x0809177C",
+      "size": 24352,
+      "sha256": "0d8a1167d6047c0f2bef58ff748db967bc45955bda4fa299f46eb874008deb14"
+    },
+    "trainer_see_start": "0x0809177C"
+  },
+  "debug_only_menu_text_bytes": 23636,
+  "displacement": {
+    "mori_entry": "+0xC310",
+    "trainer_see_entry": "+0xD36C"
+  },
+  "anchors": {
+    "tomomichi_entry": "0x0808B85C",
+    "tomomichi_second": "0x0808B868",
+    "tomomichi_last": "0x0808F3C0",
+    "nohara_entry": "0x0808F3C4",
+    "nohara_second": "0x0808F414",
+    "nohara_last": "0x080903F4",
+    "mori_retail_entry": "0x08084144",
+    "mori_debug_entry": "0x08090454",
+    "taya_entry": "0x08090720",
+    "taya_second": "0x08090808",
+    "taya_last": "0x080916AC",
+    "trainer_see_retail": "0x08084410",
+    "trainer_see_debug": "0x0809177C"
+  }
+}
