@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "module": "trainer_card",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08093260",
+      "end_exclusive": "0x08094710",
+      "size": 5296,
+      "sha256": "914172d616e63504c6322025b7e281bf630fe89fdfe5d6d170c44394b95ff1d1"
+    },
+    "rev1": {
+      "start": "0x08093260",
+      "end_exclusive": "0x08094710",
+      "size": 5296,
+      "sha256": "914172d616e63504c6322025b7e281bf630fe89fdfe5d6d170c44394b95ff1d1"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080A0694",
+    "end_exclusive": "0x080A1C60",
+    "size": 5580,
+    "sha256": "c52635154eecab15c54d75afeda752b5469de06a2bdcae02c347ee52483ac4cf",
+    "growth_bytes": 284
+  },
+  "delta": {
+    "entry": "+0xD434",
+    "exit": "+0xD550"
+  },
+  "german_language_id": 5,
+  "debug_growth": {
+    "show_player": {
+      "retail_size": 32,
+      "debug_size": 40,
+      "growth_bytes": 8
+    },
+    "show_link": {
+      "retail_size": 68,
+      "debug_size": 84,
+      "growth_bytes": 16
+    },
+    "dedicated_functions": {
+      "debug_sub_80A0710": {
+        "start": "0x080A0710",
+        "end_exclusive": "0x080A073C",
+        "size": 44,
+        "sha256": "8f528e340a14ea981588f8f5c9432f011e6d2a21e0dd5faa9b5688746b883696"
+      },
+      "debug_sub_80A073C": {
+        "start": "0x080A073C",
+        "end_exclusive": "0x080A0780",
+        "size": 68,
+        "sha256": "ef2a3c703f49824838ca426f494cdd001903b8f0b1be9e949010450acf92e158"
+      },
+      "debug_sub_80A0780": {
+        "start": "0x080A0780",
+        "end_exclusive": "0x080A07A8",
+        "size": 40,
+        "sha256": "ac51fa79059dfd66ceb364c9408e65e5181b65b5f1ad8384276db535549dfc5f"
+      }
+    },
+    "early_growth_bytes": 176,
+    "remaining_guarded_common_growth_bytes": 108
+  },
+  "source_correlation": {
+    "explicit_function_definition_count_with_debug": 84,
+    "debug_only_function_count": 3
+  },
+  "tail": {
+    "function": "unref_sub_8094588",
+    "retail": {
+      "start": "0x080946D8",
+      "end_exclusive": "0x08094710",
+      "size": 56,
+      "sha256": "3b6bd699d5cb5173691d9705a313c7717e50e4fe45650a5386b85c3b4742f8d9"
+    },
+    "debug": {
+      "start": "0x080A1C28",
+      "end_exclusive": "0x080A1C60",
+      "size": 56,
+      "sha256": "f931a40fb2767b7e2213f725b98520c9a744140b5909f67b54579d9c13b0de1c"
+    }
+  },
+  "next_module": {
+    "name": "save_menu_util",
+    "first_function": "HandleDrawSaveWindowInfo",
+    "retail_start": "0x08094710",
+    "debug_start": "0x080A1C60",
+    "delta": "+0xD550",
+    "common_first_24_hex": "70 B5 00 04 05 0C 09 04 0C 0C 0C 26 00 F0 B6 F8 00 06 00 28 00 D0 0D 26"
+  }
+}
