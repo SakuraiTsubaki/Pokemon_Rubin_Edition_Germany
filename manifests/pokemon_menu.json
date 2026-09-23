@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_menu",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08089EC4",
+      "end_exclusive": "0x0808BA64",
+      "size": 7072,
+      "sha256": "e7d55eb1e9dc69dc936146d5b2a216b600fd5ebd714bd4547f4b8cb69f1dca15"
+    },
+    "rev1": {
+      "start": "0x08089EC4",
+      "end_exclusive": "0x0808BA64",
+      "size": 7072,
+      "sha256": "e7d55eb1e9dc69dc936146d5b2a216b600fd5ebd714bd4547f4b8cb69f1dca15"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08097290",
+    "end_exclusive": "0x08098E98",
+    "size": 7176,
+    "sha256": "111c646d5e840c31bd107eec3a3f42a4c545b632c5d54422002c7e94a5496bd1",
+    "growth_bytes": 104
+  },
+  "delta": {
+    "entry": "+0xD3CC",
+    "exit": "+0xD434"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 83
+  },
+  "debug_growth": {
+    "waterfall_helper": {
+      "name": "debug_sub_80986AC",
+      "start": "0x080986AC",
+      "end_exclusive": "0x080986F8",
+      "size": 76,
+      "sha256": "6b4d3d6355598a0cafcc4fcd984c12dd624f33fe3e6eaa80392b3a88a49c1e51"
+    },
+    "tmhm_gate": {
+      "retail": {
+        "start": "0x0808B2E0",
+        "end_exclusive": "0x0808B374",
+        "size": 148,
+        "sha256": "236b1d716db3d90f560d64eb0c55ce8fe6466de34e3043e37270077d51ba16d1"
+      },
+      "debug": {
+        "start": "0x080986F8",
+        "end_exclusive": "0x080987A8",
+        "size": 176,
+        "sha256": "bf2fdb0623dc87bb531a954e1c60e967230568abb609530313f6312ef880d8e1"
+      },
+      "growth_bytes": 28
+    }
+  },
+  "tail": {
+    "function": "sub_808B5E4",
+    "retail": {
+      "start": "0x0808BA38",
+      "end_exclusive": "0x0808BA64",
+      "size": 44,
+      "sha256": "d80b13f226814e1420590161d80bdd9a8f7cc5f2c37f60c20394c4dc1e69b417"
+    },
+    "debug": {
+      "start": "0x08098E6C",
+      "end_exclusive": "0x08098E98",
+      "size": 44,
+      "sha256": "11429eac1fbb5db1e4afda21d3a79d20a45198f745abf417116b7de536b75299"
+    }
+  },
+  "next_module": {
+    "name": "option_menu",
+    "first_function": "MainCB",
+    "retail_start": "0x0808BA64",
+    "debug_start": "0x08098E98",
+    "delta": "+0xD434"
+  }
+}
