@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "module": "field_fadetransition",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08080CA8",
+      "end_exclusive": "0x080817A0",
+      "size": 2808,
+      "sha256": "f96353b9c87675df5ce13131a1fca193b058f8dda2a2770fa1baedf49dc34068"
+    },
+    "rev1": {
+      "start": "0x08080CA8",
+      "end_exclusive": "0x080817A0",
+      "size": 2808,
+      "sha256": "f96353b9c87675df5ce13131a1fca193b058f8dda2a2770fa1baedf49dc34068"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0808805C",
+    "end_exclusive": "0x08088B68",
+    "size": 2828,
+    "sha256": "1e8a0f4842a41da185180921af4747d6b63f0eb81bedae9b88edf0b01100a8dd",
+    "growth_bytes": 20
+  },
+  "delta": {
+    "entry": "+0x73B4",
+    "exit": "+0x73C8"
+  },
+  "entry": {
+    "first_function": "palette_bg_fill_white",
+    "faded_palette_buffer": {
+      "retail": "0x0202EEC8",
+      "debug": "0x0202F16C"
+    },
+    "palette_bytes": "0x400"
+  },
+  "source_correlation": {
+    "function_definition_count_with_debug": 45
+  },
+  "debug_growth": {
+    "function": "debug_sub_80888D8",
+    "start": "0x080888D8",
+    "end_exclusive": "0x080888EC",
+    "size": 20,
+    "sha256": "ebf96fac7b416d1e95e002459d594edc90f429311a2468148935b698d33e3857"
+  },
+  "tail": {
+    "last_function": "sub_8081334",
+    "retail": {
+      "start": "0x08081768",
+      "end_exclusive": "0x080817A0",
+      "size": 56,
+      "sha256": "bb3a28ad81d2475c472a45c8aca141095b78c2e80ea28a2001b0294f1c0d12aa"
+    },
+    "debug": {
+      "start": "0x08088B30",
+      "end_exclusive": "0x08088B68",
+      "size": 56,
+      "sha256": "2ec098ec081f221e2158188eb5db786baed13fbce2bfa7049a60c889ccc0846e"
+    }
+  },
+  "next_module": {
+    "name": "field_screen_effect",
+    "first_function": "SetFlashScanlineEffectWindowBoundary",
+    "retail_start": "0x080817A0",
+    "debug_start": "0x08088B68",
+    "delta": "+0x73C8",
+    "common_first_48_hex": "00 B5 A0 29 10 D8 00 2A 00 DA 00 22 FF 2A 00 DD FF 22 00 2B 00 DA 00 23 FF 2B 00 DD FF 23 49 00 09 18 10 02 18 43 08 80 01 BC 00 47 F0 B5 57 46"
+  }
+}
