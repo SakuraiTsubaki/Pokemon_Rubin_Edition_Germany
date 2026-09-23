@@ -36,6 +36,67 @@
       "debug": "0x03004BD4"
     }
   },
+  "map_music_state": {
+    "sCurrentMapMusic": {
+      "retail": "0x030006D4",
+      "debug": "0x030006F4",
+      "literal_refs": 11
+    },
+    "sNextMapMusic": {
+      "retail": "0x030006D6",
+      "debug": "0x030006F6",
+      "literal_refs": 10
+    },
+    "sMapMusicState": {
+      "retail": "0x030006D8",
+      "debug": "0x030006F8",
+      "literal_refs": 12
+    },
+    "sMapMusicFadeInSpeed": {
+      "retail": "0x030006D9",
+      "debug": "0x030006F9",
+      "literal_refs": 4
+    },
+    "sFanfareCounter": {
+      "retail": "0x030006DA",
+      "debug": "0x030006FA",
+      "literal_refs": 3
+    }
+  },
+  "music_players": {
+    "BGM": {
+      "retail": "0x03007390",
+      "debug": "0x030074A0",
+      "literal_refs": 15
+    },
+    "SE1": {
+      "retail": "0x030073D0",
+      "debug": "0x030074E0",
+      "literal_refs": 4
+    },
+    "SE2": {
+      "retail": "0x03007410",
+      "debug": "0x03007520",
+      "literal_refs": 4
+    },
+    "SE3": {
+      "retail": "0x03007460",
+      "debug": "0x03007570",
+      "literal_refs": 1
+    }
+  },
+  "cry_state": {
+    "gMPlay_PokemonCry": {
+      "retail": "0x0202F79C",
+      "debug": "0x0202FA40",
+      "literal_refs": 6
+    },
+    "gPokemonCryBGMDuckingCounter": {
+      "retail": "0x0202F7A0",
+      "debug": "0x0202FA44",
+      "literal_refs": 4
+    }
+  },
   "fanfare_table": {
     "retail": "0x083896DC",
     "debug": "0x083A386C",
@@ -43,11 +104,23 @@
     "bytes": 48,
     "sha256": "b47a9578152cbf53851514486121001deccd59ee7f1d5b7ce0a0c5924f3a9ca8"
   },
+  "source_correlation": {
+    "explicit_function_definition_count": 46,
+    "debug_conditional_text": false,
+    "cry_mode_count": 6
+  },
+  "tail": {
+    "last_function": "IsSpecialSEPlaying",
+    "retail_start": "0x080759BC",
+    "debug_start": "0x0807CC28",
+    "size": 40
+  },
   "next_module": {
     "name": "battle_anim",
     "first_function": "ClearBattleAnimationVars",
     "retail_start": "0x080759E4",
     "debug_start": "0x0807CC50",
-    "delta": "+0x726C"
+    "delta": "+0x726C",
+    "common_first_32_hex": "F0 B5 4F 46 46 46 C0 B4 22 48 00 21 01 70 22 48 01 70 22 48 01 70 22 48 01 70 22 48 00 21 01 60"
   }
 }

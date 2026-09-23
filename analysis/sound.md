@@ -53,9 +53,69 @@ Profile-specific music-player references inside the German module are:
 
 The Pokemon-cry runtime state is also profile-relocated:
 
-- `gMPlay_PokemonCry`: Retail **Œ‘ÎPÊŠ‹XYÈ
-ŠŒŒ‘M
-Šˆ8 %ˆ]\˜[™YœÂ‹HÔÚÙ[[ÛÜP‘ÓQXÚÚ[™ĞÛİ[\˜ˆ™]Z[
-ŠŒŒ‘ĞL
-Š‹XYÈ
-Šƒƒ#$dCB¢¢(	BBÆ—FW&Â&Vg0 ¢22fæf&RF&ÆP ¥F†R6÷W&6RÖ6÷'&VÆFVBfæf&RF&ÆR†2¢£"VçG&–W2¢¢ÂV6‚‡Sb6öætçVÒÂSbGW&F–öâ–à ¤&–æ'’FG&W76W3  ¢Ò&WF–Â&Wbò&Wb¢¢£ƒƒ3ƒ“dD2¢ ¢ÒFV'Vs¢¢£ƒƒ43ƒd2¢  ¥F†R6ö×ÆWFRC‚Ö'—FRF&ÆR—2'—FRÖ–FVçF–6Â–âÆÂF‡&VR&öf–ÆW2v—F‚4„Ó#Sc  ¦#Cv“SsƒS&6&cS3ƒSSCCƒc#FV66CS–VSvcCV#v6S3S“#Fc6–6€ ¥F–ÂæBæW‡BÖÖöGVÆRæ6†÷"öÖ—GFVB†W&Rf÷"'&Wf—G’
+- `gMPlay_PokemonCry`: Retail **0x0202F79C**, Debug **0x0202FA40** â€” 6 literal refs
+- `gPokemonCryBGMDuckingCounter`: Retail **0x0202F7A0**, Debug **0x0202FA44** â€” 4 literal refs
+
+## Fanfare table
+
+The source-correlated fanfare table has **12 entries**, each `(u16 songNum, u16 duration)`.
+
+Binary addresses:
+
+- Retail Rev 0 / Rev 1: **0x083896DC**
+- Debug: **0x083A386C**
+
+The complete 48-byte table is byte-identical in all three profiles with SHA-256:
+
+`b47a9578152cbf53851514486121001deccd59ee7f1d5b7ce0a0c5924f3a9ca8`
+
+Durations are measured by the module's fanfare counter and the BGM is paused/resumed around fanfare playback.
+
+## Cry path
+
+The source-correlated cry layer supports six cry modes (`0..5`) and configures volume, pan, pitch, length, release, chorus and priority before selecting the cry tone table.
+
+Normal cry playback ducks BGM volume and restores it through a task after the cry ends. The module tracks the current Pokemon-cry music player pointer and a short ducking counter.
+
+## Public sound path
+
+The source-correlated module contains **46 explicit functions** and no Debug-only text. It covers:
+
+- map BGM state/reset/fade transitions;
+- fanfare playback and fanfare task lifetime;
+- Pokemon cry configuration and BGM ducking;
+- BGM play/stop/fade helpers;
+- SE1/SE2 panning and combined pan control;
+- BGM/SE status queries.
+
+Historical source labels are semantic correlation only; German addresses come from the German binaries.
+
+## Tail anchor
+
+The final function is source-correlated as `IsSpecialSEPlaying`.
+
+Its 40-byte region begins:
+
+`00 B5 05 48 41 68 00 29 0A DB 04 48 01 40 00 29 06 D0 01 20 05 E0`
+
+and ends:
+
+`00 20 02 BC 08 47 00 00`
+
+The function's only profile-specific literal is the SE3 music-player address shown above. Including the final alignment halfword gives the exact module end.
+
+## Next-module anchor
+
+`battle_anim` begins immediately afterward:
+
+- Retail Rev 0 / Rev 1: **0x080759E4**
+- Debug: **0x0807CC50**
+- accumulated delta: **+0x726C**
+
+Its first function is source-correlated as `ClearBattleAnimationVars`.
+
+Common first 32 bytes:
+
+`F0 B5 4F 46 46 46 C0 B4 22 48 00 21 01 70 22 48 01 70 22 48 01 70 22 48 01 70 22 48 00 21 01 60`
+
+This clears the battle-animation runtime globals and independently anchors the `sound` â†’ `battle_anim` transition.
