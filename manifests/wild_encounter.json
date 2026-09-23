@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "module": "wild_encounter",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08084DCC",
+      "end_exclusive": "0x08085ABC",
+      "size": 3312,
+      "sha256": "957aab21eeb0e9a3f6fe29b2b0a8884ab46f3d1ca239c48f02ad38a548357413"
+    },
+    "rev1": {
+      "start": "0x08084DCC",
+      "end_exclusive": "0x08085ABC",
+      "size": 3312,
+      "sha256": "957aab21eeb0e9a3f6fe29b2b0a8884ab46f3d1ca239c48f02ad38a548357413"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08092138",
+    "end_exclusive": "0x08092E88",
+    "size": 3408,
+    "sha256": "b9022adf9e727020045e3f601fa1073865d2cf5f4f510eae98c8e79708da6cdc",
+    "growth_bytes": 96
+  },
+  "delta": {
+    "entry": "+0xD36C",
+    "exit": "+0xD3CC"
+  },
+  "entry": {
+    "first_function": "DisableWildEncounters",
+    "entry_hex": "01 49 08 70 70 47 00 00",
+    "gWildEncountersDisabled": {
+      "retail": "0x0202FF7C",
+      "debug": "0x02030228"
+    }
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 32,
+    "debug_only_function_count": 2
+  },
+  "debug_growth": {
+    "FeebasDebug_GetTrueNumberOfWaterTilesInMapThird": {
+      "start": "0x08092344",
+      "end_exclusive": "0x0809236C",
+      "size": 40,
+      "sha256": "4e4b5a83b8afa73f3f3b25eb73c5bf3491531398dbd0805fe22e2608dd957b42",
+      "section_counts": [
+        131,
+        167,
+        149
+      ]
+    },
+    "debug_sub_809283C": {
+      "start": "0x0809283C",
+      "end_exclusive": "0x08092874",
+      "size": 56,
+      "sha256": "3c06b8bdc88b76b1777c7337fe0fc9144061ef10bf1505ebe5feb7d703f4e7a0"
+    }
+  },
+  "tail": {
+    "last_function": "ApplyCleanseTagEncounterRateMod",
+    "retail": {
+      "start": "0x08085A94",
+      "end_exclusive": "0x08085ABC",
+      "size": 40,
+      "sha256": "dbb891d095b12726f53ac3658337ec1168a99ab0f35a94dd1eda1b70c189a1c6"
+    },
+    "debug": {
+      "start": "0x08092E60",
+      "end_exclusive": "0x08092E88",
+      "size": 40,
+      "sha256": "53f5e67a03e31cde8943aa20a7044fd19816594da491d2fe9b41a023480169b2"
+    }
+  },
+  "next_module": {
+    "name": "field_effect",
+    "first_function": "FieldEffectStart",
+    "retail_start": "0x08085ABC",
+    "debug_start": "0x08092E88",
+    "delta": "+0xD3CC",
+    "common_prefix_hex": "30 B5 82 B0 04 1C 24 06 24 0E 20 1C"
+  }
+}
