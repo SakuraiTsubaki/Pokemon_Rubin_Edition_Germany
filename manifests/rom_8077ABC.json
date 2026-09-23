@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "module": "rom_8077ABC",
+  "historical_name_only": true,
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08077E7C",
+      "end_exclusive": "0x0807ADE8",
+      "size": 12140,
+      "sha256": "45ac9b3545cb3dfc58e3e2b02c2cd0b193e72cb998e2f0c85dc21d3ad8d337fa"
+    },
+    "rev1": {
+      "start": "0x08077E7C",
+      "end_exclusive": "0x0807ADE8",
+      "size": 12140,
+      "sha256": "45ac9b3545cb3dfc58e3e2b02c2cd0b193e72cb998e2f0c85dc21d3ad8d337fa"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0807F0E8",
+    "end_exclusive": "0x08082054",
+    "size": 12140,
+    "sha256": "b077bfd1b8f84650c1fe96a10724f3d215b876d880c62c0319234564d87867b7",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x726C"
+  },
+  "entry": {
+    "first_function": "GetBattlerSpriteCoord",
+    "common_first_32_hex": "30 B5 00 06 05 0E 09 06 0C 0E FF F7 8B F8 00 06 00 28 04 D0 03 2C 02 D1 03 2D 00 D1 01 24 04 2C"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 118,
+    "debug_conditional_text": false,
+    "address_policy": "Historical numeric source labels are semantic only; German addresses are established from German binaries."
+  },
+  "tail": {
+    "last_function": "sub_807A9BC",
+    "retail": {
+      "start": "0x0807AD7C",
+      "end_exclusive": "0x0807ADE8",
+      "size": 108,
+      "sha256": "bf5c11aa0f0330b73deb89f6afb0c3eee4f0240f6168c48418cbc5dbaa2c1bfd"
+    },
+    "debug": {
+      "start": "0x08081FE8",
+      "end_exclusive": "0x08082054",
+      "size": 108,
+      "sha256": "035e1847ab0e415478379d66fecd1ea36f25379df79968e279de1371150ac722"
+    }
+  },
+  "next_module": {
+    "name": "task",
+    "first_function": "ResetTasks",
+    "retail_start": "0x0807ADE8",
+    "debug_start": "0x08082054",
+    "delta": "+0x726C",
+    "task_count": 16,
+    "task_size": "0x28",
+    "task_data_size": "0x20",
+    "head_sentinel": "0xFE",
+    "tail_sentinel": "0xFF",
+    "gTasks": {
+      "retail": "0x03004B30",
+      "debug": "0x03004C10"
+    },
+    "TaskDummy_thumb": {
+      "retail": "0x0807B011",
+      "debug": "0x08082285"
+    },
+    "common_first_48_hex": "F0 B5 00 24 13 4E 37 1C 08 37 A0 00 00 19 C0 00 82 19 00 21 11 71 10 49 11 60 54 71 01 34 94 71 01 21 49 42 0D 1C FF 21 D1 71 C0 19 00 21 20 22"
+  }
+}
