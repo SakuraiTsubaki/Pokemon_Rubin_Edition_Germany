@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "module": "sound",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08074F6C",
+      "end_exclusive": "0x080759E4",
+      "size": 2680,
+      "sha256": "5d126e677f92d1b169d5b26172bb83cb000e0899dbae11ea0d41688826fd531f"
+    },
+    "rev1": {
+      "start": "0x08074F6C",
+      "end_exclusive": "0x080759E4",
+      "size": 2680,
+      "sha256": "5d126e677f92d1b169d5b26172bb83cb000e0899dbae11ea0d41688826fd531f"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0807C1D8",
+    "end_exclusive": "0x0807CC50",
+    "size": 2680,
+    "sha256": "4c7e9d4d53eadc90f4424f77bf662c1426a9c70371f7aa6991e62d388ec67e30",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x726C"
+  },
+  "entry": {
+    "first_function": "InitMapMusic",
+    "common_first_16_hex": "00 B5 03 49 00 20 08 70 00 F0 80 F8 01 BC 00 47",
+    "gDisableMusic": {
+      "retail": "0x03004AFC",
+      "debug": "0x03004BD4"
+    }
+  },
+  "fanfare_table": {
+    "retail": "0x083896DC",
+    "debug": "0x083A386C",
+    "entries": 12,
+    "bytes": 48,
+    "sha256": "b47a9578152cbf53851514486121001deccd59ee7f1d5b7ce0a0c5924f3a9ca8"
+  },
+  "next_module": {
+    "name": "battle_anim",
+    "first_function": "ClearBattleAnimationVars",
+    "retail_start": "0x080759E4",
+    "debug_start": "0x0807CC50",
+    "delta": "+0x726C"
+  }
+}
