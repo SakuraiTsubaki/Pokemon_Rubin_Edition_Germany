@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "module": "battle_anim",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080759E4",
+      "end_exclusive": "0x08077E7C",
+      "size": 9368,
+      "sha256": "c5eda52f36c5b7ff1bb83de262b3ceab7dbc7a6308933eeffa3aab014aa9c013"
+    },
+    "rev1": {
+      "start": "0x080759E4",
+      "end_exclusive": "0x08077E7C",
+      "size": 9368,
+      "sha256": "c5eda52f36c5b7ff1bb83de262b3ceab7dbc7a6308933eeffa3aab014aa9c013"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0807CC50",
+    "end_exclusive": "0x0807F0E8",
+    "size": 9368,
+    "sha256": "819df18b3733a0edb4ac128c409fdbd68cd179a0b0a2fdaa00be9471dd1a3c3f",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x726C"
+  },
+  "entry": {
+    "first_function": "ClearBattleAnimationVars",
+    "common_first_32_hex": "F0 B5 4F 46 46 46 C0 B4 22 48 00 21 01 70 22 48 01 70 22 48 01 70 22 48 01 70 22 48 00 21 01 60"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 75,
+    "script_command_count": 48,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "last_function": "ScriptCmd_stopsound",
+    "retail_start": "0x08077E54",
+    "debug_start": "0x0807F0C0",
+    "size": 40,
+    "literals": {
+      "SE1": {
+        "retail": "0x030073D0",
+        "debug": "0x030074E0"
+      },
+      "SE2": {
+        "retail": "0x03007410",
+        "debug": "0x03007520"
+      },
+      "sBattleAnimScriptPtr": {
+        "retail": "0x0202F7A4",
+        "debug": "0x0202FA48"
+      }
+    }
+  },
+  "next_module": {
+    "name": "rom_8077ABC",
+    "first_function": "GetBattlerSpriteCoord",
+    "retail_start": "0x08077E7C",
+    "debug_start": "0x0807F0E8",
+    "delta": "+0x726C",
+    "common_first_32_hex": "30 B5 00 06 05 0E 09 06 0C 0E FF F7 8B F8 00 06 00 28 04 D0 03 2C 02 D1 03 2D 00 D1 01 24 04 2C"
+  },
+  "address_policy": "Historical numeric source labels are semantic only; German addresses are established from German binaries."
+}
