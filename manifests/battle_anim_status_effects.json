@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "module": "battle_anim_status_effects",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0807BA5C",
+      "end_exclusive": "0x0807C1C0",
+      "size": 1892,
+      "sha256": "96dff3d1c51f8c66be47915de60bee9d1b8aaba244d7ebbb8a0a2afa1b0d00d6"
+    },
+    "rev1": {
+      "start": "0x0807BA5C",
+      "end_exclusive": "0x0807C1C0",
+      "size": 1892,
+      "sha256": "96dff3d1c51f8c66be47915de60bee9d1b8aaba244d7ebbb8a0a2afa1b0d00d6"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08082CD0",
+    "end_exclusive": "0x08083434",
+    "size": 1892,
+    "sha256": "6aa1736be3a4541ecd847d6368d3b806b5cdd085f37a64b87e6115396babe00b",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x7274",
+    "exit": "+0x7274"
+  },
+  "entry": {
+    "first_function": "unref_sub_807B69C",
+    "common_first_30_hex": "F0 B5 47 46 80 B4 04 1C 0D 1C 24 06 24 0E 2D 06 2D 0E 24 48 20 18 06 78 23 48 0A 21 FF F7"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 12,
+    "debug_conditional_text": false,
+    "address_policy": "Historical numeric labels are semantic only; German addresses come from the German binaries."
+  },
+  "tail": {
+    "last_function": "sub_807BDAC",
+    "retail": {
+      "start": "0x0807C16C",
+      "end_exclusive": "0x0807C1C0",
+      "size": 84,
+      "sha256": "e50efe904f1ab85cafe5ad0bbfb7729edb8421413cc1c14c728e7ab6bbd439ca"
+    },
+    "debug": {
+      "start": "0x080833E0",
+      "end_exclusive": "0x08083434",
+      "size": 84,
+      "sha256": "3d4f5d4bf778b9ed40f8a92bc222c470540c86bb750ab200bf7ca54305854e4d"
+    }
+  },
+  "next_module": {
+    "name": "title_screen",
+    "first_function": "SpriteCallback_VersionBannerLeft",
+    "retail_start": "0x0807C1C0",
+    "debug_start": "0x08083434",
+    "delta": "+0x7274",
+    "common_first_48_hex": "10 B5 02 1C 30 20 11 5E 88 00 40 18 C0 00 09 49 44 18 0A 21 60 5E 00 28 0E D0 51 78 0D 20 40 42 08 40 50 70 54 20 50 84 3E 32 11 78 59 38 08 40 10 70"
+  }
+}
