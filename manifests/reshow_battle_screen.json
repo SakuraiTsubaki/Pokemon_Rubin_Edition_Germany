@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "module": "reshow_battle_screen",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0807B114",
+      "end_exclusive": "0x0807BA5C",
+      "size": 2376,
+      "sha256": "4fc253119d97ce63c123ffcde3b7a20fc687881ae4d6f6b75efa671765ec6507"
+    },
+    "rev1": {
+      "start": "0x0807B114",
+      "end_exclusive": "0x0807BA5C",
+      "size": 2376,
+      "sha256": "4fc253119d97ce63c123ffcde3b7a20fc687881ae4d6f6b75efa671765ec6507"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08082388",
+    "end_exclusive": "0x08082CD0",
+    "size": 2376,
+    "sha256": "5478096f86521a4cda821e393ce4ba5ec2bd519de9f6cd6a7e56e2dc4a42aba0",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x7274",
+    "exit": "+0x7274"
+  },
+  "source_correlation": {
+    "semantic_function_count": 7,
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "battle_anim_status_effects",
+    "first_function": "unref_sub_807B69C",
+    "retail_start": "0x0807BA5C",
+    "debug_start": "0x08082CD0",
+    "delta": "+0x7274",
+    "common_first_30_hex": "F0 B5 47 46 80 B4 04 1C 0D 1C 24 06 24 0E 2D 06 2D 0E 24 48 20 18 06 78 23 48 0A 21 FF F7"
+  }
+}
