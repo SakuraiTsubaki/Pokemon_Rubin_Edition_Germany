@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "module": "option_menu",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0808BA64",
+      "end_exclusive": "0x0808C430",
+      "size": 2508,
+      "sha256": "1efa501a7455ed6c5fe575bb962f9ac8ecb94717bd872f704d5027819d3a8614"
+    },
+    "rev1": {
+      "start": "0x0808BA64",
+      "end_exclusive": "0x0808C430",
+      "size": 2508,
+      "sha256": "1efa501a7455ed6c5fe575bb962f9ac8ecb94717bd872f704d5027819d3a8614"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08098E98",
+    "end_exclusive": "0x08099864",
+    "size": 2508,
+    "sha256": "673d41e14bbbe9d80e8f473de6b7209a1cdec157cac0b4b64e2152ce12ea7b5c",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD434",
+    "exit": "+0xD434"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 21,
+    "debug_conditional_text": false,
+    "german_text_speed_x": [
+      120,
+      161,
+      202
+    ],
+    "german_battle_style_set_x": 178
+  },
+  "tail": {
+    "function": "ButtonMode_DrawChoices",
+    "retail": {
+      "start": "0x0808C3DC",
+      "end_exclusive": "0x0808C430",
+      "size": 84,
+      "sha256": "4cfcde4898d967ad8f61dc3d80b0a112988c24064b2576923640ad2d50604667"
+    },
+    "debug": {
+      "start": "0x08099810",
+      "end_exclusive": "0x08099864",
+      "size": 84,
+      "sha256": "dba036b2229f5ddc91e2f854f3b67d6a96d7070a8d7c90813d352d9ec764ac0e"
+    }
+  },
+  "next_module": {
+    "name": "pokedex",
+    "first_function": "ResetPokedex",
+    "retail_start": "0x0808C430",
+    "debug_start": "0x08099864",
+    "delta": "+0xD434",
+    "common_first_36_hex": "70 B5 16 48 00 21 01 80 15 4A 40 20 10 70 15 48 01 70 15 4C 00 20 61 76 21 76 A1 76 E1 76 E0 61 20 62 60 62",
+    "dex_flags_no": 52,
+    "loop_compare_hex": "33 29 F2 D9"
+  }
+}
