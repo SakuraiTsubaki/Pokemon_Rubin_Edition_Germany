@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "module": "task",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0807ADE8",
+      "end_exclusive": "0x0807B114",
+      "size": 812,
+      "sha256": "68d30c1dfd7fa6d080cabae3fbfdf8e37dd0a8f08b53ade8b916dd1620772920"
+    },
+    "rev1": {
+      "start": "0x0807ADE8",
+      "end_exclusive": "0x0807B114",
+      "size": 812,
+      "sha256": "68d30c1dfd7fa6d080cabae3fbfdf8e37dd0a8f08b53ade8b916dd1620772920"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08082054",
+    "end_exclusive": "0x08082388",
+    "size": 820,
+    "sha256": "ceabbb2065c235e4d0dac09d37c5835886c406f1dfb86f1e498d970ecb482cc3",
+    "growth_bytes": 8
+  },
+  "delta": {
+    "entry": "+0x726C",
+    "exit": "+0x7274"
+  },
+  "runtime": {
+    "task_count": 16,
+    "task_size": "0x28",
+    "task_data_size": "0x20",
+    "head_sentinel": "0xFE",
+    "tail_sentinel": "0xFF",
+    "gTasks": {
+      "retail": "0x03004B30",
+      "debug": "0x03004C10"
+    }
+  },
+  "debug_growth": {
+    "source_region": "CreateTask failure path",
+    "source_behavior": "Crash(gError_NoTasksLeft)",
+    "retail_create_task": {
+      "start": "0x0807AE48",
+      "end_exclusive": "0x0807AE9C",
+      "size": 84,
+      "sha256": "f2013a49d64d7d8e490d9bbdbb6b8fd2355153b80dfc74005afe452084ac1154"
+    },
+    "debug_create_task": {
+      "start": "0x080820B4",
+      "end_exclusive": "0x08082110",
+      "size": 92,
+      "sha256": "4b6b4aa00f2492030c4f6ffb0a686dede295fad9d55ca354fc0484da7eef00a7"
+    },
+    "debug_error_message_address": "0x083B8B18"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 12,
+    "debug_conditional_region_count": 1
+  },
+  "next_module": {
+    "name": "reshow_battle_screen",
+    "first_function": "ReshowBattleScreenDummy",
+    "retail_start": "0x0807B114",
+    "debug_start": "0x08082388",
+    "delta": "+0x7274",
+    "dummy_hex": "70 47 00 00",
+    "next_function": "ReshowBattleScreenAfterMenu",
+    "next_common_prefix_hex": "00 B5 0D 4A 10 7A 80 21 08 43 10 72 00 20"
+  }
+}
