@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "module": "pokedex",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0808C430",
+      "end_exclusive": "0x08093260",
+      "size": 28208,
+      "sha256": "6e9cb760626238d323e52e2e7e273e108d3231c4a7aa03a1d93da7721bbf94f9"
+    },
+    "rev1": {
+      "start": "0x0808C430",
+      "end_exclusive": "0x08093260",
+      "size": 28208,
+      "sha256": "6e9cb760626238d323e52e2e7e273e108d3231c4a7aa03a1d93da7721bbf94f9"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08099864",
+    "end_exclusive": "0x080A0694",
+    "size": 28208,
+    "sha256": "adfc0aa3861ad4c0f5269d0ed3193cdaae58a7cf026c704bc381d826683fec62",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD434",
+    "exit": "+0xD434"
+  },
+  "reset": {
+    "dex_flags_no": 52,
+    "pokemon_slots_number": 412,
+    "loop_compare_hex": "48 1C 00 04 01 0C 33 29 F2 D9"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 131,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "function": "CreateSearchParameterScrollArrows",
+    "retail": {
+      "start": "0x080931DC",
+      "end_exclusive": "0x08093260",
+      "size": 132,
+      "sha256": "f92c2f9f66b399e72a99f1ebe646d4348cbde9d87b0cd6881750c479f14f1dc3"
+    },
+    "debug": {
+      "start": "0x080A0610",
+      "end_exclusive": "0x080A0694",
+      "size": 132,
+      "sha256": "ac30dd4644022b708eaef9615e3057a11637b3941c5ff66f84535b0c44795e0a"
+    }
+  },
+  "next_module": {
+    "name": "trainer_card",
+    "first_function": "TrainerCard_ShowPlayerCard",
+    "retail_start": "0x08093260",
+    "debug_start": "0x080A0694",
+    "entry_delta": "+0xD434",
+    "german_language_id": 5,
+    "retail_prefix_hex": "00 B5 00 F0 CB F8 04 48 6D F7 4A F9 03 48 9C 30 05 21 01 70 01 BC 00 47",
+    "debug_prefix_hex": "00 B5 07 4A 00 21 11 70 00 F0 20 F9"
+  }
+}
