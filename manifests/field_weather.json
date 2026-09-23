@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "module": "field_weather",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0807CC5C",
+      "end_exclusive": "0x0807E2AC",
+      "size": 5712,
+      "sha256": "65ba9a03483a5b4582d2484bb26c8993ed8ce9d2f1eae56cb9b37ebc4b173cf8"
+    },
+    "rev1": {
+      "start": "0x0807CC5C",
+      "end_exclusive": "0x0807E2AC",
+      "size": 5712,
+      "sha256": "65ba9a03483a5b4582d2484bb26c8993ed8ce9d2f1eae56cb9b37ebc4b173cf8"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08083F14",
+    "end_exclusive": "0x08085660",
+    "size": 5964,
+    "sha256": "e45bd520d56f26c9f5eac43dabde70ad7146e9182b06ff8929ea3dcae846e9c7",
+    "growth_bytes": 252
+  },
+  "delta": {
+    "entry": "+0x72B8",
+    "exit": "+0x73B4"
+  },
+  "runtime": {
+    "weather_callback_count": 15,
+    "palette_state_count": 4
+  },
+  "source_correlation": {
+    "explicit_function_definition_count_with_debug": 48
+  },
+  "debug_growth": {
+    "debug_sub_8085564": {
+      "start": "0x08085564",
+      "end_exclusive": "0x0808560C",
+      "size": 168,
+      "sha256": "ea49cdc926960635156453ff66e6fac79ac6f1b5dbc41994efd220211925950b"
+    },
+    "debug_sub_808560C": {
+      "start": "0x0808560C",
+      "end_exclusive": "0x08085660",
+      "size": 84,
+      "sha256": "75abe94de07942eec0e6b6998eb34861c6e62b9a609ff0b2a2d1620f20bd63a8"
+    }
+  },
+  "last_common_function": {
+    "name": "ResetPreservedPalettesInWeather",
+    "retail": {
+      "start": "0x0807E29C",
+      "end_exclusive": "0x0807E2AC",
+      "size": 16,
+      "sha256": "e9e2e88b835b73156afabff9d07d55285bc3a039572b43a6825791769ad2c33a"
+    },
+    "debug": {
+      "start": "0x08085554",
+      "end_exclusive": "0x08085564",
+      "size": 16,
+      "sha256": "d0b6eb4feccd7aaa7170c0bb881baeaf364dd397f1640b40f516c2fd8e80e141"
+    }
+  },
+  "next_module": {
+    "name": "field_weather_effects",
+    "first_function": "Clouds_InitVars",
+    "retail_start": "0x0807E2AC",
+    "debug_start": "0x08085660",
+    "delta": "+0x73B4",
+    "common_prefix_hex": "00 B5 0D 48 00 68 0D 4A 81 18 00 22 0A 70 0C 49 43 18 14 21 19 70 0B 4B C1 18 0A 70 06 3B C1 18 0A 80 09 49 40 18 00 78 00 28 03 D1 00 20 10 21"
+  }
+}
