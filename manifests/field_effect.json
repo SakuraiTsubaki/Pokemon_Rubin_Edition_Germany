@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "module": "field_effect",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08085ABC",
+      "end_exclusive": "0x080899CC",
+      "size": 16144,
+      "sha256": "e418e172cdc0829670b913fdf38594527b10e679132790a06b6851fbc43281aa"
+    },
+    "rev1": {
+      "start": "0x08085ABC",
+      "end_exclusive": "0x080899CC",
+      "size": 16144,
+      "sha256": "e418e172cdc0829670b913fdf38594527b10e679132790a06b6851fbc43281aa"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08092E88",
+    "end_exclusive": "0x08096D98",
+    "size": 16144,
+    "sha256": "b7072798d60d961371bc0c636b19ae2afe6f00e950625f966666c4400eeb5bb3",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD3CC",
+    "exit": "+0xD3CC"
+  },
+  "entry": {
+    "first_function": "FieldEffectStart",
+    "common_prefix_hex": "30 B5 82 B0 04 1C 24 06 24 0E 20 1C"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 210,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "last_function": "fishE",
+    "retail": {
+      "start": "0x08089950",
+      "end_exclusive": "0x080899CC",
+      "size": 124,
+      "sha256": "863bbc7bc016752fa840645f1d4b41a06486dfd5f76f47fbe67235906cf662de"
+    },
+    "debug": {
+      "start": "0x08096D1C",
+      "end_exclusive": "0x08096D98",
+      "size": 124,
+      "sha256": "f9f711a6e6face161e28afdddf007e5a1893985043b835c35597988b5039e942"
+    }
+  },
+  "next_module": {
+    "name": "scanline_effect",
+    "first_function": "ScanlineEffect_Stop",
+    "retail_start": "0x080899CC",
+    "debug_start": "0x08096D98",
+    "delta": "+0xD3CC",
+    "common_first_34_hex": "10 B5 0B 4C 00 20 60 75 0A 49 4A 89 0A 48 10 40 48 81 4A 89 09 48 10 40 48 81 48 89 20 7E FF 28 03 D0"
+  }
+}
