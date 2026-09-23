@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "module": "field_screen_effect",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080817A0",
+      "end_exclusive": "0x08081D94",
+      "size": 1524,
+      "sha256": "dc3058ebd07b7a27a381d1b75b9f095c3bdc9d94e70d90076d608ca68cf6782d"
+    },
+    "rev1": {
+      "start": "0x080817A0",
+      "end_exclusive": "0x08081D94",
+      "size": 1524,
+      "sha256": "dc3058ebd07b7a27a381d1b75b9f095c3bdc9d94e70d90076d608ca68cf6782d"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08088B68",
+    "end_exclusive": "0x0808915C",
+    "size": 1524,
+    "sha256": "131727fd66761d42156daeb30b806f7312f912673d8d4aa4d5cba54b5024c2a1",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x73C8",
+    "exit": "+0x73C8"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 15,
+    "debug_conditional_text": false,
+    "flash_level_pixel_radii": [
+      200,
+      72,
+      56,
+      40,
+      24,
+      0
+    ],
+    "max_flash_level": 4
+  },
+  "tail": {
+    "last_function": "task50_0807F0C8",
+    "retail": {
+      "start": "0x08081D70",
+      "end_exclusive": "0x08081D94",
+      "size": 36,
+      "sha256": "3c94a205e2b9de6a41b71323c3dd1c575fd09bd542c3e173a3602e163d90c8dc"
+    },
+    "debug": {
+      "start": "0x08089138",
+      "end_exclusive": "0x0808915C",
+      "size": 36,
+      "sha256": "c68c8330ca0f2db300e043aeef5a6b859eedbfaab9e6c56a1722ba96364e026a"
+    }
+  },
+  "next_module": {
+    "name": "battle_setup",
+    "first_function": "Task_BattleStart",
+    "retail_start": "0x08081D94",
+    "debug_start": "0x0808915C",
+    "delta": "+0x73C8",
+    "common_first_32_hex": "30 B5 00 06 05 0E A8 00 40 19 C0 00 04 49 44 18 00 21 60 5E 00 28 05 D0 01 28 0E D0 1D E0 00 00"
+  }
+}
