@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "module": "field_weather_effects",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0807E2AC",
+      "end_exclusive": "0x08080CA8",
+      "size": 10748,
+      "sha256": "98060a9865c5cb3ff0063d8a0690b12597ccf7f14faafefaff17c9aa954920e1"
+    },
+    "rev1": {
+      "start": "0x0807E2AC",
+      "end_exclusive": "0x08080CA8",
+      "size": 10748,
+      "sha256": "98060a9865c5cb3ff0063d8a0690b12597ccf7f14faafefaff17c9aa954920e1"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08085660",
+    "end_exclusive": "0x0808805C",
+    "size": 10748,
+    "sha256": "f6f8ba11e0c8e6d356c26ef7a053d68785e2699933f06176d6fdc76f8ee68780",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0x73B4",
+    "exit": "+0x73B4"
+  },
+  "entry": {
+    "first_function": "Clouds_InitVars",
+    "common_first_48_hex": "00 B5 0D 48 00 68 0D 4A 81 18 00 22 0A 70 0C 49 43 18 14 21 19 70 0B 4B C1 18 0A 70 06 3B C1 18 0A 80 09 49 40 18 00 78 00 28 03 D1 00 20 10 21"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 101,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "last_function": "UpdateRainCounter",
+    "retail": {
+      "start": "0x08080C88",
+      "end_exclusive": "0x08080CA8",
+      "size": 32,
+      "sha256": "12e8879d7e0e70c121609d1eb1833fc782eea64c2f4eb6e7c4a1a0b45367780f"
+    },
+    "debug": {
+      "start": "0x0808803C",
+      "end_exclusive": "0x0808805C",
+      "size": 32,
+      "sha256": "d247f4096e91cced24bf183ffc36cd1f94794531c676df80e46ad7eab01b9ac4"
+    }
+  },
+  "next_module": {
+    "name": "field_fadetransition",
+    "first_function": "palette_bg_fill_white",
+    "retail_start": "0x08080CA8",
+    "debug_start": "0x0808805C",
+    "delta": "+0x73B4",
+    "white_function": {
+      "retail_end": "0x08080CCC",
+      "debug_end": "0x08088080",
+      "size": 36
+    },
+    "black_function_start": {
+      "retail": "0x08080CCC",
+      "debug": "0x08088080"
+    },
+    "faded_palette_buffer": {
+      "retail": "0x0202EEC8",
+      "debug": "0x0202F16C"
+    },
+    "palette_bytes": "0x400"
+  }
+}
