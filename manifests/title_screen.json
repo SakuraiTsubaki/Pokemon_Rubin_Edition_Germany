@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "module": "title_screen",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0807C1C0",
+      "end_exclusive": "0x0807CC5C",
+      "size": 2716,
+      "sha256": "04b39c6221fdf7b12a2d274b0ced8c35d99e4c82490808b8a38b0d2c9368b2b4"
+    },
+    "rev1": {
+      "start": "0x0807C1C0",
+      "end_exclusive": "0x0807CC5C",
+      "size": 2716,
+      "sha256": "04b39c6221fdf7b12a2d274b0ced8c35d99e4c82490808b8a38b0d2c9368b2b4"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x08083434",
+    "end_exclusive": "0x08083F14",
+    "size": 2784,
+    "sha256": "e301c3aec31b83cd9038880e95e02f1e8908c5dfe8606b5920a8fc928e5f3a9f",
+    "growth_bytes": 68
+  },
+  "delta": {
+    "entry": "+0x7274",
+    "exit": "+0x72B8"
+  },
+  "german_layout": {
+    "version_banner_shape": 0,
+    "right_tile_offset": 128,
+    "version_banner_bytes": "0x2000",
+    "left_x": 108,
+    "right_x": 172,
+    "ruby_y_goal": 84,
+    "initial_y": 44,
+    "start_banner_x": 118,
+    "german_extra_press_start_anim_indices": [
+      8,
+      9
+    ]
+  },
+  "debug_growth": {
+    "task_title_screen_phase3": {
+      "retail": {
+        "start": "0x0807CA78",
+        "end_exclusive": "0x0807CBA8",
+        "size": 304,
+        "sha256": "05e0926eaa6ed0d93e2aaab3eacfd9f5cb9b0858db308c7ed519a544281bc92c"
+      },
+      "debug": {
+        "start": "0x08083CEC",
+        "end_exclusive": "0x08083E44",
+        "size": 344,
+        "sha256": "0629023932f881ccc4abd12caf3993305dc3cd3616f6ad2cc35258ad2bf6eb62"
+      },
+      "growth_bytes": 40,
+      "reason": "Debug SELECT-button test-menu branch"
+    },
+    "debug_only_callback": {
+      "name": "CB2_GoToTestMenu",
+      "start": "0x08083E60",
+      "end_exclusive": "0x08083E7C",
+      "size": 28,
+      "sha256": "6b016e7833466b735eddf30f9b9caeef4b22049bc75beea7a5b77ebd35d49927"
+    }
+  },
+  "source_correlation": {
+    "function_definition_count_with_debug": 19
+  },
+  "tail": {
+    "last_function": "UpdateLegendaryMarkingColor",
+    "retail": {
+      "start": "0x0807CC18",
+      "end_exclusive": "0x0807CC5C",
+      "size": 68,
+      "sha256": "3b955f0ccfcac7c4dedc1be663e9b68d00c430d4a23fa37125866b658e5a8fff"
+    },
+    "debug": {
+      "start": "0x08083ED0",
+      "end_exclusive": "0x08083F14",
+      "size": 68,
+      "sha256": "cbffa9a9f56a5d8887f77cbc55b40371fee05178f919d4615845cd30fd3831d9"
+    }
+  },
+  "next_module": {
+    "name": "field_weather",
+    "first_function": "StartWeather",
+    "retail_start": "0x0807CC5C",
+    "debug_start": "0x08083F14",
+    "delta": "+0x72B8",
+    "entry_start_hex": "70 B5 30 48",
+    "common_after_branch_hex": "00 06 06 0E 00 2E 55 D1 90 20 40 01"
+  }
+}
