@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "module": "trainer_see",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08084410",
+      "end_exclusive": "0x08084DCC",
+      "size": 2492,
+      "sha256": "47081b39ac7750874dc7441a768a4053b922dc7445d5b605e578062863d79b18"
+    },
+    "rev1": {
+      "start": "0x08084410",
+      "end_exclusive": "0x08084DCC",
+      "size": 2492,
+      "sha256": "47081b39ac7750874dc7441a768a4053b922dc7445d5b605e578062863d79b18"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x0809177C",
+    "end_exclusive": "0x08092138",
+    "size": 2492,
+    "sha256": "ce5879427fd13bf636c31ee85ccbc4f8f06c5dac625e81177c0a4bf532a7c748",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD36C",
+    "exit": "+0xD36C"
+  },
+  "entry": {
+    "first_function": "CheckTrainers",
+    "common_first_32_hex": "30 B5 00 24 0A 4D E0 00 00 19 80 00 41 19 08 78 C0 07 00 28 0E D0 C8 79 01 28 01 D0 03 28 09 D1"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 30,
+    "directional_approach_function_count": 4,
+    "main_approach_state_count": 12,
+    "reveal_state_count": 4,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "setup_function": {
+      "name": "sub_8084894",
+      "retail_start": "0x08084CE8",
+      "debug_start": "0x08092054",
+      "size": 76
+    },
+    "last_function": {
+      "name": "objc_exclamation_mark_probably",
+      "retail": {
+        "start": "0x08084D34",
+        "end_exclusive": "0x08084DCC",
+        "size": 152,
+        "sha256": "cfb42c98e9a778414924ecd58ee3107c724f6a2b64d3b56e5a3293bc93678792"
+      },
+      "debug": {
+        "start": "0x080920A0",
+        "end_exclusive": "0x08092138",
+        "size": 152,
+        "sha256": "b17fc9ff4c4876e0024eee1759cd0adefbb711d949738d19ba7b316fb53f8553"
+      }
+    }
+  },
+  "next_module": {
+    "name": "wild_encounter",
+    "first_function": "DisableWildEncounters",
+    "retail_start": "0x08084DCC",
+    "debug_start": "0x08092138",
+    "delta": "+0xD36C",
+    "entry_hex": "01 49 08 70 70 47 00 00",
+    "gWildEncountersDisabled": {
+      "retail": "0x0202FF7C",
+      "debug": "0x02030228"
+    }
+  }
+}
