@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "module": "kagaya_debug_menu",
+  "profile": "debug_only",
+  "evidence": "German Debug ROM binary",
+  "debug": {
+    "start": "0x080B05C4",
+    "end_exclusive": "0x080B082C",
+    "size": 616,
+    "sha256": "4c12dd142520ba4092d845b622771c5b5ab31988d606746c06b8af8fb9a34526"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 13,
+    "globally_debug_guarded": true
+  },
+  "tail": {
+    "function": "debug_sub_80B0800",
+    "start": "0x080B0800",
+    "end_exclusive": "0x080B082C",
+    "size": 44,
+    "sha256": "60a1c0b773316494820caa986f65f8ee90c0b6c609bde4275e496e8aa32dcc28"
+  },
+  "rejoin": {
+    "next_module": "mail_data",
+    "retail_start": "0x080A2C68",
+    "debug_start": "0x080B082C",
+    "delta": "+0xDBC4",
+    "common_prefix_hex": "30 B5 00 24 07 4D E0 00 00 19 80 00 40 19 00 F0 0B F8"
+  }
+}
