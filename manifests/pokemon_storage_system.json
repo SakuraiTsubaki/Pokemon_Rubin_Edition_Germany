@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_storage_system",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08095C2C",
+      "end_exclusive": "0x08096908",
+      "size": 3292,
+      "sha256": "703092c567fa1305a37a5c6ce99e3ac33bae5b5483d203ca4a12125b12b467b0"
+    },
+    "rev1": {
+      "start": "0x08095C2C",
+      "end_exclusive": "0x08096908",
+      "size": 3292,
+      "sha256": "703092c567fa1305a37a5c6ce99e3ac33bae5b5483d203ca4a12125b12b467b0"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080A317C",
+    "end_exclusive": "0x080A3FB4",
+    "size": 3640,
+    "sha256": "a14deaad84ad49a35a00d9e4126449a23beecf7a3e09355011b1d7a0d6749cd1",
+    "growth_bytes": 348
+  },
+  "delta": {
+    "entry": "+0xD550",
+    "exit": "+0xD6AC"
+  },
+  "debug_growth": {
+    "function": "debug_sub_80A3904",
+    "start": "0x080A3904",
+    "end_exclusive": "0x080A3A60",
+    "size": 348,
+    "sha256": "3c407fdd1d3a8c068ca9d137cad80e40e6b833d46af3619e5f0df22c075b7eaa"
+  },
+  "tail": {
+    "function": "sub_8096784",
+    "retail_start": "0x080968D4",
+    "debug_start": "0x080A3F80",
+    "size": 52,
+    "sha256": "b736e4badd6f3bba4692a553241b2a130b73787c94d3cdd026658cce58aedf24",
+    "byte_identical_across_profiles": true
+  },
+  "next_module": {
+    "name": "pokemon_storage_system_2",
+    "first_function": "task_intro_29",
+    "retail_start": "0x08096908",
+    "debug_start": "0x080A3FB4",
+    "delta": "+0xD6AC",
+    "common_first_16_hex": "00 B5 00 06 00 0E 04 49 08 70 04 49 48 71 04 48"
+  }
+}
