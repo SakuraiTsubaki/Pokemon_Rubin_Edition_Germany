@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "module": "fldeff_cut",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080A2654",
+      "end_exclusive": "0x080A2C68",
+      "size": 1556,
+      "sha256": "6be9fdd17acaf4a027dfaa86910ed014dc98c1652e88518454fe51e0a004c548"
+    },
+    "rev1": {
+      "start": "0x080A2654",
+      "end_exclusive": "0x080A2C68",
+      "size": 1556,
+      "sha256": "6be9fdd17acaf4a027dfaa86910ed014dc98c1652e88518454fe51e0a004c548"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080AFEE4",
+    "end_exclusive": "0x080B05C4",
+    "size": 1760,
+    "sha256": "337c6fba9a54af29502dc2e62fcfa5e99ed0a24655c343e93ede974a0a94746d",
+    "growth_bytes": 204
+  },
+  "delta": {
+    "entry": "+0xD890",
+    "exit": "+0xD95C"
+  },
+  "debug_growth": {
+    "function": "Debug_SetUpFieldMove_Cut",
+    "start": "0x080AFEE4",
+    "end_exclusive": "0x080AFFB0",
+    "size": 204,
+    "sha256": "daa2efebe8574e6b559ae418eb20884950d8d3a7519ae8c88617636fac1a906d"
+  },
+  "tail": {
+    "function": "StartCutTreeFieldEffect",
+    "retail": {
+      "start": "0x080A2C50",
+      "end_exclusive": "0x080A2C68",
+      "size": 24,
+      "sha256": "7efe7b605c208fa906fb0fab38e7dcfdbbbc761e07271e0ee6fc3c0ebd8f92e2"
+    },
+    "debug": {
+      "start": "0x080B05AC",
+      "end_exclusive": "0x080B05C4",
+      "size": 24,
+      "sha256": "357678a73b9bbe53f16963c07c5047f266afe9da96d3e5ef85033ee6f342beb7"
+    }
+  },
+  "next_module": {
+    "retail": {
+      "name": "mail_data",
+      "first_function": "ClearMailData",
+      "start": "0x080A2C68",
+      "prefix_hex": "30 B5 00 24 07 4D E0 00 00 19 80 00 40 19 00 F0 0B F8"
+    },
+    "debug": {
+      "name": "kagaya_debug_menu",
+      "first_function": "InitKagayaDebugMenu_A",
+      "start": "0x080B05C4",
+      "entry_hex": "00 B5 00 F0 03 F8 00 20 02 BC 08 47"
+    }
+  }
+}
