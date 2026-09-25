@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_storage_system_3",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08098C90",
+      "end_exclusive": "0x08099D4C",
+      "size": 4284,
+      "sha256": "2b83265be47e0550f0cb19b77f1d254e64bdc4cf294c319058bbab1f54b4ef24"
+    },
+    "rev1": {
+      "start": "0x08098C90",
+      "end_exclusive": "0x08099D4C",
+      "size": 4284,
+      "sha256": "2b83265be47e0550f0cb19b77f1d254e64bdc4cf294c319058bbab1f54b4ef24"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080A6498",
+    "end_exclusive": "0x080A7554",
+    "size": 4284,
+    "sha256": "581caea6528b19ab4c8e36957f663fad9abeacc98ff3bd3fecc654cdd086d2a5",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD808",
+    "exit": "+0xD808"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 34,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "function": "PSS_DestroyMonIconSprite",
+    "retail": {
+      "start": "0x08099D34",
+      "end_exclusive": "0x08099D4C",
+      "size": 24,
+      "sha256": "8cb8b62d810194c7f33dc8c329a86cdfa8baedbf47e2ab46153e165ef036d0e5"
+    },
+    "debug": {
+      "start": "0x080A753C",
+      "end_exclusive": "0x080A7554",
+      "size": 24,
+      "sha256": "232695a9ce7115bd592a0169c77bd524eb5244d427c986325c1fa85d26e4ac24"
+    }
+  },
+  "next_module": {
+    "name": "pokemon_storage_system_4",
+    "first_function": "sub_8099BF8",
+    "retail_start": "0x08099D4C",
+    "debug_start": "0x080A7554",
+    "delta": "+0xD808",
+    "common_prefix_hex": "10 B5 81 B0 04 1C 24 06 24 0E 13 48 00 68 13 49 42 18 00 21 11 70"
+  }
+}
