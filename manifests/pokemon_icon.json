@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_icon",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0809D3C0",
+      "end_exclusive": "0x0809D998",
+      "size": 1496,
+      "sha256": "2fd41d5d628f62c828a537eea74fce8d51a105d30752d920aca70ca01571de63"
+    },
+    "rev1": {
+      "start": "0x0809D3C0",
+      "end_exclusive": "0x0809D998",
+      "size": 1496,
+      "sha256": "2fd41d5d628f62c828a537eea74fce8d51a105d30752d920aca70ca01571de63"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080AAC04",
+    "end_exclusive": "0x080AB1DC",
+    "size": 1496,
+    "sha256": "c347fc84c44cde896ad7c0238c9f46c959596747c70b0990f83667962632ae9f",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD844",
+    "exit": "+0xD844"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 18,
+    "debug_conditional_text": false
+  },
+  "next_module": {
+    "name": "pokemon_summary_screen",
+    "first_function": "sub_809D844",
+    "retail_start": "0x0809D998",
+    "debug_start": "0x080AB1DC",
+    "delta": "+0xD844",
+    "retail_entry_hex": "00 B5 DD F7 03 FB 62 F7 93 FF 62 F7 B7 FF D6 F7 A9 FA 01 BC 00 47",
+    "debug_entry_prefix_hex": "00 B5 81 B0 D7 F7 1A F8 55 F7 70 FB 55 F7 94 FB CF F7 BC FF"
+  }
+}
