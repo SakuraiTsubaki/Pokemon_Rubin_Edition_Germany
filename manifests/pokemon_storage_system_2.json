@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_storage_system_2",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08096908",
+      "end_exclusive": "0x08098C90",
+      "size": 9096,
+      "sha256": "eeef7c2b7e2abc0fcae65e71e5ba650b1894a6bf6043df93d5c6ae1cf557dd58"
+    },
+    "rev1": {
+      "start": "0x08096908",
+      "end_exclusive": "0x08098C90",
+      "size": 9096,
+      "sha256": "eeef7c2b7e2abc0fcae65e71e5ba650b1894a6bf6043df93d5c6ae1cf557dd58"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080A3FB4",
+    "end_exclusive": "0x080A6498",
+    "size": 9444,
+    "sha256": "2c576e8a2aba3aa8a7b2d6972656ac485cfa2e5e730bc4036d80e555bb7a6f0b",
+    "growth_bytes": 348
+  },
+  "delta": {
+    "entry": "+0xD6AC",
+    "exit": "+0xD808"
+  },
+  "debug_growth": {
+    "direct_debug_functions": [
+      {
+        "name": "debug_sub_80A4300",
+        "start": "0x080A4300",
+        "end_exclusive": "0x080A433C",
+        "size": 60,
+        "sha256": "0984327cafb08159a22d50312193b0bf4f3c346d670889585e9298c468268eb2"
+      },
+      {
+        "name": "debug_sub_80A433C",
+        "start": "0x080A433C",
+        "end_exclusive": "0x080A435C",
+        "size": 32,
+        "sha256": "b2a54853b5c67a97b7d32f80134f952bc3b7b9c8f9ad261e8c1857f022f8beb9"
+      },
+      {
+        "name": "debug_sub_80A435C",
+        "start": "0x080A435C",
+        "end_exclusive": "0x080A43B4",
+        "size": 88,
+        "sha256": "6b58e42c5765e0913697b2d9487df7d0f117bce422012527ac29f537d55a4264"
+      }
+    ],
+    "direct_debug_function_bytes": 180,
+    "guarded_ordinary_path_growth_bytes": 168
+  },
+  "tail": {
+    "function": "sub_8098AA8",
+    "retail": {
+      "start": "0x08098BFC",
+      "end_exclusive": "0x08098C90",
+      "size": 148,
+      "sha256": "bed1d08334439e11ea3b8287b38dfba8c658a35ffc88c995512eb5e43189c211"
+    },
+    "debug": {
+      "start": "0x080A6404",
+      "end_exclusive": "0x080A6498",
+      "size": 148,
+      "sha256": "2c92985e8adb8fe066085b9e0c1593dacc4065cc89e00d42d82bad0232c33cdf"
+    }
+  },
+  "next_module": {
+    "name": "pokemon_storage_system_3",
+    "first_function": "get_preferred_box",
+    "retail_start": "0x08098C90",
+    "debug_start": "0x080A6498",
+    "delta": "+0xD808",
+    "entry_hex": "01 48 00 78 70 47 00 00"
+  }
+}
