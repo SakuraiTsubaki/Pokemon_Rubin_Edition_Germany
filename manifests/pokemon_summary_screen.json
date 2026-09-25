@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "module": "pokemon_summary_screen",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x0809D998",
+      "end_exclusive": "0x080A2224",
+      "size": 18572,
+      "sha256": "7340ceeb3b69f3ff1fb65a3a64b0a29d89841b2decb3eac6d3ed0ee1ce66d94b"
+    },
+    "rev1": {
+      "start": "0x0809D998",
+      "end_exclusive": "0x080A2224",
+      "size": 18572,
+      "sha256": "7340ceeb3b69f3ff1fb65a3a64b0a29d89841b2decb3eac6d3ed0ee1ce66d94b"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080AB1DC",
+    "end_exclusive": "0x080AFAB4",
+    "size": 18648,
+    "sha256": "59eb2394e4ba40e321aa4f6654efa6d0ce358d3f6f85747dc6d6d11462ba2337",
+    "growth_bytes": 76
+  },
+  "delta": {
+    "entry": "+0xD844",
+    "exit": "+0xD890"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 117,
+    "debug_conditional_text_block_count": 2
+  },
+  "debug_growth": {
+    "first_function": {
+      "name": "sub_809D844",
+      "retail": {
+        "start": "0x0809D998",
+        "end_exclusive": "0x0809D9B0",
+        "size": 24,
+        "sha256": "8bfa5e539a0f88e0d017278123bb240fe32c14bd337a95b92fa59ce1cb4dd539"
+      },
+      "debug": {
+        "start": "0x080AB1DC",
+        "end_exclusive": "0x080AB220",
+        "size": 68,
+        "sha256": "a952d10abc36c12d19d21859467541ff4b57851534d6dec83158dece17ee382e"
+      },
+      "growth_bytes": 44
+    },
+    "second_guarded_path_growth_bytes": 32
+  },
+  "tail": {
+    "function": "sub_80A20A8",
+    "retail": {
+      "start": "0x080A21F8",
+      "end_exclusive": "0x080A2224",
+      "size": 44,
+      "sha256": "9696dceaf51f770b406a676fb441b6ae3dbb275315a35ad88802dd35c5948e11"
+    },
+    "debug": {
+      "start": "0x080AFA88",
+      "end_exclusive": "0x080AFAB4",
+      "size": 44,
+      "sha256": "436b6c9eb5c0bd0cc79f6b6c2e697a5c0e56a64e9b39b5c7bfc27dcfe520a3a5"
+    }
+  },
+  "next_module": {
+    "name": "script_movement",
+    "first_function": "ScriptMovement_StartObjectMovementScript",
+    "retail_start": "0x080A2224",
+    "debug_start": "0x080AFAB4",
+    "delta": "+0xD890",
+    "common_prefix_hex": "10 B5 81 B0 1C 1C 00 06 00 0E 09 06 09 0E 12 06 12 0E 6B 46"
+  }
+}
