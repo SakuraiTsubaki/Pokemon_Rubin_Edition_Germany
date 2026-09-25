@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "module": "unk_text_8095904",
+  "historical_name_only": true,
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x08095A54",
+      "end_exclusive": "0x08095C2C",
+      "size": 472,
+      "sha256": "7c97512f9b583eaab1ba4494db45187ac232d32f869c332429e3f50473beba3a"
+    },
+    "rev1": {
+      "start": "0x08095A54",
+      "end_exclusive": "0x08095C2C",
+      "size": 472,
+      "sha256": "7c97512f9b583eaab1ba4494db45187ac232d32f869c332429e3f50473beba3a"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080A2FA4",
+    "end_exclusive": "0x080A317C",
+    "size": 472,
+    "sha256": "fab4730ceb6435ea9f6ecbe2c321d83f4557bca896e0564a8e085698b1305a4c",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD550",
+    "exit": "+0xD550"
+  },
+  "functions": [
+    {
+      "name": "sub_8095904",
+      "retail_start": "0x08095A54",
+      "debug_start": "0x080A2FA4"
+    },
+    {
+      "name": "unref_sub_8095A48",
+      "retail_start": "0x08095B98",
+      "debug_start": "0x080A30E8",
+      "size": 148,
+      "sha256": "08470fd10cdfb958daf4abd90a4e9bbd3f70a8dbaf8309af09de31d5a57770f8",
+      "byte_identical_across_profiles": true
+    }
+  ],
+  "next_module": {
+    "name": "pokemon_storage_system",
+    "first_function": "CountPokemonInBoxN",
+    "retail_start": "0x08095C2C",
+    "debug_start": "0x080A317C",
+    "delta": "+0xD550",
+    "common_first_32_hex": "70 B5 00 06 00 0E 00 24 00 25 81 00 09 18 08 01 40 1A 46 01 A0 00 00 19 00 01 0A 49 40 18 30 18"
+  }
+}
