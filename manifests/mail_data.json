@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "module": "mail_data",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080A2C68",
+      "end_exclusive": "0x080A3094",
+      "size": 1068,
+      "sha256": "d1f7c56133c3f2cfaf49ca8e2563296e1d0d23c109e832aa5a8ed6fa520e25f7"
+    },
+    "rev1": {
+      "start": "0x080A2C68",
+      "end_exclusive": "0x080A3094",
+      "size": 1068,
+      "sha256": "d1f7c56133c3f2cfaf49ca8e2563296e1d0d23c109e832aa5a8ed6fa520e25f7"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080B082C",
+    "end_exclusive": "0x080B0C58",
+    "size": 1068,
+    "sha256": "4cae863753115f6685058df5d06f329b1c58d1d70dc3a047500794c19b066855",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xDBC4",
+    "exit": "+0xDBC4"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 12,
+    "debug_conditional_text": false,
+    "mail_slot_count": 16
+  },
+  "tail": {
+    "function": "ItemIsMail",
+    "retail_start": "0x080A307C",
+    "debug_start": "0x080B0C40",
+    "size": 24,
+    "sha256": "c95417e6a9324955274a945c1465d4e64bc47b5fa59d79522d36d3f260fffa1f",
+    "byte_identical_across_profiles": true
+  },
+  "next_module": {
+    "name": "map_name_popup",
+    "first_function": "unref_sub_80A2F44",
+    "retail_start": "0x080A3094",
+    "debug_start": "0x080B0C58",
+    "delta": "+0xDBC4"
+  }
+}
