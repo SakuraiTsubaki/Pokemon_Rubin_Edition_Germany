@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "module": "script_movement",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080A2224",
+      "end_exclusive": "0x080A2654",
+      "size": 1072,
+      "sha256": "2f2790d8621ae2fe724a8dfd52479b24a91c4f9eed2c68782c0753d5f9c88750"
+    },
+    "rev1": {
+      "start": "0x080A2224",
+      "end_exclusive": "0x080A2654",
+      "size": 1072,
+      "sha256": "2f2790d8621ae2fe724a8dfd52479b24a91c4f9eed2c68782c0753d5f9c88750"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080AFAB4",
+    "end_exclusive": "0x080AFEE4",
+    "size": 1072,
+    "sha256": "5325c59d58f13c5a416f9e2cc57e0f2731664b11be16e1f1f40bd054b3fc29f4",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xD890",
+    "exit": "+0xD890"
+  },
+  "source_correlation": {
+    "explicit_function_definition_count": 18,
+    "debug_conditional_text": false,
+    "movement_script_terminator": "0xFE",
+    "movement_slot_count": 16
+  },
+  "tail": {
+    "function": "sub_80A2490",
+    "retail": {
+      "start": "0x080A25E0",
+      "end_exclusive": "0x080A2654",
+      "size": 116,
+      "sha256": "0f3221843beaae8637a85ce0cabc224447f080f745aa2e91ef5f0079f7131066"
+    },
+    "debug": {
+      "start": "0x080AFE70",
+      "end_exclusive": "0x080AFEE4",
+      "size": 116,
+      "sha256": "9917805dcfa0b391d9cff9c7080cccad65081f17107c6b286bf6d2e76df5e4b7"
+    }
+  },
+  "next_module": {
+    "name": "fldeff_cut",
+    "retail": {
+      "start": "0x080A2654",
+      "first_function": "SetUpFieldMove_Cut",
+      "prefix_hex": "F0 B5 47 46 80 B4 52 20 69 F0 34 F8 00 06 00 0E 01 28"
+    },
+    "debug": {
+      "start": "0x080AFEE4",
+      "first_function": "Debug_SetUpFieldMove_Cut",
+      "prefix_hex": "F0 B5 47 46 80 B4 52 20 70 F0 24 FC 00 06 00 0E 01 28"
+    },
+    "delta": "+0xD890"
+  }
+}
