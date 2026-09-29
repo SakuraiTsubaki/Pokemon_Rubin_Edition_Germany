@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "module": "map_name_popup",
+  "evidence": "German ROM binary",
+  "retail": {
+    "rev0": {
+      "start": "0x080A3094",
+      "end_exclusive": "0x080A3268",
+      "size": 468,
+      "sha256": "b217476853bbcbe13fc7cd03a6e2fa7d3e11a8da30591a3307bb4f16d010f3f0"
+    },
+    "rev1": {
+      "start": "0x080A3094",
+      "end_exclusive": "0x080A3268",
+      "size": 468,
+      "sha256": "b217476853bbcbe13fc7cd03a6e2fa7d3e11a8da30591a3307bb4f16d010f3f0"
+    },
+    "rev0_rev1_byte_identical": true
+  },
+  "debug": {
+    "start": "0x080B0C58",
+    "end_exclusive": "0x080B0E2C",
+    "size": 468,
+    "sha256": "db6295fd772da9c7c31d1be82d8b6aa1c2ff72010af3b050169327a963554de6",
+    "additional_code_bytes": 0
+  },
+  "delta": {
+    "entry": "+0xDBC4",
+    "exit": "+0xDBC4"
+  },
+  "source_correlation": {
+    "function_count": 5,
+    "debug_conditional_text": false
+  },
+  "tail": {
+    "function": "DrawMapNamePopup",
+    "retail_start": "0x080A3230",
+    "debug_start": "0x080B0DF4",
+    "size": 56,
+    "gMapHeader": {
+      "retail": "0x0202E828",
+      "debug": "0x0202EACC"
+    }
+  },
+  "next_module": {
+    "name": "item_menu",
+    "first_function": "sub_80A3118",
+    "retail_start": "0x080A3268",
+    "debug_start": "0x080B0E2C",
+    "delta": "+0xDBC4"
+  }
+}
